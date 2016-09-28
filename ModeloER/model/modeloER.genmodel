@@ -6,7 +6,7 @@
   <foreignModel>modeloER.ecore</foreignModel>
   <genPackages prefix="ModeloER" disposableProviderFactory="true" ecorePackage="modeloER.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="modeloER.ecore#//TipoDato">
-      <genEnumLiterals ecoreEnumLiteral="modeloER.ecore#//TipoDato/varchar(255)"/>
+      <genEnumLiterals ecoreEnumLiteral="modeloER.ecore#//TipoDato/varchar"/>
       <genEnumLiterals ecoreEnumLiteral="modeloER.ecore#//TipoDato/int"/>
       <genEnumLiterals ecoreEnumLiteral="modeloER.ecore#//TipoDato/Char"/>
       <genEnumLiterals ecoreEnumLiteral="modeloER.ecore#//TipoDato/Float"/>

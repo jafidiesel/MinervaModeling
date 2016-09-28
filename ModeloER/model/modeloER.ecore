@@ -28,7 +28,7 @@
         eType="#//Entidad" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoDato">
-    <eLiterals name="varchar(255)"/>
+    <eLiterals name="varchar"/>
     <eLiterals name="int" value="1"/>
     <eLiterals name="Char" value="2"/>
     <eLiterals name="Float" value="3"/>

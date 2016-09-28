@@ -233,7 +233,7 @@
           </edges>
           <edges xmi:type="notation:Edge" xmi:id="_emzcIIRVEeayf4BqS4kE3A" type="4001" element="_7dI50IRLEeayf4BqS4kE3A" source="_VClT4IRVEeayf4BqS4kE3A" target="_WuD_QIRKEeayf4BqS4kE3A">
             <children xmi:type="notation:Node" xmi:id="_em0DMIRVEeayf4BqS4kE3A" type="6001">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_em0DMYRVEeayf4BqS4kE3A" x="-2" y="35"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_em0DMYRVEeayf4BqS4kE3A" x="-10" y="43"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_em1RUIRVEeayf4BqS4kE3A" type="6002">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_em1RUYRVEeayf4BqS4kE3A" x="1" y="10"/>
@@ -294,7 +294,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_enl7wIRUEeayf4BqS4kE3A" name="tipoDato : TipoDato = varchar(255)" tooltipText="">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_enl7wIRUEeayf4BqS4kE3A" name="tipoDato : TipoDato = varchar" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="modeloER.ecore#//Atributo/tipoDato"/>
           <semanticElements xmi:type="ecore:EAttribute" href="modeloER.ecore#//Atributo/tipoDato"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_isoegIRUEeayf4BqS4kE3A" labelAlignment="LEFT">
@@ -437,9 +437,9 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_zqAQgIRSEeayf4BqS4kE3A" name="varchar(255)" tooltipText="">
-          <target xmi:type="ecore:EEnumLiteral" href="modeloER.ecore#//TipoDato/varchar(255)"/>
-          <semanticElements xmi:type="ecore:EEnumLiteral" href="modeloER.ecore#//TipoDato/varchar(255)"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_zqAQgIRSEeayf4BqS4kE3A" name="varchar" tooltipText="">
+          <target xmi:type="ecore:EEnumLiteral" href="modeloER.ecore#//TipoDato/varchar"/>
+          <semanticElements xmi:type="ecore:EEnumLiteral" href="modeloER.ecore#//TipoDato/varchar"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_zqAQgYRSEeayf4BqS4kE3A" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
           </ownedStyle>
