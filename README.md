@@ -1,6 +1,8 @@
 # MinervaModeling
 
 ## Posibles inconvenientes
+>**Nota**:
+>Podemos solucionar esto simplemente cambiando la perspectiva de Java(por default) a Modeling, en la que nos saldrá el metamodelo en forma gráfica.
 Cuando importen este proyecto, puede que el archivo **modeloER.aird** no les
 muestre el diagrama al abrirlo, sino el código XML. Para solucionarlo, deben
 crear un proyecto nuevo (*Prueba* por ejemplo) y en el Wizard de creación, al
