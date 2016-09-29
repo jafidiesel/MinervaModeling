@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ModeloER/src" modelPluginID="ModeloER" modelName="ModeloER"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>modeloER.ecore</foreignModel>
+  <genPackages prefix="ModeloER" disposableProviderFactory="true" ecorePackage="modeloER.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="modeloER.ecore#//TipoDato">
+      <genEnumLiterals ecoreEnumLiteral="modeloER.ecore#//TipoDato/varchar"/>
+      <genEnumLiterals ecoreEnumLiteral="modeloER.ecore#//TipoDato/int"/>
+      <genEnumLiterals ecoreEnumLiteral="modeloER.ecore#//TipoDato/Char"/>
+      <genEnumLiterals ecoreEnumLiteral="modeloER.ecore#//TipoDato/Float"/>
+      <genEnumLiterals ecoreEnumLiteral="modeloER.ecore#//TipoDato/boolean"/>
+    </genEnums>
+    <genClasses ecoreClass="modeloER.ecore#//Entidad">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Entidad/atributosEntidad"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Entidad/nombre"/>
+    </genClasses>
+    <genClasses ecoreClass="modeloER.ecore#//Atributo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Atributo/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Atributo/nulo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Atributo/tipoDato"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Atributo/clavePrimaria"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Atributo/claveForanea"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Atributo/atributosAtributo"/>
+    </genClasses>
+    <genClasses ecoreClass="modeloER.ecore#//Relacion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Relacion/nombre"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Relacion/atributosRelacion"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//EntidadRelacion/entidadEntidadRelacion"/>
+    </genClasses>
+    <genClasses ecoreClass="modeloER.ecore#//Diagrama">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/relacionesDelDiagrama"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/atributosDelDiagrama"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/entidadesDelDiagrama"/>
+    </genClasses>
+    <genClasses ecoreClass="modeloER.ecore#//EntidadRelacion">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//EntidadRelacion/entidadEntidadRelacion"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//EntidadRelacion/relacionEntidadRelacion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//EntidadRelacion/limiteInferior"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//EntidadRelacion/limiteSuperior"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
