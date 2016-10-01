@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modeloER:Diagrama xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:modeloER="http://www.example.org/modeloER">
+  <relacionesDelDiagrama nombre="Relacion1">
+    <atributosRelacion nombre="atributoRelacion1"/>
+  </relacionesDelDiagrama>
+  <entidadesDelDiagrama nombre="Pedido">
+    <atributosEntidad nombre="NombrePedido" tipoDato="int"/>
+    <atributosEntidad nombre="OrdenPedido" tipoDato="int" clavePrimaria="true">
+      <atributosAtributo/>
+    </atributosEntidad>
+  </entidadesDelDiagrama>
+  <entidadesDelDiagrama nombre="Entidad1"/>
+  <entidadRelacionesDelDiagrama entidadEntidadRelacion="//@entidadesDelDiagrama.0" relacionEntidadRelacion="//@relacionesDelDiagrama.0"/>
+  <entidadRelacionesDelDiagrama entidadEntidadRelacion="//@entidadesDelDiagrama.1" relacionEntidadRelacion="//@relacionesDelDiagrama.0"/>
+  <entidadRelacionesDelDiagrama entidadEntidadRelacion="//@entidadesDelDiagrama.1" relacionEntidadRelacion="//@relacionesDelDiagrama.0" limiteSuperior=""/>
+</modeloER:Diagrama>
