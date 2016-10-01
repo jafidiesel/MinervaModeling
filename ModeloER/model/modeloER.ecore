@@ -31,6 +31,20 @@
         eType="#//Herencia" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entidadRelacionesDelDiagrama"
         upperBound="-1" eType="#//EntidadRelacion" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributoderivado" upperBound="-1"
+        eType="#//AtributoDerivado" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributomultivaluado" upperBound="-1"
+        eType="#//AtributoMultivaluado" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="claveprimaria" upperBound="-1"
+        eType="#//ClavePrimaria" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="claveforanea" upperBound="-1"
+        eType="#//ClaveForanea" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="claveprimariaforanea" upperBound="-1"
+        eType="#//ClavePrimariaForanea" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tipodebil" upperBound="-1"
+        eType="#//TipoDebil" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tipofuerte" upperBound="-1"
+        eType="#//TipoFuerte" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoDato">
     <eLiterals name="varchar"/>
@@ -53,4 +67,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="entidadesHijasHerencia"
         lowerBound="1" upperBound="-1" eType="#//Entidad"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AtributoDerivado" eSuperTypes="#//Atributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AtributoMultivaluado" eSuperTypes="#//Atributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClavePrimaria" eSuperTypes="#//Atributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClaveForanea" eSuperTypes="#//Atributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClavePrimariaForanea" eSuperTypes="#//Atributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TipoDebil" eSuperTypes="#//Relacion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TipoFuerte" eSuperTypes="#//Relacion"/>
 </ecore:EPackage>
