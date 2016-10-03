@@ -31,20 +31,20 @@
         eType="#//Herencia" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entidadRelacionesDelDiagrama"
         upperBound="-1" eType="#//EntidadRelacion" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="atributoderivado" upperBound="-1"
-        eType="#//AtributoDerivado" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="atributomultivaluado" upperBound="-1"
-        eType="#//AtributoMultivaluado" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="claveprimaria" upperBound="-1"
-        eType="#//ClavePrimaria" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="claveforanea" upperBound="-1"
-        eType="#//ClaveForanea" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="claveprimariaforanea" upperBound="-1"
-        eType="#//ClavePrimariaForanea" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tipodebil" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributoderivadoDelDiagrama"
+        upperBound="-1" eType="#//AtributoDerivado" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributomultivaluadoDelDiagrama"
+        upperBound="-1" eType="#//AtributoMultivaluado" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="claveprimariaDelDiagrama"
+        upperBound="-1" eType="#//ClavePrimaria" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="claveforaneaDelDiagrama"
+        upperBound="-1" eType="#//ClaveForanea" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="claveprimariaforaneaDelDiagrama"
+        upperBound="-1" eType="#//ClavePrimariaForanea" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tipodebilDelDiagrama" upperBound="-1"
         eType="#//TipoDebil" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tipofuerte" upperBound="-1"
-        eType="#//TipoFuerte" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tipofuerteDelDiagrama"
+        upperBound="-1" eType="#//TipoFuerte" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoDato">
     <eLiterals name="varchar"/>
