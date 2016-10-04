@@ -45,6 +45,10 @@
         eType="#//TipoDebil" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tipofuerteDelDiagrama"
         upperBound="-1" eType="#//TipoFuerte" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entidadesRelacionesFuertesDelDiagrama"
+        upperBound="-1" eType="#//EntidadRelacionFuerte" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entidadesRelacionesDebilesDelDiagrama"
+        upperBound="-1" eType="#//EntidadRelacionDebil" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoDato">
     <eLiterals name="varchar"/>
@@ -74,4 +78,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="ClavePrimariaForanea" eSuperTypes="#//Atributo"/>
   <eClassifiers xsi:type="ecore:EClass" name="TipoDebil" eSuperTypes="#//Relacion"/>
   <eClassifiers xsi:type="ecore:EClass" name="TipoFuerte" eSuperTypes="#//Relacion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EntidadRelacionDebil" eSuperTypes="#//EntidadRelacion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EntidadRelacionFuerte" eSuperTypes="#//EntidadRelacion"/>
 </ecore:EPackage>
