@@ -49,6 +49,12 @@
         upperBound="-1" eType="#//EntidadRelacionFuerte" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entidadesRelacionesDebilesDelDiagrama"
         upperBound="-1" eType="#//EntidadRelacionDebil" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributoderivadoclaveprimariaDelDiagrama"
+        upperBound="-1" eType="#//AtributoDerivadoClavePrimaria" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entidadfuerteDelDiagrama"
+        upperBound="-1" eType="#//EntidadFuerte" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entidaddebilDelDiagrama"
+        upperBound="-1" eType="#//EntidadDebil" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="TipoDato">
     <eLiterals name="varchar"/>
@@ -80,4 +86,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="TipoFuerte" eSuperTypes="#//Relacion"/>
   <eClassifiers xsi:type="ecore:EClass" name="EntidadRelacionDebil" eSuperTypes="#//EntidadRelacion"/>
   <eClassifiers xsi:type="ecore:EClass" name="EntidadRelacionFuerte" eSuperTypes="#//EntidadRelacion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AtributoDerivadoClavePrimaria" eSuperTypes="#//Atributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EntidadFuerte" eSuperTypes="#//Entidad"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EntidadDebil" eSuperTypes="#//Entidad"/>
 </ecore:EPackage>

@@ -44,6 +44,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/tipofuerteDelDiagrama"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/entidadesRelacionesFuertesDelDiagrama"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/entidadesRelacionesDebilesDelDiagrama"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/atributoderivadoclaveprimariaDelDiagrama"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/entidadfuerteDelDiagrama"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/entidaddebilDelDiagrama"/>
     </genClasses>
     <genClasses ecoreClass="modeloER.ecore#//EntidadRelacion">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//EntidadRelacion/entidadEntidadRelacion"/>
@@ -64,5 +67,8 @@
     <genClasses ecoreClass="modeloER.ecore#//TipoFuerte"/>
     <genClasses ecoreClass="modeloER.ecore#//EntidadRelacionDebil"/>
     <genClasses ecoreClass="modeloER.ecore#//EntidadRelacionFuerte"/>
+    <genClasses ecoreClass="modeloER.ecore#//AtributoDerivadoClavePrimaria"/>
+    <genClasses ecoreClass="modeloER.ecore#//EntidadFuerte"/>
+    <genClasses ecoreClass="modeloER.ecore#//EntidadDebil"/>
   </genPackages>
 </genmodel:GenModel>
