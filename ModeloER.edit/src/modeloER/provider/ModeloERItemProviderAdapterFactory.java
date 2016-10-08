@@ -417,6 +417,75 @@ public class ModeloERItemProviderAdapterFactory extends ModeloERAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link modeloER.AtributoDerivadoClavePrimaria} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AtributoDerivadoClavePrimariaItemProvider atributoDerivadoClavePrimariaItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link modeloER.AtributoDerivadoClavePrimaria}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAtributoDerivadoClavePrimariaAdapter() {
+		if (atributoDerivadoClavePrimariaItemProvider == null) {
+			atributoDerivadoClavePrimariaItemProvider = new AtributoDerivadoClavePrimariaItemProvider(this);
+		}
+
+		return atributoDerivadoClavePrimariaItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link modeloER.EntidadFuerte} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EntidadFuerteItemProvider entidadFuerteItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link modeloER.EntidadFuerte}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEntidadFuerteAdapter() {
+		if (entidadFuerteItemProvider == null) {
+			entidadFuerteItemProvider = new EntidadFuerteItemProvider(this);
+		}
+
+		return entidadFuerteItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link modeloER.EntidadDebil} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EntidadDebilItemProvider entidadDebilItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link modeloER.EntidadDebil}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEntidadDebilAdapter() {
+		if (entidadDebilItemProvider == null) {
+			entidadDebilItemProvider = new EntidadDebilItemProvider(this);
+		}
+
+		return entidadDebilItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -530,6 +599,9 @@ public class ModeloERItemProviderAdapterFactory extends ModeloERAdapterFactory i
 		if (tipoFuerteItemProvider != null) tipoFuerteItemProvider.dispose();
 		if (entidadRelacionDebilItemProvider != null) entidadRelacionDebilItemProvider.dispose();
 		if (entidadRelacionFuerteItemProvider != null) entidadRelacionFuerteItemProvider.dispose();
+		if (atributoDerivadoClavePrimariaItemProvider != null) atributoDerivadoClavePrimariaItemProvider.dispose();
+		if (entidadFuerteItemProvider != null) entidadFuerteItemProvider.dispose();
+		if (entidadDebilItemProvider != null) entidadDebilItemProvider.dispose();
 	}
 
 }

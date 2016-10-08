@@ -4,12 +4,15 @@ package modeloER.impl;
 
 import modeloER.Atributo;
 import modeloER.AtributoDerivado;
+import modeloER.AtributoDerivadoClavePrimaria;
 import modeloER.AtributoMultivaluado;
 import modeloER.ClaveForanea;
 import modeloER.ClavePrimaria;
 import modeloER.ClavePrimariaForanea;
 import modeloER.Diagrama;
 import modeloER.Entidad;
+import modeloER.EntidadDebil;
+import modeloER.EntidadFuerte;
 import modeloER.EntidadRelacion;
 import modeloER.EntidadRelacionDebil;
 import modeloER.EntidadRelacionFuerte;
@@ -140,6 +143,27 @@ public class ModeloERPackageImpl extends EPackageImpl implements ModeloERPackage
 	 * @generated
 	 */
 	private EClass entidadRelacionFuerteEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass atributoDerivadoClavePrimariaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass entidadFuerteEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass entidadDebilEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -475,6 +499,33 @@ public class ModeloERPackageImpl extends EPackageImpl implements ModeloERPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDiagrama_AtributoderivadoclaveprimariaDelDiagrama() {
+		return (EReference)diagramaEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDiagrama_EntidadfuerteDelDiagrama() {
+		return (EReference)diagramaEClass.getEStructuralFeatures().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDiagrama_EntidaddebilDelDiagrama() {
+		return (EReference)diagramaEClass.getEStructuralFeatures().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEntidadRelacion() {
 		return entidadRelacionEClass;
 	}
@@ -628,6 +679,33 @@ public class ModeloERPackageImpl extends EPackageImpl implements ModeloERPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAtributoDerivadoClavePrimaria() {
+		return atributoDerivadoClavePrimariaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEntidadFuerte() {
+		return entidadFuerteEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEntidadDebil() {
+		return entidadDebilEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getTipoDato() {
 		return tipoDatoEEnum;
 	}
@@ -692,6 +770,9 @@ public class ModeloERPackageImpl extends EPackageImpl implements ModeloERPackage
 		createEReference(diagramaEClass, DIAGRAMA__TIPOFUERTE_DEL_DIAGRAMA);
 		createEReference(diagramaEClass, DIAGRAMA__ENTIDADES_RELACIONES_FUERTES_DEL_DIAGRAMA);
 		createEReference(diagramaEClass, DIAGRAMA__ENTIDADES_RELACIONES_DEBILES_DEL_DIAGRAMA);
+		createEReference(diagramaEClass, DIAGRAMA__ATRIBUTODERIVADOCLAVEPRIMARIA_DEL_DIAGRAMA);
+		createEReference(diagramaEClass, DIAGRAMA__ENTIDADFUERTE_DEL_DIAGRAMA);
+		createEReference(diagramaEClass, DIAGRAMA__ENTIDADDEBIL_DEL_DIAGRAMA);
 
 		entidadRelacionEClass = createEClass(ENTIDAD_RELACION);
 		createEReference(entidadRelacionEClass, ENTIDAD_RELACION__ENTIDAD_ENTIDAD_RELACION);
@@ -720,6 +801,12 @@ public class ModeloERPackageImpl extends EPackageImpl implements ModeloERPackage
 		entidadRelacionDebilEClass = createEClass(ENTIDAD_RELACION_DEBIL);
 
 		entidadRelacionFuerteEClass = createEClass(ENTIDAD_RELACION_FUERTE);
+
+		atributoDerivadoClavePrimariaEClass = createEClass(ATRIBUTO_DERIVADO_CLAVE_PRIMARIA);
+
+		entidadFuerteEClass = createEClass(ENTIDAD_FUERTE);
+
+		entidadDebilEClass = createEClass(ENTIDAD_DEBIL);
 
 		// Create enums
 		tipoDatoEEnum = createEEnum(TIPO_DATO);
@@ -762,6 +849,9 @@ public class ModeloERPackageImpl extends EPackageImpl implements ModeloERPackage
 		tipoFuerteEClass.getESuperTypes().add(this.getRelacion());
 		entidadRelacionDebilEClass.getESuperTypes().add(this.getEntidadRelacion());
 		entidadRelacionFuerteEClass.getESuperTypes().add(this.getEntidadRelacion());
+		atributoDerivadoClavePrimariaEClass.getESuperTypes().add(this.getAtributo());
+		entidadFuerteEClass.getESuperTypes().add(this.getEntidad());
+		entidadDebilEClass.getESuperTypes().add(this.getEntidad());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(entidadEClass, Entidad.class, "Entidad", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -796,6 +886,9 @@ public class ModeloERPackageImpl extends EPackageImpl implements ModeloERPackage
 		initEReference(getDiagrama_TipofuerteDelDiagrama(), this.getTipoFuerte(), null, "tipofuerteDelDiagrama", null, 0, -1, Diagrama.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDiagrama_EntidadesRelacionesFuertesDelDiagrama(), this.getEntidadRelacionFuerte(), null, "entidadesRelacionesFuertesDelDiagrama", null, 0, -1, Diagrama.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDiagrama_EntidadesRelacionesDebilesDelDiagrama(), this.getEntidadRelacionDebil(), null, "entidadesRelacionesDebilesDelDiagrama", null, 0, -1, Diagrama.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDiagrama_AtributoderivadoclaveprimariaDelDiagrama(), this.getAtributoDerivadoClavePrimaria(), null, "atributoderivadoclaveprimariaDelDiagrama", null, 0, -1, Diagrama.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDiagrama_EntidadfuerteDelDiagrama(), this.getEntidadFuerte(), null, "entidadfuerteDelDiagrama", null, 0, -1, Diagrama.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDiagrama_EntidaddebilDelDiagrama(), this.getEntidadDebil(), null, "entidaddebilDelDiagrama", null, 0, -1, Diagrama.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(entidadRelacionEClass, EntidadRelacion.class, "EntidadRelacion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEntidadRelacion_EntidadEntidadRelacion(), this.getEntidad(), null, "entidadEntidadRelacion", null, 1, 1, EntidadRelacion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -824,6 +917,12 @@ public class ModeloERPackageImpl extends EPackageImpl implements ModeloERPackage
 		initEClass(entidadRelacionDebilEClass, EntidadRelacionDebil.class, "EntidadRelacionDebil", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(entidadRelacionFuerteEClass, EntidadRelacionFuerte.class, "EntidadRelacionFuerte", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(atributoDerivadoClavePrimariaEClass, AtributoDerivadoClavePrimaria.class, "AtributoDerivadoClavePrimaria", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(entidadFuerteEClass, EntidadFuerte.class, "EntidadFuerte", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(entidadDebilEClass, EntidadDebil.class, "EntidadDebil", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(tipoDatoEEnum, TipoDato.class, "TipoDato");

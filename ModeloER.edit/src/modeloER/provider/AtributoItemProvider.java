@@ -304,6 +304,11 @@ public class AtributoItemProvider
 			(createChildParameter
 				(ModeloERPackage.Literals.ATRIBUTO__ATRIBUTOS_ATRIBUTO,
 				 ModeloERFactory.eINSTANCE.createClavePrimariaForanea()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModeloERPackage.Literals.ATRIBUTO__ATRIBUTOS_ATRIBUTO,
+				 ModeloERFactory.eINSTANCE.createAtributoDerivadoClavePrimaria()));
 	}
 
 	/**

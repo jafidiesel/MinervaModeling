@@ -165,6 +165,27 @@ public class ModeloERSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ModeloERPackage.ATRIBUTO_DERIVADO_CLAVE_PRIMARIA: {
+				AtributoDerivadoClavePrimaria atributoDerivadoClavePrimaria = (AtributoDerivadoClavePrimaria)theEObject;
+				T result = caseAtributoDerivadoClavePrimaria(atributoDerivadoClavePrimaria);
+				if (result == null) result = caseAtributo(atributoDerivadoClavePrimaria);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModeloERPackage.ENTIDAD_FUERTE: {
+				EntidadFuerte entidadFuerte = (EntidadFuerte)theEObject;
+				T result = caseEntidadFuerte(entidadFuerte);
+				if (result == null) result = caseEntidad(entidadFuerte);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModeloERPackage.ENTIDAD_DEBIL: {
+				EntidadDebil entidadDebil = (EntidadDebil)theEObject;
+				T result = caseEntidadDebil(entidadDebil);
+				if (result == null) result = caseEntidad(entidadDebil);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -391,6 +412,51 @@ public class ModeloERSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEntidadRelacionFuerte(EntidadRelacionFuerte object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Atributo Derivado Clave Primaria</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Atributo Derivado Clave Primaria</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAtributoDerivadoClavePrimaria(AtributoDerivadoClavePrimaria object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Entidad Fuerte</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Entidad Fuerte</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEntidadFuerte(EntidadFuerte object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Entidad Debil</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Entidad Debil</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEntidadDebil(EntidadDebil object) {
 		return null;
 	}
 

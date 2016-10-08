@@ -377,13 +377,40 @@ public interface ModeloERPackage extends EPackage {
 	int DIAGRAMA__ENTIDADES_RELACIONES_DEBILES_DEL_DIAGRAMA = 13;
 
 	/**
+	 * The feature id for the '<em><b>Atributoderivadoclaveprimaria Del Diagrama</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIAGRAMA__ATRIBUTODERIVADOCLAVEPRIMARIA_DEL_DIAGRAMA = 14;
+
+	/**
+	 * The feature id for the '<em><b>Entidadfuerte Del Diagrama</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIAGRAMA__ENTIDADFUERTE_DEL_DIAGRAMA = 15;
+
+	/**
+	 * The feature id for the '<em><b>Entidaddebil Del Diagrama</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DIAGRAMA__ENTIDADDEBIL_DEL_DIAGRAMA = 16;
+
+	/**
 	 * The number of structural features of the '<em>Diagrama</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DIAGRAMA_FEATURE_COUNT = 14;
+	int DIAGRAMA_FEATURE_COUNT = 17;
 
 	/**
 	 * The number of operations of the '<em>Diagrama</em>' class.
@@ -1153,6 +1180,180 @@ public interface ModeloERPackage extends EPackage {
 	int ENTIDAD_RELACION_FUERTE_OPERATION_COUNT = ENTIDAD_RELACION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link modeloER.impl.AtributoDerivadoClavePrimariaImpl <em>Atributo Derivado Clave Primaria</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see modeloER.impl.AtributoDerivadoClavePrimariaImpl
+	 * @see modeloER.impl.ModeloERPackageImpl#getAtributoDerivadoClavePrimaria()
+	 * @generated
+	 */
+	int ATRIBUTO_DERIVADO_CLAVE_PRIMARIA = 15;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO_DERIVADO_CLAVE_PRIMARIA__NOMBRE = ATRIBUTO__NOMBRE;
+
+	/**
+	 * The feature id for the '<em><b>Nulo</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO_DERIVADO_CLAVE_PRIMARIA__NULO = ATRIBUTO__NULO;
+
+	/**
+	 * The feature id for the '<em><b>Tipo Dato</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO_DERIVADO_CLAVE_PRIMARIA__TIPO_DATO = ATRIBUTO__TIPO_DATO;
+
+	/**
+	 * The feature id for the '<em><b>Clave Primaria</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO_DERIVADO_CLAVE_PRIMARIA__CLAVE_PRIMARIA = ATRIBUTO__CLAVE_PRIMARIA;
+
+	/**
+	 * The feature id for the '<em><b>Clave Foranea</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO_DERIVADO_CLAVE_PRIMARIA__CLAVE_FORANEA = ATRIBUTO__CLAVE_FORANEA;
+
+	/**
+	 * The feature id for the '<em><b>Atributos Atributo</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO_DERIVADO_CLAVE_PRIMARIA__ATRIBUTOS_ATRIBUTO = ATRIBUTO__ATRIBUTOS_ATRIBUTO;
+
+	/**
+	 * The number of structural features of the '<em>Atributo Derivado Clave Primaria</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO_DERIVADO_CLAVE_PRIMARIA_FEATURE_COUNT = ATRIBUTO_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Atributo Derivado Clave Primaria</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ATRIBUTO_DERIVADO_CLAVE_PRIMARIA_OPERATION_COUNT = ATRIBUTO_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link modeloER.impl.EntidadFuerteImpl <em>Entidad Fuerte</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see modeloER.impl.EntidadFuerteImpl
+	 * @see modeloER.impl.ModeloERPackageImpl#getEntidadFuerte()
+	 * @generated
+	 */
+	int ENTIDAD_FUERTE = 16;
+
+	/**
+	 * The feature id for the '<em><b>Atributos Entidad</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTIDAD_FUERTE__ATRIBUTOS_ENTIDAD = ENTIDAD__ATRIBUTOS_ENTIDAD;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTIDAD_FUERTE__NOMBRE = ENTIDAD__NOMBRE;
+
+	/**
+	 * The number of structural features of the '<em>Entidad Fuerte</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTIDAD_FUERTE_FEATURE_COUNT = ENTIDAD_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Entidad Fuerte</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTIDAD_FUERTE_OPERATION_COUNT = ENTIDAD_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link modeloER.impl.EntidadDebilImpl <em>Entidad Debil</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see modeloER.impl.EntidadDebilImpl
+	 * @see modeloER.impl.ModeloERPackageImpl#getEntidadDebil()
+	 * @generated
+	 */
+	int ENTIDAD_DEBIL = 17;
+
+	/**
+	 * The feature id for the '<em><b>Atributos Entidad</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTIDAD_DEBIL__ATRIBUTOS_ENTIDAD = ENTIDAD__ATRIBUTOS_ENTIDAD;
+
+	/**
+	 * The feature id for the '<em><b>Nombre</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTIDAD_DEBIL__NOMBRE = ENTIDAD__NOMBRE;
+
+	/**
+	 * The number of structural features of the '<em>Entidad Debil</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTIDAD_DEBIL_FEATURE_COUNT = ENTIDAD_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Entidad Debil</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTIDAD_DEBIL_OPERATION_COUNT = ENTIDAD_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link modeloER.TipoDato <em>Tipo Dato</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1160,7 +1361,7 @@ public interface ModeloERPackage extends EPackage {
 	 * @see modeloER.impl.ModeloERPackageImpl#getTipoDato()
 	 * @generated
 	 */
-	int TIPO_DATO = 15;
+	int TIPO_DATO = 18;
 
 
 	/**
@@ -1479,6 +1680,39 @@ public interface ModeloERPackage extends EPackage {
 	EReference getDiagrama_EntidadesRelacionesDebilesDelDiagrama();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link modeloER.Diagrama#getAtributoderivadoclaveprimariaDelDiagrama <em>Atributoderivadoclaveprimaria Del Diagrama</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Atributoderivadoclaveprimaria Del Diagrama</em>'.
+	 * @see modeloER.Diagrama#getAtributoderivadoclaveprimariaDelDiagrama()
+	 * @see #getDiagrama()
+	 * @generated
+	 */
+	EReference getDiagrama_AtributoderivadoclaveprimariaDelDiagrama();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link modeloER.Diagrama#getEntidadfuerteDelDiagrama <em>Entidadfuerte Del Diagrama</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Entidadfuerte Del Diagrama</em>'.
+	 * @see modeloER.Diagrama#getEntidadfuerteDelDiagrama()
+	 * @see #getDiagrama()
+	 * @generated
+	 */
+	EReference getDiagrama_EntidadfuerteDelDiagrama();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link modeloER.Diagrama#getEntidaddebilDelDiagrama <em>Entidaddebil Del Diagrama</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Entidaddebil Del Diagrama</em>'.
+	 * @see modeloER.Diagrama#getEntidaddebilDelDiagrama()
+	 * @see #getDiagrama()
+	 * @generated
+	 */
+	EReference getDiagrama_EntidaddebilDelDiagrama();
+
+	/**
 	 * Returns the meta object for class '{@link modeloER.EntidadRelacion <em>Entidad Relacion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1653,6 +1887,36 @@ public interface ModeloERPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEntidadRelacionFuerte();
+
+	/**
+	 * Returns the meta object for class '{@link modeloER.AtributoDerivadoClavePrimaria <em>Atributo Derivado Clave Primaria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Atributo Derivado Clave Primaria</em>'.
+	 * @see modeloER.AtributoDerivadoClavePrimaria
+	 * @generated
+	 */
+	EClass getAtributoDerivadoClavePrimaria();
+
+	/**
+	 * Returns the meta object for class '{@link modeloER.EntidadFuerte <em>Entidad Fuerte</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Entidad Fuerte</em>'.
+	 * @see modeloER.EntidadFuerte
+	 * @generated
+	 */
+	EClass getEntidadFuerte();
+
+	/**
+	 * Returns the meta object for class '{@link modeloER.EntidadDebil <em>Entidad Debil</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Entidad Debil</em>'.
+	 * @see modeloER.EntidadDebil
+	 * @generated
+	 */
+	EClass getEntidadDebil();
 
 	/**
 	 * Returns the meta object for enum '{@link modeloER.TipoDato <em>Tipo Dato</em>}'.
@@ -1928,6 +2192,30 @@ public interface ModeloERPackage extends EPackage {
 		EReference DIAGRAMA__ENTIDADES_RELACIONES_DEBILES_DEL_DIAGRAMA = eINSTANCE.getDiagrama_EntidadesRelacionesDebilesDelDiagrama();
 
 		/**
+		 * The meta object literal for the '<em><b>Atributoderivadoclaveprimaria Del Diagrama</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DIAGRAMA__ATRIBUTODERIVADOCLAVEPRIMARIA_DEL_DIAGRAMA = eINSTANCE.getDiagrama_AtributoderivadoclaveprimariaDelDiagrama();
+
+		/**
+		 * The meta object literal for the '<em><b>Entidadfuerte Del Diagrama</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DIAGRAMA__ENTIDADFUERTE_DEL_DIAGRAMA = eINSTANCE.getDiagrama_EntidadfuerteDelDiagrama();
+
+		/**
+		 * The meta object literal for the '<em><b>Entidaddebil Del Diagrama</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DIAGRAMA__ENTIDADDEBIL_DEL_DIAGRAMA = eINSTANCE.getDiagrama_EntidaddebilDelDiagrama();
+
+		/**
 		 * The meta object literal for the '{@link modeloER.impl.EntidadRelacionImpl <em>Entidad Relacion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2084,6 +2372,36 @@ public interface ModeloERPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ENTIDAD_RELACION_FUERTE = eINSTANCE.getEntidadRelacionFuerte();
+
+		/**
+		 * The meta object literal for the '{@link modeloER.impl.AtributoDerivadoClavePrimariaImpl <em>Atributo Derivado Clave Primaria</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see modeloER.impl.AtributoDerivadoClavePrimariaImpl
+		 * @see modeloER.impl.ModeloERPackageImpl#getAtributoDerivadoClavePrimaria()
+		 * @generated
+		 */
+		EClass ATRIBUTO_DERIVADO_CLAVE_PRIMARIA = eINSTANCE.getAtributoDerivadoClavePrimaria();
+
+		/**
+		 * The meta object literal for the '{@link modeloER.impl.EntidadFuerteImpl <em>Entidad Fuerte</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see modeloER.impl.EntidadFuerteImpl
+		 * @see modeloER.impl.ModeloERPackageImpl#getEntidadFuerte()
+		 * @generated
+		 */
+		EClass ENTIDAD_FUERTE = eINSTANCE.getEntidadFuerte();
+
+		/**
+		 * The meta object literal for the '{@link modeloER.impl.EntidadDebilImpl <em>Entidad Debil</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see modeloER.impl.EntidadDebilImpl
+		 * @see modeloER.impl.ModeloERPackageImpl#getEntidadDebil()
+		 * @generated
+		 */
+		EClass ENTIDAD_DEBIL = eINSTANCE.getEntidadDebil();
 
 		/**
 		 * The meta object literal for the '{@link modeloER.TipoDato <em>Tipo Dato</em>}' enum.

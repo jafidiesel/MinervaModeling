@@ -231,6 +231,11 @@ public class RelacionItemProvider
 			(createChildParameter
 				(ModeloERPackage.Literals.RELACION__ATRIBUTOS_RELACION,
 				 ModeloERFactory.eINSTANCE.createClavePrimariaForanea()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModeloERPackage.Literals.RELACION__ATRIBUTOS_RELACION,
+				 ModeloERFactory.eINSTANCE.createAtributoDerivadoClavePrimaria()));
 	}
 
 	/**

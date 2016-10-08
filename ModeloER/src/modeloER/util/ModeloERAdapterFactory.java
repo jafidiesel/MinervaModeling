@@ -128,6 +128,18 @@ public class ModeloERAdapterFactory extends AdapterFactoryImpl {
 				return createEntidadRelacionFuerteAdapter();
 			}
 			@Override
+			public Adapter caseAtributoDerivadoClavePrimaria(AtributoDerivadoClavePrimaria object) {
+				return createAtributoDerivadoClavePrimariaAdapter();
+			}
+			@Override
+			public Adapter caseEntidadFuerte(EntidadFuerte object) {
+				return createEntidadFuerteAdapter();
+			}
+			@Override
+			public Adapter caseEntidadDebil(EntidadDebil object) {
+				return createEntidadDebilAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -354,6 +366,48 @@ public class ModeloERAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEntidadRelacionFuerteAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modeloER.AtributoDerivadoClavePrimaria <em>Atributo Derivado Clave Primaria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modeloER.AtributoDerivadoClavePrimaria
+	 * @generated
+	 */
+	public Adapter createAtributoDerivadoClavePrimariaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modeloER.EntidadFuerte <em>Entidad Fuerte</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modeloER.EntidadFuerte
+	 * @generated
+	 */
+	public Adapter createEntidadFuerteAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modeloER.EntidadDebil <em>Entidad Debil</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modeloER.EntidadDebil
+	 * @generated
+	 */
+	public Adapter createEntidadDebilAdapter() {
 		return null;
 	}
 

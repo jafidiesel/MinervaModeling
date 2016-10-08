@@ -29,6 +29,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link modeloER.Diagrama#getTipofuerteDelDiagrama <em>Tipofuerte Del Diagrama</em>}</li>
  *   <li>{@link modeloER.Diagrama#getEntidadesRelacionesFuertesDelDiagrama <em>Entidades Relaciones Fuertes Del Diagrama</em>}</li>
  *   <li>{@link modeloER.Diagrama#getEntidadesRelacionesDebilesDelDiagrama <em>Entidades Relaciones Debiles Del Diagrama</em>}</li>
+ *   <li>{@link modeloER.Diagrama#getAtributoderivadoclaveprimariaDelDiagrama <em>Atributoderivadoclaveprimaria Del Diagrama</em>}</li>
+ *   <li>{@link modeloER.Diagrama#getEntidadfuerteDelDiagrama <em>Entidadfuerte Del Diagrama</em>}</li>
+ *   <li>{@link modeloER.Diagrama#getEntidaddebilDelDiagrama <em>Entidaddebil Del Diagrama</em>}</li>
  * </ul>
  *
  * @see modeloER.ModeloERPackage#getDiagrama()
@@ -259,5 +262,53 @@ public interface Diagrama extends EObject {
 	 * @generated
 	 */
 	EList<EntidadRelacionDebil> getEntidadesRelacionesDebilesDelDiagrama();
+
+	/**
+	 * Returns the value of the '<em><b>Atributoderivadoclaveprimaria Del Diagrama</b></em>' containment reference list.
+	 * The list contents are of type {@link modeloER.AtributoDerivadoClavePrimaria}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Atributoderivadoclaveprimaria Del Diagrama</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Atributoderivadoclaveprimaria Del Diagrama</em>' containment reference list.
+	 * @see modeloER.ModeloERPackage#getDiagrama_AtributoderivadoclaveprimariaDelDiagrama()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<AtributoDerivadoClavePrimaria> getAtributoderivadoclaveprimariaDelDiagrama();
+
+	/**
+	 * Returns the value of the '<em><b>Entidadfuerte Del Diagrama</b></em>' containment reference list.
+	 * The list contents are of type {@link modeloER.EntidadFuerte}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Entidadfuerte Del Diagrama</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Entidadfuerte Del Diagrama</em>' containment reference list.
+	 * @see modeloER.ModeloERPackage#getDiagrama_EntidadfuerteDelDiagrama()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<EntidadFuerte> getEntidadfuerteDelDiagrama();
+
+	/**
+	 * Returns the value of the '<em><b>Entidaddebil Del Diagrama</b></em>' containment reference list.
+	 * The list contents are of type {@link modeloER.EntidadDebil}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Entidaddebil Del Diagrama</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Entidaddebil Del Diagrama</em>' containment reference list.
+	 * @see modeloER.ModeloERPackage#getDiagrama_EntidaddebilDelDiagrama()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<EntidadDebil> getEntidaddebilDelDiagrama();
 
 } // Diagrama

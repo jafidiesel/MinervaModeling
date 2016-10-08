@@ -208,6 +208,11 @@ public class EntidadItemProvider
 			(createChildParameter
 				(ModeloERPackage.Literals.ENTIDAD__ATRIBUTOS_ENTIDAD,
 				 ModeloERFactory.eINSTANCE.createClavePrimariaForanea()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModeloERPackage.Literals.ENTIDAD__ATRIBUTOS_ENTIDAD,
+				 ModeloERFactory.eINSTANCE.createAtributoDerivadoClavePrimaria()));
 	}
 
 	/**

@@ -72,6 +72,9 @@ public class ModeloERFactoryImpl extends EFactoryImpl implements ModeloERFactory
 			case ModeloERPackage.TIPO_FUERTE: return createTipoFuerte();
 			case ModeloERPackage.ENTIDAD_RELACION_DEBIL: return createEntidadRelacionDebil();
 			case ModeloERPackage.ENTIDAD_RELACION_FUERTE: return createEntidadRelacionFuerte();
+			case ModeloERPackage.ATRIBUTO_DERIVADO_CLAVE_PRIMARIA: return createAtributoDerivadoClavePrimaria();
+			case ModeloERPackage.ENTIDAD_FUERTE: return createEntidadFuerte();
+			case ModeloERPackage.ENTIDAD_DEBIL: return createEntidadDebil();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -255,6 +258,36 @@ public class ModeloERFactoryImpl extends EFactoryImpl implements ModeloERFactory
 	public EntidadRelacionFuerte createEntidadRelacionFuerte() {
 		EntidadRelacionFuerteImpl entidadRelacionFuerte = new EntidadRelacionFuerteImpl();
 		return entidadRelacionFuerte;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AtributoDerivadoClavePrimaria createAtributoDerivadoClavePrimaria() {
+		AtributoDerivadoClavePrimariaImpl atributoDerivadoClavePrimaria = new AtributoDerivadoClavePrimariaImpl();
+		return atributoDerivadoClavePrimaria;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EntidadFuerte createEntidadFuerte() {
+		EntidadFuerteImpl entidadFuerte = new EntidadFuerteImpl();
+		return entidadFuerte;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EntidadDebil createEntidadDebil() {
+		EntidadDebilImpl entidadDebil = new EntidadDebilImpl();
+		return entidadDebil;
 	}
 
 	/**

@@ -6,12 +6,15 @@ import java.util.Collection;
 
 import modeloER.Atributo;
 import modeloER.AtributoDerivado;
+import modeloER.AtributoDerivadoClavePrimaria;
 import modeloER.AtributoMultivaluado;
 import modeloER.ClaveForanea;
 import modeloER.ClavePrimaria;
 import modeloER.ClavePrimariaForanea;
 import modeloER.Diagrama;
 import modeloER.Entidad;
+import modeloER.EntidadDebil;
+import modeloER.EntidadFuerte;
 import modeloER.EntidadRelacion;
 import modeloER.EntidadRelacionDebil;
 import modeloER.EntidadRelacionFuerte;
@@ -55,6 +58,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link modeloER.impl.DiagramaImpl#getTipofuerteDelDiagrama <em>Tipofuerte Del Diagrama</em>}</li>
  *   <li>{@link modeloER.impl.DiagramaImpl#getEntidadesRelacionesFuertesDelDiagrama <em>Entidades Relaciones Fuertes Del Diagrama</em>}</li>
  *   <li>{@link modeloER.impl.DiagramaImpl#getEntidadesRelacionesDebilesDelDiagrama <em>Entidades Relaciones Debiles Del Diagrama</em>}</li>
+ *   <li>{@link modeloER.impl.DiagramaImpl#getAtributoderivadoclaveprimariaDelDiagrama <em>Atributoderivadoclaveprimaria Del Diagrama</em>}</li>
+ *   <li>{@link modeloER.impl.DiagramaImpl#getEntidadfuerteDelDiagrama <em>Entidadfuerte Del Diagrama</em>}</li>
+ *   <li>{@link modeloER.impl.DiagramaImpl#getEntidaddebilDelDiagrama <em>Entidaddebil Del Diagrama</em>}</li>
  * </ul>
  *
  * @generated
@@ -199,6 +205,36 @@ public class DiagramaImpl extends MinimalEObjectImpl.Container implements Diagra
 	 * @ordered
 	 */
 	protected EList<EntidadRelacionDebil> entidadesRelacionesDebilesDelDiagrama;
+
+	/**
+	 * The cached value of the '{@link #getAtributoderivadoclaveprimariaDelDiagrama() <em>Atributoderivadoclaveprimaria Del Diagrama</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAtributoderivadoclaveprimariaDelDiagrama()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<AtributoDerivadoClavePrimaria> atributoderivadoclaveprimariaDelDiagrama;
+
+	/**
+	 * The cached value of the '{@link #getEntidadfuerteDelDiagrama() <em>Entidadfuerte Del Diagrama</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEntidadfuerteDelDiagrama()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<EntidadFuerte> entidadfuerteDelDiagrama;
+
+	/**
+	 * The cached value of the '{@link #getEntidaddebilDelDiagrama() <em>Entidaddebil Del Diagrama</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEntidaddebilDelDiagrama()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<EntidadDebil> entidaddebilDelDiagrama;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -392,6 +428,42 @@ public class DiagramaImpl extends MinimalEObjectImpl.Container implements Diagra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<AtributoDerivadoClavePrimaria> getAtributoderivadoclaveprimariaDelDiagrama() {
+		if (atributoderivadoclaveprimariaDelDiagrama == null) {
+			atributoderivadoclaveprimariaDelDiagrama = new EObjectContainmentEList<AtributoDerivadoClavePrimaria>(AtributoDerivadoClavePrimaria.class, this, ModeloERPackage.DIAGRAMA__ATRIBUTODERIVADOCLAVEPRIMARIA_DEL_DIAGRAMA);
+		}
+		return atributoderivadoclaveprimariaDelDiagrama;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<EntidadFuerte> getEntidadfuerteDelDiagrama() {
+		if (entidadfuerteDelDiagrama == null) {
+			entidadfuerteDelDiagrama = new EObjectContainmentEList<EntidadFuerte>(EntidadFuerte.class, this, ModeloERPackage.DIAGRAMA__ENTIDADFUERTE_DEL_DIAGRAMA);
+		}
+		return entidadfuerteDelDiagrama;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<EntidadDebil> getEntidaddebilDelDiagrama() {
+		if (entidaddebilDelDiagrama == null) {
+			entidaddebilDelDiagrama = new EObjectContainmentEList<EntidadDebil>(EntidadDebil.class, this, ModeloERPackage.DIAGRAMA__ENTIDADDEBIL_DEL_DIAGRAMA);
+		}
+		return entidaddebilDelDiagrama;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -423,6 +495,12 @@ public class DiagramaImpl extends MinimalEObjectImpl.Container implements Diagra
 				return ((InternalEList<?>)getEntidadesRelacionesFuertesDelDiagrama()).basicRemove(otherEnd, msgs);
 			case ModeloERPackage.DIAGRAMA__ENTIDADES_RELACIONES_DEBILES_DEL_DIAGRAMA:
 				return ((InternalEList<?>)getEntidadesRelacionesDebilesDelDiagrama()).basicRemove(otherEnd, msgs);
+			case ModeloERPackage.DIAGRAMA__ATRIBUTODERIVADOCLAVEPRIMARIA_DEL_DIAGRAMA:
+				return ((InternalEList<?>)getAtributoderivadoclaveprimariaDelDiagrama()).basicRemove(otherEnd, msgs);
+			case ModeloERPackage.DIAGRAMA__ENTIDADFUERTE_DEL_DIAGRAMA:
+				return ((InternalEList<?>)getEntidadfuerteDelDiagrama()).basicRemove(otherEnd, msgs);
+			case ModeloERPackage.DIAGRAMA__ENTIDADDEBIL_DEL_DIAGRAMA:
+				return ((InternalEList<?>)getEntidaddebilDelDiagrama()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -463,6 +541,12 @@ public class DiagramaImpl extends MinimalEObjectImpl.Container implements Diagra
 				return getEntidadesRelacionesFuertesDelDiagrama();
 			case ModeloERPackage.DIAGRAMA__ENTIDADES_RELACIONES_DEBILES_DEL_DIAGRAMA:
 				return getEntidadesRelacionesDebilesDelDiagrama();
+			case ModeloERPackage.DIAGRAMA__ATRIBUTODERIVADOCLAVEPRIMARIA_DEL_DIAGRAMA:
+				return getAtributoderivadoclaveprimariaDelDiagrama();
+			case ModeloERPackage.DIAGRAMA__ENTIDADFUERTE_DEL_DIAGRAMA:
+				return getEntidadfuerteDelDiagrama();
+			case ModeloERPackage.DIAGRAMA__ENTIDADDEBIL_DEL_DIAGRAMA:
+				return getEntidaddebilDelDiagrama();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -532,6 +616,18 @@ public class DiagramaImpl extends MinimalEObjectImpl.Container implements Diagra
 				getEntidadesRelacionesDebilesDelDiagrama().clear();
 				getEntidadesRelacionesDebilesDelDiagrama().addAll((Collection<? extends EntidadRelacionDebil>)newValue);
 				return;
+			case ModeloERPackage.DIAGRAMA__ATRIBUTODERIVADOCLAVEPRIMARIA_DEL_DIAGRAMA:
+				getAtributoderivadoclaveprimariaDelDiagrama().clear();
+				getAtributoderivadoclaveprimariaDelDiagrama().addAll((Collection<? extends AtributoDerivadoClavePrimaria>)newValue);
+				return;
+			case ModeloERPackage.DIAGRAMA__ENTIDADFUERTE_DEL_DIAGRAMA:
+				getEntidadfuerteDelDiagrama().clear();
+				getEntidadfuerteDelDiagrama().addAll((Collection<? extends EntidadFuerte>)newValue);
+				return;
+			case ModeloERPackage.DIAGRAMA__ENTIDADDEBIL_DEL_DIAGRAMA:
+				getEntidaddebilDelDiagrama().clear();
+				getEntidaddebilDelDiagrama().addAll((Collection<? extends EntidadDebil>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -586,6 +682,15 @@ public class DiagramaImpl extends MinimalEObjectImpl.Container implements Diagra
 			case ModeloERPackage.DIAGRAMA__ENTIDADES_RELACIONES_DEBILES_DEL_DIAGRAMA:
 				getEntidadesRelacionesDebilesDelDiagrama().clear();
 				return;
+			case ModeloERPackage.DIAGRAMA__ATRIBUTODERIVADOCLAVEPRIMARIA_DEL_DIAGRAMA:
+				getAtributoderivadoclaveprimariaDelDiagrama().clear();
+				return;
+			case ModeloERPackage.DIAGRAMA__ENTIDADFUERTE_DEL_DIAGRAMA:
+				getEntidadfuerteDelDiagrama().clear();
+				return;
+			case ModeloERPackage.DIAGRAMA__ENTIDADDEBIL_DEL_DIAGRAMA:
+				getEntidaddebilDelDiagrama().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -626,6 +731,12 @@ public class DiagramaImpl extends MinimalEObjectImpl.Container implements Diagra
 				return entidadesRelacionesFuertesDelDiagrama != null && !entidadesRelacionesFuertesDelDiagrama.isEmpty();
 			case ModeloERPackage.DIAGRAMA__ENTIDADES_RELACIONES_DEBILES_DEL_DIAGRAMA:
 				return entidadesRelacionesDebilesDelDiagrama != null && !entidadesRelacionesDebilesDelDiagrama.isEmpty();
+			case ModeloERPackage.DIAGRAMA__ATRIBUTODERIVADOCLAVEPRIMARIA_DEL_DIAGRAMA:
+				return atributoderivadoclaveprimariaDelDiagrama != null && !atributoderivadoclaveprimariaDelDiagrama.isEmpty();
+			case ModeloERPackage.DIAGRAMA__ENTIDADFUERTE_DEL_DIAGRAMA:
+				return entidadfuerteDelDiagrama != null && !entidadfuerteDelDiagrama.isEmpty();
+			case ModeloERPackage.DIAGRAMA__ENTIDADDEBIL_DEL_DIAGRAMA:
+				return entidaddebilDelDiagrama != null && !entidaddebilDelDiagrama.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -157,6 +157,33 @@ public interface ModeloERFactory extends EFactory {
 	EntidadRelacionFuerte createEntidadRelacionFuerte();
 
 	/**
+	 * Returns a new object of class '<em>Atributo Derivado Clave Primaria</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Atributo Derivado Clave Primaria</em>'.
+	 * @generated
+	 */
+	AtributoDerivadoClavePrimaria createAtributoDerivadoClavePrimaria();
+
+	/**
+	 * Returns a new object of class '<em>Entidad Fuerte</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Entidad Fuerte</em>'.
+	 * @generated
+	 */
+	EntidadFuerte createEntidadFuerte();
+
+	/**
+	 * Returns a new object of class '<em>Entidad Debil</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Entidad Debil</em>'.
+	 * @generated
+	 */
+	EntidadDebil createEntidadDebil();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
