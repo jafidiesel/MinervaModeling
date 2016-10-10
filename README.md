@@ -1,6 +1,6 @@
 # MinervaModeling
 
-## Posibles inconvenientes
+## Posibles inconvenientes.
 >**Nota**:
 >Podemos solucionar esto simplemente cambiando la perspectiva de Java(por default) a Modeling, en la que nos saldrá el metamodelo en forma gráfica.
 Cuando importen este proyecto, puede que el archivo **modeloER.aird** no les
