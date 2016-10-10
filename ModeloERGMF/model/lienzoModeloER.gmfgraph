@@ -89,7 +89,14 @@
         <children
             xsi:type="gmfgraph:Label"
             name="NombreClavePrimaria"
-            text="&lt;...>"/>
+            text="&lt;...>">
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              style="BOLD"/>
+          <border
+              xsi:type="gmfgraph:LineBorder"
+              width="2"/>
+        </children>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
@@ -97,17 +104,25 @@
     <descriptors
         name="ClaveForaneaFigure">
       <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="ClaveForaneaFigure">
+          xsi:type="gmfgraph:Ellipse">
         <layout
             xsi:type="gmfgraph:FlowLayout"/>
+        <minimumSize
+            dx="40"
+            dy="25"/>
         <children
             xsi:type="gmfgraph:Label"
-            name="ClaveForaneaNombreFigure"
-            text="&lt;...>"/>
+            name="NombreClaveForanea"
+            text="&lt;..>">
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              style="ITALIC"/>
+          <border
+              xsi:type="gmfgraph:LineBorder"
+              width="2"/>
+        </children>
       </actualFigure>
-      <accessors
-          figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+      <accessors/>
     </descriptors>
     <descriptors
         name="ClavePrimariaForaneaFigure">

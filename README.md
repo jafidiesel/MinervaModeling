@@ -1,5 +1,8 @@
 # MinervaModeling
 
+> Toolkit para entender que puta son las cosas que se ponen en GMF
+> http://what-when-how.com/Tutorial/topic-225aimup/Eclipse-Modeling-Project-A-Domain-Specific-Language-Toolkit-533.html
+
 ## Posibles inconvenientes.
 >**Nota**:
 >Podemos solucionar esto simplemente cambiando la perspectiva de Java(por default) a Modeling, en la que nos saldrá el metamodelo en forma gráfica.
