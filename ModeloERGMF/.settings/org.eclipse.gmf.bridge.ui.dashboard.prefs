@@ -1,5 +1,5 @@
 eclipse.preferences.version=1
 gmf_dashboard/domainGenerationModel=platform\:/resource/ModeloER/model/modeloER.genmodel
 gmf_dashboard/domainModel=platform\:/resource/ModeloER/model/modeloER.ecore
-gmf_dashboard/graphicalDefinitionModel=platform\:/resource/ModeloERGMF/model/lienzoModeloER.gmfgraph
-gmf_dashboard/toolingDefinitionModel=platform\:/resource/ModeloERGMF/model/barraModeloER.gmftool
+gmf_dashboard/graphicalDefinitionModel=platform\:/resource/ModeloERGMF/model/LienzoModeloER.gmfgraph
+gmf_dashboard/toolingDefinitionModel=platform\:/resource/ModeloERGMF/model/BarraModeloER.gmftool

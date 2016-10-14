@@ -10,7 +10,7 @@
       <!-- @generated modeloER -->
       <package
             uri="http://www.example.org/modeloER"
-            class="modeloER.ModeloERPackage"
+            class="modeloER.modeloER.ModeloERPackage"
             genModel="model/modeloER.genmodel"/>
    </extension>
 

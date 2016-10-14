@@ -4,7 +4,8 @@
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="7.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>modeloER.ecore</foreignModel>
-  <genPackages prefix="ModeloER" disposableProviderFactory="true" ecorePackage="modeloER.ecore#/">
+  <genPackages prefix="ModeloER" basePackage="modeloER" disposableProviderFactory="true"
+      ecorePackage="modeloER.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="modeloER.ecore#//TipoDato">
       <genEnumLiterals ecoreEnumLiteral="modeloER.ecore#//TipoDato/varchar"/>
       <genEnumLiterals ecoreEnumLiteral="modeloER.ecore#//TipoDato/int"/>
@@ -20,14 +21,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Atributo/nombre"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Atributo/nulo"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Atributo/tipoDato"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Atributo/clavePrimaria"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Atributo/claveForanea"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Atributo/atributosAtributo"/>
     </genClasses>
     <genClasses ecoreClass="modeloER.ecore#//Relacion">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Relacion/nombre"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Relacion/atributosRelacion"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//EntidadRelacion/entidadEntidadRelacion"/>
     </genClasses>
     <genClasses ecoreClass="modeloER.ecore#//Diagrama">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/relacionesDelDiagrama"/>
@@ -63,8 +61,8 @@
     <genClasses ecoreClass="modeloER.ecore#//ClavePrimaria"/>
     <genClasses ecoreClass="modeloER.ecore#//ClaveForanea"/>
     <genClasses ecoreClass="modeloER.ecore#//ClavePrimariaForanea"/>
-    <genClasses ecoreClass="modeloER.ecore#//TipoDebil"/>
-    <genClasses ecoreClass="modeloER.ecore#//TipoFuerte"/>
+    <genClasses ecoreClass="modeloER.ecore#//RelacionTipoDebil"/>
+    <genClasses ecoreClass="modeloER.ecore#//RelacionTipoFuerte"/>
     <genClasses ecoreClass="modeloER.ecore#//EntidadRelacionDebil"/>
     <genClasses ecoreClass="modeloER.ecore#//EntidadRelacionFuerte"/>
     <genClasses ecoreClass="modeloER.ecore#//AtributoDerivadoClavePrimaria"/>

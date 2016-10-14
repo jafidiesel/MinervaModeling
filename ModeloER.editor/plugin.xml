@@ -12,9 +12,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="modeloER.presentation.ModeloERModelWizardID"
+            id="modeloER.modeloER.presentation.ModeloERModelWizardID"
             name="%_UI_ModeloERModelWizard_label"
-            class="modeloER.presentation.ModeloERModelWizard"
+            class="modeloER.modeloER.presentation.ModeloERModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/ModeloERModelFile.gif">
          <description>%_UI_ModeloERModelWizard_description</description>
@@ -25,13 +25,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated modeloER -->
       <editor
-            id="modeloER.presentation.ModeloEREditorID"
+            id="modeloER.modeloER.presentation.ModeloEREditorID"
             name="%_UI_ModeloEREditor_label"
             icon="icons/full/obj16/ModeloERModelFile.gif"
             extensions="modeloer"
-            class="modeloER.presentation.ModeloEREditor"
-            contributorClass="modeloER.presentation.ModeloERActionBarContributor">
+            class="modeloER.modeloER.presentation.ModeloEREditor"
+            contributorClass="modeloER.modeloER.presentation.ModeloERActionBarContributor">
       </editor>
    </extension>
-
 </plugin>

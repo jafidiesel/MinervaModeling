@@ -12,4 +12,7 @@ Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: modeloER,
  modeloER.impl,
- modeloER.util
+ modeloER.util,
+ modeloER.modeloER,
+ modeloER.modeloER.impl,
+ modeloER.modeloER.util

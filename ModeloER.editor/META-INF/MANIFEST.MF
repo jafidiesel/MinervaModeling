@@ -4,11 +4,12 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: ModeloER.editor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: modeloER.presentation.ModeloEREditorPlugin$Implementation
+Bundle-Activator: modeloER.modeloER.presentation.ModeloEREditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: modeloER.presentation
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: modeloER.presentation,
+ modeloER.modeloER.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  ModeloER.edit;visibility:=reexport,
