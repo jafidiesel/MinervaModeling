@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmftool:ToolRegistry
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
+  <palette
+      title="modeloERPalette">
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="modeloER">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Entidad"
+          description="Create new Entidad">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/Entidad.gif"
+            bundle="modeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/Entidad.gif"
+            bundle="modeloER.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="EntidadEntidadAtributos"
+          description="Create new EntidadEntidadAtributos">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/EntidadAtributos.gif"
+            bundle="modeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/EntidadAtributos.gif"
+            bundle="modeloER.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Atributo"
+          description="Create new Atributo">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/Atributo.gif"
+            bundle="modeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/Atributo.gif"
+            bundle="modeloER.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="EntidadRelacion"
+          description="Create new EntidadRelacion">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/EntidadRelacion.gif"
+            bundle="modeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/EntidadRelacion.gif"
+            bundle="modeloER.edit"/>
+      </tools>
+    </tools>
+  </palette>
+</gmftool:ToolRegistry>
