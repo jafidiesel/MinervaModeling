@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mer_completo:Diagrama
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mer_completo="http://www.example.org/mer_completo"
+    xsi:schemaLocation="http://www.example.org/mer_completo mer_completo.ecore">
+  <Diagrama_EntidadFuerte
+      nombre="Persona"/>
+  <Diagrama_EntidadFuerte
+      nombre="Doctor"/>
+  <Diagrama_EntidadFuerte
+      nombre="Abogado"/>
+  <Diagrama_HerenciaPadre
+      herenciaPadre_Entidad="//@Diagrama_EntidadFuerte.0"
+      nombre="Persona"/>
+  <Diagrama_HerenciaHijo
+      herenciaHijo_Entidad="//@Diagrama_EntidadFuerte.1"
+      nombre="Doctor"/>
+  <Diagrama_HerenciaHijo
+      herenciaHijo_Entidad="//@Diagrama_EntidadFuerte.2"
+      nombre="Abogado"/>
+  <Diagrama_Herencia
+      Herencia_HerneciaPadre="//@Diagrama_HerenciaPadre.0"
+      Herencia_HerenciaHijo="//@Diagrama_HerenciaHijo.0 //@Diagrama_HerenciaHijo.1"/>
+</mer_completo:Diagrama>

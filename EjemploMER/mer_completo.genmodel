@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/mer_completo/src" modelPluginID="mer_completo"
+    modelName="Mer_completo" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>mer_completo.ecore</foreignModel>
+  <genPackages prefix="Mer_completo" disposableProviderFactory="true" ecorePackage="mer_completo.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mer_completo.ecore#//TipoDato">
+      <genEnumLiterals ecoreEnumLiteral="mer_completo.ecore#//TipoDato/int"/>
+      <genEnumLiterals ecoreEnumLiteral="mer_completo.ecore#//TipoDato/float"/>
+      <genEnumLiterals ecoreEnumLiteral="mer_completo.ecore#//TipoDato/char"/>
+      <genEnumLiterals ecoreEnumLiteral="mer_completo.ecore#//TipoDato/varchar"/>
+      <genEnumLiterals ecoreEnumLiteral="mer_completo.ecore#//TipoDato/Date"/>
+    </genEnums>
+    <genClasses ecoreClass="mer_completo.ecore#//Entidad">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mer_completo.ecore#//Entidad/nombre"/>
+    </genClasses>
+    <genClasses ecoreClass="mer_completo.ecore#//Atributo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mer_completo.ecore#//Atributo/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mer_completo.ecore#//Atributo/tipodato"/>
+    </genClasses>
+    <genClasses ecoreClass="mer_completo.ecore#//EntidadRelacion"/>
+    <genClasses ecoreClass="mer_completo.ecore#//Relacion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mer_completo.ecore#//Relacion/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mer_completo.ecore#//Relacion/limiteOrigen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mer_completo.ecore#//Relacion/limiteDestino"/>
+    </genClasses>
+    <genClasses ecoreClass="mer_completo.ecore#//Diagrama">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mer_completo.ecore#//Diagrama/Diagrama_EntidadFuerte"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mer_completo.ecore#//Diagrama/Diagrama_EntidadDebil"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mer_completo.ecore#//Diagrama/Diagrama_EntidadRelacionSimple"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mer_completo.ecore#//Diagrama/Diagrama_EntidadRelacionTotal"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mer_completo.ecore#//Diagrama/Diagrama_RelacionFuerte"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mer_completo.ecore#//Diagrama/Diagrama_RelacionDebil"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mer_completo.ecore#//Diagrama/Diagrama_HerenciaPadre"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mer_completo.ecore#//Diagrama/Diagrama_HerenciaHijo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mer_completo.ecore#//Diagrama/Diagrama_Herencia"/>
+    </genClasses>
+    <genClasses ecoreClass="mer_completo.ecore#//AtributoSimple"/>
+    <genClasses ecoreClass="mer_completo.ecore#//ClavePrimaria"/>
+    <genClasses ecoreClass="mer_completo.ecore#//AtributoMultivaluado">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mer_completo.ecore#//AtributoMultivaluado/AtributoMultivaludo_AtributoSimple"/>
+    </genClasses>
+    <genClasses ecoreClass="mer_completo.ecore#//EntidadFuerte">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mer_completo.ecore#//EntidadFuerte/EntidadFuerte_AtributoSimple"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mer_completo.ecore#//EntidadFuerte/EntidadFuerte_ClavePrimaria"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mer_completo.ecore#//EntidadFuerte/EntidadFuerte_AtributoMultivaluado"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mer_completo.ecore#//EntidadFuerte/EntidadFuerte_AtributoDerivado"/>
+    </genClasses>
+    <genClasses ecoreClass="mer_completo.ecore#//EntidadDebil">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mer_completo.ecore#//EntidadDebil/EntidadDebil_AtributoSimple"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mer_completo.ecore#//EntidadDebil/EntidadDebil_ClavePrimaria"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mer_completo.ecore#//EntidadDebil/EntidadDebil_AtributoMultivaluado"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mer_completo.ecore#//EntidadDebil/EntidadDebil_AtributoDerivado"/>
+    </genClasses>
+    <genClasses ecoreClass="mer_completo.ecore#//RelacionFuerte">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mer_completo.ecore#//RelacionFuerte/RelacionFuerte_AtributoSimple"/>
+    </genClasses>
+    <genClasses ecoreClass="mer_completo.ecore#//RelacionDebil">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mer_completo.ecore#//RelacionDebil/RelacionDebil_AtributoSimple"/>
+    </genClasses>
+    <genClasses ecoreClass="mer_completo.ecore#//AtributoDerivado"/>
+    <genClasses ecoreClass="mer_completo.ecore#//EntidadRelacionSimple">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mer_completo.ecore#//EntidadRelacionSimple/EntidadRelacionSimple_RelacionFuerte"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mer_completo.ecore#//EntidadRelacionSimple/EntidadRelacionSimple_RelacionDebil"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mer_completo.ecore#//EntidadRelacionSimple/EntidadRelacionSimple_EntidadFuerte"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mer_completo.ecore#//EntidadRelacionSimple/EntidadRelacionSimple_EntidadDebil"/>
+    </genClasses>
+    <genClasses ecoreClass="mer_completo.ecore#//EntidadRelacionTotal">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mer_completo.ecore#//EntidadRelacionTotal/EntidadRelacionTotal_RelacionFuerte"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mer_completo.ecore#//EntidadRelacionTotal/EntidadRelacionTotal_RelacionDebil"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mer_completo.ecore#//EntidadRelacionTotal/EntidadRelacionTotal_EntidadFuerte"/>
+    </genClasses>
+    <genClasses ecoreClass="mer_completo.ecore#//Herencia">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mer_completo.ecore#//Herencia/Herencia_HerneciaPadre"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mer_completo.ecore#//Herencia/Herencia_HerenciaHijo"/>
+    </genClasses>
+    <genClasses ecoreClass="mer_completo.ecore#//HerenciaPadre">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mer_completo.ecore#//HerenciaPadre/herenciaPadre_Entidad"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mer_completo.ecore#//HerenciaPadre/nombre"/>
+    </genClasses>
+    <genClasses ecoreClass="mer_completo.ecore#//HerenciaHijo">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mer_completo.ecore#//HerenciaHijo/herenciaHijo_Entidad"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mer_completo.ecore#//HerenciaHijo/nombre"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
