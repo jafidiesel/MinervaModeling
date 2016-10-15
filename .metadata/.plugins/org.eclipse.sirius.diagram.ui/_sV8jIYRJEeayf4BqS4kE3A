@@ -1,6 +1,6 @@
-#Thu Sep 29 00:28:21 ART 2016
-viewport.x=-23
+#Sat Oct 15 00:34:30 ART 2016
 rulergrid.snaptogeometry=true
+viewport.x=-80
 zoom=1.0
 print.margin.right=0.5
 rulergrid.rulerunit=1
@@ -17,4 +17,4 @@ rulergrid.gridlevel=true
 print.margin.top=0.5
 print.useMillim=true
 print.usePortrait=true
-viewport.y=-105
+viewport.y=201

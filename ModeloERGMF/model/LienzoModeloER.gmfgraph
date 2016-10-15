@@ -142,17 +142,23 @@
     <descriptors
         name="RelacionTipoDebilFigure">
       <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="RelacionTipoDebilFigure">
+          xsi:type="gmfgraph:ScalablePolygon">
         <layout
             xsi:type="gmfgraph:FlowLayout"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="RelacionTipoDebilNombreFigure"
-            text="&lt;...>"/>
+        <template
+            y="30"/>
+        <template
+            x="30"/>
+        <template
+            x="60"
+            y="30"/>
+        <template
+            x="30"
+            y="60"/>
+        <template
+            y="30"/>
       </actualFigure>
-      <accessors
-          figure="//@figures.0/@descriptors.13/@actualFigure/@children.0"/>
+      <accessors/>
     </descriptors>
     <descriptors
         name="RelacionTipoDebilAtributosRelacionFigure">
@@ -163,14 +169,24 @@
     <descriptors
         name="RelacionTipoFuerteFigure">
       <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="RelacionTipoFuerteFigure">
+          xsi:type="gmfgraph:ScalablePolygon"
+          lineWidth="5">
         <layout
-            xsi:type="gmfgraph:FlowLayout"/>
+            xsi:type="gmfgraph:FlowLayout"
+            majorAlignment="CENTER"/>
         <children
             xsi:type="gmfgraph:Label"
             name="RelacionTipoFuerteNombreFigure"
             text="&lt;...>"/>
+        <template
+            y="30"/>
+        <template
+            x="30"/>
+        <template
+            x="60"
+            y="30"/>
+        <template
+            y="30"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.15/@actualFigure/@children.0"/>
@@ -271,6 +287,35 @@
           name="EntidadFuerteFigure">
         <layout
             xsi:type="gmfgraph:FlowLayout"/>
+        <border
+            xsi:type="gmfgraph:CompoundBorder">
+          <outer
+              xsi:type="gmfgraph:CompoundBorder">
+            <outer
+                xsi:type="gmfgraph:LineBorder"/>
+            <inner
+                xsi:type="gmfgraph:MarginBorder">
+              <insets
+                  top="5"
+                  left="5"
+                  bottom="5"
+                  right="5"/>
+            </inner>
+          </outer>
+          <inner
+              xsi:type="gmfgraph:CompoundBorder">
+            <outer
+                xsi:type="gmfgraph:LineBorder"/>
+            <inner
+                xsi:type="gmfgraph:MarginBorder">
+              <insets
+                  top="5"
+                  left="5"
+                  bottom="5"
+                  right="5"/>
+            </inner>
+          </inner>
+        </border>
         <children
             xsi:type="gmfgraph:Label"
             name="EntidadFuerteNombreFigure"
