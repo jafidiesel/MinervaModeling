@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated flotaVehiculos -->
+      <package
+            uri="http://www.example.org/flotaVehiculos"
+            class="flotaVehiculos.FlotaVehiculosPackage"
+            genModel="model/flotaVehiculos.genmodel"/>
+   </extension>
+
+</plugin>

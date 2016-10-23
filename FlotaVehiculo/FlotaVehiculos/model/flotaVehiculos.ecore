@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="flotaVehiculos" nsURI="http://www.example.org/flotaVehiculos"
+    nsPrefix="flotaVehiculos">
+  <eClassifiers xsi:type="ecore:EClass" name="Diagrama">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vehiculo" lowerBound="1"
+        upperBound="-1" eType="#//Vehiculo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conductores" lowerBound="1"
+        upperBound="-1" eType="#//Conductor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="asignacionesDiarias" lowerBound="1"
+        upperBound="-1" eType="#//AsignacionDiaria" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Vehiculo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="matricula" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="marca" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Automovil" eSuperTypes="#//Vehiculo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pasajeros" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeSegunda" eSuperTypes="#//Conductor">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conductorAsignacionDiaria"
+        lowerBound="1" upperBound="-1" eType="#//AsignacionDiaria"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Conductor">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cedula" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fechaNacimiento" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DePrimera" eSuperTypes="#//Conductor">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="asignacionFija" lowerBound="1"
+        eType="#//Pesado"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pesado" eSuperTypes="#//Vehiculo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="carga" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Camion" eSuperTypes="#//Pesado">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cantidadDeEjes" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Camioneta" eSuperTypes="#//Pesado">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dobleCabina" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Omnibus" eSuperTypes="#//Pesado">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cantidadAsientos" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="banio" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AsignacionDiaria">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="asignacionDiariaVehiculo"
+        lowerBound="1" eType="#//Automovil"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fechaAsignacion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+  </eClassifiers>
+</ecore:EPackage>

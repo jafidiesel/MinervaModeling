@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+gmf_dashboard/domainGenerationModel=platform\:/resource/FlotaVehiculos/model/flotaVehiculos.genmodel
+gmf_dashboard/domainModel=platform\:/resource/FlotaVehiculos/model/flotaVehiculos.ecore
+gmf_dashboard/graphicalDefinitionModel=platform\:/resource/FlotaVehiculoGMF/model/LienzoFlotaVehiculos.gmfgraph
+gmf_dashboard/toolingDefinitionModel=platform\:/resource/FlotaVehiculoGMF/model/BarraFlotaVehiculos.gmftool

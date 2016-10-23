@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="flotaVehiculos">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="DeSegundaConductorAsignacionDiariaTargetDecoration"/>
+    <descriptors name="AutomovilFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="AutomovilFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="AutomovilMatriculaFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="AutomovilModeloFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="AutomovilMarcaFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="AutomovilPasajerosFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.0/@actualFigure/@children.2"/>
+      <accessors figure="//@figures.0/@descriptors.0/@actualFigure/@children.3"/>
+    </descriptors>
+    <descriptors name="DeSegundaFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="DeSegundaFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="DeSegundaCedulaFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="DeSegundaFechaNacimientoFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="DeSegundaNombreFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.1/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="DeSegundaConductorAsignacionDiariaFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="DeSegundaConductorAsignacionDiariaFigure" targetDecoration="//@figures.0/@figures.0"/>
+    </descriptors>
+    <descriptors name="DePrimeraFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="DePrimeraFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="DePrimeraCedulaFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="DePrimeraFechaNacimientoFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="DePrimeraNombreFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.3/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.3/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="CamionFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="CamionFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="CamionMatriculaFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="CamionModeloFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="CamionMarcaFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="CamionCargaFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="CamionCantidadDeEjesFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.4/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.4/@actualFigure/@children.2"/>
+      <accessors figure="//@figures.0/@descriptors.4/@actualFigure/@children.3"/>
+      <accessors figure="//@figures.0/@descriptors.4/@actualFigure/@children.4"/>
+    </descriptors>
+    <descriptors name="CamionetaFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="CamionetaFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="CamionetaMatriculaFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="CamionetaModeloFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="CamionetaMarcaFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="CamionetaCargaFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="CamionetaDobleCabinaFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.5/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.5/@actualFigure/@children.2"/>
+      <accessors figure="//@figures.0/@descriptors.5/@actualFigure/@children.3"/>
+      <accessors figure="//@figures.0/@descriptors.5/@actualFigure/@children.4"/>
+    </descriptors>
+    <descriptors name="OmnibusFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="OmnibusFigure">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <children xsi:type="gmfgraph:Label" name="OmnibusMatriculaFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="OmnibusModeloFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="OmnibusMarcaFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="OmnibusCargaFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="OmnibusCantidadAsientosFigure" text="&lt;...>"/>
+        <children xsi:type="gmfgraph:Label" name="OmnibusBanioFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.6/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.6/@actualFigure/@children.2"/>
+      <accessors figure="//@figures.0/@descriptors.6/@actualFigure/@children.3"/>
+      <accessors figure="//@figures.0/@descriptors.6/@actualFigure/@children.4"/>
+      <accessors figure="//@figures.0/@descriptors.6/@actualFigure/@children.5"/>
+    </descriptors>
+    <descriptors name="AsignacionDiariaFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AsignacionDiariaFigure">
+        <children xsi:type="gmfgraph:Label" name="AsignacionDiariaFechaAsignacionFigure" text="&lt;...>"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
+    </descriptors>
+  </figures>
+  <nodes name="Automovil" figure="AutomovilFigure"/>
+  <nodes name="DeSegunda" figure="DeSegundaFigure"/>
+  <nodes name="DePrimera" figure="DePrimeraFigure"/>
+  <nodes name="Camion" figure="CamionFigure"/>
+  <nodes name="Camioneta" figure="CamionetaFigure"/>
+  <nodes name="Omnibus" figure="OmnibusFigure"/>
+  <connections name="DeSegundaConductorAsignacionDiaria" figure="DeSegundaConductorAsignacionDiariaFigure"/>
+  <connections name="AsignacionDiaria" figure="AsignacionDiariaFigure"/>
+  <labels name="AutomovilMatricula" figure="AutomovilFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="AutomovilModelo" figure="AutomovilFigure" accessor="//@figures.0/@descriptors.0/@accessors.1"/>
+  <labels name="AutomovilMarca" figure="AutomovilFigure" accessor="//@figures.0/@descriptors.0/@accessors.2"/>
+  <labels name="AutomovilPasajeros" figure="AutomovilFigure" accessor="//@figures.0/@descriptors.0/@accessors.3"/>
+  <labels name="DeSegundaCedula" figure="DeSegundaFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="DeSegundaFechaNacimiento" figure="DeSegundaFigure" accessor="//@figures.0/@descriptors.1/@accessors.1"/>
+  <labels name="DeSegundaNombre" figure="DeSegundaFigure" accessor="//@figures.0/@descriptors.1/@accessors.2"/>
+  <labels name="DePrimeraCedula" figure="DePrimeraFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="DePrimeraFechaNacimiento" figure="DePrimeraFigure" accessor="//@figures.0/@descriptors.3/@accessors.1"/>
+  <labels name="DePrimeraNombre" figure="DePrimeraFigure" accessor="//@figures.0/@descriptors.3/@accessors.2"/>
+  <labels name="CamionMatricula" figure="CamionFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="CamionModelo" figure="CamionFigure" accessor="//@figures.0/@descriptors.4/@accessors.1"/>
+  <labels name="CamionMarca" figure="CamionFigure" accessor="//@figures.0/@descriptors.4/@accessors.2"/>
+  <labels name="CamionCarga" figure="CamionFigure" accessor="//@figures.0/@descriptors.4/@accessors.3"/>
+  <labels name="CamionCantidadDeEjes" figure="CamionFigure" accessor="//@figures.0/@descriptors.4/@accessors.4"/>
+  <labels name="CamionetaMatricula" figure="CamionetaFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="CamionetaModelo" figure="CamionetaFigure" accessor="//@figures.0/@descriptors.5/@accessors.1"/>
+  <labels name="CamionetaMarca" figure="CamionetaFigure" accessor="//@figures.0/@descriptors.5/@accessors.2"/>
+  <labels name="CamionetaCarga" figure="CamionetaFigure" accessor="//@figures.0/@descriptors.5/@accessors.3"/>
+  <labels name="CamionetaDobleCabina" figure="CamionetaFigure" accessor="//@figures.0/@descriptors.5/@accessors.4"/>
+  <labels name="OmnibusMatricula" figure="OmnibusFigure" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
+  <labels name="OmnibusModelo" figure="OmnibusFigure" accessor="//@figures.0/@descriptors.6/@accessors.1"/>
+  <labels name="OmnibusMarca" figure="OmnibusFigure" accessor="//@figures.0/@descriptors.6/@accessors.2"/>
+  <labels name="OmnibusCarga" figure="OmnibusFigure" accessor="//@figures.0/@descriptors.6/@accessors.3"/>
+  <labels name="OmnibusCantidadAsientos" figure="OmnibusFigure" accessor="//@figures.0/@descriptors.6/@accessors.4"/>
+  <labels name="OmnibusBanio" figure="OmnibusFigure" accessor="//@figures.0/@descriptors.6/@accessors.5"/>
+  <labels name="AsignacionDiariaFechaAsignacion" figure="AsignacionDiariaFigure" accessor="//@figures.0/@descriptors.7/@accessors.0"/>
+</gmfgraph:Canvas>

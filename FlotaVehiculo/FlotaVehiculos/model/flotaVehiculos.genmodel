@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/FlotaVehiculos/src" modelPluginID="FlotaVehiculos"
+    modelName="FlotaVehiculos" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>flotaVehiculos.ecore</foreignModel>
+  <genPackages prefix="FlotaVehiculos" disposableProviderFactory="true" ecorePackage="flotaVehiculos.ecore#/">
+    <genClasses ecoreClass="flotaVehiculos.ecore#//Diagrama">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference flotaVehiculos.ecore#//Diagrama/vehiculo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference flotaVehiculos.ecore#//Diagrama/conductores"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference flotaVehiculos.ecore#//Diagrama/asignacionesDiarias"/>
+    </genClasses>
+    <genClasses ecoreClass="flotaVehiculos.ecore#//Vehiculo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute flotaVehiculos.ecore#//Vehiculo/matricula"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute flotaVehiculos.ecore#//Vehiculo/modelo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute flotaVehiculos.ecore#//Vehiculo/marca"/>
+    </genClasses>
+    <genClasses ecoreClass="flotaVehiculos.ecore#//Automovil">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute flotaVehiculos.ecore#//Automovil/pasajeros"/>
+    </genClasses>
+    <genClasses ecoreClass="flotaVehiculos.ecore#//DeSegunda">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference flotaVehiculos.ecore#//DeSegunda/conductorAsignacionDiaria"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference flotaVehiculos.ecore#//AsignacionDiaria/asignacionDiariaVehiculo"/>
+    </genClasses>
+    <genClasses ecoreClass="flotaVehiculos.ecore#//Conductor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute flotaVehiculos.ecore#//Conductor/cedula"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute flotaVehiculos.ecore#//Conductor/fechaNacimiento"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute flotaVehiculos.ecore#//Conductor/nombre"/>
+    </genClasses>
+    <genClasses ecoreClass="flotaVehiculos.ecore#//DePrimera">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference flotaVehiculos.ecore#//DePrimera/asignacionFija"/>
+    </genClasses>
+    <genClasses ecoreClass="flotaVehiculos.ecore#//Pesado">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute flotaVehiculos.ecore#//Pesado/carga"/>
+    </genClasses>
+    <genClasses ecoreClass="flotaVehiculos.ecore#//Camion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute flotaVehiculos.ecore#//Camion/cantidadDeEjes"/>
+    </genClasses>
+    <genClasses ecoreClass="flotaVehiculos.ecore#//Camioneta">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute flotaVehiculos.ecore#//Camioneta/dobleCabina"/>
+    </genClasses>
+    <genClasses ecoreClass="flotaVehiculos.ecore#//Omnibus">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute flotaVehiculos.ecore#//Omnibus/cantidadAsientos"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute flotaVehiculos.ecore#//Omnibus/banio"/>
+    </genClasses>
+    <genClasses ecoreClass="flotaVehiculos.ecore#//AsignacionDiaria">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference flotaVehiculos.ecore#//AsignacionDiaria/asignacionDiariaVehiculo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute flotaVehiculos.ecore#//AsignacionDiaria/fechaAsignacion"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

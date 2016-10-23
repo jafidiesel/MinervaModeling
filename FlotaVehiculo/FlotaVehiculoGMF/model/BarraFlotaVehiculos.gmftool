@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmftool:ToolRegistry
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
+  <palette
+      title="flotaVehiculosPalette">
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="flotaVehiculos">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Automovil"
+          description="Create new Automovil">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/auto.gif"
+            bundle="/FlotaVehiculos.edit/icons/full/obj16"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/auto.gif"
+            bundle="/FlotaVehiculos.edit/icons/full/obj16"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="DeSegunda"
+          description="Create new DeSegunda">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/conductorSegundo.gif"
+            bundle="/FlotaVehiculos.edit/icons/full/obj16"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/conductorSegundo.gif"
+            bundle="/FlotaVehiculos.edit/icons/full/obj16"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="DePrimera"
+          description="Create new DePrimera">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/conductorPrimera.gif"
+            bundle="/FlotaVehiculos.edit/icons/full/obj16"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/conductorPrimera.gif"
+            bundle="/FlotaVehiculos.edit/icons/full/obj16"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Camion"
+          description="Create new Camion">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/camion.gif"
+            bundle="/FlotaVehiculos.edit/icons/full/obj16"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/camion.gif"
+            bundle="/FlotaVehiculos.edit/icons/full/obj16"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Camioneta"
+          description="Create new Camioneta">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/camioneta.gif"
+            bundle="/FlotaVehiculos.edit/icons/full/obj16"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/camioneta.gif"
+            bundle="/FlotaVehiculos.edit/icons/full/obj16"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Omnibus"
+          description="Create new Omnibus">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/omnibus.gif"
+            bundle="/FlotaVehiculos.edit/icons/full/obj16"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/omnibus.gif"
+            bundle="/FlotaVehiculos.edit/icons/full/obj16"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="AsignacionDiaria"
+          description="Create new AsignacionDiaria">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/AsignacionDiaria.gif"
+            bundle="/FlotaVehiculos.edit/icons/full/obj16"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/AsignacionDiaria.gif"
+            bundle="/FlotaVehiculos.edit/icons/full/obj16/"/>
+      </tools>
+    </tools>
+  </palette>
+</gmftool:ToolRegistry>
