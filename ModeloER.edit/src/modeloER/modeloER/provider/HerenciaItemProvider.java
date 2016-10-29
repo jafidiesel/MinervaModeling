@@ -6,14 +6,11 @@ package modeloER.modeloER.provider;
 import java.util.Collection;
 import java.util.List;
 
-import modeloER.modeloER.ModeloERPackage;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -57,54 +54,8 @@ public class HerenciaItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addEntidadPadreHerenciaPropertyDescriptor(object);
-			addEntidadesHijasHerenciaPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Entidad Padre Herencia feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addEntidadPadreHerenciaPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Herencia_entidadPadreHerencia_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Herencia_entidadPadreHerencia_feature", "_UI_Herencia_type"),
-				 ModeloERPackage.Literals.HERENCIA__ENTIDAD_PADRE_HERENCIA,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Entidades Hijas Herencia feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addEntidadesHijasHerenciaPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Herencia_entidadesHijasHerencia_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Herencia_entidadesHijasHerencia_feature", "_UI_Herencia_type"),
-				 ModeloERPackage.Literals.HERENCIA__ENTIDADES_HIJAS_HERENCIA,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**

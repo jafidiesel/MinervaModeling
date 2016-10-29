@@ -1,0 +1,7 @@
+# Tracing options for the ModeloER.diagram plug-in
+
+# Common issues
+ModeloER.diagram/debug=false
+
+# Visual IDs
+ModeloER.diagram/debug/visualID=false

@@ -64,7 +64,7 @@ public class ClaveForaneaItemProvider extends AtributoItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ClaveForanea)object).getNombre();
+		String label = ((ClaveForanea)object).getNombreAtributo();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ClaveForanea_type") :
 			getString("_UI_ClaveForanea_type") + " " + label;

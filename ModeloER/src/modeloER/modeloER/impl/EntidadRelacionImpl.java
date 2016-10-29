@@ -23,74 +23,74 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link modeloER.modeloER.impl.EntidadRelacionImpl#getEntidadEntidadRelacion <em>Entidad Entidad Relacion</em>}</li>
- *   <li>{@link modeloER.modeloER.impl.EntidadRelacionImpl#getRelacionEntidadRelacion <em>Relacion Entidad Relacion</em>}</li>
- *   <li>{@link modeloER.modeloER.impl.EntidadRelacionImpl#getLimiteInferior <em>Limite Inferior</em>}</li>
- *   <li>{@link modeloER.modeloER.impl.EntidadRelacionImpl#getLimiteSuperior <em>Limite Superior</em>}</li>
+ *   <li>{@link modeloER.modeloER.impl.EntidadRelacionImpl#getEntidadERLink <em>Entidad ER Link</em>}</li>
+ *   <li>{@link modeloER.modeloER.impl.EntidadRelacionImpl#getRelacionERLink <em>Relacion ER Link</em>}</li>
+ *   <li>{@link modeloER.modeloER.impl.EntidadRelacionImpl#getLimiteInferiorER <em>Limite Inferior ER</em>}</li>
+ *   <li>{@link modeloER.modeloER.impl.EntidadRelacionImpl#getLimiteSuperiorER <em>Limite Superior ER</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class EntidadRelacionImpl extends MinimalEObjectImpl.Container implements EntidadRelacion {
 	/**
-	 * The cached value of the '{@link #getEntidadEntidadRelacion() <em>Entidad Entidad Relacion</em>}' reference.
+	 * The cached value of the '{@link #getEntidadERLink() <em>Entidad ER Link</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEntidadEntidadRelacion()
+	 * @see #getEntidadERLink()
 	 * @generated
 	 * @ordered
 	 */
-	protected Entidad entidadEntidadRelacion;
+	protected Entidad entidadERLink;
 
 	/**
-	 * The cached value of the '{@link #getRelacionEntidadRelacion() <em>Relacion Entidad Relacion</em>}' reference.
+	 * The cached value of the '{@link #getRelacionERLink() <em>Relacion ER Link</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRelacionEntidadRelacion()
+	 * @see #getRelacionERLink()
 	 * @generated
 	 * @ordered
 	 */
-	protected Relacion relacionEntidadRelacion;
+	protected Relacion relacionERLink;
 
 	/**
-	 * The default value of the '{@link #getLimiteInferior() <em>Limite Inferior</em>}' attribute.
+	 * The default value of the '{@link #getLimiteInferiorER() <em>Limite Inferior ER</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLimiteInferior()
+	 * @see #getLimiteInferiorER()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String LIMITE_INFERIOR_EDEFAULT = null;
+	protected static final String LIMITE_INFERIOR_ER_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getLimiteInferior() <em>Limite Inferior</em>}' attribute.
+	 * The cached value of the '{@link #getLimiteInferiorER() <em>Limite Inferior ER</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLimiteInferior()
+	 * @see #getLimiteInferiorER()
 	 * @generated
 	 * @ordered
 	 */
-	protected String limiteInferior = LIMITE_INFERIOR_EDEFAULT;
+	protected String limiteInferiorER = LIMITE_INFERIOR_ER_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLimiteSuperior() <em>Limite Superior</em>}' attribute.
+	 * The default value of the '{@link #getLimiteSuperiorER() <em>Limite Superior ER</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLimiteSuperior()
+	 * @see #getLimiteSuperiorER()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String LIMITE_SUPERIOR_EDEFAULT = null;
+	protected static final String LIMITE_SUPERIOR_ER_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getLimiteSuperior() <em>Limite Superior</em>}' attribute.
+	 * The cached value of the '{@link #getLimiteSuperiorER() <em>Limite Superior ER</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLimiteSuperior()
+	 * @see #getLimiteSuperiorER()
 	 * @generated
 	 * @ordered
 	 */
-	protected String limiteSuperior = LIMITE_SUPERIOR_EDEFAULT;
+	protected String limiteSuperiorER = LIMITE_SUPERIOR_ER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -116,16 +116,16 @@ public class EntidadRelacionImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entidad getEntidadEntidadRelacion() {
-		if (entidadEntidadRelacion != null && entidadEntidadRelacion.eIsProxy()) {
-			InternalEObject oldEntidadEntidadRelacion = (InternalEObject)entidadEntidadRelacion;
-			entidadEntidadRelacion = (Entidad)eResolveProxy(oldEntidadEntidadRelacion);
-			if (entidadEntidadRelacion != oldEntidadEntidadRelacion) {
+	public Entidad getEntidadERLink() {
+		if (entidadERLink != null && entidadERLink.eIsProxy()) {
+			InternalEObject oldEntidadERLink = (InternalEObject)entidadERLink;
+			entidadERLink = (Entidad)eResolveProxy(oldEntidadERLink);
+			if (entidadERLink != oldEntidadERLink) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModeloERPackage.ENTIDAD_RELACION__ENTIDAD_ENTIDAD_RELACION, oldEntidadEntidadRelacion, entidadEntidadRelacion));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModeloERPackage.ENTIDAD_RELACION__ENTIDAD_ER_LINK, oldEntidadERLink, entidadERLink));
 			}
 		}
-		return entidadEntidadRelacion;
+		return entidadERLink;
 	}
 
 	/**
@@ -133,8 +133,8 @@ public class EntidadRelacionImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entidad basicGetEntidadEntidadRelacion() {
-		return entidadEntidadRelacion;
+	public Entidad basicGetEntidadERLink() {
+		return entidadERLink;
 	}
 
 	/**
@@ -142,11 +142,11 @@ public class EntidadRelacionImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEntidadEntidadRelacion(Entidad newEntidadEntidadRelacion) {
-		Entidad oldEntidadEntidadRelacion = entidadEntidadRelacion;
-		entidadEntidadRelacion = newEntidadEntidadRelacion;
+	public void setEntidadERLink(Entidad newEntidadERLink) {
+		Entidad oldEntidadERLink = entidadERLink;
+		entidadERLink = newEntidadERLink;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModeloERPackage.ENTIDAD_RELACION__ENTIDAD_ENTIDAD_RELACION, oldEntidadEntidadRelacion, entidadEntidadRelacion));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModeloERPackage.ENTIDAD_RELACION__ENTIDAD_ER_LINK, oldEntidadERLink, entidadERLink));
 	}
 
 	/**
@@ -154,16 +154,16 @@ public class EntidadRelacionImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Relacion getRelacionEntidadRelacion() {
-		if (relacionEntidadRelacion != null && relacionEntidadRelacion.eIsProxy()) {
-			InternalEObject oldRelacionEntidadRelacion = (InternalEObject)relacionEntidadRelacion;
-			relacionEntidadRelacion = (Relacion)eResolveProxy(oldRelacionEntidadRelacion);
-			if (relacionEntidadRelacion != oldRelacionEntidadRelacion) {
+	public Relacion getRelacionERLink() {
+		if (relacionERLink != null && relacionERLink.eIsProxy()) {
+			InternalEObject oldRelacionERLink = (InternalEObject)relacionERLink;
+			relacionERLink = (Relacion)eResolveProxy(oldRelacionERLink);
+			if (relacionERLink != oldRelacionERLink) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModeloERPackage.ENTIDAD_RELACION__RELACION_ENTIDAD_RELACION, oldRelacionEntidadRelacion, relacionEntidadRelacion));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModeloERPackage.ENTIDAD_RELACION__RELACION_ER_LINK, oldRelacionERLink, relacionERLink));
 			}
 		}
-		return relacionEntidadRelacion;
+		return relacionERLink;
 	}
 
 	/**
@@ -171,8 +171,8 @@ public class EntidadRelacionImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Relacion basicGetRelacionEntidadRelacion() {
-		return relacionEntidadRelacion;
+	public Relacion basicGetRelacionERLink() {
+		return relacionERLink;
 	}
 
 	/**
@@ -180,11 +180,11 @@ public class EntidadRelacionImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRelacionEntidadRelacion(Relacion newRelacionEntidadRelacion) {
-		Relacion oldRelacionEntidadRelacion = relacionEntidadRelacion;
-		relacionEntidadRelacion = newRelacionEntidadRelacion;
+	public void setRelacionERLink(Relacion newRelacionERLink) {
+		Relacion oldRelacionERLink = relacionERLink;
+		relacionERLink = newRelacionERLink;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModeloERPackage.ENTIDAD_RELACION__RELACION_ENTIDAD_RELACION, oldRelacionEntidadRelacion, relacionEntidadRelacion));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModeloERPackage.ENTIDAD_RELACION__RELACION_ER_LINK, oldRelacionERLink, relacionERLink));
 	}
 
 	/**
@@ -192,8 +192,8 @@ public class EntidadRelacionImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLimiteInferior() {
-		return limiteInferior;
+	public String getLimiteInferiorER() {
+		return limiteInferiorER;
 	}
 
 	/**
@@ -201,11 +201,11 @@ public class EntidadRelacionImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLimiteInferior(String newLimiteInferior) {
-		String oldLimiteInferior = limiteInferior;
-		limiteInferior = newLimiteInferior;
+	public void setLimiteInferiorER(String newLimiteInferiorER) {
+		String oldLimiteInferiorER = limiteInferiorER;
+		limiteInferiorER = newLimiteInferiorER;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModeloERPackage.ENTIDAD_RELACION__LIMITE_INFERIOR, oldLimiteInferior, limiteInferior));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModeloERPackage.ENTIDAD_RELACION__LIMITE_INFERIOR_ER, oldLimiteInferiorER, limiteInferiorER));
 	}
 
 	/**
@@ -213,8 +213,8 @@ public class EntidadRelacionImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLimiteSuperior() {
-		return limiteSuperior;
+	public String getLimiteSuperiorER() {
+		return limiteSuperiorER;
 	}
 
 	/**
@@ -222,11 +222,11 @@ public class EntidadRelacionImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLimiteSuperior(String newLimiteSuperior) {
-		String oldLimiteSuperior = limiteSuperior;
-		limiteSuperior = newLimiteSuperior;
+	public void setLimiteSuperiorER(String newLimiteSuperiorER) {
+		String oldLimiteSuperiorER = limiteSuperiorER;
+		limiteSuperiorER = newLimiteSuperiorER;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModeloERPackage.ENTIDAD_RELACION__LIMITE_SUPERIOR, oldLimiteSuperior, limiteSuperior));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModeloERPackage.ENTIDAD_RELACION__LIMITE_SUPERIOR_ER, oldLimiteSuperiorER, limiteSuperiorER));
 	}
 
 	/**
@@ -237,16 +237,16 @@ public class EntidadRelacionImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModeloERPackage.ENTIDAD_RELACION__ENTIDAD_ENTIDAD_RELACION:
-				if (resolve) return getEntidadEntidadRelacion();
-				return basicGetEntidadEntidadRelacion();
-			case ModeloERPackage.ENTIDAD_RELACION__RELACION_ENTIDAD_RELACION:
-				if (resolve) return getRelacionEntidadRelacion();
-				return basicGetRelacionEntidadRelacion();
-			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_INFERIOR:
-				return getLimiteInferior();
-			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_SUPERIOR:
-				return getLimiteSuperior();
+			case ModeloERPackage.ENTIDAD_RELACION__ENTIDAD_ER_LINK:
+				if (resolve) return getEntidadERLink();
+				return basicGetEntidadERLink();
+			case ModeloERPackage.ENTIDAD_RELACION__RELACION_ER_LINK:
+				if (resolve) return getRelacionERLink();
+				return basicGetRelacionERLink();
+			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_INFERIOR_ER:
+				return getLimiteInferiorER();
+			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_SUPERIOR_ER:
+				return getLimiteSuperiorER();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -259,17 +259,17 @@ public class EntidadRelacionImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModeloERPackage.ENTIDAD_RELACION__ENTIDAD_ENTIDAD_RELACION:
-				setEntidadEntidadRelacion((Entidad)newValue);
+			case ModeloERPackage.ENTIDAD_RELACION__ENTIDAD_ER_LINK:
+				setEntidadERLink((Entidad)newValue);
 				return;
-			case ModeloERPackage.ENTIDAD_RELACION__RELACION_ENTIDAD_RELACION:
-				setRelacionEntidadRelacion((Relacion)newValue);
+			case ModeloERPackage.ENTIDAD_RELACION__RELACION_ER_LINK:
+				setRelacionERLink((Relacion)newValue);
 				return;
-			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_INFERIOR:
-				setLimiteInferior((String)newValue);
+			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_INFERIOR_ER:
+				setLimiteInferiorER((String)newValue);
 				return;
-			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_SUPERIOR:
-				setLimiteSuperior((String)newValue);
+			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_SUPERIOR_ER:
+				setLimiteSuperiorER((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -283,17 +283,17 @@ public class EntidadRelacionImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModeloERPackage.ENTIDAD_RELACION__ENTIDAD_ENTIDAD_RELACION:
-				setEntidadEntidadRelacion((Entidad)null);
+			case ModeloERPackage.ENTIDAD_RELACION__ENTIDAD_ER_LINK:
+				setEntidadERLink((Entidad)null);
 				return;
-			case ModeloERPackage.ENTIDAD_RELACION__RELACION_ENTIDAD_RELACION:
-				setRelacionEntidadRelacion((Relacion)null);
+			case ModeloERPackage.ENTIDAD_RELACION__RELACION_ER_LINK:
+				setRelacionERLink((Relacion)null);
 				return;
-			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_INFERIOR:
-				setLimiteInferior(LIMITE_INFERIOR_EDEFAULT);
+			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_INFERIOR_ER:
+				setLimiteInferiorER(LIMITE_INFERIOR_ER_EDEFAULT);
 				return;
-			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_SUPERIOR:
-				setLimiteSuperior(LIMITE_SUPERIOR_EDEFAULT);
+			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_SUPERIOR_ER:
+				setLimiteSuperiorER(LIMITE_SUPERIOR_ER_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -307,14 +307,14 @@ public class EntidadRelacionImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModeloERPackage.ENTIDAD_RELACION__ENTIDAD_ENTIDAD_RELACION:
-				return entidadEntidadRelacion != null;
-			case ModeloERPackage.ENTIDAD_RELACION__RELACION_ENTIDAD_RELACION:
-				return relacionEntidadRelacion != null;
-			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_INFERIOR:
-				return LIMITE_INFERIOR_EDEFAULT == null ? limiteInferior != null : !LIMITE_INFERIOR_EDEFAULT.equals(limiteInferior);
-			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_SUPERIOR:
-				return LIMITE_SUPERIOR_EDEFAULT == null ? limiteSuperior != null : !LIMITE_SUPERIOR_EDEFAULT.equals(limiteSuperior);
+			case ModeloERPackage.ENTIDAD_RELACION__ENTIDAD_ER_LINK:
+				return entidadERLink != null;
+			case ModeloERPackage.ENTIDAD_RELACION__RELACION_ER_LINK:
+				return relacionERLink != null;
+			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_INFERIOR_ER:
+				return LIMITE_INFERIOR_ER_EDEFAULT == null ? limiteInferiorER != null : !LIMITE_INFERIOR_ER_EDEFAULT.equals(limiteInferiorER);
+			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_SUPERIOR_ER:
+				return LIMITE_SUPERIOR_ER_EDEFAULT == null ? limiteSuperiorER != null : !LIMITE_SUPERIOR_ER_EDEFAULT.equals(limiteSuperiorER);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -329,10 +329,10 @@ public class EntidadRelacionImpl extends MinimalEObjectImpl.Container implements
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (limiteInferior: ");
-		result.append(limiteInferior);
-		result.append(", limiteSuperior: ");
-		result.append(limiteSuperior);
+		result.append(" (limiteInferiorER: ");
+		result.append(limiteInferiorER);
+		result.append(", limiteSuperiorER: ");
+		result.append(limiteSuperiorER);
 		result.append(')');
 		return result.toString();
 	}

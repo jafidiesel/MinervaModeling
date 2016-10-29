@@ -15,23 +15,29 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link modeloER.modeloER.Diagrama#getRelacionesDelDiagrama <em>Relaciones Del Diagrama</em>}</li>
  *   <li>{@link modeloER.modeloER.Diagrama#getAtributosDelDiagrama <em>Atributos Del Diagrama</em>}</li>
- *   <li>{@link modeloER.modeloER.Diagrama#getEntidadesDelDiagrama <em>Entidades Del Diagrama</em>}</li>
  *   <li>{@link modeloER.modeloER.Diagrama#getHerenciasDelDiagrama <em>Herencias Del Diagrama</em>}</li>
- *   <li>{@link modeloER.modeloER.Diagrama#getEntidadRelacionesDelDiagrama <em>Entidad Relaciones Del Diagrama</em>}</li>
  *   <li>{@link modeloER.modeloER.Diagrama#getAtributoderivadoDelDiagrama <em>Atributoderivado Del Diagrama</em>}</li>
  *   <li>{@link modeloER.modeloER.Diagrama#getAtributomultivaluadoDelDiagrama <em>Atributomultivaluado Del Diagrama</em>}</li>
  *   <li>{@link modeloER.modeloER.Diagrama#getClaveprimariaDelDiagrama <em>Claveprimaria Del Diagrama</em>}</li>
  *   <li>{@link modeloER.modeloER.Diagrama#getClaveforaneaDelDiagrama <em>Claveforanea Del Diagrama</em>}</li>
  *   <li>{@link modeloER.modeloER.Diagrama#getClaveprimariaforaneaDelDiagrama <em>Claveprimariaforanea Del Diagrama</em>}</li>
- *   <li>{@link modeloER.modeloER.Diagrama#getTipodebilDelDiagrama <em>Tipodebil Del Diagrama</em>}</li>
- *   <li>{@link modeloER.modeloER.Diagrama#getTipofuerteDelDiagrama <em>Tipofuerte Del Diagrama</em>}</li>
+ *   <li>{@link modeloER.modeloER.Diagrama#getRelacionesTipodebilDelDiagrama <em>Relaciones Tipodebil Del Diagrama</em>}</li>
+ *   <li>{@link modeloER.modeloER.Diagrama#getRelacionesTipofuerteDelDiagrama <em>Relaciones Tipofuerte Del Diagrama</em>}</li>
  *   <li>{@link modeloER.modeloER.Diagrama#getEntidadesRelacionesFuertesDelDiagrama <em>Entidades Relaciones Fuertes Del Diagrama</em>}</li>
  *   <li>{@link modeloER.modeloER.Diagrama#getEntidadesRelacionesDebilesDelDiagrama <em>Entidades Relaciones Debiles Del Diagrama</em>}</li>
  *   <li>{@link modeloER.modeloER.Diagrama#getAtributoderivadoclaveprimariaDelDiagrama <em>Atributoderivadoclaveprimaria Del Diagrama</em>}</li>
  *   <li>{@link modeloER.modeloER.Diagrama#getEntidadfuerteDelDiagrama <em>Entidadfuerte Del Diagrama</em>}</li>
  *   <li>{@link modeloER.modeloER.Diagrama#getEntidaddebilDelDiagrama <em>Entidaddebil Del Diagrama</em>}</li>
+ *   <li>{@link modeloER.modeloER.Diagrama#getAtributosimpleDelDiagrama <em>Atributosimple Del Diagrama</em>}</li>
+ *   <li>{@link modeloER.modeloER.Diagrama#getAtributocompuestoDelDiagrama <em>Atributocompuesto Del Diagrama</em>}</li>
+ *   <li>{@link modeloER.modeloER.Diagrama#getLinkasacDelDiagrama <em>Linkasac Del Diagrama</em>}</li>
+ *   <li>{@link modeloER.modeloER.Diagrama#getAtributoderivadoentidadDelDiagrama <em>Atributoderivadoentidad Del Diagrama</em>}</li>
+ *   <li>{@link modeloER.modeloER.Diagrama#getAtributoentidadlinkDiagrama <em>Atributoentidadlink Diagrama</em>}</li>
+ *   <li>{@link modeloER.modeloER.Diagrama#getAtributoderivadoentidadDiagrama <em>Atributoderivadoentidad Diagrama</em>}</li>
+ *   <li>{@link modeloER.modeloER.Diagrama#getRelacionatributolinkDiagrama <em>Relacionatributolink Diagrama</em>}</li>
+ *   <li>{@link modeloER.modeloER.Diagrama#getLinkherenciapadreDiagrama <em>Linkherenciapadre Diagrama</em>}</li>
+ *   <li>{@link modeloER.modeloER.Diagrama#getLinkherenciahijoDiagrama <em>Linkherenciahijo Diagrama</em>}</li>
  * </ul>
  *
  * @see modeloER.modeloER.ModeloERPackage#getDiagrama()
@@ -39,22 +45,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Diagrama extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Relaciones Del Diagrama</b></em>' containment reference list.
-	 * The list contents are of type {@link modeloER.modeloER.Relacion}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Relaciones Del Diagrama</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Relaciones Del Diagrama</em>' containment reference list.
-	 * @see modeloER.modeloER.ModeloERPackage#getDiagrama_RelacionesDelDiagrama()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Relacion> getRelacionesDelDiagrama();
-
 	/**
 	 * Returns the value of the '<em><b>Atributos Del Diagrama</b></em>' containment reference list.
 	 * The list contents are of type {@link modeloER.modeloER.Atributo}.
@@ -72,22 +62,6 @@ public interface Diagrama extends EObject {
 	EList<Atributo> getAtributosDelDiagrama();
 
 	/**
-	 * Returns the value of the '<em><b>Entidades Del Diagrama</b></em>' containment reference list.
-	 * The list contents are of type {@link modeloER.modeloER.Entidad}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Entidades Del Diagrama</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Entidades Del Diagrama</em>' containment reference list.
-	 * @see modeloER.modeloER.ModeloERPackage#getDiagrama_EntidadesDelDiagrama()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Entidad> getEntidadesDelDiagrama();
-
-	/**
 	 * Returns the value of the '<em><b>Herencias Del Diagrama</b></em>' containment reference list.
 	 * The list contents are of type {@link modeloER.modeloER.Herencia}.
 	 * <!-- begin-user-doc -->
@@ -102,22 +76,6 @@ public interface Diagrama extends EObject {
 	 * @generated
 	 */
 	EList<Herencia> getHerenciasDelDiagrama();
-
-	/**
-	 * Returns the value of the '<em><b>Entidad Relaciones Del Diagrama</b></em>' containment reference list.
-	 * The list contents are of type {@link modeloER.modeloER.EntidadRelacion}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Entidad Relaciones Del Diagrama</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Entidad Relaciones Del Diagrama</em>' containment reference list.
-	 * @see modeloER.modeloER.ModeloERPackage#getDiagrama_EntidadRelacionesDelDiagrama()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<EntidadRelacion> getEntidadRelacionesDelDiagrama();
 
 	/**
 	 * Returns the value of the '<em><b>Atributoderivado Del Diagrama</b></em>' containment reference list.
@@ -200,36 +158,36 @@ public interface Diagrama extends EObject {
 	EList<ClavePrimariaForanea> getClaveprimariaforaneaDelDiagrama();
 
 	/**
-	 * Returns the value of the '<em><b>Tipodebil Del Diagrama</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Relaciones Tipodebil Del Diagrama</b></em>' containment reference list.
 	 * The list contents are of type {@link modeloER.modeloER.RelacionTipoDebil}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Tipodebil Del Diagrama</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Relaciones Tipodebil Del Diagrama</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tipodebil Del Diagrama</em>' containment reference list.
-	 * @see modeloER.modeloER.ModeloERPackage#getDiagrama_TipodebilDelDiagrama()
+	 * @return the value of the '<em>Relaciones Tipodebil Del Diagrama</em>' containment reference list.
+	 * @see modeloER.modeloER.ModeloERPackage#getDiagrama_RelacionesTipodebilDelDiagrama()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<RelacionTipoDebil> getTipodebilDelDiagrama();
+	EList<RelacionTipoDebil> getRelacionesTipodebilDelDiagrama();
 
 	/**
-	 * Returns the value of the '<em><b>Tipofuerte Del Diagrama</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Relaciones Tipofuerte Del Diagrama</b></em>' containment reference list.
 	 * The list contents are of type {@link modeloER.modeloER.RelacionTipoFuerte}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Tipofuerte Del Diagrama</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Relaciones Tipofuerte Del Diagrama</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tipofuerte Del Diagrama</em>' containment reference list.
-	 * @see modeloER.modeloER.ModeloERPackage#getDiagrama_TipofuerteDelDiagrama()
+	 * @return the value of the '<em>Relaciones Tipofuerte Del Diagrama</em>' containment reference list.
+	 * @see modeloER.modeloER.ModeloERPackage#getDiagrama_RelacionesTipofuerteDelDiagrama()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<RelacionTipoFuerte> getTipofuerteDelDiagrama();
+	EList<RelacionTipoFuerte> getRelacionesTipofuerteDelDiagrama();
 
 	/**
 	 * Returns the value of the '<em><b>Entidades Relaciones Fuertes Del Diagrama</b></em>' containment reference list.
@@ -310,5 +268,149 @@ public interface Diagrama extends EObject {
 	 * @generated
 	 */
 	EList<EntidadDebil> getEntidaddebilDelDiagrama();
+
+	/**
+	 * Returns the value of the '<em><b>Atributosimple Del Diagrama</b></em>' containment reference list.
+	 * The list contents are of type {@link modeloER.modeloER.AtributoSimple}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Atributosimple Del Diagrama</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Atributosimple Del Diagrama</em>' containment reference list.
+	 * @see modeloER.modeloER.ModeloERPackage#getDiagrama_AtributosimpleDelDiagrama()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<AtributoSimple> getAtributosimpleDelDiagrama();
+
+	/**
+	 * Returns the value of the '<em><b>Atributocompuesto Del Diagrama</b></em>' containment reference list.
+	 * The list contents are of type {@link modeloER.modeloER.AtributoCompuesto}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Atributocompuesto Del Diagrama</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Atributocompuesto Del Diagrama</em>' containment reference list.
+	 * @see modeloER.modeloER.ModeloERPackage#getDiagrama_AtributocompuestoDelDiagrama()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<AtributoCompuesto> getAtributocompuestoDelDiagrama();
+
+	/**
+	 * Returns the value of the '<em><b>Linkasac Del Diagrama</b></em>' containment reference list.
+	 * The list contents are of type {@link modeloER.modeloER.LinkASAC}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Linkasac Del Diagrama</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Linkasac Del Diagrama</em>' containment reference list.
+	 * @see modeloER.modeloER.ModeloERPackage#getDiagrama_LinkasacDelDiagrama()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<LinkASAC> getLinkasacDelDiagrama();
+
+	/**
+	 * Returns the value of the '<em><b>Atributoderivadoentidad Del Diagrama</b></em>' containment reference list.
+	 * The list contents are of type {@link modeloER.modeloER.AtributoDerivadoEntidad}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Atributoderivadoentidad Del Diagrama</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Atributoderivadoentidad Del Diagrama</em>' containment reference list.
+	 * @see modeloER.modeloER.ModeloERPackage#getDiagrama_AtributoderivadoentidadDelDiagrama()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<AtributoDerivadoEntidad> getAtributoderivadoentidadDelDiagrama();
+
+	/**
+	 * Returns the value of the '<em><b>Atributoentidadlink Diagrama</b></em>' containment reference list.
+	 * The list contents are of type {@link modeloER.modeloER.AtributoEntidadLink}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Atributoentidadlink Diagrama</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Atributoentidadlink Diagrama</em>' containment reference list.
+	 * @see modeloER.modeloER.ModeloERPackage#getDiagrama_AtributoentidadlinkDiagrama()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<AtributoEntidadLink> getAtributoentidadlinkDiagrama();
+
+	/**
+	 * Returns the value of the '<em><b>Atributoderivadoentidad Diagrama</b></em>' containment reference list.
+	 * The list contents are of type {@link modeloER.modeloER.AtributoDerivadoEntidad}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Atributoderivadoentidad Diagrama</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Atributoderivadoentidad Diagrama</em>' containment reference list.
+	 * @see modeloER.modeloER.ModeloERPackage#getDiagrama_AtributoderivadoentidadDiagrama()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<AtributoDerivadoEntidad> getAtributoderivadoentidadDiagrama();
+
+	/**
+	 * Returns the value of the '<em><b>Relacionatributolink Diagrama</b></em>' containment reference list.
+	 * The list contents are of type {@link modeloER.modeloER.RelacionAtributoLink}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Relacionatributolink Diagrama</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Relacionatributolink Diagrama</em>' containment reference list.
+	 * @see modeloER.modeloER.ModeloERPackage#getDiagrama_RelacionatributolinkDiagrama()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<RelacionAtributoLink> getRelacionatributolinkDiagrama();
+
+	/**
+	 * Returns the value of the '<em><b>Linkherenciapadre Diagrama</b></em>' containment reference list.
+	 * The list contents are of type {@link modeloER.modeloER.LinkHerenciaPadre}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Linkherenciapadre Diagrama</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Linkherenciapadre Diagrama</em>' containment reference list.
+	 * @see modeloER.modeloER.ModeloERPackage#getDiagrama_LinkherenciapadreDiagrama()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<LinkHerenciaPadre> getLinkherenciapadreDiagrama();
+
+	/**
+	 * Returns the value of the '<em><b>Linkherenciahijo Diagrama</b></em>' containment reference list.
+	 * The list contents are of type {@link modeloER.modeloER.LinkHerenciaHijo}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Linkherenciahijo Diagrama</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Linkherenciahijo Diagrama</em>' containment reference list.
+	 * @see modeloER.modeloER.ModeloERPackage#getDiagrama_LinkherenciahijoDiagrama()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<LinkHerenciaHijo> getLinkherenciahijoDiagrama();
 
 } // Diagrama

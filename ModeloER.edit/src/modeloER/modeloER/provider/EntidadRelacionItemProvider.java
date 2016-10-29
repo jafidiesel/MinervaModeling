@@ -60,28 +60,28 @@ public class EntidadRelacionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addEntidadEntidadRelacionPropertyDescriptor(object);
-			addRelacionEntidadRelacionPropertyDescriptor(object);
-			addLimiteInferiorPropertyDescriptor(object);
-			addLimiteSuperiorPropertyDescriptor(object);
+			addEntidadERLinkPropertyDescriptor(object);
+			addRelacionERLinkPropertyDescriptor(object);
+			addLimiteInferiorERPropertyDescriptor(object);
+			addLimiteSuperiorERPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Entidad Entidad Relacion feature.
+	 * This adds a property descriptor for the Entidad ER Link feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addEntidadEntidadRelacionPropertyDescriptor(Object object) {
+	protected void addEntidadERLinkPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_EntidadRelacion_entidadEntidadRelacion_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_EntidadRelacion_entidadEntidadRelacion_feature", "_UI_EntidadRelacion_type"),
-				 ModeloERPackage.Literals.ENTIDAD_RELACION__ENTIDAD_ENTIDAD_RELACION,
+				 getString("_UI_EntidadRelacion_entidadERLink_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EntidadRelacion_entidadERLink_feature", "_UI_EntidadRelacion_type"),
+				 ModeloERPackage.Literals.ENTIDAD_RELACION__ENTIDAD_ER_LINK,
 				 true,
 				 false,
 				 true,
@@ -91,19 +91,19 @@ public class EntidadRelacionItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Relacion Entidad Relacion feature.
+	 * This adds a property descriptor for the Relacion ER Link feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRelacionEntidadRelacionPropertyDescriptor(Object object) {
+	protected void addRelacionERLinkPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_EntidadRelacion_relacionEntidadRelacion_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_EntidadRelacion_relacionEntidadRelacion_feature", "_UI_EntidadRelacion_type"),
-				 ModeloERPackage.Literals.ENTIDAD_RELACION__RELACION_ENTIDAD_RELACION,
+				 getString("_UI_EntidadRelacion_relacionERLink_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EntidadRelacion_relacionERLink_feature", "_UI_EntidadRelacion_type"),
+				 ModeloERPackage.Literals.ENTIDAD_RELACION__RELACION_ER_LINK,
 				 true,
 				 false,
 				 true,
@@ -113,19 +113,19 @@ public class EntidadRelacionItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Limite Inferior feature.
+	 * This adds a property descriptor for the Limite Inferior ER feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLimiteInferiorPropertyDescriptor(Object object) {
+	protected void addLimiteInferiorERPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_EntidadRelacion_limiteInferior_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_EntidadRelacion_limiteInferior_feature", "_UI_EntidadRelacion_type"),
-				 ModeloERPackage.Literals.ENTIDAD_RELACION__LIMITE_INFERIOR,
+				 getString("_UI_EntidadRelacion_limiteInferiorER_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EntidadRelacion_limiteInferiorER_feature", "_UI_EntidadRelacion_type"),
+				 ModeloERPackage.Literals.ENTIDAD_RELACION__LIMITE_INFERIOR_ER,
 				 true,
 				 false,
 				 false,
@@ -135,19 +135,19 @@ public class EntidadRelacionItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Limite Superior feature.
+	 * This adds a property descriptor for the Limite Superior ER feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addLimiteSuperiorPropertyDescriptor(Object object) {
+	protected void addLimiteSuperiorERPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_EntidadRelacion_limiteSuperior_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_EntidadRelacion_limiteSuperior_feature", "_UI_EntidadRelacion_type"),
-				 ModeloERPackage.Literals.ENTIDAD_RELACION__LIMITE_SUPERIOR,
+				 getString("_UI_EntidadRelacion_limiteSuperiorER_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_EntidadRelacion_limiteSuperiorER_feature", "_UI_EntidadRelacion_type"),
+				 ModeloERPackage.Literals.ENTIDAD_RELACION__LIMITE_SUPERIOR_ER,
 				 true,
 				 false,
 				 false,
@@ -175,7 +175,7 @@ public class EntidadRelacionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((EntidadRelacion)object).getLimiteInferior();
+		String label = ((EntidadRelacion)object).getLimiteInferiorER();
 		return label == null || label.length() == 0 ?
 			getString("_UI_EntidadRelacion_type") :
 			getString("_UI_EntidadRelacion_type") + " " + label;
@@ -194,8 +194,8 @@ public class EntidadRelacionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(EntidadRelacion.class)) {
-			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_INFERIOR:
-			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_SUPERIOR:
+			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_INFERIOR_ER:
+			case ModeloERPackage.ENTIDAD_RELACION__LIMITE_SUPERIOR_ER:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

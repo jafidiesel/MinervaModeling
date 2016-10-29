@@ -140,6 +140,38 @@ public class ModeloERAdapterFactory extends AdapterFactoryImpl {
 				return createEntidadDebilAdapter();
 			}
 			@Override
+			public Adapter caseAtributoSimple(AtributoSimple object) {
+				return createAtributoSimpleAdapter();
+			}
+			@Override
+			public Adapter caseAtributoCompuesto(AtributoCompuesto object) {
+				return createAtributoCompuestoAdapter();
+			}
+			@Override
+			public Adapter caseLinkASAC(LinkASAC object) {
+				return createLinkASACAdapter();
+			}
+			@Override
+			public Adapter caseAtributoEntidadLink(AtributoEntidadLink object) {
+				return createAtributoEntidadLinkAdapter();
+			}
+			@Override
+			public Adapter caseLinkHerenciaPadre(LinkHerenciaPadre object) {
+				return createLinkHerenciaPadreAdapter();
+			}
+			@Override
+			public Adapter caseLinkHerenciaHijo(LinkHerenciaHijo object) {
+				return createLinkHerenciaHijoAdapter();
+			}
+			@Override
+			public Adapter caseAtributoDerivadoEntidad(AtributoDerivadoEntidad object) {
+				return createAtributoDerivadoEntidadAdapter();
+			}
+			@Override
+			public Adapter caseRelacionAtributoLink(RelacionAtributoLink object) {
+				return createRelacionAtributoLinkAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -408,6 +440,118 @@ public class ModeloERAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEntidadDebilAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modeloER.modeloER.AtributoSimple <em>Atributo Simple</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modeloER.modeloER.AtributoSimple
+	 * @generated
+	 */
+	public Adapter createAtributoSimpleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modeloER.modeloER.AtributoCompuesto <em>Atributo Compuesto</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modeloER.modeloER.AtributoCompuesto
+	 * @generated
+	 */
+	public Adapter createAtributoCompuestoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modeloER.modeloER.LinkASAC <em>Link ASAC</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modeloER.modeloER.LinkASAC
+	 * @generated
+	 */
+	public Adapter createLinkASACAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modeloER.modeloER.AtributoEntidadLink <em>Atributo Entidad Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modeloER.modeloER.AtributoEntidadLink
+	 * @generated
+	 */
+	public Adapter createAtributoEntidadLinkAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modeloER.modeloER.LinkHerenciaPadre <em>Link Herencia Padre</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modeloER.modeloER.LinkHerenciaPadre
+	 * @generated
+	 */
+	public Adapter createLinkHerenciaPadreAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modeloER.modeloER.LinkHerenciaHijo <em>Link Herencia Hijo</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modeloER.modeloER.LinkHerenciaHijo
+	 * @generated
+	 */
+	public Adapter createLinkHerenciaHijoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modeloER.modeloER.AtributoDerivadoEntidad <em>Atributo Derivado Entidad</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modeloER.modeloER.AtributoDerivadoEntidad
+	 * @generated
+	 */
+	public Adapter createAtributoDerivadoEntidadAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link modeloER.modeloER.RelacionAtributoLink <em>Relacion Atributo Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see modeloER.modeloER.RelacionAtributoLink
+	 * @generated
+	 */
+	public Adapter createRelacionAtributoLinkAdapter() {
 		return null;
 	}
 

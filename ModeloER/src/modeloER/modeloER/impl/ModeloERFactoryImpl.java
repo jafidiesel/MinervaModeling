@@ -75,6 +75,14 @@ public class ModeloERFactoryImpl extends EFactoryImpl implements ModeloERFactory
 			case ModeloERPackage.ATRIBUTO_DERIVADO_CLAVE_PRIMARIA: return createAtributoDerivadoClavePrimaria();
 			case ModeloERPackage.ENTIDAD_FUERTE: return createEntidadFuerte();
 			case ModeloERPackage.ENTIDAD_DEBIL: return createEntidadDebil();
+			case ModeloERPackage.ATRIBUTO_SIMPLE: return createAtributoSimple();
+			case ModeloERPackage.ATRIBUTO_COMPUESTO: return createAtributoCompuesto();
+			case ModeloERPackage.LINK_ASAC: return createLinkASAC();
+			case ModeloERPackage.ATRIBUTO_ENTIDAD_LINK: return createAtributoEntidadLink();
+			case ModeloERPackage.LINK_HERENCIA_PADRE: return createLinkHerenciaPadre();
+			case ModeloERPackage.LINK_HERENCIA_HIJO: return createLinkHerenciaHijo();
+			case ModeloERPackage.ATRIBUTO_DERIVADO_ENTIDAD: return createAtributoDerivadoEntidad();
+			case ModeloERPackage.RELACION_ATRIBUTO_LINK: return createRelacionAtributoLink();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -288,6 +296,86 @@ public class ModeloERFactoryImpl extends EFactoryImpl implements ModeloERFactory
 	public EntidadDebil createEntidadDebil() {
 		EntidadDebilImpl entidadDebil = new EntidadDebilImpl();
 		return entidadDebil;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AtributoSimple createAtributoSimple() {
+		AtributoSimpleImpl atributoSimple = new AtributoSimpleImpl();
+		return atributoSimple;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AtributoCompuesto createAtributoCompuesto() {
+		AtributoCompuestoImpl atributoCompuesto = new AtributoCompuestoImpl();
+		return atributoCompuesto;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LinkASAC createLinkASAC() {
+		LinkASACImpl linkASAC = new LinkASACImpl();
+		return linkASAC;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AtributoEntidadLink createAtributoEntidadLink() {
+		AtributoEntidadLinkImpl atributoEntidadLink = new AtributoEntidadLinkImpl();
+		return atributoEntidadLink;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LinkHerenciaPadre createLinkHerenciaPadre() {
+		LinkHerenciaPadreImpl linkHerenciaPadre = new LinkHerenciaPadreImpl();
+		return linkHerenciaPadre;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LinkHerenciaHijo createLinkHerenciaHijo() {
+		LinkHerenciaHijoImpl linkHerenciaHijo = new LinkHerenciaHijoImpl();
+		return linkHerenciaHijo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AtributoDerivadoEntidad createAtributoDerivadoEntidad() {
+		AtributoDerivadoEntidadImpl atributoDerivadoEntidad = new AtributoDerivadoEntidadImpl();
+		return atributoDerivadoEntidad;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RelacionAtributoLink createRelacionAtributoLink() {
+		RelacionAtributoLinkImpl relacionAtributoLink = new RelacionAtributoLinkImpl();
+		return relacionAtributoLink;
 	}
 
 	/**

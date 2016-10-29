@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link modeloER.modeloER.Relacion#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link modeloER.modeloER.Relacion#getNombreRelacion <em>Nombre Relacion</em>}</li>
  *   <li>{@link modeloER.modeloER.Relacion#getAtributosRelacion <em>Atributos Relacion</em>}</li>
  * </ul>
  *
@@ -25,30 +25,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Relacion extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
+	 * Returns the value of the '<em><b>Nombre Relacion</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Nombre Relacion</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nombre</em>' attribute.
-	 * @see #setNombre(String)
-	 * @see modeloER.modeloER.ModeloERPackage#getRelacion_Nombre()
+	 * @return the value of the '<em>Nombre Relacion</em>' attribute.
+	 * @see #setNombreRelacion(String)
+	 * @see modeloER.modeloER.ModeloERPackage#getRelacion_NombreRelacion()
 	 * @model
 	 * @generated
 	 */
-	String getNombre();
+	String getNombreRelacion();
 
 	/**
-	 * Sets the value of the '{@link modeloER.modeloER.Relacion#getNombre <em>Nombre</em>}' attribute.
+	 * Sets the value of the '{@link modeloER.modeloER.Relacion#getNombreRelacion <em>Nombre Relacion</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nombre</em>' attribute.
-	 * @see #getNombre()
+	 * @param value the new value of the '<em>Nombre Relacion</em>' attribute.
+	 * @see #getNombreRelacion()
 	 * @generated
 	 */
-	void setNombre(String value);
+	void setNombreRelacion(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Atributos Relacion</b></em>' containment reference list.

@@ -64,7 +64,7 @@ public class AtributoMultivaluadoItemProvider extends AtributoItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((AtributoMultivaluado)object).getNombre();
+		String label = ((AtributoMultivaluado)object).getNombreAtributo();
 		return label == null || label.length() == 0 ?
 			getString("_UI_AtributoMultivaluado_type") :
 			getString("_UI_AtributoMultivaluado_type") + " " + label;

@@ -64,7 +64,7 @@ public class AtributoDerivadoClavePrimariaItemProvider extends AtributoItemProvi
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((AtributoDerivadoClavePrimaria)object).getNombre();
+		String label = ((AtributoDerivadoClavePrimaria)object).getNombreAtributo();
 		return label == null || label.length() == 0 ?
 			getString("_UI_AtributoDerivadoClavePrimaria_type") :
 			getString("_UI_AtributoDerivadoClavePrimaria_type") + " " + label;

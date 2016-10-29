@@ -15,47 +15,49 @@
     </genEnums>
     <genClasses ecoreClass="modeloER.ecore#//Entidad">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Entidad/atributosEntidad"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Entidad/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Entidad/nombreEntidad"/>
     </genClasses>
     <genClasses ecoreClass="modeloER.ecore#//Atributo">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Atributo/nombre"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Atributo/nulo"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Atributo/tipoDato"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Atributo/atributosAtributo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Atributo/nombreAtributo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Atributo/nuloAtributo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Atributo/tipoDatoAtributo"/>
     </genClasses>
     <genClasses ecoreClass="modeloER.ecore#//Relacion">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Relacion/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//Relacion/nombreRelacion"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Relacion/atributosRelacion"/>
     </genClasses>
     <genClasses ecoreClass="modeloER.ecore#//Diagrama">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/relacionesDelDiagrama"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/atributosDelDiagrama"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/entidadesDelDiagrama"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/herenciasDelDiagrama"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/entidadRelacionesDelDiagrama"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/atributoderivadoDelDiagrama"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/atributomultivaluadoDelDiagrama"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/claveprimariaDelDiagrama"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/claveforaneaDelDiagrama"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/claveprimariaforaneaDelDiagrama"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/tipodebilDelDiagrama"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/tipofuerteDelDiagrama"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/relacionesTipodebilDelDiagrama"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/relacionesTipofuerteDelDiagrama"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/entidadesRelacionesFuertesDelDiagrama"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/entidadesRelacionesDebilesDelDiagrama"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/atributoderivadoclaveprimariaDelDiagrama"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/entidadfuerteDelDiagrama"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/entidaddebilDelDiagrama"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/atributosimpleDelDiagrama"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/atributocompuestoDelDiagrama"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/linkasacDelDiagrama"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/atributoderivadoentidadDelDiagrama"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/atributoentidadlinkDiagrama"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/atributoderivadoentidadDiagrama"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/relacionatributolinkDiagrama"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/linkherenciapadreDiagrama"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modeloER.ecore#//Diagrama/linkherenciahijoDiagrama"/>
     </genClasses>
     <genClasses ecoreClass="modeloER.ecore#//EntidadRelacion">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//EntidadRelacion/entidadEntidadRelacion"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//EntidadRelacion/relacionEntidadRelacion"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//EntidadRelacion/limiteInferior"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//EntidadRelacion/limiteSuperior"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//EntidadRelacion/entidadERLink"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//EntidadRelacion/relacionERLink"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//EntidadRelacion/limiteInferiorER"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//EntidadRelacion/limiteSuperiorER"/>
     </genClasses>
-    <genClasses ecoreClass="modeloER.ecore#//Herencia">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//Herencia/entidadPadreHerencia"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//Herencia/entidadesHijasHerencia"/>
-    </genClasses>
+    <genClasses ecoreClass="modeloER.ecore#//Herencia"/>
     <genClasses ecoreClass="modeloER.ecore#//AtributoDerivado"/>
     <genClasses ecoreClass="modeloER.ecore#//AtributoMultivaluado"/>
     <genClasses ecoreClass="modeloER.ecore#//ClavePrimaria"/>
@@ -68,5 +70,32 @@
     <genClasses ecoreClass="modeloER.ecore#//AtributoDerivadoClavePrimaria"/>
     <genClasses ecoreClass="modeloER.ecore#//EntidadFuerte"/>
     <genClasses ecoreClass="modeloER.ecore#//EntidadDebil"/>
+    <genClasses ecoreClass="modeloER.ecore#//AtributoSimple"/>
+    <genClasses ecoreClass="modeloER.ecore#//AtributoCompuesto"/>
+    <genClasses ecoreClass="modeloER.ecore#//LinkASAC">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//LinkASAC/atributocompuestoOrigen"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//LinkASAC/atributosimpleDestino"/>
+    </genClasses>
+    <genClasses ecoreClass="modeloER.ecore#//AtributoEntidadLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//AtributoEntidadLink/entidadAtributoLinkOrigen"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//AtributoEntidadLink/atributoEntidadLinkDestino"/>
+    </genClasses>
+    <genClasses ecoreClass="modeloER.ecore#//LinkHerenciaPadre">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//LinkHerenciaPadre/linkHerenciaPadreHerenciaDestino"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//LinkHerenciaPadre/herenciaPadreEntidadOrigen"/>
+    </genClasses>
+    <genClasses ecoreClass="modeloER.ecore#//LinkHerenciaHijo">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//LinkHerenciaHijo/herenciaHijoHerenciaDestino"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//LinkHerenciaHijo/herenciaHijoEntidadOrigen"/>
+    </genClasses>
+    <genClasses ecoreClass="modeloER.ecore#//AtributoDerivadoEntidad">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//AtributoDerivadoEntidad/entidadAtributoDerivadoOrigen"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//AtributoDerivadoEntidad/atributoderivadoclaveprimariaDestino"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//AtributoDerivadoEntidad/atributoderivadoDestino"/>
+    </genClasses>
+    <genClasses ecoreClass="modeloER.ecore#//RelacionAtributoLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//RelacionAtributoLink/relacionAtributoOrigen"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//RelacionAtributoLink/relacionAtributoDestino"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

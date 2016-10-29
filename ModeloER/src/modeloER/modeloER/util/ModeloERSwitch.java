@@ -186,6 +186,56 @@ public class ModeloERSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ModeloERPackage.ATRIBUTO_SIMPLE: {
+				AtributoSimple atributoSimple = (AtributoSimple)theEObject;
+				T result = caseAtributoSimple(atributoSimple);
+				if (result == null) result = caseAtributo(atributoSimple);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModeloERPackage.ATRIBUTO_COMPUESTO: {
+				AtributoCompuesto atributoCompuesto = (AtributoCompuesto)theEObject;
+				T result = caseAtributoCompuesto(atributoCompuesto);
+				if (result == null) result = caseAtributo(atributoCompuesto);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModeloERPackage.LINK_ASAC: {
+				LinkASAC linkASAC = (LinkASAC)theEObject;
+				T result = caseLinkASAC(linkASAC);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModeloERPackage.ATRIBUTO_ENTIDAD_LINK: {
+				AtributoEntidadLink atributoEntidadLink = (AtributoEntidadLink)theEObject;
+				T result = caseAtributoEntidadLink(atributoEntidadLink);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModeloERPackage.LINK_HERENCIA_PADRE: {
+				LinkHerenciaPadre linkHerenciaPadre = (LinkHerenciaPadre)theEObject;
+				T result = caseLinkHerenciaPadre(linkHerenciaPadre);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModeloERPackage.LINK_HERENCIA_HIJO: {
+				LinkHerenciaHijo linkHerenciaHijo = (LinkHerenciaHijo)theEObject;
+				T result = caseLinkHerenciaHijo(linkHerenciaHijo);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModeloERPackage.ATRIBUTO_DERIVADO_ENTIDAD: {
+				AtributoDerivadoEntidad atributoDerivadoEntidad = (AtributoDerivadoEntidad)theEObject;
+				T result = caseAtributoDerivadoEntidad(atributoDerivadoEntidad);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModeloERPackage.RELACION_ATRIBUTO_LINK: {
+				RelacionAtributoLink relacionAtributoLink = (RelacionAtributoLink)theEObject;
+				T result = caseRelacionAtributoLink(relacionAtributoLink);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -457,6 +507,126 @@ public class ModeloERSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEntidadDebil(EntidadDebil object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Atributo Simple</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Atributo Simple</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAtributoSimple(AtributoSimple object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Atributo Compuesto</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Atributo Compuesto</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAtributoCompuesto(AtributoCompuesto object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Link ASAC</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Link ASAC</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLinkASAC(LinkASAC object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Atributo Entidad Link</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Atributo Entidad Link</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAtributoEntidadLink(AtributoEntidadLink object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Link Herencia Padre</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Link Herencia Padre</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLinkHerenciaPadre(LinkHerenciaPadre object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Link Herencia Hijo</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Link Herencia Hijo</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLinkHerenciaHijo(LinkHerenciaHijo object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Atributo Derivado Entidad</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Atributo Derivado Entidad</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAtributoDerivadoEntidad(AtributoDerivadoEntidad object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Relacion Atributo Link</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Relacion Atributo Link</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRelacionAtributoLink(RelacionAtributoLink object) {
 		return null;
 	}
 

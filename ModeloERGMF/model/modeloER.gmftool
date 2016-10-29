@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmftool:ToolRegistry
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
+  <palette
+      title="modeloERPalette">
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Atributos">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Atributo Derivado"
+          description="Create new AtributoDerivado">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/AtributoDerivadoIcon.svg"
+            bundle="/ModeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/AtributoDerivadoIcon.svg"
+            bundle="/ModeloER.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Atributo Multivaluado"
+          description="Create new AtributoMultivaluado">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/AtributoMultivaluadoIcon.svg"
+            bundle="/ModeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/AtributoMultivaluadoIcon.svg"
+            bundle="/ModeloER.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Clave Primaria"
+          description="Create new ClavePrimaria">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/AtributoClaveIcon.svg"
+            bundle="/ModeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/AtributoClaveIcon.svg"
+            bundle="/ModeloER.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Clave Foranea"
+          description="Create new ClaveForanea">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/AtributoClaveForaneaIcon.svg"
+            bundle="/ModeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/AtributoClaveForaneaIcon.svg"
+            bundle="/ModeloER.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Clave Primaria Foranea"
+          description="Create new ClavePrimariaForanea">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/AtributoClavePrimariaForaneaIcon.svg"
+            bundle="/ModeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/AtributoClavePrimariaForaneaIcon.svg"
+            bundle="/ModeloER.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Atributo "
+          description="Create new AtributoSimple">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/AtributoIcon.svg"
+            bundle="/ModeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/AtributoIcon.svg"
+            bundle="/ModeloER.edit"/>
+      </tools>
+    </tools>
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Nodos">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Herencia"
+          description="Create new Herencia">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/HerenciaIcon.svg"
+            bundle="/ModeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/HerenciaIcon.svg"
+            bundle="/ModeloER.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Relacion Tipo Debil"
+          description="Create new RelacionTipoDebil">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/VinculoDebilIcon.svg"
+            bundle="/ModeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/VinculoDebilIcon.svg"
+            bundle="/ModeloER.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Relacion Tipo Fuerte"
+          description="Create new RelacionTipoFuerte">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/VinculoIcon.svg"
+            bundle="/ModeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/VinculoIcon.svg"
+            bundle="/ModeloER.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Entidad "
+          description="Create new EntidadFuerte">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/EntidadIcon.svg"
+            bundle="/ModeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/EntidadIcon.svg"
+            bundle="/ModeloER.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Entidad Debil"
+          description="Create new EntidadDebil">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/EntidadDebilIcon.svg"
+            bundle="/ModeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/EntidadDebilIcon.svg"
+            bundle="/ModeloER.edit"/>
+      </tools>
+    </tools>
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Relaciones">
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Link Entidad-Relacion "
+          description="Create new EntidadRelacionDebil">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/RelacionIcon.svg"
+            bundle="/ModeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/RelacionIcon.svg"
+            bundle="/ModeloER.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Link Entidad-Relacion Debil"
+          description="Create new EntidadRelacionFuerte">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/RelacionParticipacionTotalIcon.svg"
+            bundle="/ModeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/RelacionParticipacionTotalIcon.svg"
+            bundle="/ModeloER.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Link Simple"
+          description="Create new EntidadAtributosEntidadLink">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/RelacionIcon.svg"
+            bundle="/ModeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/RelacionIcon.svg"
+            bundle="/ModeloER.edit"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Relacion Linea Discontinua"
+          description="Establece la relacion entre Entidad y A. Derivado">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/RelacionAtributoDerivado.svg"
+            bundle="/ModeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/RelacionAtributoDerivado.svg"
+            bundle="/ModeloER.edit"/>
+      </tools>
+    </tools>
+  </palette>
+</gmftool:ToolRegistry>

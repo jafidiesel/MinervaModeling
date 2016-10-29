@@ -184,6 +184,78 @@ public interface ModeloERFactory extends EFactory {
 	EntidadDebil createEntidadDebil();
 
 	/**
+	 * Returns a new object of class '<em>Atributo Simple</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Atributo Simple</em>'.
+	 * @generated
+	 */
+	AtributoSimple createAtributoSimple();
+
+	/**
+	 * Returns a new object of class '<em>Atributo Compuesto</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Atributo Compuesto</em>'.
+	 * @generated
+	 */
+	AtributoCompuesto createAtributoCompuesto();
+
+	/**
+	 * Returns a new object of class '<em>Link ASAC</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Link ASAC</em>'.
+	 * @generated
+	 */
+	LinkASAC createLinkASAC();
+
+	/**
+	 * Returns a new object of class '<em>Atributo Entidad Link</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Atributo Entidad Link</em>'.
+	 * @generated
+	 */
+	AtributoEntidadLink createAtributoEntidadLink();
+
+	/**
+	 * Returns a new object of class '<em>Link Herencia Padre</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Link Herencia Padre</em>'.
+	 * @generated
+	 */
+	LinkHerenciaPadre createLinkHerenciaPadre();
+
+	/**
+	 * Returns a new object of class '<em>Link Herencia Hijo</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Link Herencia Hijo</em>'.
+	 * @generated
+	 */
+	LinkHerenciaHijo createLinkHerenciaHijo();
+
+	/**
+	 * Returns a new object of class '<em>Atributo Derivado Entidad</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Atributo Derivado Entidad</em>'.
+	 * @generated
+	 */
+	AtributoDerivadoEntidad createAtributoDerivadoEntidad();
+
+	/**
+	 * Returns a new object of class '<em>Relacion Atributo Link</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Relacion Atributo Link</em>'.
+	 * @generated
+	 */
+	RelacionAtributoLink createRelacionAtributoLink();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

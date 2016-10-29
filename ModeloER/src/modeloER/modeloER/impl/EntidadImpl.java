@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link modeloER.modeloER.impl.EntidadImpl#getAtributosEntidad <em>Atributos Entidad</em>}</li>
- *   <li>{@link modeloER.modeloER.impl.EntidadImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link modeloER.modeloER.impl.EntidadImpl#getNombreEntidad <em>Nombre Entidad</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,24 +48,24 @@ public class EntidadImpl extends MinimalEObjectImpl.Container implements Entidad
 	protected EList<Atributo> atributosEntidad;
 
 	/**
-	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * The default value of the '{@link #getNombreEntidad() <em>Nombre Entidad</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNombre()
+	 * @see #getNombreEntidad()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOMBRE_EDEFAULT = null;
+	protected static final String NOMBRE_ENTIDAD_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * The cached value of the '{@link #getNombreEntidad() <em>Nombre Entidad</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNombre()
+	 * @see #getNombreEntidad()
 	 * @generated
 	 * @ordered
 	 */
-	protected String nombre = NOMBRE_EDEFAULT;
+	protected String nombreEntidad = NOMBRE_ENTIDAD_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -103,8 +103,8 @@ public class EntidadImpl extends MinimalEObjectImpl.Container implements Entidad
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNombre() {
-		return nombre;
+	public String getNombreEntidad() {
+		return nombreEntidad;
 	}
 
 	/**
@@ -112,11 +112,11 @@ public class EntidadImpl extends MinimalEObjectImpl.Container implements Entidad
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNombre(String newNombre) {
-		String oldNombre = nombre;
-		nombre = newNombre;
+	public void setNombreEntidad(String newNombreEntidad) {
+		String oldNombreEntidad = nombreEntidad;
+		nombreEntidad = newNombreEntidad;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModeloERPackage.ENTIDAD__NOMBRE, oldNombre, nombre));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModeloERPackage.ENTIDAD__NOMBRE_ENTIDAD, oldNombreEntidad, nombreEntidad));
 	}
 
 	/**
@@ -143,8 +143,8 @@ public class EntidadImpl extends MinimalEObjectImpl.Container implements Entidad
 		switch (featureID) {
 			case ModeloERPackage.ENTIDAD__ATRIBUTOS_ENTIDAD:
 				return getAtributosEntidad();
-			case ModeloERPackage.ENTIDAD__NOMBRE:
-				return getNombre();
+			case ModeloERPackage.ENTIDAD__NOMBRE_ENTIDAD:
+				return getNombreEntidad();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -162,8 +162,8 @@ public class EntidadImpl extends MinimalEObjectImpl.Container implements Entidad
 				getAtributosEntidad().clear();
 				getAtributosEntidad().addAll((Collection<? extends Atributo>)newValue);
 				return;
-			case ModeloERPackage.ENTIDAD__NOMBRE:
-				setNombre((String)newValue);
+			case ModeloERPackage.ENTIDAD__NOMBRE_ENTIDAD:
+				setNombreEntidad((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -180,8 +180,8 @@ public class EntidadImpl extends MinimalEObjectImpl.Container implements Entidad
 			case ModeloERPackage.ENTIDAD__ATRIBUTOS_ENTIDAD:
 				getAtributosEntidad().clear();
 				return;
-			case ModeloERPackage.ENTIDAD__NOMBRE:
-				setNombre(NOMBRE_EDEFAULT);
+			case ModeloERPackage.ENTIDAD__NOMBRE_ENTIDAD:
+				setNombreEntidad(NOMBRE_ENTIDAD_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -197,8 +197,8 @@ public class EntidadImpl extends MinimalEObjectImpl.Container implements Entidad
 		switch (featureID) {
 			case ModeloERPackage.ENTIDAD__ATRIBUTOS_ENTIDAD:
 				return atributosEntidad != null && !atributosEntidad.isEmpty();
-			case ModeloERPackage.ENTIDAD__NOMBRE:
-				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
+			case ModeloERPackage.ENTIDAD__NOMBRE_ENTIDAD:
+				return NOMBRE_ENTIDAD_EDEFAULT == null ? nombreEntidad != null : !NOMBRE_ENTIDAD_EDEFAULT.equals(nombreEntidad);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -213,8 +213,8 @@ public class EntidadImpl extends MinimalEObjectImpl.Container implements Entidad
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (nombre: ");
-		result.append(nombre);
+		result.append(" (nombreEntidad: ");
+		result.append(nombreEntidad);
 		result.append(')');
 		return result.toString();
 	}

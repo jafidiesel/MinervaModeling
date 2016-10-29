@@ -7,15 +7,12 @@ import java.util.Collection;
 import java.util.List;
 
 import modeloER.modeloER.Atributo;
-import modeloER.modeloER.ModeloERFactory;
 import modeloER.modeloER.ModeloERPackage;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
@@ -63,27 +60,27 @@ public class AtributoItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNombrePropertyDescriptor(object);
-			addNuloPropertyDescriptor(object);
-			addTipoDatoPropertyDescriptor(object);
+			addNombreAtributoPropertyDescriptor(object);
+			addNuloAtributoPropertyDescriptor(object);
+			addTipoDatoAtributoPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Nombre feature.
+	 * This adds a property descriptor for the Nombre Atributo feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNombrePropertyDescriptor(Object object) {
+	protected void addNombreAtributoPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Atributo_nombre_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Atributo_nombre_feature", "_UI_Atributo_type"),
-				 ModeloERPackage.Literals.ATRIBUTO__NOMBRE,
+				 getString("_UI_Atributo_nombreAtributo_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Atributo_nombreAtributo_feature", "_UI_Atributo_type"),
+				 ModeloERPackage.Literals.ATRIBUTO__NOMBRE_ATRIBUTO,
 				 true,
 				 false,
 				 false,
@@ -93,19 +90,19 @@ public class AtributoItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Nulo feature.
+	 * This adds a property descriptor for the Nulo Atributo feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNuloPropertyDescriptor(Object object) {
+	protected void addNuloAtributoPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Atributo_nulo_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Atributo_nulo_feature", "_UI_Atributo_type"),
-				 ModeloERPackage.Literals.ATRIBUTO__NULO,
+				 getString("_UI_Atributo_nuloAtributo_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Atributo_nuloAtributo_feature", "_UI_Atributo_type"),
+				 ModeloERPackage.Literals.ATRIBUTO__NULO_ATRIBUTO,
 				 true,
 				 false,
 				 false,
@@ -115,55 +112,25 @@ public class AtributoItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Tipo Dato feature.
+	 * This adds a property descriptor for the Tipo Dato Atributo feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTipoDatoPropertyDescriptor(Object object) {
+	protected void addTipoDatoAtributoPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Atributo_tipoDato_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Atributo_tipoDato_feature", "_UI_Atributo_type"),
-				 ModeloERPackage.Literals.ATRIBUTO__TIPO_DATO,
+				 getString("_UI_Atributo_tipoDatoAtributo_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Atributo_tipoDatoAtributo_feature", "_UI_Atributo_type"),
+				 ModeloERPackage.Literals.ATRIBUTO__TIPO_DATO_ATRIBUTO,
 				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
-	}
-
-	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(ModeloERPackage.Literals.ATRIBUTO__ATRIBUTOS_ATRIBUTO);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -185,7 +152,7 @@ public class AtributoItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Atributo)object).getNombre();
+		String label = ((Atributo)object).getNombreAtributo();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Atributo_type") :
 			getString("_UI_Atributo_type") + " " + label;
@@ -204,13 +171,10 @@ public class AtributoItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Atributo.class)) {
-			case ModeloERPackage.ATRIBUTO__NOMBRE:
-			case ModeloERPackage.ATRIBUTO__NULO:
-			case ModeloERPackage.ATRIBUTO__TIPO_DATO:
+			case ModeloERPackage.ATRIBUTO__NOMBRE_ATRIBUTO:
+			case ModeloERPackage.ATRIBUTO__NULO_ATRIBUTO:
+			case ModeloERPackage.ATRIBUTO__TIPO_DATO_ATRIBUTO:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case ModeloERPackage.ATRIBUTO__ATRIBUTOS_ATRIBUTO:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -226,41 +190,6 @@ public class AtributoItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModeloERPackage.Literals.ATRIBUTO__ATRIBUTOS_ATRIBUTO,
-				 ModeloERFactory.eINSTANCE.createAtributo()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModeloERPackage.Literals.ATRIBUTO__ATRIBUTOS_ATRIBUTO,
-				 ModeloERFactory.eINSTANCE.createAtributoDerivado()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModeloERPackage.Literals.ATRIBUTO__ATRIBUTOS_ATRIBUTO,
-				 ModeloERFactory.eINSTANCE.createAtributoMultivaluado()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModeloERPackage.Literals.ATRIBUTO__ATRIBUTOS_ATRIBUTO,
-				 ModeloERFactory.eINSTANCE.createClavePrimaria()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModeloERPackage.Literals.ATRIBUTO__ATRIBUTOS_ATRIBUTO,
-				 ModeloERFactory.eINSTANCE.createClaveForanea()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModeloERPackage.Literals.ATRIBUTO__ATRIBUTOS_ATRIBUTO,
-				 ModeloERFactory.eINSTANCE.createClavePrimariaForanea()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModeloERPackage.Literals.ATRIBUTO__ATRIBUTOS_ATRIBUTO,
-				 ModeloERFactory.eINSTANCE.createAtributoDerivadoClavePrimaria()));
 	}
 
 	/**

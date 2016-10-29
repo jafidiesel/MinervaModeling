@@ -64,7 +64,7 @@ public class RelacionTipoDebilItemProvider extends RelacionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((RelacionTipoDebil)object).getNombre();
+		String label = ((RelacionTipoDebil)object).getNombreRelacion();
 		return label == null || label.length() == 0 ?
 			getString("_UI_RelacionTipoDebil_type") :
 			getString("_UI_RelacionTipoDebil_type") + " " + label;

@@ -63,25 +63,25 @@ public class EntidadItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNombrePropertyDescriptor(object);
+			addNombreEntidadPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Nombre feature.
+	 * This adds a property descriptor for the Nombre Entidad feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNombrePropertyDescriptor(Object object) {
+	protected void addNombreEntidadPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Entidad_nombre_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Entidad_nombre_feature", "_UI_Entidad_type"),
-				 ModeloERPackage.Literals.ENTIDAD__NOMBRE,
+				 getString("_UI_Entidad_nombreEntidad_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Entidad_nombreEntidad_feature", "_UI_Entidad_type"),
+				 ModeloERPackage.Literals.ENTIDAD__NOMBRE_ENTIDAD,
 				 true,
 				 false,
 				 false,
@@ -139,7 +139,7 @@ public class EntidadItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Entidad)object).getNombre();
+		String label = ((Entidad)object).getNombreEntidad();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Entidad_type") :
 			getString("_UI_Entidad_type") + " " + label;
@@ -158,7 +158,7 @@ public class EntidadItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Entidad.class)) {
-			case ModeloERPackage.ENTIDAD__NOMBRE:
+			case ModeloERPackage.ENTIDAD__NOMBRE_ENTIDAD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ModeloERPackage.ENTIDAD__ATRIBUTOS_ENTIDAD:
@@ -213,6 +213,16 @@ public class EntidadItemProvider
 			(createChildParameter
 				(ModeloERPackage.Literals.ENTIDAD__ATRIBUTOS_ENTIDAD,
 				 ModeloERFactory.eINSTANCE.createAtributoDerivadoClavePrimaria()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModeloERPackage.Literals.ENTIDAD__ATRIBUTOS_ENTIDAD,
+				 ModeloERFactory.eINSTANCE.createAtributoSimple()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModeloERPackage.Literals.ENTIDAD__ATRIBUTOS_ENTIDAD,
+				 ModeloERFactory.eINSTANCE.createAtributoCompuesto()));
 	}
 
 	/**

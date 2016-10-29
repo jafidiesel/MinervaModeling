@@ -8,8 +8,7 @@ Bundle-Activator: modeloER.modeloER.provider.ModeloEREditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: modeloER.provider,
- modeloER.modeloER.provider
+Export-Package: modeloER.modeloER.provider
 Require-Bundle: org.eclipse.core.runtime,
  ModeloER;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport

@@ -8,8 +8,7 @@ Bundle-Activator: modeloER.modeloER.presentation.ModeloEREditorPlugin$Implementa
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Export-Package: modeloER.presentation,
- modeloER.modeloER.presentation
+Export-Package: modeloER.modeloER.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  ModeloER.edit;visibility:=reexport,

@@ -64,7 +64,7 @@ public class EntidadRelacionDebilItemProvider extends EntidadRelacionItemProvide
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((EntidadRelacionDebil)object).getLimiteInferior();
+		String label = ((EntidadRelacionDebil)object).getLimiteInferiorER();
 		return label == null || label.length() == 0 ?
 			getString("_UI_EntidadRelacionDebil_type") :
 			getString("_UI_EntidadRelacionDebil_type") + " " + label;

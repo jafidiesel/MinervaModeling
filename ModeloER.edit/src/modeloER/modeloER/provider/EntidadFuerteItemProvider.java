@@ -64,7 +64,7 @@ public class EntidadFuerteItemProvider extends EntidadItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((EntidadFuerte)object).getNombre();
+		String label = ((EntidadFuerte)object).getNombreEntidad();
 		return label == null || label.length() == 0 ?
 			getString("_UI_EntidadFuerte_type") :
 			getString("_UI_EntidadFuerte_type") + " " + label;

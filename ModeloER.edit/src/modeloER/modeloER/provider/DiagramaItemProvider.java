@@ -77,23 +77,29 @@ public class DiagramaItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__RELACIONES_DEL_DIAGRAMA);
 			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__ATRIBUTOS_DEL_DIAGRAMA);
-			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__ENTIDADES_DEL_DIAGRAMA);
 			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__HERENCIAS_DEL_DIAGRAMA);
-			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__ENTIDAD_RELACIONES_DEL_DIAGRAMA);
 			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__ATRIBUTODERIVADO_DEL_DIAGRAMA);
 			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__ATRIBUTOMULTIVALUADO_DEL_DIAGRAMA);
 			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__CLAVEPRIMARIA_DEL_DIAGRAMA);
 			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__CLAVEFORANEA_DEL_DIAGRAMA);
 			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__CLAVEPRIMARIAFORANEA_DEL_DIAGRAMA);
-			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__TIPODEBIL_DEL_DIAGRAMA);
-			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__TIPOFUERTE_DEL_DIAGRAMA);
+			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__RELACIONES_TIPODEBIL_DEL_DIAGRAMA);
+			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__RELACIONES_TIPOFUERTE_DEL_DIAGRAMA);
 			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__ENTIDADES_RELACIONES_FUERTES_DEL_DIAGRAMA);
 			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__ENTIDADES_RELACIONES_DEBILES_DEL_DIAGRAMA);
 			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__ATRIBUTODERIVADOCLAVEPRIMARIA_DEL_DIAGRAMA);
 			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__ENTIDADFUERTE_DEL_DIAGRAMA);
 			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__ENTIDADDEBIL_DEL_DIAGRAMA);
+			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__ATRIBUTOSIMPLE_DEL_DIAGRAMA);
+			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__ATRIBUTOCOMPUESTO_DEL_DIAGRAMA);
+			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__LINKASAC_DEL_DIAGRAMA);
+			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__ATRIBUTODERIVADOENTIDAD_DEL_DIAGRAMA);
+			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__ATRIBUTOENTIDADLINK_DIAGRAMA);
+			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__ATRIBUTODERIVADOENTIDAD_DIAGRAMA);
+			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__RELACIONATRIBUTOLINK_DIAGRAMA);
+			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__LINKHERENCIAPADRE_DIAGRAMA);
+			childrenFeatures.add(ModeloERPackage.Literals.DIAGRAMA__LINKHERENCIAHIJO_DIAGRAMA);
 		}
 		return childrenFeatures;
 	}
@@ -146,23 +152,29 @@ public class DiagramaItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Diagrama.class)) {
-			case ModeloERPackage.DIAGRAMA__RELACIONES_DEL_DIAGRAMA:
 			case ModeloERPackage.DIAGRAMA__ATRIBUTOS_DEL_DIAGRAMA:
-			case ModeloERPackage.DIAGRAMA__ENTIDADES_DEL_DIAGRAMA:
 			case ModeloERPackage.DIAGRAMA__HERENCIAS_DEL_DIAGRAMA:
-			case ModeloERPackage.DIAGRAMA__ENTIDAD_RELACIONES_DEL_DIAGRAMA:
 			case ModeloERPackage.DIAGRAMA__ATRIBUTODERIVADO_DEL_DIAGRAMA:
 			case ModeloERPackage.DIAGRAMA__ATRIBUTOMULTIVALUADO_DEL_DIAGRAMA:
 			case ModeloERPackage.DIAGRAMA__CLAVEPRIMARIA_DEL_DIAGRAMA:
 			case ModeloERPackage.DIAGRAMA__CLAVEFORANEA_DEL_DIAGRAMA:
 			case ModeloERPackage.DIAGRAMA__CLAVEPRIMARIAFORANEA_DEL_DIAGRAMA:
-			case ModeloERPackage.DIAGRAMA__TIPODEBIL_DEL_DIAGRAMA:
-			case ModeloERPackage.DIAGRAMA__TIPOFUERTE_DEL_DIAGRAMA:
+			case ModeloERPackage.DIAGRAMA__RELACIONES_TIPODEBIL_DEL_DIAGRAMA:
+			case ModeloERPackage.DIAGRAMA__RELACIONES_TIPOFUERTE_DEL_DIAGRAMA:
 			case ModeloERPackage.DIAGRAMA__ENTIDADES_RELACIONES_FUERTES_DEL_DIAGRAMA:
 			case ModeloERPackage.DIAGRAMA__ENTIDADES_RELACIONES_DEBILES_DEL_DIAGRAMA:
 			case ModeloERPackage.DIAGRAMA__ATRIBUTODERIVADOCLAVEPRIMARIA_DEL_DIAGRAMA:
 			case ModeloERPackage.DIAGRAMA__ENTIDADFUERTE_DEL_DIAGRAMA:
 			case ModeloERPackage.DIAGRAMA__ENTIDADDEBIL_DEL_DIAGRAMA:
+			case ModeloERPackage.DIAGRAMA__ATRIBUTOSIMPLE_DEL_DIAGRAMA:
+			case ModeloERPackage.DIAGRAMA__ATRIBUTOCOMPUESTO_DEL_DIAGRAMA:
+			case ModeloERPackage.DIAGRAMA__LINKASAC_DEL_DIAGRAMA:
+			case ModeloERPackage.DIAGRAMA__ATRIBUTODERIVADOENTIDAD_DEL_DIAGRAMA:
+			case ModeloERPackage.DIAGRAMA__ATRIBUTOENTIDADLINK_DIAGRAMA:
+			case ModeloERPackage.DIAGRAMA__ATRIBUTODERIVADOENTIDAD_DIAGRAMA:
+			case ModeloERPackage.DIAGRAMA__RELACIONATRIBUTOLINK_DIAGRAMA:
+			case ModeloERPackage.DIAGRAMA__LINKHERENCIAPADRE_DIAGRAMA:
+			case ModeloERPackage.DIAGRAMA__LINKHERENCIAHIJO_DIAGRAMA:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -179,21 +191,6 @@ public class DiagramaItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModeloERPackage.Literals.DIAGRAMA__RELACIONES_DEL_DIAGRAMA,
-				 ModeloERFactory.eINSTANCE.createRelacion()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModeloERPackage.Literals.DIAGRAMA__RELACIONES_DEL_DIAGRAMA,
-				 ModeloERFactory.eINSTANCE.createRelacionTipoDebil()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModeloERPackage.Literals.DIAGRAMA__RELACIONES_DEL_DIAGRAMA,
-				 ModeloERFactory.eINSTANCE.createRelacionTipoFuerte()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -232,38 +229,18 @@ public class DiagramaItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ModeloERPackage.Literals.DIAGRAMA__ENTIDADES_DEL_DIAGRAMA,
-				 ModeloERFactory.eINSTANCE.createEntidad()));
+				(ModeloERPackage.Literals.DIAGRAMA__ATRIBUTOS_DEL_DIAGRAMA,
+				 ModeloERFactory.eINSTANCE.createAtributoSimple()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ModeloERPackage.Literals.DIAGRAMA__ENTIDADES_DEL_DIAGRAMA,
-				 ModeloERFactory.eINSTANCE.createEntidadFuerte()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModeloERPackage.Literals.DIAGRAMA__ENTIDADES_DEL_DIAGRAMA,
-				 ModeloERFactory.eINSTANCE.createEntidadDebil()));
+				(ModeloERPackage.Literals.DIAGRAMA__ATRIBUTOS_DEL_DIAGRAMA,
+				 ModeloERFactory.eINSTANCE.createAtributoCompuesto()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(ModeloERPackage.Literals.DIAGRAMA__HERENCIAS_DEL_DIAGRAMA,
 				 ModeloERFactory.eINSTANCE.createHerencia()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModeloERPackage.Literals.DIAGRAMA__ENTIDAD_RELACIONES_DEL_DIAGRAMA,
-				 ModeloERFactory.eINSTANCE.createEntidadRelacion()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModeloERPackage.Literals.DIAGRAMA__ENTIDAD_RELACIONES_DEL_DIAGRAMA,
-				 ModeloERFactory.eINSTANCE.createEntidadRelacionDebil()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModeloERPackage.Literals.DIAGRAMA__ENTIDAD_RELACIONES_DEL_DIAGRAMA,
-				 ModeloERFactory.eINSTANCE.createEntidadRelacionFuerte()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -292,12 +269,12 @@ public class DiagramaItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ModeloERPackage.Literals.DIAGRAMA__TIPODEBIL_DEL_DIAGRAMA,
+				(ModeloERPackage.Literals.DIAGRAMA__RELACIONES_TIPODEBIL_DEL_DIAGRAMA,
 				 ModeloERFactory.eINSTANCE.createRelacionTipoDebil()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ModeloERPackage.Literals.DIAGRAMA__TIPOFUERTE_DEL_DIAGRAMA,
+				(ModeloERPackage.Literals.DIAGRAMA__RELACIONES_TIPOFUERTE_DEL_DIAGRAMA,
 				 ModeloERFactory.eINSTANCE.createRelacionTipoFuerte()));
 
 		newChildDescriptors.add
@@ -324,6 +301,51 @@ public class DiagramaItemProvider
 			(createChildParameter
 				(ModeloERPackage.Literals.DIAGRAMA__ENTIDADDEBIL_DEL_DIAGRAMA,
 				 ModeloERFactory.eINSTANCE.createEntidadDebil()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModeloERPackage.Literals.DIAGRAMA__ATRIBUTOSIMPLE_DEL_DIAGRAMA,
+				 ModeloERFactory.eINSTANCE.createAtributoSimple()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModeloERPackage.Literals.DIAGRAMA__ATRIBUTOCOMPUESTO_DEL_DIAGRAMA,
+				 ModeloERFactory.eINSTANCE.createAtributoCompuesto()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModeloERPackage.Literals.DIAGRAMA__LINKASAC_DEL_DIAGRAMA,
+				 ModeloERFactory.eINSTANCE.createLinkASAC()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModeloERPackage.Literals.DIAGRAMA__ATRIBUTODERIVADOENTIDAD_DEL_DIAGRAMA,
+				 ModeloERFactory.eINSTANCE.createAtributoDerivadoEntidad()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModeloERPackage.Literals.DIAGRAMA__ATRIBUTOENTIDADLINK_DIAGRAMA,
+				 ModeloERFactory.eINSTANCE.createAtributoEntidadLink()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModeloERPackage.Literals.DIAGRAMA__ATRIBUTODERIVADOENTIDAD_DIAGRAMA,
+				 ModeloERFactory.eINSTANCE.createAtributoDerivadoEntidad()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModeloERPackage.Literals.DIAGRAMA__RELACIONATRIBUTOLINK_DIAGRAMA,
+				 ModeloERFactory.eINSTANCE.createRelacionAtributoLink()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModeloERPackage.Literals.DIAGRAMA__LINKHERENCIAPADRE_DIAGRAMA,
+				 ModeloERFactory.eINSTANCE.createLinkHerenciaPadre()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModeloERPackage.Literals.DIAGRAMA__LINKHERENCIAHIJO_DIAGRAMA,
+				 ModeloERFactory.eINSTANCE.createLinkHerenciaHijo()));
 	}
 
 	/**
@@ -338,9 +360,6 @@ public class DiagramaItemProvider
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == ModeloERPackage.Literals.DIAGRAMA__RELACIONES_DEL_DIAGRAMA ||
-			childFeature == ModeloERPackage.Literals.DIAGRAMA__TIPODEBIL_DEL_DIAGRAMA ||
-			childFeature == ModeloERPackage.Literals.DIAGRAMA__TIPOFUERTE_DEL_DIAGRAMA ||
 			childFeature == ModeloERPackage.Literals.DIAGRAMA__ATRIBUTOS_DEL_DIAGRAMA ||
 			childFeature == ModeloERPackage.Literals.DIAGRAMA__ATRIBUTODERIVADO_DEL_DIAGRAMA ||
 			childFeature == ModeloERPackage.Literals.DIAGRAMA__ATRIBUTOMULTIVALUADO_DEL_DIAGRAMA ||
@@ -348,12 +367,10 @@ public class DiagramaItemProvider
 			childFeature == ModeloERPackage.Literals.DIAGRAMA__CLAVEFORANEA_DEL_DIAGRAMA ||
 			childFeature == ModeloERPackage.Literals.DIAGRAMA__CLAVEPRIMARIAFORANEA_DEL_DIAGRAMA ||
 			childFeature == ModeloERPackage.Literals.DIAGRAMA__ATRIBUTODERIVADOCLAVEPRIMARIA_DEL_DIAGRAMA ||
-			childFeature == ModeloERPackage.Literals.DIAGRAMA__ENTIDADES_DEL_DIAGRAMA ||
-			childFeature == ModeloERPackage.Literals.DIAGRAMA__ENTIDADFUERTE_DEL_DIAGRAMA ||
-			childFeature == ModeloERPackage.Literals.DIAGRAMA__ENTIDADDEBIL_DEL_DIAGRAMA ||
-			childFeature == ModeloERPackage.Literals.DIAGRAMA__ENTIDAD_RELACIONES_DEL_DIAGRAMA ||
-			childFeature == ModeloERPackage.Literals.DIAGRAMA__ENTIDADES_RELACIONES_DEBILES_DEL_DIAGRAMA ||
-			childFeature == ModeloERPackage.Literals.DIAGRAMA__ENTIDADES_RELACIONES_FUERTES_DEL_DIAGRAMA;
+			childFeature == ModeloERPackage.Literals.DIAGRAMA__ATRIBUTOSIMPLE_DEL_DIAGRAMA ||
+			childFeature == ModeloERPackage.Literals.DIAGRAMA__ATRIBUTOCOMPUESTO_DEL_DIAGRAMA ||
+			childFeature == ModeloERPackage.Literals.DIAGRAMA__ATRIBUTODERIVADOENTIDAD_DEL_DIAGRAMA ||
+			childFeature == ModeloERPackage.Literals.DIAGRAMA__ATRIBUTODERIVADOENTIDAD_DIAGRAMA;
 
 		if (qualify) {
 			return getString

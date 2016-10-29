@@ -2,25 +2,14 @@
  */
 package modeloER.modeloER.impl;
 
-import java.util.Collection;
-
 import modeloER.modeloER.Atributo;
 import modeloER.modeloER.ModeloERPackage;
 import modeloER.modeloER.TipoDato;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,84 +19,73 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link modeloER.modeloER.impl.AtributoImpl#getNombre <em>Nombre</em>}</li>
- *   <li>{@link modeloER.modeloER.impl.AtributoImpl#isNulo <em>Nulo</em>}</li>
- *   <li>{@link modeloER.modeloER.impl.AtributoImpl#getTipoDato <em>Tipo Dato</em>}</li>
- *   <li>{@link modeloER.modeloER.impl.AtributoImpl#getAtributosAtributo <em>Atributos Atributo</em>}</li>
+ *   <li>{@link modeloER.modeloER.impl.AtributoImpl#getNombreAtributo <em>Nombre Atributo</em>}</li>
+ *   <li>{@link modeloER.modeloER.impl.AtributoImpl#isNuloAtributo <em>Nulo Atributo</em>}</li>
+ *   <li>{@link modeloER.modeloER.impl.AtributoImpl#getTipoDatoAtributo <em>Tipo Dato Atributo</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class AtributoImpl extends MinimalEObjectImpl.Container implements Atributo {
 	/**
-	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * The default value of the '{@link #getNombreAtributo() <em>Nombre Atributo</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNombre()
+	 * @see #getNombreAtributo()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOMBRE_EDEFAULT = null;
+	protected static final String NOMBRE_ATRIBUTO_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * The cached value of the '{@link #getNombreAtributo() <em>Nombre Atributo</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNombre()
+	 * @see #getNombreAtributo()
 	 * @generated
 	 * @ordered
 	 */
-	protected String nombre = NOMBRE_EDEFAULT;
+	protected String nombreAtributo = NOMBRE_ATRIBUTO_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isNulo() <em>Nulo</em>}' attribute.
+	 * The default value of the '{@link #isNuloAtributo() <em>Nulo Atributo</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isNulo()
+	 * @see #isNuloAtributo()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean NULO_EDEFAULT = false;
+	protected static final boolean NULO_ATRIBUTO_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isNulo() <em>Nulo</em>}' attribute.
+	 * The cached value of the '{@link #isNuloAtributo() <em>Nulo Atributo</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isNulo()
+	 * @see #isNuloAtributo()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean nulo = NULO_EDEFAULT;
+	protected boolean nuloAtributo = NULO_ATRIBUTO_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getTipoDato() <em>Tipo Dato</em>}' attribute.
+	 * The default value of the '{@link #getTipoDatoAtributo() <em>Tipo Dato Atributo</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTipoDato()
+	 * @see #getTipoDatoAtributo()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final TipoDato TIPO_DATO_EDEFAULT = TipoDato.VARCHAR;
+	protected static final TipoDato TIPO_DATO_ATRIBUTO_EDEFAULT = TipoDato.VARCHAR;
 
 	/**
-	 * The cached value of the '{@link #getTipoDato() <em>Tipo Dato</em>}' attribute.
+	 * The cached value of the '{@link #getTipoDatoAtributo() <em>Tipo Dato Atributo</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTipoDato()
+	 * @see #getTipoDatoAtributo()
 	 * @generated
 	 * @ordered
 	 */
-	protected TipoDato tipoDato = TIPO_DATO_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getAtributosAtributo() <em>Atributos Atributo</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAtributosAtributo()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Atributo> atributosAtributo;
+	protected TipoDato tipoDatoAtributo = TIPO_DATO_ATRIBUTO_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -133,8 +111,8 @@ public class AtributoImpl extends MinimalEObjectImpl.Container implements Atribu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNombre() {
-		return nombre;
+	public String getNombreAtributo() {
+		return nombreAtributo;
 	}
 
 	/**
@@ -142,11 +120,11 @@ public class AtributoImpl extends MinimalEObjectImpl.Container implements Atribu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNombre(String newNombre) {
-		String oldNombre = nombre;
-		nombre = newNombre;
+	public void setNombreAtributo(String newNombreAtributo) {
+		String oldNombreAtributo = nombreAtributo;
+		nombreAtributo = newNombreAtributo;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModeloERPackage.ATRIBUTO__NOMBRE, oldNombre, nombre));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModeloERPackage.ATRIBUTO__NOMBRE_ATRIBUTO, oldNombreAtributo, nombreAtributo));
 	}
 
 	/**
@@ -154,8 +132,8 @@ public class AtributoImpl extends MinimalEObjectImpl.Container implements Atribu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isNulo() {
-		return nulo;
+	public boolean isNuloAtributo() {
+		return nuloAtributo;
 	}
 
 	/**
@@ -163,11 +141,11 @@ public class AtributoImpl extends MinimalEObjectImpl.Container implements Atribu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNulo(boolean newNulo) {
-		boolean oldNulo = nulo;
-		nulo = newNulo;
+	public void setNuloAtributo(boolean newNuloAtributo) {
+		boolean oldNuloAtributo = nuloAtributo;
+		nuloAtributo = newNuloAtributo;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModeloERPackage.ATRIBUTO__NULO, oldNulo, nulo));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModeloERPackage.ATRIBUTO__NULO_ATRIBUTO, oldNuloAtributo, nuloAtributo));
 	}
 
 	/**
@@ -175,8 +153,8 @@ public class AtributoImpl extends MinimalEObjectImpl.Container implements Atribu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TipoDato getTipoDato() {
-		return tipoDato;
+	public TipoDato getTipoDatoAtributo() {
+		return tipoDatoAtributo;
 	}
 
 	/**
@@ -184,37 +162,11 @@ public class AtributoImpl extends MinimalEObjectImpl.Container implements Atribu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTipoDato(TipoDato newTipoDato) {
-		TipoDato oldTipoDato = tipoDato;
-		tipoDato = newTipoDato == null ? TIPO_DATO_EDEFAULT : newTipoDato;
+	public void setTipoDatoAtributo(TipoDato newTipoDatoAtributo) {
+		TipoDato oldTipoDatoAtributo = tipoDatoAtributo;
+		tipoDatoAtributo = newTipoDatoAtributo == null ? TIPO_DATO_ATRIBUTO_EDEFAULT : newTipoDatoAtributo;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModeloERPackage.ATRIBUTO__TIPO_DATO, oldTipoDato, tipoDato));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Atributo> getAtributosAtributo() {
-		if (atributosAtributo == null) {
-			atributosAtributo = new EObjectContainmentEList<Atributo>(Atributo.class, this, ModeloERPackage.ATRIBUTO__ATRIBUTOS_ATRIBUTO);
-		}
-		return atributosAtributo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ModeloERPackage.ATRIBUTO__ATRIBUTOS_ATRIBUTO:
-				return ((InternalEList<?>)getAtributosAtributo()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+			eNotify(new ENotificationImpl(this, Notification.SET, ModeloERPackage.ATRIBUTO__TIPO_DATO_ATRIBUTO, oldTipoDatoAtributo, tipoDatoAtributo));
 	}
 
 	/**
@@ -225,14 +177,12 @@ public class AtributoImpl extends MinimalEObjectImpl.Container implements Atribu
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModeloERPackage.ATRIBUTO__NOMBRE:
-				return getNombre();
-			case ModeloERPackage.ATRIBUTO__NULO:
-				return isNulo();
-			case ModeloERPackage.ATRIBUTO__TIPO_DATO:
-				return getTipoDato();
-			case ModeloERPackage.ATRIBUTO__ATRIBUTOS_ATRIBUTO:
-				return getAtributosAtributo();
+			case ModeloERPackage.ATRIBUTO__NOMBRE_ATRIBUTO:
+				return getNombreAtributo();
+			case ModeloERPackage.ATRIBUTO__NULO_ATRIBUTO:
+				return isNuloAtributo();
+			case ModeloERPackage.ATRIBUTO__TIPO_DATO_ATRIBUTO:
+				return getTipoDatoAtributo();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -246,18 +196,14 @@ public class AtributoImpl extends MinimalEObjectImpl.Container implements Atribu
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModeloERPackage.ATRIBUTO__NOMBRE:
-				setNombre((String)newValue);
+			case ModeloERPackage.ATRIBUTO__NOMBRE_ATRIBUTO:
+				setNombreAtributo((String)newValue);
 				return;
-			case ModeloERPackage.ATRIBUTO__NULO:
-				setNulo((Boolean)newValue);
+			case ModeloERPackage.ATRIBUTO__NULO_ATRIBUTO:
+				setNuloAtributo((Boolean)newValue);
 				return;
-			case ModeloERPackage.ATRIBUTO__TIPO_DATO:
-				setTipoDato((TipoDato)newValue);
-				return;
-			case ModeloERPackage.ATRIBUTO__ATRIBUTOS_ATRIBUTO:
-				getAtributosAtributo().clear();
-				getAtributosAtributo().addAll((Collection<? extends Atributo>)newValue);
+			case ModeloERPackage.ATRIBUTO__TIPO_DATO_ATRIBUTO:
+				setTipoDatoAtributo((TipoDato)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -271,17 +217,14 @@ public class AtributoImpl extends MinimalEObjectImpl.Container implements Atribu
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModeloERPackage.ATRIBUTO__NOMBRE:
-				setNombre(NOMBRE_EDEFAULT);
+			case ModeloERPackage.ATRIBUTO__NOMBRE_ATRIBUTO:
+				setNombreAtributo(NOMBRE_ATRIBUTO_EDEFAULT);
 				return;
-			case ModeloERPackage.ATRIBUTO__NULO:
-				setNulo(NULO_EDEFAULT);
+			case ModeloERPackage.ATRIBUTO__NULO_ATRIBUTO:
+				setNuloAtributo(NULO_ATRIBUTO_EDEFAULT);
 				return;
-			case ModeloERPackage.ATRIBUTO__TIPO_DATO:
-				setTipoDato(TIPO_DATO_EDEFAULT);
-				return;
-			case ModeloERPackage.ATRIBUTO__ATRIBUTOS_ATRIBUTO:
-				getAtributosAtributo().clear();
+			case ModeloERPackage.ATRIBUTO__TIPO_DATO_ATRIBUTO:
+				setTipoDatoAtributo(TIPO_DATO_ATRIBUTO_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -295,14 +238,12 @@ public class AtributoImpl extends MinimalEObjectImpl.Container implements Atribu
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModeloERPackage.ATRIBUTO__NOMBRE:
-				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
-			case ModeloERPackage.ATRIBUTO__NULO:
-				return nulo != NULO_EDEFAULT;
-			case ModeloERPackage.ATRIBUTO__TIPO_DATO:
-				return tipoDato != TIPO_DATO_EDEFAULT;
-			case ModeloERPackage.ATRIBUTO__ATRIBUTOS_ATRIBUTO:
-				return atributosAtributo != null && !atributosAtributo.isEmpty();
+			case ModeloERPackage.ATRIBUTO__NOMBRE_ATRIBUTO:
+				return NOMBRE_ATRIBUTO_EDEFAULT == null ? nombreAtributo != null : !NOMBRE_ATRIBUTO_EDEFAULT.equals(nombreAtributo);
+			case ModeloERPackage.ATRIBUTO__NULO_ATRIBUTO:
+				return nuloAtributo != NULO_ATRIBUTO_EDEFAULT;
+			case ModeloERPackage.ATRIBUTO__TIPO_DATO_ATRIBUTO:
+				return tipoDatoAtributo != TIPO_DATO_ATRIBUTO_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -317,12 +258,12 @@ public class AtributoImpl extends MinimalEObjectImpl.Container implements Atribu
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (nombre: ");
-		result.append(nombre);
-		result.append(", nulo: ");
-		result.append(nulo);
-		result.append(", tipoDato: ");
-		result.append(tipoDato);
+		result.append(" (nombreAtributo: ");
+		result.append(nombreAtributo);
+		result.append(", nuloAtributo: ");
+		result.append(nuloAtributo);
+		result.append(", tipoDatoAtributo: ");
+		result.append(tipoDatoAtributo);
 		result.append(')');
 		return result.toString();
 	}

@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link modeloER.modeloER.Entidad#getAtributosEntidad <em>Atributos Entidad</em>}</li>
- *   <li>{@link modeloER.modeloER.Entidad#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link modeloER.modeloER.Entidad#getNombreEntidad <em>Nombre Entidad</em>}</li>
  * </ul>
  *
  * @see modeloER.modeloER.ModeloERPackage#getEntidad()
@@ -41,29 +41,29 @@ public interface Entidad extends EObject {
 	EList<Atributo> getAtributosEntidad();
 
 	/**
-	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
+	 * Returns the value of the '<em><b>Nombre Entidad</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Nombre Entidad</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nombre</em>' attribute.
-	 * @see #setNombre(String)
-	 * @see modeloER.modeloER.ModeloERPackage#getEntidad_Nombre()
+	 * @return the value of the '<em>Nombre Entidad</em>' attribute.
+	 * @see #setNombreEntidad(String)
+	 * @see modeloER.modeloER.ModeloERPackage#getEntidad_NombreEntidad()
 	 * @model
 	 * @generated
 	 */
-	String getNombre();
+	String getNombreEntidad();
 
 	/**
-	 * Sets the value of the '{@link modeloER.modeloER.Entidad#getNombre <em>Nombre</em>}' attribute.
+	 * Sets the value of the '{@link modeloER.modeloER.Entidad#getNombreEntidad <em>Nombre Entidad</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nombre</em>' attribute.
-	 * @see #getNombre()
+	 * @param value the new value of the '<em>Nombre Entidad</em>' attribute.
+	 * @see #getNombreEntidad()
 	 * @generated
 	 */
-	void setNombre(String value);
+	void setNombreEntidad(String value);
 
 } // Entidad

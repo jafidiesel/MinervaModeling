@@ -64,7 +64,7 @@ public class AtributoDerivadoItemProvider extends AtributoItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((AtributoDerivado)object).getNombre();
+		String label = ((AtributoDerivado)object).getNombreAtributo();
 		return label == null || label.length() == 0 ?
 			getString("_UI_AtributoDerivado_type") :
 			getString("_UI_AtributoDerivado_type") + " " + label;

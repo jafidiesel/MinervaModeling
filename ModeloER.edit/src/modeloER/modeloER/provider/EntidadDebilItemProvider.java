@@ -64,7 +64,7 @@ public class EntidadDebilItemProvider extends EntidadItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((EntidadDebil)object).getNombre();
+		String label = ((EntidadDebil)object).getNombreEntidad();
 		return label == null || label.length() == 0 ?
 			getString("_UI_EntidadDebil_type") :
 			getString("_UI_EntidadDebil_type") + " " + label;

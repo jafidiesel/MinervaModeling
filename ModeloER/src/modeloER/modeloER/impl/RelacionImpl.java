@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link modeloER.modeloER.impl.RelacionImpl#getNombre <em>Nombre</em>}</li>
+ *   <li>{@link modeloER.modeloER.impl.RelacionImpl#getNombreRelacion <em>Nombre Relacion</em>}</li>
  *   <li>{@link modeloER.modeloER.impl.RelacionImpl#getAtributosRelacion <em>Atributos Relacion</em>}</li>
  * </ul>
  *
@@ -38,24 +38,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class RelacionImpl extends MinimalEObjectImpl.Container implements Relacion {
 	/**
-	 * The default value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * The default value of the '{@link #getNombreRelacion() <em>Nombre Relacion</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNombre()
+	 * @see #getNombreRelacion()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NOMBRE_EDEFAULT = null;
+	protected static final String NOMBRE_RELACION_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getNombre() <em>Nombre</em>}' attribute.
+	 * The cached value of the '{@link #getNombreRelacion() <em>Nombre Relacion</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNombre()
+	 * @see #getNombreRelacion()
 	 * @generated
 	 * @ordered
 	 */
-	protected String nombre = NOMBRE_EDEFAULT;
+	protected String nombreRelacion = NOMBRE_RELACION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getAtributosRelacion() <em>Atributos Relacion</em>}' containment reference list.
@@ -91,8 +91,8 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNombre() {
-		return nombre;
+	public String getNombreRelacion() {
+		return nombreRelacion;
 	}
 
 	/**
@@ -100,11 +100,11 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNombre(String newNombre) {
-		String oldNombre = nombre;
-		nombre = newNombre;
+	public void setNombreRelacion(String newNombreRelacion) {
+		String oldNombreRelacion = nombreRelacion;
+		nombreRelacion = newNombreRelacion;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModeloERPackage.RELACION__NOMBRE, oldNombre, nombre));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModeloERPackage.RELACION__NOMBRE_RELACION, oldNombreRelacion, nombreRelacion));
 	}
 
 	/**
@@ -141,8 +141,8 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModeloERPackage.RELACION__NOMBRE:
-				return getNombre();
+			case ModeloERPackage.RELACION__NOMBRE_RELACION:
+				return getNombreRelacion();
 			case ModeloERPackage.RELACION__ATRIBUTOS_RELACION:
 				return getAtributosRelacion();
 		}
@@ -158,8 +158,8 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModeloERPackage.RELACION__NOMBRE:
-				setNombre((String)newValue);
+			case ModeloERPackage.RELACION__NOMBRE_RELACION:
+				setNombreRelacion((String)newValue);
 				return;
 			case ModeloERPackage.RELACION__ATRIBUTOS_RELACION:
 				getAtributosRelacion().clear();
@@ -177,8 +177,8 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModeloERPackage.RELACION__NOMBRE:
-				setNombre(NOMBRE_EDEFAULT);
+			case ModeloERPackage.RELACION__NOMBRE_RELACION:
+				setNombreRelacion(NOMBRE_RELACION_EDEFAULT);
 				return;
 			case ModeloERPackage.RELACION__ATRIBUTOS_RELACION:
 				getAtributosRelacion().clear();
@@ -195,8 +195,8 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModeloERPackage.RELACION__NOMBRE:
-				return NOMBRE_EDEFAULT == null ? nombre != null : !NOMBRE_EDEFAULT.equals(nombre);
+			case ModeloERPackage.RELACION__NOMBRE_RELACION:
+				return NOMBRE_RELACION_EDEFAULT == null ? nombreRelacion != null : !NOMBRE_RELACION_EDEFAULT.equals(nombreRelacion);
 			case ModeloERPackage.RELACION__ATRIBUTOS_RELACION:
 				return atributosRelacion != null && !atributosRelacion.isEmpty();
 		}
@@ -213,8 +213,8 @@ public class RelacionImpl extends MinimalEObjectImpl.Container implements Relaci
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (nombre: ");
-		result.append(nombre);
+		result.append(" (nombreRelacion: ");
+		result.append(nombreRelacion);
 		result.append(')');
 		return result.toString();
 	}

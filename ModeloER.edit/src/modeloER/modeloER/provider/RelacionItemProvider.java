@@ -63,25 +63,25 @@ public class RelacionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNombrePropertyDescriptor(object);
+			addNombreRelacionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Nombre feature.
+	 * This adds a property descriptor for the Nombre Relacion feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNombrePropertyDescriptor(Object object) {
+	protected void addNombreRelacionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Relacion_nombre_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Relacion_nombre_feature", "_UI_Relacion_type"),
-				 ModeloERPackage.Literals.RELACION__NOMBRE,
+				 getString("_UI_Relacion_nombreRelacion_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Relacion_nombreRelacion_feature", "_UI_Relacion_type"),
+				 ModeloERPackage.Literals.RELACION__NOMBRE_RELACION,
 				 true,
 				 false,
 				 false,
@@ -139,7 +139,7 @@ public class RelacionItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Relacion)object).getNombre();
+		String label = ((Relacion)object).getNombreRelacion();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Relacion_type") :
 			getString("_UI_Relacion_type") + " " + label;
@@ -158,7 +158,7 @@ public class RelacionItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Relacion.class)) {
-			case ModeloERPackage.RELACION__NOMBRE:
+			case ModeloERPackage.RELACION__NOMBRE_RELACION:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ModeloERPackage.RELACION__ATRIBUTOS_RELACION:
@@ -213,6 +213,16 @@ public class RelacionItemProvider
 			(createChildParameter
 				(ModeloERPackage.Literals.RELACION__ATRIBUTOS_RELACION,
 				 ModeloERFactory.eINSTANCE.createAtributoDerivadoClavePrimaria()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModeloERPackage.Literals.RELACION__ATRIBUTOS_RELACION,
+				 ModeloERFactory.eINSTANCE.createAtributoSimple()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModeloERPackage.Literals.RELACION__ATRIBUTOS_RELACION,
+				 ModeloERFactory.eINSTANCE.createAtributoCompuesto()));
 	}
 
 	/**

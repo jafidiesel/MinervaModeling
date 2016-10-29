@@ -13,10 +13,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link modeloER.modeloER.EntidadRelacion#getEntidadEntidadRelacion <em>Entidad Entidad Relacion</em>}</li>
- *   <li>{@link modeloER.modeloER.EntidadRelacion#getRelacionEntidadRelacion <em>Relacion Entidad Relacion</em>}</li>
- *   <li>{@link modeloER.modeloER.EntidadRelacion#getLimiteInferior <em>Limite Inferior</em>}</li>
- *   <li>{@link modeloER.modeloER.EntidadRelacion#getLimiteSuperior <em>Limite Superior</em>}</li>
+ *   <li>{@link modeloER.modeloER.EntidadRelacion#getEntidadERLink <em>Entidad ER Link</em>}</li>
+ *   <li>{@link modeloER.modeloER.EntidadRelacion#getRelacionERLink <em>Relacion ER Link</em>}</li>
+ *   <li>{@link modeloER.modeloER.EntidadRelacion#getLimiteInferiorER <em>Limite Inferior ER</em>}</li>
+ *   <li>{@link modeloER.modeloER.EntidadRelacion#getLimiteSuperiorER <em>Limite Superior ER</em>}</li>
  * </ul>
  *
  * @see modeloER.modeloER.ModeloERPackage#getEntidadRelacion()
@@ -25,107 +25,107 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface EntidadRelacion extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Entidad Entidad Relacion</b></em>' reference.
+	 * Returns the value of the '<em><b>Entidad ER Link</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Entidad Entidad Relacion</em>' reference isn't clear,
+	 * If the meaning of the '<em>Entidad ER Link</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Entidad Entidad Relacion</em>' reference.
-	 * @see #setEntidadEntidadRelacion(Entidad)
-	 * @see modeloER.modeloER.ModeloERPackage#getEntidadRelacion_EntidadEntidadRelacion()
+	 * @return the value of the '<em>Entidad ER Link</em>' reference.
+	 * @see #setEntidadERLink(Entidad)
+	 * @see modeloER.modeloER.ModeloERPackage#getEntidadRelacion_EntidadERLink()
 	 * @model required="true"
 	 * @generated
 	 */
-	Entidad getEntidadEntidadRelacion();
+	Entidad getEntidadERLink();
 
 	/**
-	 * Sets the value of the '{@link modeloER.modeloER.EntidadRelacion#getEntidadEntidadRelacion <em>Entidad Entidad Relacion</em>}' reference.
+	 * Sets the value of the '{@link modeloER.modeloER.EntidadRelacion#getEntidadERLink <em>Entidad ER Link</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Entidad Entidad Relacion</em>' reference.
-	 * @see #getEntidadEntidadRelacion()
+	 * @param value the new value of the '<em>Entidad ER Link</em>' reference.
+	 * @see #getEntidadERLink()
 	 * @generated
 	 */
-	void setEntidadEntidadRelacion(Entidad value);
+	void setEntidadERLink(Entidad value);
 
 	/**
-	 * Returns the value of the '<em><b>Relacion Entidad Relacion</b></em>' reference.
+	 * Returns the value of the '<em><b>Relacion ER Link</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Relacion Entidad Relacion</em>' reference isn't clear,
+	 * If the meaning of the '<em>Relacion ER Link</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Relacion Entidad Relacion</em>' reference.
-	 * @see #setRelacionEntidadRelacion(Relacion)
-	 * @see modeloER.modeloER.ModeloERPackage#getEntidadRelacion_RelacionEntidadRelacion()
+	 * @return the value of the '<em>Relacion ER Link</em>' reference.
+	 * @see #setRelacionERLink(Relacion)
+	 * @see modeloER.modeloER.ModeloERPackage#getEntidadRelacion_RelacionERLink()
 	 * @model required="true"
 	 * @generated
 	 */
-	Relacion getRelacionEntidadRelacion();
+	Relacion getRelacionERLink();
 
 	/**
-	 * Sets the value of the '{@link modeloER.modeloER.EntidadRelacion#getRelacionEntidadRelacion <em>Relacion Entidad Relacion</em>}' reference.
+	 * Sets the value of the '{@link modeloER.modeloER.EntidadRelacion#getRelacionERLink <em>Relacion ER Link</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Relacion Entidad Relacion</em>' reference.
-	 * @see #getRelacionEntidadRelacion()
+	 * @param value the new value of the '<em>Relacion ER Link</em>' reference.
+	 * @see #getRelacionERLink()
 	 * @generated
 	 */
-	void setRelacionEntidadRelacion(Relacion value);
+	void setRelacionERLink(Relacion value);
 
 	/**
-	 * Returns the value of the '<em><b>Limite Inferior</b></em>' attribute.
+	 * Returns the value of the '<em><b>Limite Inferior ER</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Limite Inferior</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Limite Inferior ER</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Limite Inferior</em>' attribute.
-	 * @see #setLimiteInferior(String)
-	 * @see modeloER.modeloER.ModeloERPackage#getEntidadRelacion_LimiteInferior()
+	 * @return the value of the '<em>Limite Inferior ER</em>' attribute.
+	 * @see #setLimiteInferiorER(String)
+	 * @see modeloER.modeloER.ModeloERPackage#getEntidadRelacion_LimiteInferiorER()
 	 * @model
 	 * @generated
 	 */
-	String getLimiteInferior();
+	String getLimiteInferiorER();
 
 	/**
-	 * Sets the value of the '{@link modeloER.modeloER.EntidadRelacion#getLimiteInferior <em>Limite Inferior</em>}' attribute.
+	 * Sets the value of the '{@link modeloER.modeloER.EntidadRelacion#getLimiteInferiorER <em>Limite Inferior ER</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Limite Inferior</em>' attribute.
-	 * @see #getLimiteInferior()
+	 * @param value the new value of the '<em>Limite Inferior ER</em>' attribute.
+	 * @see #getLimiteInferiorER()
 	 * @generated
 	 */
-	void setLimiteInferior(String value);
+	void setLimiteInferiorER(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Limite Superior</b></em>' attribute.
+	 * Returns the value of the '<em><b>Limite Superior ER</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Limite Superior</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Limite Superior ER</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Limite Superior</em>' attribute.
-	 * @see #setLimiteSuperior(String)
-	 * @see modeloER.modeloER.ModeloERPackage#getEntidadRelacion_LimiteSuperior()
+	 * @return the value of the '<em>Limite Superior ER</em>' attribute.
+	 * @see #setLimiteSuperiorER(String)
+	 * @see modeloER.modeloER.ModeloERPackage#getEntidadRelacion_LimiteSuperiorER()
 	 * @model
 	 * @generated
 	 */
-	String getLimiteSuperior();
+	String getLimiteSuperiorER();
 
 	/**
-	 * Sets the value of the '{@link modeloER.modeloER.EntidadRelacion#getLimiteSuperior <em>Limite Superior</em>}' attribute.
+	 * Sets the value of the '{@link modeloER.modeloER.EntidadRelacion#getLimiteSuperiorER <em>Limite Superior ER</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Limite Superior</em>' attribute.
-	 * @see #getLimiteSuperior()
+	 * @param value the new value of the '<em>Limite Superior ER</em>' attribute.
+	 * @see #getLimiteSuperiorER()
 	 * @generated
 	 */
-	void setLimiteSuperior(String value);
+	void setLimiteSuperiorER(String value);
 
 } // EntidadRelacion

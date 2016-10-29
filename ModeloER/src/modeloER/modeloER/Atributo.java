@@ -2,8 +2,6 @@
  */
 package modeloER.modeloER;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,10 +13,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link modeloER.modeloER.Atributo#getNombre <em>Nombre</em>}</li>
- *   <li>{@link modeloER.modeloER.Atributo#isNulo <em>Nulo</em>}</li>
- *   <li>{@link modeloER.modeloER.Atributo#getTipoDato <em>Tipo Dato</em>}</li>
- *   <li>{@link modeloER.modeloER.Atributo#getAtributosAtributo <em>Atributos Atributo</em>}</li>
+ *   <li>{@link modeloER.modeloER.Atributo#getNombreAtributo <em>Nombre Atributo</em>}</li>
+ *   <li>{@link modeloER.modeloER.Atributo#isNuloAtributo <em>Nulo Atributo</em>}</li>
+ *   <li>{@link modeloER.modeloER.Atributo#getTipoDatoAtributo <em>Tipo Dato Atributo</em>}</li>
  * </ul>
  *
  * @see modeloER.modeloER.ModeloERPackage#getAtributo()
@@ -27,100 +24,86 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Atributo extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
+	 * Returns the value of the '<em><b>Nombre Atributo</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Nombre Atributo</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nombre</em>' attribute.
-	 * @see #setNombre(String)
-	 * @see modeloER.modeloER.ModeloERPackage#getAtributo_Nombre()
+	 * @return the value of the '<em>Nombre Atributo</em>' attribute.
+	 * @see #setNombreAtributo(String)
+	 * @see modeloER.modeloER.ModeloERPackage#getAtributo_NombreAtributo()
 	 * @model
 	 * @generated
 	 */
-	String getNombre();
+	String getNombreAtributo();
 
 	/**
-	 * Sets the value of the '{@link modeloER.modeloER.Atributo#getNombre <em>Nombre</em>}' attribute.
+	 * Sets the value of the '{@link modeloER.modeloER.Atributo#getNombreAtributo <em>Nombre Atributo</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nombre</em>' attribute.
-	 * @see #getNombre()
+	 * @param value the new value of the '<em>Nombre Atributo</em>' attribute.
+	 * @see #getNombreAtributo()
 	 * @generated
 	 */
-	void setNombre(String value);
+	void setNombreAtributo(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Nulo</b></em>' attribute.
+	 * Returns the value of the '<em><b>Nulo Atributo</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Nulo</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Nulo Atributo</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nulo</em>' attribute.
-	 * @see #setNulo(boolean)
-	 * @see modeloER.modeloER.ModeloERPackage#getAtributo_Nulo()
-	 * @model
+	 * @return the value of the '<em>Nulo Atributo</em>' attribute.
+	 * @see #setNuloAtributo(boolean)
+	 * @see modeloER.modeloER.ModeloERPackage#getAtributo_NuloAtributo()
+	 * @model default="false"
 	 * @generated
 	 */
-	boolean isNulo();
+	boolean isNuloAtributo();
 
 	/**
-	 * Sets the value of the '{@link modeloER.modeloER.Atributo#isNulo <em>Nulo</em>}' attribute.
+	 * Sets the value of the '{@link modeloER.modeloER.Atributo#isNuloAtributo <em>Nulo Atributo</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nulo</em>' attribute.
-	 * @see #isNulo()
+	 * @param value the new value of the '<em>Nulo Atributo</em>' attribute.
+	 * @see #isNuloAtributo()
 	 * @generated
 	 */
-	void setNulo(boolean value);
+	void setNuloAtributo(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Tipo Dato</b></em>' attribute.
+	 * Returns the value of the '<em><b>Tipo Dato Atributo</b></em>' attribute.
+	 * The default value is <code>"varchar"</code>.
 	 * The literals are from the enumeration {@link modeloER.modeloER.TipoDato}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Tipo Dato</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Tipo Dato Atributo</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tipo Dato</em>' attribute.
+	 * @return the value of the '<em>Tipo Dato Atributo</em>' attribute.
 	 * @see modeloER.modeloER.TipoDato
-	 * @see #setTipoDato(TipoDato)
-	 * @see modeloER.modeloER.ModeloERPackage#getAtributo_TipoDato()
-	 * @model
+	 * @see #setTipoDatoAtributo(TipoDato)
+	 * @see modeloER.modeloER.ModeloERPackage#getAtributo_TipoDatoAtributo()
+	 * @model default="varchar"
 	 * @generated
 	 */
-	TipoDato getTipoDato();
+	TipoDato getTipoDatoAtributo();
 
 	/**
-	 * Sets the value of the '{@link modeloER.modeloER.Atributo#getTipoDato <em>Tipo Dato</em>}' attribute.
+	 * Sets the value of the '{@link modeloER.modeloER.Atributo#getTipoDatoAtributo <em>Tipo Dato Atributo</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tipo Dato</em>' attribute.
+	 * @param value the new value of the '<em>Tipo Dato Atributo</em>' attribute.
 	 * @see modeloER.modeloER.TipoDato
-	 * @see #getTipoDato()
+	 * @see #getTipoDatoAtributo()
 	 * @generated
 	 */
-	void setTipoDato(TipoDato value);
-
-	/**
-	 * Returns the value of the '<em><b>Atributos Atributo</b></em>' containment reference list.
-	 * The list contents are of type {@link modeloER.modeloER.Atributo}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Atributos Atributo</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Atributos Atributo</em>' containment reference list.
-	 * @see modeloER.modeloER.ModeloERPackage#getAtributo_AtributosAtributo()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Atributo> getAtributosAtributo();
+	void setTipoDatoAtributo(TipoDato value);
 
 } // Atributo

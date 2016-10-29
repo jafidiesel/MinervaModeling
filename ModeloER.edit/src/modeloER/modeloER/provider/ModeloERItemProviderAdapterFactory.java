@@ -486,6 +486,190 @@ public class ModeloERItemProviderAdapterFactory extends ModeloERAdapterFactory i
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link modeloER.modeloER.AtributoSimple} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AtributoSimpleItemProvider atributoSimpleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link modeloER.modeloER.AtributoSimple}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAtributoSimpleAdapter() {
+		if (atributoSimpleItemProvider == null) {
+			atributoSimpleItemProvider = new AtributoSimpleItemProvider(this);
+		}
+
+		return atributoSimpleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link modeloER.modeloER.AtributoCompuesto} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AtributoCompuestoItemProvider atributoCompuestoItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link modeloER.modeloER.AtributoCompuesto}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAtributoCompuestoAdapter() {
+		if (atributoCompuestoItemProvider == null) {
+			atributoCompuestoItemProvider = new AtributoCompuestoItemProvider(this);
+		}
+
+		return atributoCompuestoItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link modeloER.modeloER.LinkASAC} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LinkASACItemProvider linkASACItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link modeloER.modeloER.LinkASAC}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLinkASACAdapter() {
+		if (linkASACItemProvider == null) {
+			linkASACItemProvider = new LinkASACItemProvider(this);
+		}
+
+		return linkASACItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link modeloER.modeloER.AtributoEntidadLink} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AtributoEntidadLinkItemProvider atributoEntidadLinkItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link modeloER.modeloER.AtributoEntidadLink}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAtributoEntidadLinkAdapter() {
+		if (atributoEntidadLinkItemProvider == null) {
+			atributoEntidadLinkItemProvider = new AtributoEntidadLinkItemProvider(this);
+		}
+
+		return atributoEntidadLinkItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link modeloER.modeloER.LinkHerenciaPadre} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LinkHerenciaPadreItemProvider linkHerenciaPadreItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link modeloER.modeloER.LinkHerenciaPadre}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLinkHerenciaPadreAdapter() {
+		if (linkHerenciaPadreItemProvider == null) {
+			linkHerenciaPadreItemProvider = new LinkHerenciaPadreItemProvider(this);
+		}
+
+		return linkHerenciaPadreItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link modeloER.modeloER.LinkHerenciaHijo} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LinkHerenciaHijoItemProvider linkHerenciaHijoItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link modeloER.modeloER.LinkHerenciaHijo}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLinkHerenciaHijoAdapter() {
+		if (linkHerenciaHijoItemProvider == null) {
+			linkHerenciaHijoItemProvider = new LinkHerenciaHijoItemProvider(this);
+		}
+
+		return linkHerenciaHijoItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link modeloER.modeloER.AtributoDerivadoEntidad} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AtributoDerivadoEntidadItemProvider atributoDerivadoEntidadItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link modeloER.modeloER.AtributoDerivadoEntidad}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAtributoDerivadoEntidadAdapter() {
+		if (atributoDerivadoEntidadItemProvider == null) {
+			atributoDerivadoEntidadItemProvider = new AtributoDerivadoEntidadItemProvider(this);
+		}
+
+		return atributoDerivadoEntidadItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link modeloER.modeloER.RelacionAtributoLink} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RelacionAtributoLinkItemProvider relacionAtributoLinkItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link modeloER.modeloER.RelacionAtributoLink}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRelacionAtributoLinkAdapter() {
+		if (relacionAtributoLinkItemProvider == null) {
+			relacionAtributoLinkItemProvider = new RelacionAtributoLinkItemProvider(this);
+		}
+
+		return relacionAtributoLinkItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -602,6 +786,14 @@ public class ModeloERItemProviderAdapterFactory extends ModeloERAdapterFactory i
 		if (atributoDerivadoClavePrimariaItemProvider != null) atributoDerivadoClavePrimariaItemProvider.dispose();
 		if (entidadFuerteItemProvider != null) entidadFuerteItemProvider.dispose();
 		if (entidadDebilItemProvider != null) entidadDebilItemProvider.dispose();
+		if (atributoSimpleItemProvider != null) atributoSimpleItemProvider.dispose();
+		if (atributoCompuestoItemProvider != null) atributoCompuestoItemProvider.dispose();
+		if (linkASACItemProvider != null) linkASACItemProvider.dispose();
+		if (atributoEntidadLinkItemProvider != null) atributoEntidadLinkItemProvider.dispose();
+		if (linkHerenciaPadreItemProvider != null) linkHerenciaPadreItemProvider.dispose();
+		if (linkHerenciaHijoItemProvider != null) linkHerenciaHijoItemProvider.dispose();
+		if (atributoDerivadoEntidadItemProvider != null) atributoDerivadoEntidadItemProvider.dispose();
+		if (relacionAtributoLinkItemProvider != null) relacionAtributoLinkItemProvider.dispose();
 	}
 
 }

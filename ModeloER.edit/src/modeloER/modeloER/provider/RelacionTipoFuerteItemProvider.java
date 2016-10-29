@@ -64,7 +64,7 @@ public class RelacionTipoFuerteItemProvider extends RelacionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((RelacionTipoFuerte)object).getNombre();
+		String label = ((RelacionTipoFuerte)object).getNombreRelacion();
 		return label == null || label.length() == 0 ?
 			getString("_UI_RelacionTipoFuerte_type") :
 			getString("_UI_RelacionTipoFuerte_type") + " " + label;
