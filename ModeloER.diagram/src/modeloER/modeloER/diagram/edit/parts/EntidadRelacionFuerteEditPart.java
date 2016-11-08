@@ -1,6 +1,7 @@
 package modeloER.modeloER.diagram.edit.parts;
 
 import org.eclipse.draw2d.Connection;
+import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ITreeBranchEditPart;
@@ -134,13 +135,13 @@ public class EntidadRelacionFuerteEditPart extends ConnectionNodeEditPart implem
 
 			fFigureEntidadRelacionFuerteLimiteInferiorERFigure = new WrappingLabel();
 
-			fFigureEntidadRelacionFuerteLimiteInferiorERFigure.setText("0..*");
+			fFigureEntidadRelacionFuerteLimiteInferiorERFigure.setText("<...>");
 
 			this.add(fFigureEntidadRelacionFuerteLimiteInferiorERFigure);
 
 			fFigureEntidadRelacionFuerteLimiteSuperiorERFigure = new WrappingLabel();
 
-			fFigureEntidadRelacionFuerteLimiteSuperiorERFigure.setText("0..*");
+			fFigureEntidadRelacionFuerteLimiteSuperiorERFigure.setText("<...>");
 
 			this.add(fFigureEntidadRelacionFuerteLimiteSuperiorERFigure);
 

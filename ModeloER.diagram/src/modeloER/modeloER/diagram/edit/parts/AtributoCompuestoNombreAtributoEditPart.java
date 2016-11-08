@@ -52,7 +52,7 @@ public class AtributoCompuestoNombreAtributoEditPart extends CompartmentEditPart
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5004;
+	public static final int VISUAL_ID = 5005;
 
 	/**
 	* @generated
@@ -285,7 +285,7 @@ public class AtributoCompuestoNombreAtributoEditPart extends CompartmentEditPart
 	public IParser getParser() {
 		if (parser == null) {
 			parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider.getParser(
-					modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoCompuesto_2004, getParserElement(),
+					modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoCompuesto_2005, getParserElement(),
 					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
 							modeloER.modeloER.diagram.edit.parts.AtributoCompuestoNombreAtributoEditPart.VISUAL_ID));
 		}

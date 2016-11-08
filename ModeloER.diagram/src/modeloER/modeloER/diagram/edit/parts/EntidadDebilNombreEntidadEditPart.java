@@ -52,7 +52,7 @@ public class EntidadDebilNombreEntidadEditPart extends CompartmentEditPart imple
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5011;
+	public static final int VISUAL_ID = 5012;
 
 	/**
 	* @generated
@@ -285,7 +285,7 @@ public class EntidadDebilNombreEntidadEditPart extends CompartmentEditPart imple
 	public IParser getParser() {
 		if (parser == null) {
 			parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider.getParser(
-					modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2012, getParserElement(),
+					modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2013, getParserElement(),
 					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
 							.getType(modeloER.modeloER.diagram.edit.parts.EntidadDebilNombreEntidadEditPart.VISUAL_ID));
 		}

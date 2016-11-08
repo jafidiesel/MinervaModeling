@@ -52,7 +52,7 @@ public class AtributoMultivaluadoNombreAtributoEditPart extends CompartmentEditP
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5007;
+	public static final int VISUAL_ID = 5008;
 
 	/**
 	* @generated
@@ -285,7 +285,7 @@ public class AtributoMultivaluadoNombreAtributoEditPart extends CompartmentEditP
 	public IParser getParser() {
 		if (parser == null) {
 			parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider.getParser(
-					modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoMultivaluado_2007,
+					modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoMultivaluado_2008,
 					getParserElement(), modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
 							modeloER.modeloER.diagram.edit.parts.AtributoMultivaluadoNombreAtributoEditPart.VISUAL_ID));
 		}

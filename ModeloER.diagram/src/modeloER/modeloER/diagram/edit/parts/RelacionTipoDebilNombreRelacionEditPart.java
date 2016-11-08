@@ -52,7 +52,7 @@ public class RelacionTipoDebilNombreRelacionEditPart extends CompartmentEditPart
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5005;
+	public static final int VISUAL_ID = 5006;
 
 	/**
 	* @generated
@@ -285,7 +285,7 @@ public class RelacionTipoDebilNombreRelacionEditPart extends CompartmentEditPart
 	public IParser getParser() {
 		if (parser == null) {
 			parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider.getParser(
-					modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoDebil_2005, getParserElement(),
+					modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoDebil_2006, getParserElement(),
 					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
 							modeloER.modeloER.diagram.edit.parts.RelacionTipoDebilNombreRelacionEditPart.VISUAL_ID));
 		}

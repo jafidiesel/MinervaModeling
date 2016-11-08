@@ -23,7 +23,7 @@ public class AtributoMultivaluadoItemSemanticEditPolicy
 	* @generated
 	*/
 	public AtributoMultivaluadoItemSemanticEditPolicy() {
-		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoMultivaluado_2007);
+		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoMultivaluado_2008);
 	}
 
 	/**

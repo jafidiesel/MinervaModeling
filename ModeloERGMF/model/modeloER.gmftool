@@ -87,6 +87,19 @@
             path="/icons/full/obj16/AtributoIcon.svg"
             bundle="/ModeloER.edit"/>
       </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
+          title="Atributo Derivado Clave Primaria"
+          description="">
+        <smallIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/AtributoDerivadoClavePrimariaIcon.svg"
+            bundle="/ModeloER.edit"/>
+        <largeIcon
+            xsi:type="gmftool:BundleImage"
+            path="/icons/full/obj16/AtributoDerivadoClavePrimariaIcon.svg"
+            bundle="/ModeloER.edit"/>
+      </tools>
     </tools>
     <tools
         xsi:type="gmftool:ToolGroup"
@@ -202,7 +215,7 @@
       <tools
           xsi:type="gmftool:CreationTool"
           title="Relacion Linea Discontinua"
-          description="Establece la relacion entre Entidad y A. Derivado">
+          description="Establece la relacion entre Entidad y A. Derivado/A. Clave Derivado">
         <smallIcon
             xsi:type="gmftool:BundleImage"
             path="/icons/full/obj16/RelacionAtributoDerivado.svg"

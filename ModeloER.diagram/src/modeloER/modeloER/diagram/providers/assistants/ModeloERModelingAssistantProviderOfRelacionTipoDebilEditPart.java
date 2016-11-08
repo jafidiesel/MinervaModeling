@@ -58,6 +58,9 @@ public class ModeloERModelingAssistantProviderOfRelacionTipoDebilEditPart
 		if (targetEditPart instanceof modeloER.modeloER.diagram.edit.parts.ClavePrimariaEditPart) {
 			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006);
 		}
+		if (targetEditPart instanceof modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart) {
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006);
+		}
 		if (targetEditPart instanceof modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart) {
 			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006);
 		}
@@ -96,11 +99,12 @@ public class ModeloERModelingAssistantProviderOfRelacionTipoDebilEditPart
 		if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006) {
 			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivado_2001);
 			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClavePrimaria_2002);
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoSimple_2003);
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoCompuesto_2004);
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoMultivaluado_2007);
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClavePrimariaForanea_2008);
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClaveForanea_2009);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoClavePrimaria_2003);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoSimple_2004);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoCompuesto_2005);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoMultivaluado_2008);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClavePrimariaForanea_2009);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClaveForanea_2010);
 		}
 		return types;
 	}
@@ -144,11 +148,11 @@ public class ModeloERModelingAssistantProviderOfRelacionTipoDebilEditPart
 			IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
 		if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadRelacionFuerte_4003) {
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2011);
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2012);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2012);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2013);
 		} else if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadRelacionDebil_4004) {
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2011);
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2012);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2012);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2013);
 		}
 		return types;
 	}

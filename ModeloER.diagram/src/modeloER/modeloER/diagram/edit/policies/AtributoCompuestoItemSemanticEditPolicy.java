@@ -23,7 +23,7 @@ public class AtributoCompuestoItemSemanticEditPolicy
 	* @generated
 	*/
 	public AtributoCompuestoItemSemanticEditPolicy() {
-		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoCompuesto_2004);
+		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoCompuesto_2005);
 	}
 
 	/**

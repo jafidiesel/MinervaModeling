@@ -55,6 +55,15 @@ public class ModeloERDiagramUpdater {
 				continue;
 			}
 		}
+		for (Iterator<?> it = modelElement.getAtributoderivadoclaveprimariaDelDiagrama().iterator(); it.hasNext();) {
+			modeloER.modeloER.AtributoDerivadoClavePrimaria childElement = (modeloER.modeloER.AtributoDerivadoClavePrimaria) it
+					.next();
+			int visualID = modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart.VISUAL_ID) {
+				result.add(new modeloER.modeloER.diagram.part.ModeloERNodeDescriptor(childElement, visualID));
+				continue;
+			}
+		}
 		for (Iterator<?> it = modelElement.getAtributosimpleDelDiagrama().iterator(); it.hasNext();) {
 			modeloER.modeloER.AtributoSimple childElement = (modeloER.modeloER.AtributoSimple) it.next();
 			int visualID = modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getNodeVisualID(view, childElement);
@@ -149,26 +158,28 @@ public class ModeloERDiagramUpdater {
 			return getAtributoDerivado_2001ContainedLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.ClavePrimariaEditPart.VISUAL_ID:
 			return getClavePrimaria_2002ContainedLinks(view);
+		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart.VISUAL_ID:
+			return getAtributoDerivadoClavePrimaria_2003ContainedLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart.VISUAL_ID:
-			return getAtributoSimple_2003ContainedLinks(view);
+			return getAtributoSimple_2004ContainedLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.AtributoCompuestoEditPart.VISUAL_ID:
-			return getAtributoCompuesto_2004ContainedLinks(view);
+			return getAtributoCompuesto_2005ContainedLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.RelacionTipoDebilEditPart.VISUAL_ID:
-			return getRelacionTipoDebil_2005ContainedLinks(view);
+			return getRelacionTipoDebil_2006ContainedLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.RelacionTipoFuerteEditPart.VISUAL_ID:
-			return getRelacionTipoFuerte_2006ContainedLinks(view);
+			return getRelacionTipoFuerte_2007ContainedLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.AtributoMultivaluadoEditPart.VISUAL_ID:
-			return getAtributoMultivaluado_2007ContainedLinks(view);
+			return getAtributoMultivaluado_2008ContainedLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.ClavePrimariaForaneaEditPart.VISUAL_ID:
-			return getClavePrimariaForanea_2008ContainedLinks(view);
+			return getClavePrimariaForanea_2009ContainedLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.ClaveForaneaEditPart.VISUAL_ID:
-			return getClaveForanea_2009ContainedLinks(view);
+			return getClaveForanea_2010ContainedLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.HerenciaEditPart.VISUAL_ID:
-			return getHerencia_2010ContainedLinks(view);
+			return getHerencia_2011ContainedLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.EntidadFuerteEditPart.VISUAL_ID:
-			return getEntidadFuerte_2011ContainedLinks(view);
+			return getEntidadFuerte_2012ContainedLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.EntidadDebilEditPart.VISUAL_ID:
-			return getEntidadDebil_2012ContainedLinks(view);
+			return getEntidadDebil_2013ContainedLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.AtributoEntidadLinkEditPart.VISUAL_ID:
 			return getAtributoEntidadLink_4001ContainedLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.LinkHerenciaHijoEditPart.VISUAL_ID:
@@ -185,6 +196,8 @@ public class ModeloERDiagramUpdater {
 			return getLinkHerenciaPadre_4007ContainedLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidadEditPart.VISUAL_ID:
 			return getAtributoDerivadoEntidad_4008ContainedLinks(view);
+		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID:
+			return getAtributoDerivadoEntidad_4009ContainedLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -198,26 +211,28 @@ public class ModeloERDiagramUpdater {
 			return getAtributoDerivado_2001IncomingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.ClavePrimariaEditPart.VISUAL_ID:
 			return getClavePrimaria_2002IncomingLinks(view);
+		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart.VISUAL_ID:
+			return getAtributoDerivadoClavePrimaria_2003IncomingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart.VISUAL_ID:
-			return getAtributoSimple_2003IncomingLinks(view);
+			return getAtributoSimple_2004IncomingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.AtributoCompuestoEditPart.VISUAL_ID:
-			return getAtributoCompuesto_2004IncomingLinks(view);
+			return getAtributoCompuesto_2005IncomingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.RelacionTipoDebilEditPart.VISUAL_ID:
-			return getRelacionTipoDebil_2005IncomingLinks(view);
+			return getRelacionTipoDebil_2006IncomingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.RelacionTipoFuerteEditPart.VISUAL_ID:
-			return getRelacionTipoFuerte_2006IncomingLinks(view);
+			return getRelacionTipoFuerte_2007IncomingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.AtributoMultivaluadoEditPart.VISUAL_ID:
-			return getAtributoMultivaluado_2007IncomingLinks(view);
+			return getAtributoMultivaluado_2008IncomingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.ClavePrimariaForaneaEditPart.VISUAL_ID:
-			return getClavePrimariaForanea_2008IncomingLinks(view);
+			return getClavePrimariaForanea_2009IncomingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.ClaveForaneaEditPart.VISUAL_ID:
-			return getClaveForanea_2009IncomingLinks(view);
+			return getClaveForanea_2010IncomingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.HerenciaEditPart.VISUAL_ID:
-			return getHerencia_2010IncomingLinks(view);
+			return getHerencia_2011IncomingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.EntidadFuerteEditPart.VISUAL_ID:
-			return getEntidadFuerte_2011IncomingLinks(view);
+			return getEntidadFuerte_2012IncomingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.EntidadDebilEditPart.VISUAL_ID:
-			return getEntidadDebil_2012IncomingLinks(view);
+			return getEntidadDebil_2013IncomingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.AtributoEntidadLinkEditPart.VISUAL_ID:
 			return getAtributoEntidadLink_4001IncomingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.LinkHerenciaHijoEditPart.VISUAL_ID:
@@ -234,6 +249,8 @@ public class ModeloERDiagramUpdater {
 			return getLinkHerenciaPadre_4007IncomingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidadEditPart.VISUAL_ID:
 			return getAtributoDerivadoEntidad_4008IncomingLinks(view);
+		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID:
+			return getAtributoDerivadoEntidad_4009IncomingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -247,26 +264,28 @@ public class ModeloERDiagramUpdater {
 			return getAtributoDerivado_2001OutgoingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.ClavePrimariaEditPart.VISUAL_ID:
 			return getClavePrimaria_2002OutgoingLinks(view);
+		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart.VISUAL_ID:
+			return getAtributoDerivadoClavePrimaria_2003OutgoingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart.VISUAL_ID:
-			return getAtributoSimple_2003OutgoingLinks(view);
+			return getAtributoSimple_2004OutgoingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.AtributoCompuestoEditPart.VISUAL_ID:
-			return getAtributoCompuesto_2004OutgoingLinks(view);
+			return getAtributoCompuesto_2005OutgoingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.RelacionTipoDebilEditPart.VISUAL_ID:
-			return getRelacionTipoDebil_2005OutgoingLinks(view);
+			return getRelacionTipoDebil_2006OutgoingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.RelacionTipoFuerteEditPart.VISUAL_ID:
-			return getRelacionTipoFuerte_2006OutgoingLinks(view);
+			return getRelacionTipoFuerte_2007OutgoingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.AtributoMultivaluadoEditPart.VISUAL_ID:
-			return getAtributoMultivaluado_2007OutgoingLinks(view);
+			return getAtributoMultivaluado_2008OutgoingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.ClavePrimariaForaneaEditPart.VISUAL_ID:
-			return getClavePrimariaForanea_2008OutgoingLinks(view);
+			return getClavePrimariaForanea_2009OutgoingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.ClaveForaneaEditPart.VISUAL_ID:
-			return getClaveForanea_2009OutgoingLinks(view);
+			return getClaveForanea_2010OutgoingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.HerenciaEditPart.VISUAL_ID:
-			return getHerencia_2010OutgoingLinks(view);
+			return getHerencia_2011OutgoingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.EntidadFuerteEditPart.VISUAL_ID:
-			return getEntidadFuerte_2011OutgoingLinks(view);
+			return getEntidadFuerte_2012OutgoingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.EntidadDebilEditPart.VISUAL_ID:
-			return getEntidadDebil_2012OutgoingLinks(view);
+			return getEntidadDebil_2013OutgoingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.AtributoEntidadLinkEditPart.VISUAL_ID:
 			return getAtributoEntidadLink_4001OutgoingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.LinkHerenciaHijoEditPart.VISUAL_ID:
@@ -283,6 +302,8 @@ public class ModeloERDiagramUpdater {
 			return getLinkHerenciaPadre_4007OutgoingLinks(view);
 		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidadEditPart.VISUAL_ID:
 			return getAtributoDerivadoEntidad_4008OutgoingLinks(view);
+		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID:
+			return getAtributoDerivadoEntidad_4009OutgoingLinks(view);
 		}
 		return Collections.emptyList();
 	}
@@ -302,6 +323,7 @@ public class ModeloERDiagramUpdater {
 		result.addAll(getContainedTypeModelFacetLinks_RelacionAtributoLink_4006(modelElement));
 		result.addAll(getContainedTypeModelFacetLinks_LinkHerenciaPadre_4007(modelElement));
 		result.addAll(getContainedTypeModelFacetLinks_AtributoDerivadoEntidad_4008(modelElement));
+		result.addAll(getContainedTypeModelFacetLinks_AtributoDerivadoEntidad_4009(modelElement));
 		return result;
 	}
 
@@ -324,7 +346,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoSimple_2003ContainedLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoDerivadoClavePrimaria_2003ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -332,7 +354,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoCompuesto_2004ContainedLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoSimple_2004ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -340,7 +362,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getRelacionTipoDebil_2005ContainedLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoCompuesto_2005ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -348,7 +370,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getRelacionTipoFuerte_2006ContainedLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getRelacionTipoDebil_2006ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -356,7 +378,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoMultivaluado_2007ContainedLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getRelacionTipoFuerte_2007ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -364,7 +386,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getClavePrimariaForanea_2008ContainedLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoMultivaluado_2008ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -372,7 +394,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getClaveForanea_2009ContainedLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getClavePrimariaForanea_2009ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -380,7 +402,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getHerencia_2010ContainedLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getClaveForanea_2010ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -388,7 +410,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getEntidadFuerte_2011ContainedLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getHerencia_2011ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -396,7 +418,15 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getEntidadDebil_2012ContainedLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getEntidadFuerte_2012ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getEntidadDebil_2013ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -468,6 +498,14 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoDerivadoEntidad_4009ContainedLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoDerivado_2001IncomingLinks(
 			View view) {
 		modeloER.modeloER.AtributoDerivado modelElement = (modeloER.modeloER.AtributoDerivado) view.getElement();
@@ -497,7 +535,23 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoSimple_2003IncomingLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoDerivadoClavePrimaria_2003IncomingLinks(
+			View view) {
+		modeloER.modeloER.AtributoDerivadoClavePrimaria modelElement = (modeloER.modeloER.AtributoDerivadoClavePrimaria) view
+				.getElement();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> result = new LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_AtributoEntidadLink_4001(modelElement, crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_RelacionAtributoLink_4006(modelElement, crossReferences));
+		result.addAll(getIncomingTypeModelFacetLinks_AtributoDerivadoEntidad_4009(modelElement, crossReferences));
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoSimple_2004IncomingLinks(
 			View view) {
 		modeloER.modeloER.AtributoSimple modelElement = (modeloER.modeloER.AtributoSimple) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -512,7 +566,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoCompuesto_2004IncomingLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoCompuesto_2005IncomingLinks(
 			View view) {
 		modeloER.modeloER.AtributoCompuesto modelElement = (modeloER.modeloER.AtributoCompuesto) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -526,7 +580,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getRelacionTipoDebil_2005IncomingLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getRelacionTipoDebil_2006IncomingLinks(
 			View view) {
 		modeloER.modeloER.RelacionTipoDebil modelElement = (modeloER.modeloER.RelacionTipoDebil) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -540,7 +594,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getRelacionTipoFuerte_2006IncomingLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getRelacionTipoFuerte_2007IncomingLinks(
 			View view) {
 		modeloER.modeloER.RelacionTipoFuerte modelElement = (modeloER.modeloER.RelacionTipoFuerte) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -554,7 +608,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoMultivaluado_2007IncomingLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoMultivaluado_2008IncomingLinks(
 			View view) {
 		modeloER.modeloER.AtributoMultivaluado modelElement = (modeloER.modeloER.AtributoMultivaluado) view
 				.getElement();
@@ -569,7 +623,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getClavePrimariaForanea_2008IncomingLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getClavePrimariaForanea_2009IncomingLinks(
 			View view) {
 		modeloER.modeloER.ClavePrimariaForanea modelElement = (modeloER.modeloER.ClavePrimariaForanea) view
 				.getElement();
@@ -584,7 +638,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getClaveForanea_2009IncomingLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getClaveForanea_2010IncomingLinks(
 			View view) {
 		modeloER.modeloER.ClaveForanea modelElement = (modeloER.modeloER.ClaveForanea) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -598,7 +652,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getHerencia_2010IncomingLinks(View view) {
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getHerencia_2011IncomingLinks(View view) {
 		modeloER.modeloER.Herencia modelElement = (modeloER.modeloER.Herencia) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
 				.find(view.eResource().getResourceSet().getResources());
@@ -610,7 +664,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getEntidadFuerte_2011IncomingLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getEntidadFuerte_2012IncomingLinks(
 			View view) {
 		modeloER.modeloER.EntidadFuerte modelElement = (modeloER.modeloER.EntidadFuerte) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -623,7 +677,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getEntidadDebil_2012IncomingLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getEntidadDebil_2013IncomingLinks(
 			View view) {
 		modeloER.modeloER.EntidadDebil modelElement = (modeloER.modeloER.EntidadDebil) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -699,6 +753,14 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoDerivadoEntidad_4009IncomingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
 	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoDerivado_2001OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
@@ -715,7 +777,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoSimple_2003OutgoingLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoDerivadoClavePrimaria_2003OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -723,7 +785,15 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoCompuesto_2004OutgoingLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoSimple_2004OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoCompuesto_2005OutgoingLinks(
 			View view) {
 		modeloER.modeloER.AtributoCompuesto modelElement = (modeloER.modeloER.AtributoCompuesto) view.getElement();
 		LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> result = new LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor>();
@@ -734,7 +804,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getRelacionTipoDebil_2005OutgoingLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getRelacionTipoDebil_2006OutgoingLinks(
 			View view) {
 		modeloER.modeloER.RelacionTipoDebil modelElement = (modeloER.modeloER.RelacionTipoDebil) view.getElement();
 		LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> result = new LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor>();
@@ -745,7 +815,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getRelacionTipoFuerte_2006OutgoingLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getRelacionTipoFuerte_2007OutgoingLinks(
 			View view) {
 		modeloER.modeloER.RelacionTipoFuerte modelElement = (modeloER.modeloER.RelacionTipoFuerte) view.getElement();
 		LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> result = new LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor>();
@@ -756,7 +826,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoMultivaluado_2007OutgoingLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoMultivaluado_2008OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -764,7 +834,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getClavePrimariaForanea_2008OutgoingLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getClavePrimariaForanea_2009OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -772,7 +842,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getClaveForanea_2009OutgoingLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getClaveForanea_2010OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -780,7 +850,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getHerencia_2010OutgoingLinks(View view) {
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getHerencia_2011OutgoingLinks(View view) {
 		modeloER.modeloER.Herencia modelElement = (modeloER.modeloER.Herencia) view.getElement();
 		LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> result = new LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor>();
 		result.addAll(getOutgoingTypeModelFacetLinks_LinkHerenciaHijo_4002(modelElement));
@@ -790,7 +860,7 @@ public class ModeloERDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getEntidadFuerte_2011OutgoingLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getEntidadFuerte_2012OutgoingLinks(
 			View view) {
 		modeloER.modeloER.EntidadFuerte modelElement = (modeloER.modeloER.EntidadFuerte) view.getElement();
 		LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> result = new LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor>();
@@ -799,13 +869,14 @@ public class ModeloERDiagramUpdater {
 		result.addAll(getOutgoingTypeModelFacetLinks_EntidadRelacionDebil_4004(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_LinkHerenciaPadre_4007(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_AtributoDerivadoEntidad_4008(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_AtributoDerivadoEntidad_4009(modelElement));
 		return result;
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getEntidadDebil_2012OutgoingLinks(
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getEntidadDebil_2013OutgoingLinks(
 			View view) {
 		modeloER.modeloER.EntidadDebil modelElement = (modeloER.modeloER.EntidadDebil) view.getElement();
 		LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> result = new LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor>();
@@ -814,6 +885,7 @@ public class ModeloERDiagramUpdater {
 		result.addAll(getOutgoingTypeModelFacetLinks_EntidadRelacionDebil_4004(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_LinkHerenciaPadre_4007(modelElement));
 		result.addAll(getOutgoingTypeModelFacetLinks_AtributoDerivadoEntidad_4008(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_AtributoDerivadoEntidad_4009(modelElement));
 		return result;
 	}
 
@@ -876,6 +948,14 @@ public class ModeloERDiagramUpdater {
 	 * @generated
 	 */
 	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoDerivadoEntidad_4008OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
+	}
+
+	/**
+	 * @generated
+	 */
+	public static List<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getAtributoDerivadoEntidad_4009OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -1076,6 +1156,31 @@ public class ModeloERDiagramUpdater {
 			result.add(new modeloER.modeloER.diagram.part.ModeloERLinkDescriptor(src, dst, link,
 					modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoEntidad_4008,
 					modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidadEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	private static Collection<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getContainedTypeModelFacetLinks_AtributoDerivadoEntidad_4009(
+			modeloER.modeloER.Diagrama container) {
+		LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> result = new LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor>();
+		for (Iterator<?> links = container.getAtributoderivadoentidadDelDiagrama().iterator(); links.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof modeloER.modeloER.AtributoDerivadoEntidad) {
+				continue;
+			}
+			modeloER.modeloER.AtributoDerivadoEntidad link = (modeloER.modeloER.AtributoDerivadoEntidad) linkObject;
+			if (modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID != modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			modeloER.modeloER.AtributoDerivadoClavePrimaria dst = link.getAtributoderivadoclaveprimariaDestino();
+			modeloER.modeloER.Entidad src = link.getEntidadAtributoDerivadoOrigen();
+			result.add(new modeloER.modeloER.diagram.part.ModeloERLinkDescriptor(src, dst, link,
+					modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoEntidad_4009,
+					modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID));
 		}
 		return result;
 	}
@@ -1288,6 +1393,34 @@ public class ModeloERDiagramUpdater {
 			result.add(new modeloER.modeloER.diagram.part.ModeloERLinkDescriptor(src, target, link,
 					modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoEntidad_4008,
 					modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidadEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	 * @generated
+	 */
+	private static Collection<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getIncomingTypeModelFacetLinks_AtributoDerivadoEntidad_4009(
+			modeloER.modeloER.AtributoDerivadoClavePrimaria target,
+			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
+		LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> result = new LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor>();
+		Collection<EStructuralFeature.Setting> settings = crossReferences.get(target);
+		for (EStructuralFeature.Setting setting : settings) {
+			if (setting.getEStructuralFeature() != modeloER.modeloER.ModeloERPackage.eINSTANCE
+					.getAtributoDerivadoEntidad_AtributoderivadoclaveprimariaDestino()
+					|| false == setting.getEObject() instanceof modeloER.modeloER.AtributoDerivadoEntidad) {
+				continue;
+			}
+			modeloER.modeloER.AtributoDerivadoEntidad link = (modeloER.modeloER.AtributoDerivadoEntidad) setting
+					.getEObject();
+			if (modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID != modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			modeloER.modeloER.Entidad src = link.getEntidadAtributoDerivadoOrigen();
+			result.add(new modeloER.modeloER.diagram.part.ModeloERLinkDescriptor(src, target, link,
+					modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoEntidad_4009,
+					modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID));
 		}
 		return result;
 	}
@@ -1608,6 +1741,46 @@ public class ModeloERDiagramUpdater {
 			result.add(new modeloER.modeloER.diagram.part.ModeloERLinkDescriptor(src, dst, link,
 					modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoEntidad_4008,
 					modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidadEditPart.VISUAL_ID));
+		}
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	private static Collection<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> getOutgoingTypeModelFacetLinks_AtributoDerivadoEntidad_4009(
+			modeloER.modeloER.Entidad source) {
+		modeloER.modeloER.Diagrama container = null;
+		// Find container element for the link.
+		// Climb up by containment hierarchy starting from the source
+		// and return the first element that is instance of the container class.
+		for (EObject element = source; element != null && container == null; element = element.eContainer()) {
+			if (element instanceof modeloER.modeloER.Diagrama) {
+				container = (modeloER.modeloER.Diagrama) element;
+			}
+		}
+		if (container == null) {
+			return Collections.emptyList();
+		}
+		LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor> result = new LinkedList<modeloER.modeloER.diagram.part.ModeloERLinkDescriptor>();
+		for (Iterator<?> links = container.getAtributoderivadoentidadDelDiagrama().iterator(); links.hasNext();) {
+			EObject linkObject = (EObject) links.next();
+			if (false == linkObject instanceof modeloER.modeloER.AtributoDerivadoEntidad) {
+				continue;
+			}
+			modeloER.modeloER.AtributoDerivadoEntidad link = (modeloER.modeloER.AtributoDerivadoEntidad) linkObject;
+			if (modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID != modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
+					.getLinkWithClassVisualID(link)) {
+				continue;
+			}
+			modeloER.modeloER.AtributoDerivadoClavePrimaria dst = link.getAtributoderivadoclaveprimariaDestino();
+			modeloER.modeloER.Entidad src = link.getEntidadAtributoDerivadoOrigen();
+			if (src != source) {
+				continue;
+			}
+			result.add(new modeloER.modeloER.diagram.part.ModeloERLinkDescriptor(src, dst, link,
+					modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoEntidad_4009,
+					modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID));
 		}
 		return result;
 	}
