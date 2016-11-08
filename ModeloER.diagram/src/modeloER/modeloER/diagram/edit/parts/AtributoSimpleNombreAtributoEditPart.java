@@ -52,7 +52,7 @@ public class AtributoSimpleNombreAtributoEditPart extends CompartmentEditPart im
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5003;
+	public static final int VISUAL_ID = 5004;
 
 	/**
 	* @generated
@@ -285,7 +285,7 @@ public class AtributoSimpleNombreAtributoEditPart extends CompartmentEditPart im
 	public IParser getParser() {
 		if (parser == null) {
 			parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider.getParser(
-					modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoSimple_2003, getParserElement(),
+					modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoSimple_2004, getParserElement(),
 					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
 							modeloER.modeloER.diagram.edit.parts.AtributoSimpleNombreAtributoEditPart.VISUAL_ID));
 		}

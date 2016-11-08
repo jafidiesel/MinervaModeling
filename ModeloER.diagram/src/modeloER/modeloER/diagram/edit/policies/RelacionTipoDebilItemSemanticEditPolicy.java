@@ -23,7 +23,7 @@ public class RelacionTipoDebilItemSemanticEditPolicy
 	* @generated
 	*/
 	public RelacionTipoDebilItemSemanticEditPolicy() {
-		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoDebil_2005);
+		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoDebil_2006);
 	}
 
 	/**

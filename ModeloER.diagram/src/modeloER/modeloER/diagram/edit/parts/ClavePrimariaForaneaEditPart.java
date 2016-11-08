@@ -1,5 +1,6 @@
 package modeloER.modeloER.diagram.edit.parts;
 
+import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.Ellipse;
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.GridData;
@@ -37,7 +38,7 @@ public class ClavePrimariaForaneaEditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 2008;
+	public static final int VISUAL_ID = 2009;
 
 	/**
 	* @generated

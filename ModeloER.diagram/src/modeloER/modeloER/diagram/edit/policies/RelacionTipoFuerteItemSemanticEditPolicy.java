@@ -23,7 +23,7 @@ public class RelacionTipoFuerteItemSemanticEditPolicy
 	* @generated
 	*/
 	public RelacionTipoFuerteItemSemanticEditPolicy() {
-		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoFuerte_2006);
+		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoFuerte_2007);
 	}
 
 	/**

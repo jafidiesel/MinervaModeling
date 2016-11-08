@@ -52,7 +52,7 @@ public class ClaveForaneaNombreAtributoEditPart extends CompartmentEditPart impl
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5009;
+	public static final int VISUAL_ID = 5010;
 
 	/**
 	* @generated
@@ -285,7 +285,7 @@ public class ClaveForaneaNombreAtributoEditPart extends CompartmentEditPart impl
 	public IParser getParser() {
 		if (parser == null) {
 			parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider.getParser(
-					modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClaveForanea_2009, getParserElement(),
+					modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClaveForanea_2010, getParserElement(),
 					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
 							modeloER.modeloER.diagram.edit.parts.ClaveForaneaNombreAtributoEditPart.VISUAL_ID));
 		}

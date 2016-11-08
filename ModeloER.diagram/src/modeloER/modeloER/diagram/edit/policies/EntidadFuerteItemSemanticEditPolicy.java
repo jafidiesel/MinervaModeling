@@ -23,7 +23,7 @@ public class EntidadFuerteItemSemanticEditPolicy
 	* @generated
 	*/
 	public EntidadFuerteItemSemanticEditPolicy() {
-		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2011);
+		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2012);
 	}
 
 	/**
@@ -75,6 +75,13 @@ public class EntidadFuerteItemSemanticEditPolicy
 			}
 			if (modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getVisualID(
 					outgoingLink) == modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidadEditPart.VISUAL_ID) {
+				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
+				cmd.add(new DestroyElementCommand(r));
+				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
+				continue;
+			}
+			if (modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getVisualID(
+					outgoingLink) == modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
@@ -132,6 +139,11 @@ public class EntidadFuerteItemSemanticEditPolicy
 			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.AtributoDerivadoEntidadCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
+		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoEntidad_4009 == req
+				.getElementType()) {
+			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.AtributoDerivadoEntidad2CreateCommand(req,
+					req.getSource(), req.getTarget()));
+		}
 		return null;
 	}
 
@@ -161,6 +173,10 @@ public class EntidadFuerteItemSemanticEditPolicy
 				.getElementType()) {
 			return null;
 		}
+		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoEntidad_4009 == req
+				.getElementType()) {
+			return null;
+		}
 		return null;
 	}
 
@@ -185,6 +201,9 @@ public class EntidadFuerteItemSemanticEditPolicy
 		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidadEditPart.VISUAL_ID:
 			return getGEFWrapper(
 					new modeloER.modeloER.diagram.edit.commands.AtributoDerivadoEntidadReorientCommand(req));
+		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID:
+			return getGEFWrapper(
+					new modeloER.modeloER.diagram.edit.commands.AtributoDerivadoEntidad2ReorientCommand(req));
 		}
 		return super.getReorientRelationshipCommand(req);
 	}

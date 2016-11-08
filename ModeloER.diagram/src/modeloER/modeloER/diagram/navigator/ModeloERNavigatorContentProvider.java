@@ -221,6 +221,10 @@ public class ModeloERNavigatorContentProvider implements ICommonContentProvider 
 							.getType(modeloER.modeloER.diagram.edit.parts.ClavePrimariaEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
 			connectedViews = getChildrenByType(Collections.singleton(sv),
+					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
+							modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart.VISUAL_ID));
+			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+			connectedViews = getChildrenByType(Collections.singleton(sv),
 					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
 							.getType(modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart.VISUAL_ID));
 			result.addAll(createNavigatorItems(connectedViews, parentElement, false));
@@ -292,6 +296,10 @@ public class ModeloERNavigatorContentProvider implements ICommonContentProvider 
 					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
 							.getType(modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidadEditPart.VISUAL_ID));
 			links.addChildren(createNavigatorItems(connectedViews, links, false));
+			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
+					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
+							.getType(modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID));
+			links.addChildren(createNavigatorItems(connectedViews, links, false));
 			if (!links.isEmpty()) {
 				result.add(links);
 			}
@@ -344,11 +352,36 @@ public class ModeloERNavigatorContentProvider implements ICommonContentProvider 
 			return result.toArray();
 		}
 
+		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart.VISUAL_ID: {
+			LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem> result = new LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup incominglinks = new modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup(
+					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_AtributoDerivadoClavePrimaria_2003_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
+							.getType(modeloER.modeloER.diagram.edit.parts.AtributoEntidadLinkEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
+							.getType(modeloER.modeloER.diagram.edit.parts.RelacionAtributoLinkEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
+							.getType(modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
+			}
+			return result.toArray();
+		}
+
 		case modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart.VISUAL_ID: {
 			LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem> result = new LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup incominglinks = new modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup(
-					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_AtributoSimple_2003_incominglinks,
+					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_AtributoSimple_2004_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -373,10 +406,10 @@ public class ModeloERNavigatorContentProvider implements ICommonContentProvider 
 			LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem> result = new LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup incominglinks = new modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup(
-					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_AtributoCompuesto_2004_incominglinks,
+					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_AtributoCompuesto_2005_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup outgoinglinks = new modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup(
-					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_AtributoCompuesto_2004_outgoinglinks,
+					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_AtributoCompuesto_2005_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -404,10 +437,10 @@ public class ModeloERNavigatorContentProvider implements ICommonContentProvider 
 			LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem> result = new LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup incominglinks = new modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup(
-					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_RelacionTipoDebil_2005_incominglinks,
+					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_RelacionTipoDebil_2006_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup outgoinglinks = new modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup(
-					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_RelacionTipoDebil_2005_outgoinglinks,
+					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_RelacionTipoDebil_2006_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -435,10 +468,10 @@ public class ModeloERNavigatorContentProvider implements ICommonContentProvider 
 			LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem> result = new LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup incominglinks = new modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup(
-					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_RelacionTipoFuerte_2006_incominglinks,
+					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_RelacionTipoFuerte_2007_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup outgoinglinks = new modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup(
-					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_RelacionTipoFuerte_2006_outgoinglinks,
+					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_RelacionTipoFuerte_2007_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -466,7 +499,7 @@ public class ModeloERNavigatorContentProvider implements ICommonContentProvider 
 			LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem> result = new LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup incominglinks = new modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup(
-					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_AtributoMultivaluado_2007_incominglinks,
+					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_AtributoMultivaluado_2008_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -487,7 +520,7 @@ public class ModeloERNavigatorContentProvider implements ICommonContentProvider 
 			LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem> result = new LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup incominglinks = new modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup(
-					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_ClavePrimariaForanea_2008_incominglinks,
+					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_ClavePrimariaForanea_2009_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -508,7 +541,7 @@ public class ModeloERNavigatorContentProvider implements ICommonContentProvider 
 			LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem> result = new LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup incominglinks = new modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup(
-					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_ClaveForanea_2009_incominglinks,
+					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_ClaveForanea_2010_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -529,10 +562,10 @@ public class ModeloERNavigatorContentProvider implements ICommonContentProvider 
 			LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem> result = new LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup outgoinglinks = new modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup(
-					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_Herencia_2010_outgoinglinks,
+					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_Herencia_2011_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup incominglinks = new modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup(
-					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_Herencia_2010_incominglinks,
+					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_Herencia_2011_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
@@ -556,10 +589,10 @@ public class ModeloERNavigatorContentProvider implements ICommonContentProvider 
 			LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem> result = new LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup outgoinglinks = new modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup(
-					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_EntidadFuerte_2011_outgoinglinks,
+					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_EntidadFuerte_2012_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup incominglinks = new modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup(
-					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_EntidadFuerte_2011_incominglinks,
+					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_EntidadFuerte_2012_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
@@ -585,6 +618,10 @@ public class ModeloERNavigatorContentProvider implements ICommonContentProvider 
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
 					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
 							.getType(modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidadEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
+							.getType(modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID));
 			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
 			if (!outgoinglinks.isEmpty()) {
 				result.add(outgoinglinks);
@@ -599,10 +636,10 @@ public class ModeloERNavigatorContentProvider implements ICommonContentProvider 
 			LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem> result = new LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup outgoinglinks = new modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup(
-					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_EntidadDebil_2012_outgoinglinks,
+					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_EntidadDebil_2013_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup incominglinks = new modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup(
-					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_EntidadDebil_2012_incominglinks,
+					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_EntidadDebil_2013_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
@@ -628,6 +665,10 @@ public class ModeloERNavigatorContentProvider implements ICommonContentProvider 
 			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
 					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
 							.getType(modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidadEditPart.VISUAL_ID));
+			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+			connectedViews = getOutgoingLinksByType(Collections.singleton(sv),
+					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
+							.getType(modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID));
 			outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
 			if (!outgoinglinks.isEmpty()) {
 				result.add(outgoinglinks);
@@ -655,6 +696,10 @@ public class ModeloERNavigatorContentProvider implements ICommonContentProvider 
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
 							.getType(modeloER.modeloER.diagram.edit.parts.ClavePrimariaEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target, true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
+							modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target, true));
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
@@ -840,6 +885,10 @@ public class ModeloERNavigatorContentProvider implements ICommonContentProvider 
 							.getType(modeloER.modeloER.diagram.edit.parts.ClavePrimariaEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target, true));
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
+							modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target, true));
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
 							.getType(modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target, true));
@@ -920,6 +969,37 @@ public class ModeloERNavigatorContentProvider implements ICommonContentProvider 
 			connectedViews = getLinksTargetByType(Collections.singleton(sv),
 					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
 							.getType(modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEditPart.VISUAL_ID));
+			target.addChildren(createNavigatorItems(connectedViews, target, true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
+							.getType(modeloER.modeloER.diagram.edit.parts.EntidadFuerteEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source, true));
+			connectedViews = getLinksSourceByType(Collections.singleton(sv),
+					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
+							.getType(modeloER.modeloER.diagram.edit.parts.EntidadDebilEditPart.VISUAL_ID));
+			source.addChildren(createNavigatorItems(connectedViews, source, true));
+			if (!target.isEmpty()) {
+				result.add(target);
+			}
+			if (!source.isEmpty()) {
+				result.add(source);
+			}
+			return result.toArray();
+		}
+
+		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID: {
+			LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem> result = new LinkedList<modeloER.modeloER.diagram.navigator.ModeloERAbstractNavigatorItem>();
+			Edge sv = (Edge) view;
+			modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup target = new modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup(
+					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_AtributoDerivadoEntidad_4009_target,
+					"icons/linkTargetNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup source = new modeloER.modeloER.diagram.navigator.ModeloERNavigatorGroup(
+					modeloER.modeloER.diagram.part.Messages.NavigatorGroupName_AtributoDerivadoEntidad_4009_source,
+					"icons/linkSourceNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getLinksTargetByType(Collections.singleton(sv),
+					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
+							modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart.VISUAL_ID));
 			target.addChildren(createNavigatorItems(connectedViews, target, true));
 			connectedViews = getLinksSourceByType(Collections.singleton(sv),
 					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry

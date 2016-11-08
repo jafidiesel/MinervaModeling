@@ -2,6 +2,7 @@ package modeloER.modeloER.diagram.edit.parts;
 
 import org.eclipse.draw2d.Connection;
 import org.eclipse.draw2d.Graphics;
+import org.eclipse.draw2d.MarginBorder;
 import org.eclipse.draw2d.geometry.PointList;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart;
@@ -123,23 +124,23 @@ public class EntidadRelacionDebilEditPart extends ConnectionNodeEditPart impleme
 
 		/**
 		 * @generated
+		 * 
 		 */
 		public EntidadRelacionDebilFigure() {
 
 			createContents();
 		}
-		
+
 		protected void outlineShape(Graphics g) {
-			
-				PointList mylist1 = this.getPoints().getCopy();
-	        	PointList mylist2 = getPoints().getCopy();
-	        	mylist1.translate(0 , -2);
-	        	mylist2.translate(0, 2);
-	        	
-	        	      
-				g.drawPolyline(mylist1);
-	        	g.drawPolyline(mylist2);
-			}
+
+			PointList mylist1 = this.getPoints().getCopy();
+			PointList mylist2 = getPoints().getCopy();
+			mylist1.translate(0, -2);
+			mylist2.translate(0, 2);
+
+			g.drawPolyline(mylist1);
+			g.drawPolyline(mylist2);
+		}
 
 		/**
 		 * @generated
@@ -148,13 +149,13 @@ public class EntidadRelacionDebilEditPart extends ConnectionNodeEditPart impleme
 
 			fFigureEntidadRelacionDebilLimiteInferiorERFigure = new WrappingLabel();
 
-			fFigureEntidadRelacionDebilLimiteInferiorERFigure.setText("0..*");
+			fFigureEntidadRelacionDebilLimiteInferiorERFigure.setText("<...>");
 
 			this.add(fFigureEntidadRelacionDebilLimiteInferiorERFigure);
 
 			fFigureEntidadRelacionDebilLimiteSuperiorERFigure = new WrappingLabel();
 
-			fFigureEntidadRelacionDebilLimiteSuperiorERFigure.setText("0..*");
+			fFigureEntidadRelacionDebilLimiteSuperiorERFigure.setText("<...>");
 
 			this.add(fFigureEntidadRelacionDebilLimiteSuperiorERFigure);
 

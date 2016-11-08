@@ -367,6 +367,14 @@ public class ModeloERBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		}
 
 		/**
+		 * @generated
+		 */
+		public boolean canCreateAtributoDerivadoEntidad_4009(modeloER.modeloER.Diagrama container,
+				modeloER.modeloER.Entidad source, modeloER.modeloER.AtributoDerivadoClavePrimaria target) {
+			return canExistAtributoDerivadoEntidad_4009(container, null, source, target);
+		}
+
+		/**
 		* @generated
 		*/
 		public boolean canExistAtributoEntidadLink_4001(modeloER.modeloER.Diagrama container,
@@ -435,6 +443,15 @@ public class ModeloERBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 		public boolean canExistAtributoDerivadoEntidad_4008(modeloER.modeloER.Diagrama container,
 				modeloER.modeloER.AtributoDerivadoEntidad linkInstance, modeloER.modeloER.Entidad source,
 				modeloER.modeloER.AtributoDerivado target) {
+			return true;
+		}
+
+		/**
+		* @generated
+		*/
+		public boolean canExistAtributoDerivadoEntidad_4009(modeloER.modeloER.Diagrama container,
+				modeloER.modeloER.AtributoDerivadoEntidad linkInstance, modeloER.modeloER.Entidad source,
+				modeloER.modeloER.AtributoDerivadoClavePrimaria target) {
 			return true;
 		}
 	}

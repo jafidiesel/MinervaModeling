@@ -52,6 +52,28 @@
   </nodes>
   <nodes>
     <containmentFeature
+        href="../../ModeloER/model/modeloER.ecore#//Diagrama/atributoderivadoclaveprimariaDelDiagrama"/>
+    <ownedChild>
+      <domainMetaElement
+          href="../../ModeloER/model/modeloER.ecore#//AtributoDerivadoClavePrimaria"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="modeloER.gmfgraph#AtributoDerivadoClavePrimariaNombreAtributo"/>
+        <features
+            href="../../ModeloER/model/modeloER.ecore#//Atributo/nombreAtributo"/>
+        <editableFeatures
+            href="../../ModeloER/model/modeloER.ecore#//Atributo/nombreAtributo"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="modeloER.gmftool#//@palette/@tools.0/@tools.6"/>
+      <diagramNode
+          href="modeloER.gmfgraph#AtributoDerivadoClavePrimaria"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
         href="../../ModeloER/model/modeloER.ecore#//Diagrama/atributosimpleDelDiagrama"/>
     <ownedChild>
       <domainMetaElement
@@ -432,6 +454,23 @@
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="../../ModeloER/model/modeloER.ecore#//AtributoDerivadoEntidad/atributoderivadoDestino"/>
+  </links>
+  <links>
+    <domainMetaElement
+        href="../../ModeloER/model/modeloER.ecore#//AtributoDerivadoEntidad"/>
+    <containmentFeature
+        href="../../ModeloER/model/modeloER.ecore#//Diagrama/atributoderivadoentidadDelDiagrama"/>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="modeloER.gmftool#//@palette/@tools.2/@tools.3"/>
+    <diagramLink
+        href="modeloER.gmfgraph#AtributoDerivadoEntidad"/>
+    <sourceMetaFeature
+        xsi:type="ecore:EReference"
+        href="../../ModeloER/model/modeloER.ecore#//AtributoDerivadoEntidad/entidadAtributoDerivadoOrigen"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="../../ModeloER/model/modeloER.ecore#//AtributoDerivadoEntidad/atributoderivadoclaveprimariaDestino"/>
   </links>
   <diagram>
     <diagramCanvas
