@@ -1,0 +1,71 @@
+EERCASE (Modelo entidad relación con OCL *.*)
+https://sites.google.com/a/cin.ufpe.br/eercase/apresentacao
+
+->Atributo
+	*self.nombreAtributo<>null && self.nombreAtributo<>'' - nombreAtributo no puede estar vacío ni ser null.
+	*(ver entidad)//self->isUnique(nombreAtributo) - dos atributos de la misma clase no pueden tener el mismo nombre // si utilizo el isUnique me lo restringe a todos los atributos de todas las entidades
+	
+	->ClavePrimariaForanea
+		*nombreAtributo //buscar cómo sería la restricción para este atributo
+
+	->AtributoMultivaluado
+
+	->ClavePrimaria
+		*self.nuloAtributo=false - nuloAtributo debe ser false
+	
+	->ClaveForanea
+		*//para XPAND: nombreAtributo debe coincidir con el nombreAtributo de la clave primaria de otra entidad asociada
+
+	->AtributoDerivado
+
+	->AtributoDerivadoClavePrimaria
+
+	->AtributoSimple
+	
+	->AtributoCompuesto
+	
+->Entidad
+	*self.atributosEntidad->isUnique(nombreAtributo)
+	*self.nombreEntidad<>null && self.nombreEntidad<>'' - nombreEntidad no puede estar vacío ni ser null
+	*self->isUnique(nombreEntidad) - dos entidades no pueden tener el mismo nombre
+	*self.atributosEntidad->exists(ae|ae.oclIsKindOf(ClavePrimaria)) - toda entidad debe tener una clave primaria
+	
+	->EntidadFuerte
+	
+	->EntidadDebil
+	
+->EntidadRelacion
+	* self.limiteInferiorER = '*' || (not (self.limiteInferiorER.toInteger().oclIsInvalid())) - limiteInferiorER no puede estar vacio ni ser null (fijarse en funcion isnumeric o algo similar)
+
+	*self.limiteSuperiorER = '*' || (not (self.limiteSuperiorER.toInteger().oclIsInvalid())) - limiteSuperiorER no puede estar vacio ni ser null
+	
+	->EntidadRelacionDebil
+	
+	->EntidadRelacionFuerte
+	
+->Relacion
+	*self.nombreRelacion<>null AND self.nombreRelacion<>'' - nombreRelacion no puede estar vacio ni ser null
+	*self.atributosRelacion->forAll(r|r.oclIsKindOf(AtributoSimple)) - sólo puede tener atributos simples.
+	
+	->RelacionTipoFuerte
+	
+	->RelacionTipoDebil
+	
+->Herencia
+
+->LinkHerenciaHijo
+
+->LinkHerenciaPadre
+
+->RelacionAtributoLink
+
+->AtributoEntidadLink
+
+->AtributoDerivadoEntidad
+
+->LinkASAC
+
+
+
+
+	
