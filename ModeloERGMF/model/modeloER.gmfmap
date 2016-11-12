@@ -482,4 +482,23 @@
     <palette
         href="modeloER.gmftool#//@palette"/>
   </diagram>
+  <audits>
+    <childContainers
+        id="restriccionAtributo"
+        name="Restricciones de Atributo"
+        description="">
+      <audits
+          name="Nombre no vacío ni null"
+          id=""
+          message="Nombre no vacío ni null">
+        <rule
+            body="self.nombreAtributo &lt;> null &amp;&amp; self.nombreAtributo &lt;> ''"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//Atributo"/>
+        </target>
+      </audits>
+    </childContainers>
+  </audits>
 </gmfmap:Mapping>
