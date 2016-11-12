@@ -1,5 +1,6 @@
 package modeloER.modeloER.diagram.edit.parts;
 
+import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.GridData;
 import org.eclipse.draw2d.GridLayout;
 import org.eclipse.draw2d.IFigure;
@@ -32,7 +33,7 @@ public class EntidadFuerteEditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 2011;
+	public static final int VISUAL_ID = 2012;
 
 	/**
 	* @generated

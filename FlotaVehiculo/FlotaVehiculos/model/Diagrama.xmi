@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flotaVehiculos:Diagrama
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:flotaVehiculos="http://www.example.org/flotaVehiculos"
+    xsi:schemaLocation="http://www.example.org/flotaVehiculos flotaVehiculos.ecore">
+  <vehiculo
+      xsi:type="flotaVehiculos:Automovil"
+      matricula="3TR46Q"
+      modelo="Corolla"
+      marca="Toyota"
+      pasajeros="5"/>
+  <vehiculo
+      xsi:type="flotaVehiculos:Camion"
+      matricula="45HUJML"
+      modelo="Constellation"
+      marca="Volkswagen"
+      carga="200"
+      cantidadDeEjes="3"/>
+  <vehiculo
+      xsi:type="flotaVehiculos:Camioneta"
+      matricula="JH7876G"
+      modelo="Hylux"
+      marca="Toyota"
+      carga="20"
+      dobleCabina="true"/>
+  <vehiculo
+      xsi:type="flotaVehiculos:Omnibus"
+      matricula="JH098LK"
+      modelo="1722"
+      marca="Mercedez-Benz"
+      carga="1000"
+      cantidadAsientos="60"
+      banio="true"/>
+  <conductores
+      xsi:type="flotaVehiculos:DePrimera"
+      cedula="20790006"
+      fechaNacimiento="1990-08-12T00:00:00.000-0400"
+      nombre="José"
+      asignacionFija="//@vehiculo.2"/>
+  <conductores
+      xsi:type="flotaVehiculos:DeSegunda"
+      cedula="32987654"
+      fechaNacimiento="1987-12-23T00:00:00.000-0300"
+      nombre="Martha"
+      conductorAsignacionDiaria="//@asignacionesDiarias.0"/>
+  <asignacionesDiarias
+      asignacionDiariaVehiculo="//@vehiculo.0"
+      fechaAsignacion="2016-10-10T00:00:00.000-0300"/>
+</flotaVehiculos:Diagrama>

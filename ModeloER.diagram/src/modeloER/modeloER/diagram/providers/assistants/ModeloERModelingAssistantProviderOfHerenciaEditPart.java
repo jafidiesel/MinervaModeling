@@ -78,8 +78,8 @@ public class ModeloERModelingAssistantProviderOfHerenciaEditPart
 			IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
 		if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.LinkHerenciaHijo_4002) {
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2011);
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2012);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2012);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2013);
 		}
 		return types;
 	}
@@ -121,8 +121,8 @@ public class ModeloERModelingAssistantProviderOfHerenciaEditPart
 			IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
 		if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.LinkHerenciaPadre_4007) {
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2011);
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2012);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2012);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2013);
 		}
 		return types;
 	}

@@ -63,6 +63,8 @@ public class DiagramaCanonicalEditPolicy extends CanonicalEditPolicy {
 					.add(modeloER.modeloER.ModeloERPackage.eINSTANCE.getDiagrama_AtributoderivadoDelDiagrama());
 			myFeaturesToSynchronize
 					.add(modeloER.modeloER.ModeloERPackage.eINSTANCE.getDiagrama_ClaveprimariaDelDiagrama());
+			myFeaturesToSynchronize.add(
+					modeloER.modeloER.ModeloERPackage.eINSTANCE.getDiagrama_AtributoderivadoclaveprimariaDelDiagrama());
 			myFeaturesToSynchronize
 					.add(modeloER.modeloER.ModeloERPackage.eINSTANCE.getDiagrama_AtributosimpleDelDiagrama());
 			myFeaturesToSynchronize
@@ -117,6 +119,7 @@ public class DiagramaCanonicalEditPolicy extends CanonicalEditPolicy {
 		switch (visualID) {
 		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEditPart.VISUAL_ID:
 		case modeloER.modeloER.diagram.edit.parts.ClavePrimariaEditPart.VISUAL_ID:
+		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart.VISUAL_ID:
 		case modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart.VISUAL_ID:
 		case modeloER.modeloER.diagram.edit.parts.AtributoCompuestoEditPart.VISUAL_ID:
 		case modeloER.modeloER.diagram.edit.parts.RelacionTipoDebilEditPart.VISUAL_ID:
@@ -295,10 +298,18 @@ public class DiagramaCanonicalEditPolicy extends CanonicalEditPolicy {
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
 		}
+		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(modeloER.modeloER.diagram.part.ModeloERDiagramUpdater
+						.getAtributoDerivadoClavePrimaria_2003ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
 		case modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(modeloER.modeloER.diagram.part.ModeloERDiagramUpdater
-						.getAtributoSimple_2003ContainedLinks(view));
+						.getAtributoSimple_2004ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -306,7 +317,7 @@ public class DiagramaCanonicalEditPolicy extends CanonicalEditPolicy {
 		case modeloER.modeloER.diagram.edit.parts.AtributoCompuestoEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(modeloER.modeloER.diagram.part.ModeloERDiagramUpdater
-						.getAtributoCompuesto_2004ContainedLinks(view));
+						.getAtributoCompuesto_2005ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -314,7 +325,7 @@ public class DiagramaCanonicalEditPolicy extends CanonicalEditPolicy {
 		case modeloER.modeloER.diagram.edit.parts.RelacionTipoDebilEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(modeloER.modeloER.diagram.part.ModeloERDiagramUpdater
-						.getRelacionTipoDebil_2005ContainedLinks(view));
+						.getRelacionTipoDebil_2006ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -322,7 +333,7 @@ public class DiagramaCanonicalEditPolicy extends CanonicalEditPolicy {
 		case modeloER.modeloER.diagram.edit.parts.RelacionTipoFuerteEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(modeloER.modeloER.diagram.part.ModeloERDiagramUpdater
-						.getRelacionTipoFuerte_2006ContainedLinks(view));
+						.getRelacionTipoFuerte_2007ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -330,7 +341,7 @@ public class DiagramaCanonicalEditPolicy extends CanonicalEditPolicy {
 		case modeloER.modeloER.diagram.edit.parts.AtributoMultivaluadoEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(modeloER.modeloER.diagram.part.ModeloERDiagramUpdater
-						.getAtributoMultivaluado_2007ContainedLinks(view));
+						.getAtributoMultivaluado_2008ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -338,7 +349,7 @@ public class DiagramaCanonicalEditPolicy extends CanonicalEditPolicy {
 		case modeloER.modeloER.diagram.edit.parts.ClavePrimariaForaneaEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(modeloER.modeloER.diagram.part.ModeloERDiagramUpdater
-						.getClavePrimariaForanea_2008ContainedLinks(view));
+						.getClavePrimariaForanea_2009ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -346,7 +357,7 @@ public class DiagramaCanonicalEditPolicy extends CanonicalEditPolicy {
 		case modeloER.modeloER.diagram.edit.parts.ClaveForaneaEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(
-						modeloER.modeloER.diagram.part.ModeloERDiagramUpdater.getClaveForanea_2009ContainedLinks(view));
+						modeloER.modeloER.diagram.part.ModeloERDiagramUpdater.getClaveForanea_2010ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -354,7 +365,7 @@ public class DiagramaCanonicalEditPolicy extends CanonicalEditPolicy {
 		case modeloER.modeloER.diagram.edit.parts.HerenciaEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(
-						modeloER.modeloER.diagram.part.ModeloERDiagramUpdater.getHerencia_2010ContainedLinks(view));
+						modeloER.modeloER.diagram.part.ModeloERDiagramUpdater.getHerencia_2011ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -362,7 +373,7 @@ public class DiagramaCanonicalEditPolicy extends CanonicalEditPolicy {
 		case modeloER.modeloER.diagram.edit.parts.EntidadFuerteEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(modeloER.modeloER.diagram.part.ModeloERDiagramUpdater
-						.getEntidadFuerte_2011ContainedLinks(view));
+						.getEntidadFuerte_2012ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -370,7 +381,7 @@ public class DiagramaCanonicalEditPolicy extends CanonicalEditPolicy {
 		case modeloER.modeloER.diagram.edit.parts.EntidadDebilEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(
-						modeloER.modeloER.diagram.part.ModeloERDiagramUpdater.getEntidadDebil_2012ContainedLinks(view));
+						modeloER.modeloER.diagram.part.ModeloERDiagramUpdater.getEntidadDebil_2013ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -435,6 +446,14 @@ public class DiagramaCanonicalEditPolicy extends CanonicalEditPolicy {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(modeloER.modeloER.diagram.part.ModeloERDiagramUpdater
 						.getAtributoDerivadoEntidad_4008ContainedLinks(view));
+			}
+			domain2NotationMap.putView(view.getElement(), view);
+			break;
+		}
+		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID: {
+			if (!domain2NotationMap.containsKey(view.getElement())) {
+				result.addAll(modeloER.modeloER.diagram.part.ModeloERDiagramUpdater
+						.getAtributoDerivadoEntidad_4009ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

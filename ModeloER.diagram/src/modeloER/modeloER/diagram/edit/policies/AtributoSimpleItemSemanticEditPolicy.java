@@ -23,7 +23,7 @@ public class AtributoSimpleItemSemanticEditPolicy
 	* @generated
 	*/
 	public AtributoSimpleItemSemanticEditPolicy() {
-		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoSimple_2003);
+		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoSimple_2004);
 	}
 
 	/**

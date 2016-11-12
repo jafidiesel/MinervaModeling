@@ -87,7 +87,7 @@ public class EntidadRelacionDebilLimiteInferiorEREditPart extends LabelEditPart 
 		registerSnapBackPosition(
 				modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
 						modeloER.modeloER.diagram.edit.parts.EntidadRelacionDebilLimiteInferiorEREditPart.VISUAL_ID),
-				new Point(0, 4));
+				new Point(4, 4));
 	}
 
 	/**
@@ -112,7 +112,7 @@ public class EntidadRelacionDebilLimiteInferiorEREditPart extends LabelEditPart 
 	* @generated
 	*/
 	public int getKeyPoint() {
-		return ConnectionLocator.SOURCE;
+		return ConnectionLocator.TARGET;
 	}
 
 	/**

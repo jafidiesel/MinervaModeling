@@ -30,36 +30,41 @@ public class DiagramaItemSemanticEditPolicy
 		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClavePrimaria_2002 == req.getElementType()) {
 			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.ClavePrimariaCreateCommand(req));
 		}
-		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoSimple_2003 == req.getElementType()) {
+		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoClavePrimaria_2003 == req
+				.getElementType()) {
+			return getGEFWrapper(
+					new modeloER.modeloER.diagram.edit.commands.AtributoDerivadoClavePrimariaCreateCommand(req));
+		}
+		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoSimple_2004 == req.getElementType()) {
 			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.AtributoSimpleCreateCommand(req));
 		}
-		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoCompuesto_2004 == req.getElementType()) {
+		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoCompuesto_2005 == req.getElementType()) {
 			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.AtributoCompuestoCreateCommand(req));
 		}
-		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoDebil_2005 == req.getElementType()) {
+		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoDebil_2006 == req.getElementType()) {
 			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.RelacionTipoDebilCreateCommand(req));
 		}
-		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoFuerte_2006 == req.getElementType()) {
+		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoFuerte_2007 == req.getElementType()) {
 			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.RelacionTipoFuerteCreateCommand(req));
 		}
-		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoMultivaluado_2007 == req
+		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoMultivaluado_2008 == req
 				.getElementType()) {
 			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.AtributoMultivaluadoCreateCommand(req));
 		}
-		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClavePrimariaForanea_2008 == req
+		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClavePrimariaForanea_2009 == req
 				.getElementType()) {
 			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.ClavePrimariaForaneaCreateCommand(req));
 		}
-		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClaveForanea_2009 == req.getElementType()) {
+		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClaveForanea_2010 == req.getElementType()) {
 			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.ClaveForaneaCreateCommand(req));
 		}
-		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.Herencia_2010 == req.getElementType()) {
+		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.Herencia_2011 == req.getElementType()) {
 			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.HerenciaCreateCommand(req));
 		}
-		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2011 == req.getElementType()) {
+		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2012 == req.getElementType()) {
 			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.EntidadFuerteCreateCommand(req));
 		}
-		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2012 == req.getElementType()) {
+		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2013 == req.getElementType()) {
 			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.EntidadDebilCreateCommand(req));
 		}
 		return super.getCreateCommand(req);

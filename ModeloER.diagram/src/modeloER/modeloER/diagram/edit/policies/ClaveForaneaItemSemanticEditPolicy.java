@@ -23,7 +23,7 @@ public class ClaveForaneaItemSemanticEditPolicy
 	* @generated
 	*/
 	public ClaveForaneaItemSemanticEditPolicy() {
-		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClaveForanea_2009);
+		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClaveForanea_2010);
 	}
 
 	/**

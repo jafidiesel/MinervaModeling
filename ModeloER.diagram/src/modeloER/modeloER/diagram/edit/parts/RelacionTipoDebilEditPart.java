@@ -1,5 +1,6 @@
 package modeloER.modeloER.diagram.edit.parts;
 
+import org.eclipse.draw2d.ColorConstants;
 import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.GridData;
 import org.eclipse.draw2d.GridLayout;
@@ -37,7 +38,7 @@ public class RelacionTipoDebilEditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 2005;
+	public static final int VISUAL_ID = 2006;
 
 	/**
 	* @generated
@@ -276,36 +277,7 @@ public class RelacionTipoDebilEditPart extends ShapeNodeEditPart {
 		 */
 		private void createContents() {
 
-			ScalablePolygonShape polyline0 = new ScalablePolygonShape(){
-				
-			protected void outlineShape(Graphics graphics) {
-			super.outlineShape(graphics);
-			double scaleFactor = 0.9;
-			 Rectangle r = getBounds();
-			    
-			    // Define the points of a trapez
-			    Point p1 = new Point(r.x + r.width/12 , r.y+ r.height/2);
-			    Point p2 = new Point(r.x + r.width/2, r.y+ r.height/12);
-			    Point p3 = new Point (r.x + r.width - r.width/12 , r.y + r.height/2);  
-			    Point p4 = new Point (r.x + r.width/2,  r.y + r.height- r.height/12);
-			    
-			    
-			    PointList pointList = new PointList();
-			    pointList.addPoint(p1);
-			    pointList.addPoint(p2);
-			    pointList.addPoint(p3);
-			    pointList.addPoint(p4);
-			    
-			    // Fill the shape
-			    graphics.fillPolygon(pointList);
-			    
-			    // Draw the outline
-			    graphics.drawLine(p1, p2);
-			    graphics.drawLine(p2, p3);
-			    graphics.drawLine(p3, p4);
-			    graphics.drawLine(p4, p1);
-			}
-			};
+			ScalablePolygonShape polyline0 = new ScalablePolygonShape();
 
 			polyline0.addPoint(new Point(getMapMode().DPtoLP(0), getMapMode().DPtoLP(30)));
 			polyline0.addPoint(new Point(getMapMode().DPtoLP(30), getMapMode().DPtoLP(0)));
