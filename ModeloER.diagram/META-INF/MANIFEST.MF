@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Activator: modeloER.modeloER.diagram.part.ModeloERDiagramEditorPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: modeloER.modeloER.diagram.edit.parts,
+Export-Package: modeloER.modeloER.diagram.edit.parts, 
  modeloER.modeloER.diagram.part,
  modeloER.modeloER.diagram.providers
 Require-Bundle: org.eclipse.core.runtime,

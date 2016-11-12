@@ -291,11 +291,12 @@ public class ModeloERNavigatorLabelProvider extends LabelProvider
 	* @generated
 	*/
 	private String getAtributoDerivadoClavePrimaria_2003Text(View view) {
-		IParser parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider.getParser(
-				modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoClavePrimaria_2003,
-				view.getElement() != null ? view.getElement() : view,
-				modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
-						modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaNombreAtributoEditPart.VISUAL_ID));
+		IParser parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider
+				.getParser(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoClavePrimaria_2003,
+						view.getElement() != null ? view.getElement()
+								: view,
+						modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
+								modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaNombreAtributoEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -329,11 +330,12 @@ public class ModeloERNavigatorLabelProvider extends LabelProvider
 	* @generated
 	*/
 	private String getAtributoCompuesto_2005Text(View view) {
-		IParser parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider.getParser(
-				modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoCompuesto_2005,
-				view.getElement() != null ? view.getElement() : view,
-				modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
-						modeloER.modeloER.diagram.edit.parts.AtributoCompuestoNombreAtributoEditPart.VISUAL_ID));
+		IParser parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider
+				.getParser(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoCompuesto_2005,
+						view.getElement() != null ? view.getElement()
+								: view,
+						modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
+								modeloER.modeloER.diagram.edit.parts.AtributoCompuestoNombreAtributoEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -348,11 +350,12 @@ public class ModeloERNavigatorLabelProvider extends LabelProvider
 	* @generated
 	*/
 	private String getRelacionTipoDebil_2006Text(View view) {
-		IParser parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider.getParser(
-				modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoDebil_2006,
-				view.getElement() != null ? view.getElement() : view,
-				modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
-						modeloER.modeloER.diagram.edit.parts.RelacionTipoDebilNombreRelacionEditPart.VISUAL_ID));
+		IParser parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider
+				.getParser(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoDebil_2006,
+						view.getElement() != null ? view.getElement()
+								: view,
+						modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
+								modeloER.modeloER.diagram.edit.parts.RelacionTipoDebilNombreRelacionEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -367,11 +370,12 @@ public class ModeloERNavigatorLabelProvider extends LabelProvider
 	* @generated
 	*/
 	private String getRelacionTipoFuerte_2007Text(View view) {
-		IParser parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider.getParser(
-				modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoFuerte_2007,
-				view.getElement() != null ? view.getElement() : view,
-				modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
-						modeloER.modeloER.diagram.edit.parts.RelacionTipoFuerteNombreRelacionEditPart.VISUAL_ID));
+		IParser parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider
+				.getParser(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoFuerte_2007,
+						view.getElement() != null ? view.getElement()
+								: view,
+						modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
+								modeloER.modeloER.diagram.edit.parts.RelacionTipoFuerteNombreRelacionEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -386,11 +390,12 @@ public class ModeloERNavigatorLabelProvider extends LabelProvider
 	* @generated
 	*/
 	private String getAtributoMultivaluado_2008Text(View view) {
-		IParser parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider.getParser(
-				modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoMultivaluado_2008,
-				view.getElement() != null ? view.getElement() : view,
-				modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
-						modeloER.modeloER.diagram.edit.parts.AtributoMultivaluadoNombreAtributoEditPart.VISUAL_ID));
+		IParser parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider
+				.getParser(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoMultivaluado_2008,
+						view.getElement() != null ? view.getElement()
+								: view,
+						modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
+								modeloER.modeloER.diagram.edit.parts.AtributoMultivaluadoNombreAtributoEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -405,11 +410,12 @@ public class ModeloERNavigatorLabelProvider extends LabelProvider
 	* @generated
 	*/
 	private String getClavePrimariaForanea_2009Text(View view) {
-		IParser parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider.getParser(
-				modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClavePrimariaForanea_2009,
-				view.getElement() != null ? view.getElement() : view,
-				modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
-						modeloER.modeloER.diagram.edit.parts.ClavePrimariaForaneaNombreAtributoEditPart.VISUAL_ID));
+		IParser parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider
+				.getParser(modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClavePrimariaForanea_2009,
+						view.getElement() != null ? view.getElement()
+								: view,
+						modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
+								modeloER.modeloER.diagram.edit.parts.ClavePrimariaForaneaNombreAtributoEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -502,11 +508,12 @@ public class ModeloERNavigatorLabelProvider extends LabelProvider
 	* @generated
 	*/
 	private String getEntidadRelacionFuerte_4003Text(View view) {
-		IParser parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider.getParser(
-				modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadRelacionFuerte_4003,
-				view.getElement() != null ? view.getElement() : view,
-				modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
-						modeloER.modeloER.diagram.edit.parts.EntidadRelacionFuerteLimiteInferiorEREditPart.VISUAL_ID));
+		IParser parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider
+				.getParser(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadRelacionFuerte_4003,
+						view.getElement() != null ? view.getElement()
+								: view,
+						modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
+								modeloER.modeloER.diagram.edit.parts.EntidadRelacionFuerteLimiteInferiorEREditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -521,11 +528,12 @@ public class ModeloERNavigatorLabelProvider extends LabelProvider
 	* @generated
 	*/
 	private String getEntidadRelacionDebil_4004Text(View view) {
-		IParser parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider.getParser(
-				modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadRelacionDebil_4004,
-				view.getElement() != null ? view.getElement() : view,
-				modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
-						modeloER.modeloER.diagram.edit.parts.EntidadRelacionDebilLimiteInferiorEREditPart.VISUAL_ID));
+		IParser parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider
+				.getParser(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadRelacionDebil_4004,
+						view.getElement() != null ? view.getElement()
+								: view,
+						modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
+								modeloER.modeloER.diagram.edit.parts.EntidadRelacionDebilLimiteInferiorEREditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
