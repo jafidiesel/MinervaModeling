@@ -2,8 +2,8 @@ EERCASE (Modelo entidad relación con OCL *.*)
 https://sites.google.com/a/cin.ufpe.br/eercase/apresentacao
 
 ->Atributo
-	*self.nombreAtributo<>null && self.nombreAtributo<>'' - nombreAtributo no puede estar vacío ni ser null.
-	*(ver entidad)//self->isUnique(nombreAtributo) - dos atributos de la misma clase no pueden tener el mismo nombre // si utilizo el isUnique me lo restringe a todos los atributos de todas las entidades
+	*PROBADO-self.nombreAtributo<>null && self.nombreAtributo<>'' - nombreAtributo no puede estar vacío ni ser null.
+	*RESUELTO EN ENTIDAD//self->isUnique(nombreAtributo) - dos atributos de la misma clase no pueden tener el mismo nombre // si utilizo el isUnique me lo restringe a todos los atributos de todas las entidades
 	
 	->ClavePrimariaForanea
 		*nombreAtributo //buscar cómo sería la restricción para este atributo
@@ -11,7 +11,7 @@ https://sites.google.com/a/cin.ufpe.br/eercase/apresentacao
 	->AtributoMultivaluado
 
 	->ClavePrimaria
-		*self.nuloAtributo=false - nuloAtributo debe ser false
+		*PROBADO- self.nuloAtributo=false - nuloAtributo debe ser false
 	
 	->ClaveForanea
 		*//para XPAND: nombreAtributo debe coincidir con el nombreAtributo de la clave primaria de otra entidad asociada
@@ -25,27 +25,27 @@ https://sites.google.com/a/cin.ufpe.br/eercase/apresentacao
 	->AtributoCompuesto
 	
 ->Entidad
-	*self.atributosEntidad->isUnique(nombreAtributo)
-	*self.nombreEntidad<>null && self.nombreEntidad<>'' - nombreEntidad no puede estar vacío ni ser null
-	*self->isUnique(nombreEntidad) - dos entidades no pueden tener el mismo nombre
-	*self.atributosEntidad->exists(ae|ae.oclIsKindOf(ClavePrimaria)) - toda entidad debe tener una clave primaria
+	*PROBADO - self.atributosEntidad->isUnique(nombreAtributo)
+	*PROBADO - self.nombreEntidad<>null && self.nombreEntidad<>'' - nombreEntidad no puede estar vacío ni ser null
+	*PROBADO - Entidad::allInstances()->isUnique(nombreEntidad) // [NO FUNCIONA COMO DEBERÍA -> self->isUnique(nombreEntidad)] dos entidades no pueden tener el mismo nombre
+	*PROBADO - self.atributosEntidad->exists(ae|ae.oclIsKindOf(ClavePrimaria)) - toda entidad debe tener una clave primaria
 	
 	->EntidadFuerte
 	
 	->EntidadDebil
 	
 ->EntidadRelacion
-	* self.limiteInferiorER = '*' || (not (self.limiteInferiorER.toInteger().oclIsInvalid())) - limiteInferiorER no puede estar vacio ni ser null (fijarse en funcion isnumeric o algo similar)
+	* PROBADO - self.limiteInferiorER = '*' or (not (self.limiteInferiorER.toInteger().oclIsInvalid())) - limiteInferiorER no puede estar vacio ni ser null (fijarse en funcion isnumeric o algo similar)
 
-	*self.limiteSuperiorER = '*' || (not (self.limiteSuperiorER.toInteger().oclIsInvalid())) - limiteSuperiorER no puede estar vacio ni ser null
+	*PROBADO - self.limiteSuperiorER = '*' || (not (self.limiteSuperiorER.toInteger().oclIsInvalid())) - limiteSuperiorER no puede estar vacio ni ser null
 	
 	->EntidadRelacionDebil
 	
 	->EntidadRelacionFuerte
 	
 ->Relacion
-	*self.nombreRelacion<>null AND self.nombreRelacion<>'' - nombreRelacion no puede estar vacio ni ser null
-	*self.atributosRelacion->forAll(r|r.oclIsKindOf(AtributoSimple)) - sólo puede tener atributos simples.
+	*PROBADO - self.nombreRelacion<>null AND self.nombreRelacion<>'' - nombreRelacion no puede estar vacio ni ser null
+	*PROBADO - self.atributosRelacion->forAll(r|r.oclIsKindOf(AtributoSimple)) - sólo puede tener atributos simples.
 	
 	->RelacionTipoFuerte
 	

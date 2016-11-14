@@ -548,7 +548,7 @@
           id="3.3"
           message="Dos entidades no pueden tener el mismo nombre">
         <rule
-            body="self->isUnique(nombreEntidad)"/>
+            body="Entidad::allInstances()->isUnique(nombreEntidad)"/>
         <target
             xsi:type="gmfmap:DomainElementTarget">
           <element
