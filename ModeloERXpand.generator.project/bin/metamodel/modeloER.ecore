@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="modeloER" nsURI="http://www.example.org/modeloER" nsPrefix="modeloER">
+  <eClassifiers xsi:type="ecore:EClass" name="Entidad">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributosEntidad" upperBound="-1"
+        eType="#//Atributo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreEntidad" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Atributo">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreAtributo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nuloAtributo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoDatoAtributo" eType="#//TipoDato"
+        defaultValueLiteral="varchar"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkClavePrimaria" eType="#//ClavePrimaria"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkClaveForanea" eType="#//ClaveForanea"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkClavePrimariaForanea"
+        eType="#//ClavePrimariaForanea"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Relacion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreRelacion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributosRelacion" upperBound="-1"
+        eType="#//Atributo" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Diagrama">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributosDelDiagrama" upperBound="-1"
+        eType="#//Atributo" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="herenciasDelDiagrama" upperBound="-1"
+        eType="#//Herencia" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributoderivadoDelDiagrama"
+        upperBound="-1" eType="#//AtributoDerivado" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributomultivaluadoDelDiagrama"
+        upperBound="-1" eType="#//AtributoMultivaluado" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="claveprimariaDelDiagrama"
+        upperBound="-1" eType="#//ClavePrimaria" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="claveforaneaDelDiagrama"
+        upperBound="-1" eType="#//ClaveForanea" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="claveprimariaforaneaDelDiagrama"
+        upperBound="-1" eType="#//ClavePrimariaForanea" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relacionesTipodebilDelDiagrama"
+        upperBound="-1" eType="#//RelacionTipoDebil" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relacionesTipofuerteDelDiagrama"
+        upperBound="-1" eType="#//RelacionTipoFuerte" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entidadesRelacionesFuertesDelDiagrama"
+        upperBound="-1" eType="#//EntidadRelacionFuerte" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entidadesRelacionesDebilesDelDiagrama"
+        upperBound="-1" eType="#//EntidadRelacionDebil" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributoderivadoclaveprimariaDelDiagrama"
+        upperBound="-1" eType="#//AtributoDerivadoClavePrimaria" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entidadfuerteDelDiagrama"
+        upperBound="-1" eType="#//EntidadFuerte" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entidaddebilDelDiagrama"
+        upperBound="-1" eType="#//EntidadDebil" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributosimpleDelDiagrama"
+        upperBound="-1" eType="#//AtributoSimple" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributocompuestoDelDiagrama"
+        upperBound="-1" eType="#//AtributoCompuesto" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkasacDelDiagrama" upperBound="-1"
+        eType="#//LinkASAC" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributoderivadoentidadDelDiagrama"
+        upperBound="-1" eType="#//AtributoDerivadoEntidad" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributoentidadlinkDiagrama"
+        upperBound="-1" eType="#//AtributoEntidadLink" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributoderivadoentidadDiagrama"
+        upperBound="-1" eType="#//AtributoDerivadoEntidad" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relacionatributolinkDiagrama"
+        upperBound="-1" eType="#//RelacionAtributoLink" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkherenciapadreDiagrama"
+        upperBound="-1" eType="#//LinkHerenciaPadre" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkherenciahijoDiagrama"
+        upperBound="-1" eType="#//LinkHerenciaHijo" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TipoDato">
+    <eLiterals name="varchar"/>
+    <eLiterals name="int" value="1"/>
+    <eLiterals name="Char" value="2"/>
+    <eLiterals name="Float" value="3"/>
+    <eLiterals name="boolean" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EntidadRelacion">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entidadERLink" lowerBound="1"
+        eType="#//Entidad"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relacionERLink" lowerBound="1"
+        eType="#//Relacion"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="limiteInferiorER" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="limiteSuperiorER" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Herencia"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AtributoDerivado" eSuperTypes="#//Atributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AtributoMultivaluado" eSuperTypes="#//Atributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClavePrimaria" eSuperTypes="#//Atributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClaveForanea" eSuperTypes="#//Atributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClavePrimariaForanea" eSuperTypes="#//Atributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RelacionTipoDebil" eSuperTypes="#//Relacion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RelacionTipoFuerte" eSuperTypes="#//Relacion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EntidadRelacionDebil" eSuperTypes="#//EntidadRelacion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EntidadRelacionFuerte" eSuperTypes="#//EntidadRelacion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AtributoDerivadoClavePrimaria" eSuperTypes="#//Atributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EntidadFuerte" eSuperTypes="#//Entidad"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EntidadDebil" eSuperTypes="#//Entidad"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AtributoSimple" eSuperTypes="#//Atributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AtributoCompuesto" eSuperTypes="#//Atributo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkASAC">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributocompuestoOrigen"
+        lowerBound="1" eType="#//AtributoCompuesto"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributosimpleDestino"
+        lowerBound="1" eType="#//AtributoSimple"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AtributoEntidadLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entidadAtributoLinkOrigen"
+        lowerBound="1" eType="#//Entidad"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributoEntidadLinkDestino"
+        lowerBound="1" eType="#//Atributo"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkHerenciaPadre">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkHerenciaPadreHerenciaDestino"
+        lowerBound="1" eType="#//Herencia"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="herenciaPadreEntidadOrigen"
+        lowerBound="1" eType="#//Entidad"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkHerenciaHijo">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="herenciaHijoHerenciaDestino"
+        lowerBound="1" eType="#//Herencia"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="herenciaHijoEntidadOrigen"
+        lowerBound="1" eType="#//Entidad"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AtributoDerivadoEntidad">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entidadAtributoDerivadoOrigen"
+        lowerBound="1" eType="#//Entidad"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributoderivadoclaveprimariaDestino"
+        lowerBound="1" eType="#//AtributoDerivadoClavePrimaria"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atributoderivadoDestino"
+        lowerBound="1" eType="#//AtributoDerivado"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RelacionAtributoLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relacionAtributoOrigen"
+        lowerBound="1" eType="#//Relacion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relacionAtributoDestino"
+        lowerBound="1" eType="#//Atributo"/>
+  </eClassifiers>
+</ecore:EPackage>

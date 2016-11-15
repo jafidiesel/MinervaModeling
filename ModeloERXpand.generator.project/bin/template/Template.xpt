@@ -1,0 +1,36 @@
+«IMPORT modeloER»
+
+«EXTENSION template::GeneratorExtensions»
+«REM»-----------Accedo al nodo raiz----------------------------«ENDREM»
+«DEFINE main FOR Diagrama»
+«FILE "modelo/"+"generic"+".sql"»
+	«EXPAND table FOREACH entidaddebilDelDiagrama»
+	«EXPAND table FOREACH entidadfuerteDelDiagrama»
+«ENDFILE»
+«ENDDEFINE»
+
+«DEFINE table FOR EntidadDebil»
+CREATE TABLE «this.nombreEntidad+"/EntidadDebil"»{
+«EXPAND atributoEntidad FOREACH atributosEntidad»
+}
+«ENDDEFINE»
+
+«DEFINE table FOR EntidadFuerte»
+CREATE TABLE «this.nombreEntidad»+"/EntidadFuerte"{
+«EXPAND atributoEntidad FOREACH atributosEntidad»
+
+}
+«ENDDEFINE»
+
+«DEFINE atributoEntidad FOR Atributo»
+«IF this.(ClavePrimaria) == true -»
+es clave primaria
+«ENDIF»
+
+«REM»-----------«this.nombreAtributo» «this.tipoDatoAtributo»(255)«IF !this.nuloAtributo == true» NOT NULL «ENDIF»,«ENDREM»
+
+«ENDDEFINE»
+
+«DEFINE clavePrimaria FOR ClavePrimaria»
+PRIMARY KEY («this.nombreAtributo»)
+«ENDDEFINE»

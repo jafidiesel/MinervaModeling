@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modeloER:Diagrama
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:modeloER="http://www.example.org/modeloER"
+    xsi:schemaLocation="http://www.example.org/modeloER metamodel/modeloER.ecore">
+  <entidadfuerteDelDiagrama
+      nombreEntidad="Entidad1-Fuerte">
+    <atributosEntidad
+        xsi:type="modeloER:ClavePrimaria"/>
+  </entidadfuerteDelDiagrama>
+  <entidaddebilDelDiagrama
+      nombreEntidad="Entidad2-Debil">
+    <atributosEntidad
+        nombreAtributo="nombreAtributoEntidad1-Fuerte"
+        nuloAtributo="true"
+        tipoDatoAtributo="Float"/>
+  </entidaddebilDelDiagrama>
+</modeloER:Diagrama>

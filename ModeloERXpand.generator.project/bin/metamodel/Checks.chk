@@ -1,0 +1,3 @@
+import modeloER;
+
+extension metamodel::Extensions;
