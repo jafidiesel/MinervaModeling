@@ -489,6 +489,7 @@
         description="">
       <audits
           name="ValidarNombre"
+          description="Nombre no vacío ni null"
           id="1.1"
           message="Nombre no vacío ni null">
         <rule
@@ -583,6 +584,19 @@
               href="../../ModeloER/model/modeloER.ecore#//EntidadRelacion"/>
         </target>
       </audits>
+      <audits
+          name="ValidaRelacionDebil"
+          description="Una relacion débil se conecta con línea doble"
+          id="4.2"
+          message="">
+        <rule
+            body="entidadERLink.oclIsTypeOf(EntidadDebil) implies relacionERLink.oclIsTypeOf(RelacionTipoDebil)"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//EntidadRelacion"/>
+        </target>
+      </audits>
     </childContainers>
     <childContainers
         id="5"
@@ -609,6 +623,23 @@
             xsi:type="gmfmap:DomainElementTarget">
           <element
               href="../../ModeloER/model/modeloER.ecore#//Relacion"/>
+        </target>
+      </audits>
+    </childContainers>
+    <childContainers
+        id="6"
+        name="ValidarLinkASAC">
+      <audits
+          name="AtributoCompuestoASimple"
+          description="Un atributo compuesto puede tener atributos simples"
+          id="6.1"
+          message="">
+        <rule
+            body="atributocompuestoOrigen.oclIsTypeOf(AtributoCompuesto) implies atributosimpleDestino.oclIsTypeOf(AtributoSimple)"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//LinkASAC"/>
         </target>
       </audits>
     </childContainers>
