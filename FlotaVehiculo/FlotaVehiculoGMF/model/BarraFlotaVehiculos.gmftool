@@ -98,7 +98,7 @@
         <largeIcon
             xsi:type="gmftool:BundleImage"
             path="/AsignacionDiaria.gif"
-            bundle="/FlotaVehiculos.edit/icons/full/obj16/"/>
+            bundle="/FlotaVehiculos.edit/icons/full/obj16"/>
       </tools>
     </tools>
   </palette>

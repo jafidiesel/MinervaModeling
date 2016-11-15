@@ -1,9 +1,6 @@
 package modeloER.modeloER.diagram.edit.parts;
 
 import org.eclipse.draw2d.Connection;
-import org.eclipse.draw2d.Graphics;
-import org.eclipse.draw2d.MarginBorder;
-import org.eclipse.draw2d.geometry.PointList;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ITreeBranchEditPart;
@@ -124,22 +121,10 @@ public class EntidadRelacionDebilEditPart extends ConnectionNodeEditPart impleme
 
 		/**
 		 * @generated
-		 * 
 		 */
 		public EntidadRelacionDebilFigure() {
 
 			createContents();
-		}
-
-		protected void outlineShape(Graphics g) {
-
-			PointList mylist1 = this.getPoints().getCopy();
-			PointList mylist2 = getPoints().getCopy();
-			mylist1.translate(0, -2);
-			mylist2.translate(0, 2);
-
-			g.drawPolyline(mylist1);
-			g.drawPolyline(mylist2);
 		}
 
 		/**

@@ -482,4 +482,166 @@
     <palette
         href="modeloER.gmftool#//@palette"/>
   </diagram>
+  <audits>
+    <childContainers
+        id="1"
+        name="ValidarAtributo"
+        description="">
+      <audits
+          name="ValidarNombre"
+          description="Nombre no vacío ni null"
+          id="1.1"
+          message="Nombre no vacío ni null">
+        <rule
+            body="self.nombreAtributo &lt;> null and self.nombreAtributo &lt;> ''"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//Atributo"/>
+        </target>
+      </audits>
+    </childContainers>
+    <childContainers
+        id="2"
+        name="ValidarClavePrimaria">
+      <audits
+          name="ExitenciaClavePrimaria"
+          id="2.1"
+          message="Debe existir una clave primaria">
+        <rule
+            body="self.nuloAtributo = false"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//ClavePrimaria"/>
+        </target>
+      </audits>
+    </childContainers>
+    <childContainers
+        id="3"
+        name="ValidarEntidad">
+      <audits
+          name="NombreUnicoAtributo"
+          id="3.1"
+          message="Todos los atributos de una entidad deben tener un nombre único">
+        <rule
+            body="self.atributosEntidad->isUnique(nombreAtributo)"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//Entidad"/>
+        </target>
+      </audits>
+      <audits
+          name="ValidarNombre"
+          id="3.2"
+          message="El nombre de la entidad no puede estar vacío">
+        <rule
+            body="self.nombreEntidad&lt;>null and self.nombreEntidad&lt;>''"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//Entidad"/>
+        </target>
+      </audits>
+      <audits
+          name="NombreUnicoEntidad"
+          id="3.3"
+          message="Dos entidades no pueden tener el mismo nombre">
+        <rule
+            body="Entidad::allInstances()->isUnique(nombreEntidad)"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//Entidad"/>
+        </target>
+      </audits>
+      <audits
+          name="ExisteClavePrimaria"
+          id="3.4"
+          message="Toda entidad debe tener una clave primaria">
+        <rule
+            body="self.atributosEntidad->exists(ae|ae.oclIsKindOf(ClavePrimaria))"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//Entidad"/>
+        </target>
+      </audits>
+    </childContainers>
+    <childContainers
+        id="4"
+        name="ValidarEntidadRelacion">
+      <audits
+          name="ValidadLimites"
+          id="4.1"
+          message="El límite inferiory superior no deben estar vacío">
+        <rule
+            body="self.limiteInferiorER = '*' or (not(self.limiteInferiorER.toInteger().oclIsInvalid())) and self.limiteSuperiorER = '*' or (not(self.limiteSuperiorER.toInteger().oclIsInvalid()))"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//EntidadRelacion"/>
+        </target>
+      </audits>
+      <audits
+          name="ValidaRelacionDebil"
+          description="Una relacion débil se conecta con línea doble"
+          id="4.2"
+          message="">
+        <rule
+            body="entidadERLink.oclIsTypeOf(EntidadDebil) implies relacionERLink.oclIsTypeOf(RelacionTipoDebil)"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//EntidadRelacion"/>
+        </target>
+      </audits>
+    </childContainers>
+    <childContainers
+        id="5"
+        name="ValidarRelacion">
+      <audits
+          name="ValidarNombre"
+          id="5.1"
+          message="El nombre de la relación no puede estar vacio">
+        <rule
+            body="self.nombreRelacion&lt;>null and self.nombreRelacion&lt;>''"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//Relacion"/>
+        </target>
+      </audits>
+      <audits
+          name="SoloAtributosSimples"
+          id="5.2"
+          message="Solo puede tener atributos simples">
+        <rule
+            body="self.atributoRelacion->forAll(r|r.oclIsKindOf(AtributoSimple))"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//Relacion"/>
+        </target>
+      </audits>
+    </childContainers>
+    <childContainers
+        id="6"
+        name="ValidarLinkASAC">
+      <audits
+          name="AtributoCompuestoASimple"
+          description="Un atributo compuesto puede tener atributos simples"
+          id="6.1"
+          message="">
+        <rule
+            body="atributocompuestoOrigen.oclIsTypeOf(AtributoCompuesto) implies atributosimpleDestino.oclIsTypeOf(AtributoSimple)"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//LinkASAC"/>
+        </target>
+      </audits>
+    </childContainers>
+  </audits>
 </gmfmap:Mapping>

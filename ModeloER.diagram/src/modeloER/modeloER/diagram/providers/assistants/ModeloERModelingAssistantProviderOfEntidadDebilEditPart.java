@@ -130,17 +130,20 @@ public class ModeloERModelingAssistantProviderOfEntidadDebilEditPart
 			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoMultivaluado_2008);
 			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClavePrimariaForanea_2009);
 			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClaveForanea_2010);
-		} else if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadRelacionFuerte_4003) {
+		} else
+			if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadRelacionFuerte_4003) {
 			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoDebil_2006);
 			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoFuerte_2007);
 		} else if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadRelacionDebil_4004) {
 			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoDebil_2006);
 			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoFuerte_2007);
-		} else if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.LinkHerenciaPadre_4007) {
+		} else
+			if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.LinkHerenciaPadre_4007) {
 			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.Herencia_2011);
 		} else if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoEntidad_4008) {
 			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivado_2001);
-		} else if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoEntidad_4009) {
+		} else
+			if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoEntidad_4009) {
 			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoClavePrimaria_2003);
 		}
 		return types;

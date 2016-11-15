@@ -5,14 +5,35 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:modeloER="http://www.example.org/modeloER"
     xsi:schemaLocation="http://www.example.org/modeloER modeloER.ecore">
+  <atributosDelDiagrama
+      nombreAtributo=""/>
+  <atributosDelDiagrama
+      xsi:type="modeloER:ClavePrimaria"
+      nombreAtributo="ID"
+      nuloAtributo="true"/>
+  <relacionesTipodebilDelDiagrama
+      nombreRelacion="tiene"/>
   <relacionesTipofuerteDelDiagrama
-      nombreRelacion="Dicta"/>
+      nombreRelacion="">
+    <atributosRelacion/>
+  </relacionesTipofuerteDelDiagrama>
   <entidadesRelacionesFuertesDelDiagrama
-      entidadERLink="//@entidaddebilDelDiagrama.0"
-      relacionERLink="//@relacionesTipofuerteDelDiagrama.0"/>
+      limiteInferiorER="2a"/>
+  <entidadesRelacionesDebilesDelDiagrama
+      limiteInferiorER=""/>
   <entidadfuerteDelDiagrama
-      nombreEntidad="Profesor"/>
-  <entidadfuerteDelDiagrama
-      nombreEntidad="Materia"/>
-  <entidaddebilDelDiagrama/>
+      nombreEntidad="Persona">
+    <atributosEntidad
+        xsi:type="modeloER:AtributoSimple"
+        nombreAtributo="Nombre"/>
+  </entidadfuerteDelDiagrama>
+  <entidaddebilDelDiagrama
+      nombreEntidad="Animal">
+    <atributosEntidad
+        xsi:type="modeloER:ClavePrimaria"
+        nombreAtributo="DNI"/>
+    <atributosEntidad
+        xsi:type="modeloER:AtributoSimple"
+        nombreAtributo="Edad"/>
+  </entidaddebilDelDiagrama>
 </modeloER:Diagrama>
