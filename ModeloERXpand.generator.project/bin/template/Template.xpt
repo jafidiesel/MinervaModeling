@@ -12,22 +12,20 @@
 «DEFINE table FOR EntidadDebil»
 CREATE TABLE «this.nombreEntidad+"/EntidadDebil"»{
 «EXPAND atributoEntidad FOREACH atributosEntidad»
+«EXPAND clavePrimaria FOREACH atributosEntidad.typeSelect(ClavePrimaria)»
 }
 «ENDDEFINE»
 
 «DEFINE table FOR EntidadFuerte»
-CREATE TABLE «this.nombreEntidad»+"/EntidadFuerte"{
+CREATE TABLE «this.nombreEntidad+"/EntidadFuerte"»{
 «EXPAND atributoEntidad FOREACH atributosEntidad»
-
+«EXPAND clavePrimaria FOREACH atributosEntidad.typeSelect(ClavePrimaria)»
 }
 «ENDDEFINE»
 
 «DEFINE atributoEntidad FOR Atributo»
-«IF this.(ClavePrimaria) == true -»
-es clave primaria
-«ENDIF»
 
-«REM»-----------«this.nombreAtributo» «this.tipoDatoAtributo»(255)«IF !this.nuloAtributo == true» NOT NULL «ENDIF»,«ENDREM»
+«this.nombreAtributo» «this.tipoDatoAtributo»(255)«IF !this.nuloAtributo == true» NOT NULL «ENDIF»,
 
 «ENDDEFINE»
 

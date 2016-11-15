@@ -31,7 +31,7 @@
       nombreEntidad="Animal">
     <atributosEntidad
         xsi:type="modeloER:ClavePrimaria"
-        nombreAtributo="DNI"/>
+        nombreAtributo="Nombre"/>
     <atributosEntidad
         xsi:type="modeloER:AtributoSimple"
         nombreAtributo="Edad"/>

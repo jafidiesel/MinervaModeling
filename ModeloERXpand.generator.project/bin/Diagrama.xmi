@@ -8,7 +8,11 @@
   <entidadfuerteDelDiagrama
       nombreEntidad="Entidad1-Fuerte">
     <atributosEntidad
-        xsi:type="modeloER:ClavePrimaria"/>
+        xsi:type="modeloER:ClavePrimaria"
+        nombreAtributo="DNI"/>
+    <atributosEntidad
+        xsi:type="modeloER:AtributoSimple"
+        nombreAtributo="Nombre"/>
   </entidadfuerteDelDiagrama>
   <entidaddebilDelDiagrama
       nombreEntidad="Entidad2-Debil">
