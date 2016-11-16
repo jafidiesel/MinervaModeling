@@ -9,10 +9,13 @@
       nombreEntidad="Entidad1-Fuerte">
     <atributosEntidad
         xsi:type="modeloER:ClavePrimaria"
-        nombreAtributo="DNI"/>
+        nombreAtributo="nombrePK"/>
     <atributosEntidad
-        xsi:type="modeloER:AtributoSimple"
-        nombreAtributo="Nombre"/>
+        xsi:type="modeloER:AtributoMultivaluado"
+        nombreAtributo="nombreAtributoMultivaluado"/>
+    <atributosEntidad
+        xsi:type="modeloER:ClaveForanea"
+        nombreAtributo="nombreFK"/>
   </entidadfuerteDelDiagrama>
   <entidaddebilDelDiagrama
       nombreEntidad="Entidad2-Debil">
@@ -20,5 +23,14 @@
         nombreAtributo="nombreAtributoEntidad1-Fuerte"
         nuloAtributo="true"
         tipoDatoAtributo="Float"/>
+    <atributosEntidad
+        xsi:type="modeloER:ClavePrimaria"
+        nombreAtributo="7nombreClavePrimaria"/>
+    <atributosEntidad
+        xsi:type="modeloER:AtributoMultivaluado"
+        nombreAtributo="7nombreAtributoMultivaluado"/>
+    <atributosEntidad
+        xsi:type="modeloER:ClaveForanea"
+        nombreAtributo="7nombreClaveForanea"/>
   </entidaddebilDelDiagrama>
 </modeloER:Diagrama>

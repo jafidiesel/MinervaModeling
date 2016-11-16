@@ -6,6 +6,8 @@
 «FILE "modelo/"+"generic"+".sql"»
 	«EXPAND table FOREACH entidaddebilDelDiagrama»
 	«EXPAND table FOREACH entidadfuerteDelDiagrama»
+	«EXPAND tableMultivaluado FOREACH entidaddebilDelDiagrama»«REM»creacion de la tabla mutivaluada«ENDREM»
+	«EXPAND tableMultivaluado FOREACH entidadfuerteDelDiagrama»«REM»creacion de la tabla mutivaluada«ENDREM»
 «ENDFILE»
 «ENDDEFINE»
 
@@ -13,22 +15,53 @@
 CREATE TABLE «this.nombreEntidad+"/EntidadDebil"»{
 «EXPAND atributoEntidad FOREACH atributosEntidad»
 «EXPAND clavePrimaria FOREACH atributosEntidad.typeSelect(ClavePrimaria)»
+«EXPAND claveForanea FOREACH atributosEntidad.typeSelect(ClaveForanea)»
+«EXPAND atributoMultivaluado FOREACH atributosEntidad.typeSelect(AtributoMultivaluado)»
 }
+«ENDDEFINE»
+
+«DEFINE tableMultivaluado FOR EntidadDebil»
+«EXPAND atributoEntidadMultivaluado FOREACH atributosEntidad.typeSelect(AtributoMultivaluado)»
 «ENDDEFINE»
 
 «DEFINE table FOR EntidadFuerte»
 CREATE TABLE «this.nombreEntidad+"/EntidadFuerte"»{
 «EXPAND atributoEntidad FOREACH atributosEntidad»
 «EXPAND clavePrimaria FOREACH atributosEntidad.typeSelect(ClavePrimaria)»
+«EXPAND claveForanea FOREACH atributosEntidad.typeSelect(ClaveForanea)»
+«EXPAND atributoMultivaluado FOREACH atributosEntidad.typeSelect(AtributoMultivaluado)»
 }
 «ENDDEFINE»
 
+«DEFINE tableMultivaluado FOR EntidadFuerte»
+«REM»Aca iria 
+CREATE TABLE «this.nombreAtributo»+"/EntidadFuerteMultivaluado"»{
+pero lo creo en EXPAND atributoEntidadMultivaluado por que desde aca no tengo acceso
+«ENDREM»
+«EXPAND atributoEntidadMultivaluado FOREACH atributosEntidad.typeSelect(AtributoMultivaluado)»
+«ENDDEFINE»
+
 «DEFINE atributoEntidad FOR Atributo»
-
 «this.nombreAtributo» «this.tipoDatoAtributo»(255)«IF !this.nuloAtributo == true» NOT NULL «ENDIF»,
+«ENDDEFINE»
 
+«DEFINE atributoMultivaluado FOR Atributo»
+FOREIGN KEY («this.nombreAtributo»)(Mutltivaluado-test)
+«ENDDEFINE»
+
+«DEFINE atributoEntidadMultivaluado FOR Atributo»
+CREATE TABLE «this.nombreAtributo»+"/EntidadMultivaluada"»{
+OIDMultivaluado VARCHAR (255),
+«this.nombreAtributo» «this.tipoDatoAtributo»(255)«IF !this.nuloAtributo == true» NOT NULL «ENDIF»,
+PRIMARY KEY (OIDMultivaluado,«this.nombreAtributo»)
+}
 «ENDDEFINE»
 
 «DEFINE clavePrimaria FOR ClavePrimaria»
 PRIMARY KEY («this.nombreAtributo»)
 «ENDDEFINE»
+
+«DEFINE claveForanea FOR ClaveForanea»
+FOREIGN KEY («this.nombreAtributo»)
+«ENDDEFINE»
+
