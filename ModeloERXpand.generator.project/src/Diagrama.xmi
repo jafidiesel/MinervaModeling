@@ -5,6 +5,14 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:modeloER="http://www.example.org/modeloER"
     xsi:schemaLocation="http://www.example.org/modeloER metamodel/modeloER.ecore">
+  <relacionesTipodebilDelDiagrama
+      nombreRelacion="relcionTipoDebil1"/>
+  <entidadesRelacionesFuertesDelDiagrama
+      entidadERLink="//@entidadfuerteDelDiagrama.0"
+      relacionERLink="//@relacionesTipodebilDelDiagrama.0"/>
+  <entidadesRelacionesDebilesDelDiagrama
+      entidadERLink="//@entidaddebilDelDiagrama.0"
+      relacionERLink="//@relacionesTipodebilDelDiagrama.0"/>
   <entidadfuerteDelDiagrama
       nombreEntidad="Entidad1-Fuerte">
     <atributosEntidad
