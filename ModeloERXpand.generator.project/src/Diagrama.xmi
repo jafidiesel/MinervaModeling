@@ -5,6 +5,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:modeloER="http://www.example.org/modeloER"
     xsi:schemaLocation="http://www.example.org/modeloER metamodel/modeloER.ecore">
+  <herenciasDelDiagrama/>
   <relacionesTipodebilDelDiagrama
       nombreRelacion="relcionTipoDebil1"/>
   <entidadesRelacionesFuertesDelDiagrama
@@ -25,6 +26,8 @@
         xsi:type="modeloER:ClaveForanea"
         nombreAtributo="nombreFK"/>
   </entidadfuerteDelDiagrama>
+  <entidadfuerteDelDiagrama
+      nombreEntidad="Padre"/>
   <entidaddebilDelDiagrama
       nombreEntidad="Entidad2-Debil">
     <atributosEntidad

@@ -1,6 +1,5 @@
 
 	
-	/* entro a entidadRelacion */
 	
 CREATE TABLE Entidad1-Fuerte {
 	
@@ -22,18 +21,16 @@ CREATE TABLE Entidad1-Fuerte {
 }
 	
 	
-CREATE TABLE nombreAtributoMultivaluado+"/EntidadMultivaluada"»{
+/* EntidadMultivaluada */
+CREATE TABLE nombreAtributoMultivaluado {
 	OIDMultivaluado VARCHAR (255),
 	nombreAtributoMultivaluado varchar(255) NOT NULL ,
 	PRIMARY KEY (OIDMultivaluado,nombreAtributoMultivaluado)
 }
 
-	
-
 
 
 	
-	/* entro a entidadRelacion */
 	
 CREATE TABLE Entidad2-Debil {
 	
@@ -57,13 +54,12 @@ CREATE TABLE Entidad2-Debil {
 }
 	
 	
-CREATE TABLE 7nombreAtributoMultivaluado+"/EntidadMultivaluada"»{
+/* EntidadMultivaluada */
+CREATE TABLE 7nombreAtributoMultivaluado {
 	OIDMultivaluado VARCHAR (255),
 	7nombreAtributoMultivaluado varchar(255) NOT NULL ,
 	PRIMARY KEY (OIDMultivaluado,7nombreAtributoMultivaluado)
 }
 
-	
 
-	
 

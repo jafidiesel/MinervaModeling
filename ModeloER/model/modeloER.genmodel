@@ -57,7 +57,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//EntidadRelacion/limiteInferiorER"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modeloER.ecore#//EntidadRelacion/limiteSuperiorER"/>
     </genClasses>
-    <genClasses ecoreClass="modeloER.ecore#//Herencia"/>
+    <genClasses ecoreClass="modeloER.ecore#//Herencia">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//Herencia/linkHerenciaPadre"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//Herencia/linkHerenciaHijo"/>
+    </genClasses>
     <genClasses ecoreClass="modeloER.ecore#//AtributoDerivado"/>
     <genClasses ecoreClass="modeloER.ecore#//AtributoMultivaluado"/>
     <genClasses ecoreClass="modeloER.ecore#//ClavePrimaria"/>
@@ -81,11 +84,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//AtributoEntidadLink/atributoEntidadLinkDestino"/>
     </genClasses>
     <genClasses ecoreClass="modeloER.ecore#//LinkHerenciaPadre">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//LinkHerenciaPadre/linkHerenciaPadreHerenciaDestino"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//LinkHerenciaPadre/herenciaPadreEntidadOrigen"/>
     </genClasses>
     <genClasses ecoreClass="modeloER.ecore#//LinkHerenciaHijo">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//LinkHerenciaHijo/herenciaHijoHerenciaDestino"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//LinkHerenciaHijo/herenciaHijoEntidadOrigen"/>
     </genClasses>
     <genClasses ecoreClass="modeloER.ecore#//AtributoDerivadoEntidad">
