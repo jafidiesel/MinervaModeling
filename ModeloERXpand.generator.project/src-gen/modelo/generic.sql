@@ -1,6 +1,7 @@
 
 	
 	
+	
 CREATE TABLE Entidad1-Fuerte {
 	
 	nombrePK varchar(255) NOT NULL ,
@@ -12,6 +13,7 @@ CREATE TABLE Entidad1-Fuerte {
 	
 	PRIMARY KEY (nombrePK)
 
+	
 	
 	FOREIGN KEY (nombreFK)
 
@@ -46,6 +48,7 @@ CREATE TABLE Entidad2-Debil {
 	PRIMARY KEY (7nombreClavePrimaria)
 
 	
+	
 	FOREIGN KEY (7nombreClaveForanea)
 
 	
@@ -62,4 +65,18 @@ CREATE TABLE 7nombreAtributoMultivaluado {
 }
 
 
+
+	
+	
+	
+/* Herencia */
+	 
+		
+			ALTER TABLE Hijo
+				ADD clavePrimariaPadreEnHijo 
+					int,
+				FOREIGN KEY (clavePrimariaPadre)
+					REFERENCES Padre(clavePrimariaPadre)
+		
+	
 

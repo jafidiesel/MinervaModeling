@@ -5,7 +5,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:modeloER="http://www.example.org/modeloER"
     xsi:schemaLocation="http://www.example.org/modeloER metamodel/modeloER.ecore">
-  <herenciasDelDiagrama/>
+  <herenciasDelDiagrama
+      linkHerenciaPadre="//@linkherenciapadreDiagrama.0"
+      linkHerenciaHijo="//@linkherenciahijoDiagrama.0"/>
   <relacionesTipodebilDelDiagrama
       nombreRelacion="relcionTipoDebil1"/>
   <entidadesRelacionesFuertesDelDiagrama
@@ -27,7 +29,19 @@
         nombreAtributo="nombreFK"/>
   </entidadfuerteDelDiagrama>
   <entidadfuerteDelDiagrama
-      nombreEntidad="Padre"/>
+      nombreEntidad="Padre">
+    <atributosEntidad
+        xsi:type="modeloER:ClavePrimaria"
+        nombreAtributo="clavePrimariaPadre"
+        tipoDatoAtributo="int"/>
+  </entidadfuerteDelDiagrama>
+  <entidadfuerteDelDiagrama
+      nombreEntidad="Hijo">
+    <atributosEntidad
+        xsi:type="modeloER:ClavePrimaria"
+        nombreAtributo="clavePrimariaHijo"
+        tipoDatoAtributo="int"/>
+  </entidadfuerteDelDiagrama>
   <entidaddebilDelDiagrama
       nombreEntidad="Entidad2-Debil">
     <atributosEntidad
@@ -44,4 +58,8 @@
         xsi:type="modeloER:ClaveForanea"
         nombreAtributo="7nombreClaveForanea"/>
   </entidaddebilDelDiagrama>
+  <linkherenciapadreDiagrama
+      herenciaPadreEntidadOrigen="//@entidadfuerteDelDiagrama.1"/>
+  <linkherenciahijoDiagrama
+      herenciaHijoEntidadOrigen="//@entidadfuerteDelDiagrama.2"/>
 </modeloER:Diagrama>

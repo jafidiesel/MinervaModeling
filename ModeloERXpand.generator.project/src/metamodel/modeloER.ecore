@@ -12,10 +12,6 @@
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipoDatoAtributo" eType="#//TipoDato"
         defaultValueLiteral="varchar"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="linkClavePrimaria" eType="#//ClavePrimaria"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="linkClaveForanea" eType="#//ClaveForanea"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="linkClavePrimariaForanea"
-        eType="#//ClavePrimariaForanea"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Relacion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombreRelacion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -85,7 +81,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="limiteInferiorER" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="limiteSuperiorER" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Herencia"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Herencia">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkHerenciaPadre" lowerBound="1"
+        eType="#//LinkHerenciaPadre"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkHerenciaHijo" lowerBound="1"
+        eType="#//LinkHerenciaHijo"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AtributoDerivado" eSuperTypes="#//Atributo"/>
   <eClassifiers xsi:type="ecore:EClass" name="AtributoMultivaluado" eSuperTypes="#//Atributo"/>
   <eClassifiers xsi:type="ecore:EClass" name="ClavePrimaria" eSuperTypes="#//Atributo"/>
@@ -113,14 +114,10 @@
         lowerBound="1" eType="#//Atributo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LinkHerenciaPadre">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="linkHerenciaPadreHerenciaDestino"
-        lowerBound="1" eType="#//Herencia"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="herenciaPadreEntidadOrigen"
         lowerBound="1" eType="#//Entidad"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LinkHerenciaHijo">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="herenciaHijoHerenciaDestino"
-        lowerBound="1" eType="#//Herencia"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="herenciaHijoEntidadOrigen"
         lowerBound="1" eType="#//Entidad"/>
   </eClassifiers>

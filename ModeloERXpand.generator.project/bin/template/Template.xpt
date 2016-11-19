@@ -1,14 +1,19 @@
 «IMPORT modeloER»
 
 «EXTENSION template::GeneratorExtensions»
-«REM»-----------Accedo al nodo raiz----------------------------«ENDREM»
+«REM»Nodo raiz«ENDREM»
 «DEFINE main FOR Diagrama»
 «FILE "modelo/"+"generic"+".sql"»
+	«REM»Entidades fuertes y debiles«ENDREM»
 	«EXPAND entidadRelacion FOREACH entidadesRelacionesFuertesDelDiagrama»
 	«EXPAND entidadRelacion FOREACH entidadesRelacionesDebilesDelDiagrama»
+	
+	«REM»Herencia«ENDREM»
+	«EXPAND herencia FOREACH herenciasDelDiagrama»
 «ENDFILE»
 «ENDDEFINE»
 
+«REM»Entidades«ENDREM»
 «DEFINE entidadRelacion FOR EntidadRelacionFuerte»
 	«EXPAND entidad FOR entidadERLink»
 «ENDDEFINE»
@@ -31,6 +36,7 @@ CREATE TABLE «this.nombreEntidad» {
 «DEFINE relacion FOR Relacion»
 «ENDDEFINE»
 
+«REM»Atributos«ENDREM»
 «DEFINE atributoEntidad FOR Atributo»
 	«this.nombreAtributo» «this.tipoDatoAtributo»«IF this.tipoDatoAtributo.toString() == "varchar"»(255)«ENDIF»«IF !this.nuloAtributo == true» NOT NULL «ENDIF»,
 «ENDDEFINE»
@@ -40,6 +46,7 @@ CREATE TABLE «this.nombreEntidad» {
 «ENDDEFINE»
 
 «DEFINE claveForanea FOR ClaveForanea»
+	«REM»TODO: Foreign key necesita REFERENCES para indicar a que entidad hace referencia«ENDREM»
 	FOREIGN KEY («this.nombreAtributo»)
 «ENDDEFINE»
 
@@ -55,3 +62,23 @@ CREATE TABLE «this.nombreAtributo» {
 	PRIMARY KEY (OIDMultivaluado,«this.nombreAtributo»)
 }
 «ENDDEFINE»
+
+«DEFINE herencia FOR Herencia»
+/* Herencia */
+	«LET this.linkHerenciaPadre.herenciaPadreEntidadOrigen AS entidadPadre» «REM»La vieja confiable: variables locales«ENDREM»
+		«LET this.linkHerenciaHijo.herenciaHijoEntidadOrigen AS entidadHijo»
+			ALTER TABLE «entidadHijo.nombreEntidad»
+				ADD «entidadPadre.atributosEntidad.typeSelect(ClavePrimaria).first().nombreAtributo»EnHijo «REM»Magic!«ENDREM»
+					«entidadPadre.atributosEntidad.typeSelect(ClavePrimaria).first().tipoDatoAtributo»,
+				FOREIGN KEY («entidadPadre.atributosEntidad.typeSelect(ClavePrimaria).first().nombreAtributo»)
+					REFERENCES «entidadPadre.nombreEntidad»(«entidadPadre.atributosEntidad.typeSelect(ClavePrimaria).first().nombreAtributo»)
+		«ENDLET»
+	«ENDLET»
+«ENDDEFINE»
+
+
+«REM»
+A expand se le pueden pasar parametros:
+«EXPAND definitionName [(parameterList)]
+ [FOR expression | FOREACH expression [SEPARATOR expression] ] [ONFILECLOSE]»
+«ENDREM»
