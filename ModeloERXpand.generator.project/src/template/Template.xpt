@@ -10,52 +10,48 @@
 «ENDDEFINE»
 
 «DEFINE entidadRelacion FOR EntidadRelacionFuerte»
-entro a entidadRelacion
 	«EXPAND entidad FOR entidadERLink»
-
 «ENDDEFINE»
 
 «DEFINE entidadRelacion FOR EntidadRelacionDebil»
-entro a entidadRelacion
 	«EXPAND entidad FOR entidadERLink»
-	
 «ENDDEFINE»
 
 «DEFINE entidad FOR Entidad»
-	CREATE TABLE «this.nombreEntidad»{
+CREATE TABLE «this.nombreEntidad» {
 	«EXPAND atributoEntidad FOREACH atributosEntidad»
 	«EXPAND clavePrimaria FOREACH atributosEntidad.typeSelect(ClavePrimaria)»
 	«EXPAND claveForanea FOREACH atributosEntidad.typeSelect(ClaveForanea)»
 	«EXPAND atributoMultivaluado FOREACH atributosEntidad.typeSelect(AtributoMultivaluado)»
-	}
-	
-	«EXPAND tableMultivaluado FOREACH atributosEntidad.typeSelect(AtributoMultivaluado)»«REM»creacion de la tabla mutivaluada«ENDREM»
-	
+}
+	«REM»creacion de la tabla mutivaluada«ENDREM»
+	«EXPAND tableMultivaluado FOREACH atributosEntidad.typeSelect(AtributoMultivaluado)»
 «ENDDEFINE»
 
 «DEFINE relacion FOR Relacion»
 «ENDDEFINE»
 
 «DEFINE atributoEntidad FOR Atributo»
-«this.nombreAtributo» «this.tipoDatoAtributo»(255)«IF !this.nuloAtributo == true» NOT NULL «ENDIF»,
+	«this.nombreAtributo» «this.tipoDatoAtributo»«IF this.tipoDatoAtributo.toString() == "varchar"»(255)«ENDIF»«IF !this.nuloAtributo == true» NOT NULL «ENDIF»,
 «ENDDEFINE»
 
 «DEFINE clavePrimaria FOR ClavePrimaria»
-PRIMARY KEY («this.nombreAtributo»)
+	PRIMARY KEY («this.nombreAtributo»)
 «ENDDEFINE»
 
 «DEFINE claveForanea FOR ClaveForanea»
-FOREIGN KEY («this.nombreAtributo»)
+	FOREIGN KEY («this.nombreAtributo»)
 «ENDDEFINE»
 
 «DEFINE atributoMultivaluado FOR Atributo»
-FOREIGN KEY («this.nombreAtributo»)(Mutltivaluado-test)
+	FOREIGN KEY («this.nombreAtributo») /* (Mutltivaluado-test) */
 «ENDDEFINE»
 
 «DEFINE tableMultivaluado FOR AtributoMultivaluado»
-CREATE TABLE «this.nombreAtributo»+"/EntidadMultivaluada"»{
-OIDMultivaluado VARCHAR (255),
-«this.nombreAtributo» «this.tipoDatoAtributo»(255)«IF !this.nuloAtributo == true» NOT NULL «ENDIF»,
-PRIMARY KEY (OIDMultivaluado,«this.nombreAtributo»)
+/* EntidadMultivaluada */
+CREATE TABLE «this.nombreAtributo» {
+	OIDMultivaluado VARCHAR (255),
+	«this.nombreAtributo» «this.tipoDatoAtributo»«IF this.tipoDatoAtributo.toString() == "varchar"»(255)«ENDIF»«IF !this.nuloAtributo == true» NOT NULL «ENDIF»,
+	PRIMARY KEY (OIDMultivaluado,«this.nombreAtributo»)
 }
 «ENDDEFINE»
