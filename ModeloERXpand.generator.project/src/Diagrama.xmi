@@ -12,10 +12,14 @@
       nombreRelacion="relcionTipoDebil1"/>
   <entidadesRelacionesFuertesDelDiagrama
       entidadERLink="//@entidadfuerteDelDiagrama.0"
-      relacionERLink="//@relacionesTipodebilDelDiagrama.0"/>
+      relacionERLink="//@relacionesTipodebilDelDiagrama.0"
+      limiteInferiorER="1"
+      limiteSuperiorER="1"/>
   <entidadesRelacionesDebilesDelDiagrama
       entidadERLink="//@entidaddebilDelDiagrama.0"
-      relacionERLink="//@relacionesTipodebilDelDiagrama.0"/>
+      relacionERLink="//@relacionesTipodebilDelDiagrama.0"
+      limiteInferiorER="1"
+      limiteSuperiorER="1"/>
   <entidadfuerteDelDiagrama
       nombreEntidad="Entidad1-Fuerte">
     <atributosEntidad
@@ -59,7 +63,9 @@
         nombreAtributo="7nombreClaveForanea"/>
   </entidaddebilDelDiagrama>
   <linkherenciapadreDiagrama
-      herenciaPadreEntidadOrigen="//@entidadfuerteDelDiagrama.1"/>
+      herenciaPadreEntidadOrigen="//@entidadfuerteDelDiagrama.1"
+      herencia="//@herenciasDelDiagrama.0"/>
   <linkherenciahijoDiagrama
-      herenciaHijoEntidadOrigen="//@entidadfuerteDelDiagrama.2"/>
+      herenciaHijoEntidadOrigen="//@entidadfuerteDelDiagrama.2"
+      herencia="//@herenciasDelDiagrama.0"/>
 </modeloER:Diagrama>

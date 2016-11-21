@@ -1,39 +1,44 @@
 «IMPORT modeloER»
 
 «EXTENSION template::GeneratorExtensions»
-«REM»Nodo raiz«ENDREM»
+
 «DEFINE main FOR Diagrama»
 «FILE "modelo/" + "mysql" + ".sql"»
-	«REM»Entidades fuertes y debiles«ENDREM»
+	«REM»Creación de todas las entidades: sólo existen fuertes y débiles«ENDREM»
+	«EXPAND creacionEntidad FOREACH entidadfuerteDelDiagrama»
+	«EXPAND creacionEntidad FOREACH entidaddebilDelDiagrama»
+	
+	«REM»Relacionar tablas a través de claves primarias y foráneas«ENDREM»
+	
+	«FOREACH relacionesTipofuerteDelDiagrama.union(relacionesTipodebilDelDiagrama) AS relacion»
+	«LET entidadesRelacionesFuertesDelDiagrama.union(entidadesRelacionesDebilesDelDiagrama).select(e|e.relacionERLink == relacion) AS entidadRelaciones»
+		/* Entidades relacionadas:
+		«FOREACH entidadRelaciones AS entidadRelacion»
+		- «entidadRelacion.entidadERLink.nombreEntidad»
+		«ENDFOREACH»
+		*/
+	«ENDLET»
+	«ENDFOREACH»
+	
+	«REM»
 	«EXPAND entidadRelacion FOREACH entidadesRelacionesFuertesDelDiagrama»
 	«EXPAND entidadRelacion FOREACH entidadesRelacionesDebilesDelDiagrama»
 	
-	«REM»Herencia«ENDREM»
-	«EXPAND herencia FOREACH herenciasDelDiagrama»
+	«EXPAND relacionHerencia FOREACH herenciasDelDiagrama»
+	«ENDREM»
 «ENDFILE»
 «ENDDEFINE»
 
-«REM»Entidades«ENDREM»
-«DEFINE entidadRelacion FOR EntidadRelacionFuerte»
-	«EXPAND entidad FOR entidadERLink»
-«ENDDEFINE»
-
-«DEFINE entidadRelacion FOR EntidadRelacionDebil»
-	«EXPAND entidad FOR entidadERLink»
-«ENDDEFINE»
-
-«DEFINE entidad FOR Entidad»
+«REM»Creacion de entidad: CREATE TABLE; y atributos multivaluados como tablas«ENDREM»
+«REM»Primero crea los atributos multivaluados como entidades, luego crea las entidades propiamente dichas y luego las relaciona«ENDREM»
+«DEFINE creacionEntidad FOR Entidad»
+	«EXPAND creacionAtributoMultivaluado FOREACH atributosEntidad.typeSelect(AtributoMultivaluado)»
+/* Entidad */
 CREATE TABLE «this.nombreEntidad» {
 	«EXPAND atributoEntidad FOREACH atributosEntidad»
 	«EXPAND clavePrimaria FOREACH atributosEntidad.typeSelect(ClavePrimaria)»
-	«EXPAND claveForanea FOREACH atributosEntidad.typeSelect(ClaveForanea)»
 	«EXPAND atributoMultivaluado FOREACH atributosEntidad.typeSelect(AtributoMultivaluado)»
 }
-	«REM»creacion de la tabla mutivaluada«ENDREM»
-	«EXPAND tableMultivaluado FOREACH atributosEntidad.typeSelect(AtributoMultivaluado)»
-«ENDDEFINE»
-
-«DEFINE relacion FOR Relacion»
 «ENDDEFINE»
 
 «REM»Atributos«ENDREM»
@@ -45,37 +50,43 @@ CREATE TABLE «this.nombreEntidad» {
 	PRIMARY KEY («this.nombreAtributo»)
 «ENDDEFINE»
 
-«DEFINE claveForanea FOR ClaveForanea»
-	«REM»TODO: Foreign key necesita REFERENCES para indicar a que entidad hace referencia«ENDREM»
-	FOREIGN KEY («this.nombreAtributo»)
-«ENDDEFINE»
-
 «DEFINE atributoMultivaluado FOR Atributo»
-	FOREIGN KEY («this.nombreAtributo») /* (Mutltivaluado-test) */
+	FOREIGN KEY («this.nombreAtributo») REFERENCES «this.nombreAtributo»(OIDMultivaluado) 
 «ENDDEFINE»
 
-«DEFINE tableMultivaluado FOR AtributoMultivaluado»
-/* EntidadMultivaluada */
+«REM»Atributos multivaluados como tablas (entidades) apartes«ENDREM»
+«DEFINE creacionAtributoMultivaluado FOR AtributoMultivaluado»
+/* Atributo Multivaluado */
 CREATE TABLE «this.nombreAtributo» {
-	OIDMultivaluado VARCHAR (255),
+	OIDMultivaluado INT NOT NULL AUTO_INCREMENT,
 	«this.nombreAtributo» «this.tipoDatoAtributo»«IF this.tipoDatoAtributo.toString() == "varchar"»(255)«ENDIF»«IF !this.nuloAtributo == true» NOT NULL «ENDIF»,
-	PRIMARY KEY (OIDMultivaluado,«this.nombreAtributo»)
+	PRIMARY KEY (OIDMultivaluado)
 }
 «ENDDEFINE»
 
-«DEFINE herencia FOR Herencia»
-/* Herencia */
-	«LET this.linkHerenciaPadre.herenciaPadreEntidadOrigen AS entidadPadre» «REM»La vieja confiable: variables locales«ENDREM»
-		«LET this.linkHerenciaHijo.herenciaHijoEntidadOrigen AS entidadHijo»
-			ALTER TABLE «entidadHijo.nombreEntidad»
-				ADD «entidadPadre.atributosEntidad.typeSelect(ClavePrimaria).first().nombreAtributo»EnHijo «REM»Magic!«ENDREM»
-					«entidadPadre.atributosEntidad.typeSelect(ClavePrimaria).first().tipoDatoAtributo»,
-				FOREIGN KEY («entidadPadre.atributosEntidad.typeSelect(ClavePrimaria).first().nombreAtributo»)
-					REFERENCES «entidadPadre.nombreEntidad»(«entidadPadre.atributosEntidad.typeSelect(ClavePrimaria).first().nombreAtributo»)
-		«ENDLET»
-	«ENDLET»
+«REM»Relaciones«ENDREM»
+«DEFINE entidadRelacion FOR EntidadRelacion»
+«REM»Posibilidades: 1-1, 1-N, N-1, N-N«ENDREM»
+/* Clave primaria de «this.entidadERLink.nombreEntidad» */
+/* Relacion «this.limiteInferiorER»-«this.limiteSuperiorER» */
+	
 «ENDDEFINE»
 
+«DEFINE relacionEntidades FOR Entidad»
+«ENDDEFINE»
+
+«DEFINE relacionHerencia FOR Herencia»
+«LET this.linkHerenciaPadre.herenciaPadreEntidadOrigen AS entidadPadre» «REM»La vieja confiable: variables locales«ENDREM»
+«LET this.linkHerenciaHijo.herenciaHijoEntidadOrigen AS entidadHijo»
+/* Herencia entre «entidadPadre.nombreEntidad» y «entidadHijo.nombreEntidad» */
+ALTER TABLE «entidadHijo.nombreEntidad»
+	ADD «entidadPadre.atributosEntidad.typeSelect(ClavePrimaria).first().nombreAtributo»EnHijo «REM»Magic!«ENDREM»
+		«entidadPadre.atributosEntidad.typeSelect(ClavePrimaria).first().tipoDatoAtributo»,
+	FOREIGN KEY («entidadPadre.atributosEntidad.typeSelect(ClavePrimaria).first().nombreAtributo»)
+		REFERENCES «entidadPadre.nombreEntidad»(«entidadPadre.atributosEntidad.typeSelect(ClavePrimaria).first().nombreAtributo»)
+«ENDLET»
+«ENDLET»
+«ENDDEFINE»
 
 «REM»
 A expand se le pueden pasar parametros:

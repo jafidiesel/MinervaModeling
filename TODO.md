@@ -1,5 +1,7 @@
 # Por hacer o considerar
 
+## Xpand
+
 - FOREIGN KEY (claveForane) necesita especificar REFERENCE, ejemplo:
 
 ```
@@ -25,5 +27,18 @@ puede seguir lo mismo que son herencia. En xpand está hecho con herencia con
 - Clave primaria foranea
 
 - Relacion N:N
+  - Contemplar la cardinalidad de las relaciones
 
 - PK(EntidadFuerte) -> FK(EntidadDebil)
+
+- Contemplar que AtriutoCompuesto es más de un sólo atributo
+
+## OCL
+
+- Agregar restricciones para que las relaciones deban tener, obligatoriamente,
+  límte inferior y límite superior.
+
+## Cambios a evaluar sobre el mapeo y GMF
+
+- Relación bidireccional entre LinkHerenciaPadre y LinkHerenciaHijo con
+  Herencia.

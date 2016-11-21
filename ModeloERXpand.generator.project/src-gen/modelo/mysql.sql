@@ -2,6 +2,14 @@
 	
 	
 	
+/* Atributo Multivaluado */
+CREATE TABLE nombreAtributoMultivaluado {
+	OIDMultivaluado INT NOT NULL AUTO_INCREMENT,
+	nombreAtributoMultivaluado varchar(255) NOT NULL ,
+	PRIMARY KEY (OIDMultivaluado)
+}
+
+/* Entidad */
 CREATE TABLE Entidad1-Fuerte {
 	
 	nombrePK varchar(255) NOT NULL ,
@@ -14,26 +22,44 @@ CREATE TABLE Entidad1-Fuerte {
 	PRIMARY KEY (nombrePK)
 
 	
-	
-	FOREIGN KEY (nombreFK)
-
-	
-	FOREIGN KEY (nombreAtributoMultivaluado) /* (Mutltivaluado-test) */
+	FOREIGN KEY (nombreAtributoMultivaluado) REFERENCES nombreAtributoMultivaluado(OIDMultivaluado) 
 
 }
+
 	
+/* Entidad */
+CREATE TABLE Padre {
 	
-/* EntidadMultivaluada */
-CREATE TABLE nombreAtributoMultivaluado {
-	OIDMultivaluado VARCHAR (255),
-	nombreAtributoMultivaluado varchar(255) NOT NULL ,
-	PRIMARY KEY (OIDMultivaluado,nombreAtributoMultivaluado)
+	clavePrimariaPadre int NOT NULL ,
+
+	
+	PRIMARY KEY (clavePrimariaPadre)
+
+	
 }
 
+	
+/* Entidad */
+CREATE TABLE Hijo {
+	
+	clavePrimariaHijo int NOT NULL ,
 
+	
+	PRIMARY KEY (clavePrimariaHijo)
+
+	
+}
 
 	
 	
+/* Atributo Multivaluado */
+CREATE TABLE 7nombreAtributoMultivaluado {
+	OIDMultivaluado INT NOT NULL AUTO_INCREMENT,
+	7nombreAtributoMultivaluado varchar(255) NOT NULL ,
+	PRIMARY KEY (OIDMultivaluado)
+}
+
+/* Entidad */
 CREATE TABLE Entidad2-Debil {
 	
 	nombreAtributoEntidad1-Fuerte Float,
@@ -48,35 +74,23 @@ CREATE TABLE Entidad2-Debil {
 	PRIMARY KEY (7nombreClavePrimaria)
 
 	
-	
-	FOREIGN KEY (7nombreClaveForanea)
-
-	
-	FOREIGN KEY (7nombreAtributoMultivaluado) /* (Mutltivaluado-test) */
+	FOREIGN KEY (7nombreAtributoMultivaluado) REFERENCES 7nombreAtributoMultivaluado(OIDMultivaluado) 
 
 }
-	
-	
-/* EntidadMultivaluada */
-CREATE TABLE 7nombreAtributoMultivaluado {
-	OIDMultivaluado VARCHAR (255),
-	7nombreAtributoMultivaluado varchar(255) NOT NULL ,
-	PRIMARY KEY (OIDMultivaluado,7nombreAtributoMultivaluado)
-}
-
-
 
 	
 	
 	
-/* Herencia */
-	 
+	
+	
+		/* Entidades relacionadas:
 		
-			ALTER TABLE Hijo
-				ADD clavePrimariaPadreEnHijo 
-					int,
-				FOREIGN KEY (clavePrimariaPadre)
-					REFERENCES Padre(clavePrimariaPadre)
+		- Entidad1-Fuerte
 		
+		- Entidad2-Debil
+		
+		*/
 	
-
+	
+	
+	
