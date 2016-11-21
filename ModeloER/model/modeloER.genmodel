@@ -85,9 +85,11 @@
     </genClasses>
     <genClasses ecoreClass="modeloER.ecore#//LinkHerenciaPadre">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//LinkHerenciaPadre/herenciaPadreEntidadOrigen"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//LinkHerenciaPadre/herencia"/>
     </genClasses>
     <genClasses ecoreClass="modeloER.ecore#//LinkHerenciaHijo">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//LinkHerenciaHijo/herenciaHijoEntidadOrigen"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//LinkHerenciaHijo/herencia"/>
     </genClasses>
     <genClasses ecoreClass="modeloER.ecore#//AtributoDerivadoEntidad">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modeloER.ecore#//AtributoDerivadoEntidad/entidadAtributoDerivadoOrigen"/>
