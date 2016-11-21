@@ -83,9 +83,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Herencia">
     <eStructuralFeatures xsi:type="ecore:EReference" name="linkHerenciaPadre" lowerBound="1"
-        eType="#//LinkHerenciaPadre"/>
+        eType="#//LinkHerenciaPadre" eOpposite="#//LinkHerenciaPadre/herencia"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="linkHerenciaHijo" lowerBound="1"
-        eType="#//LinkHerenciaHijo"/>
+        eType="#//LinkHerenciaHijo" eOpposite="#//LinkHerenciaHijo/herencia"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AtributoDerivado" eSuperTypes="#//Atributo"/>
   <eClassifiers xsi:type="ecore:EClass" name="AtributoMultivaluado" eSuperTypes="#//Atributo"/>
@@ -116,10 +116,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="LinkHerenciaPadre">
     <eStructuralFeatures xsi:type="ecore:EReference" name="herenciaPadreEntidadOrigen"
         lowerBound="1" eType="#//Entidad"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="herencia" eType="#//Herencia"
+        eOpposite="#//Herencia/linkHerenciaPadre"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LinkHerenciaHijo">
     <eStructuralFeatures xsi:type="ecore:EReference" name="herenciaHijoEntidadOrigen"
         lowerBound="1" eType="#//Entidad"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="herencia" eType="#//Herencia"
+        eOpposite="#//Herencia/linkHerenciaHijo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AtributoDerivadoEntidad">
     <eStructuralFeatures xsi:type="ecore:EReference" name="entidadAtributoDerivadoOrigen"
