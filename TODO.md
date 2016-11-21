@@ -1,7 +1,5 @@
 # Por hacer o considerar
 
-- Herencia puede tener múltiples hijos
-
 - FOREIGN KEY (claveForane) necesita especificar REFERENCE, ejemplo:
 
 ```
@@ -16,9 +14,13 @@ puede seguir lo mismo que son herencia. En xpand está hecho con herencia con
   las relaciones fuertes y débiles porque se deja de lado la herencia que es una
   relación más.
 
-- Clave primaria de Entidad fuerte en EntidadDebil como FK. En realidad
+- Clave primaria de Entidad fuerte en EntidadDebil como FK.
 
-- ~~Herencia~~
+- Herencia
+  - Creación de Tablas
+  - Relación de Tablas
+
+- Herencia puede tener múltiples hijos
 
 - Clave primaria foranea
 
