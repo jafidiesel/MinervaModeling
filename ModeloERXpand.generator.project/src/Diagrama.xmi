@@ -10,9 +10,33 @@
       linkHerenciaHijo="//@linkherenciahijoDiagrama.0"/>
   <relacionesTipodebilDelDiagrama
       nombreRelacion="relcionTipoDebil1"/>
+  <relacionesTipofuerteDelDiagrama
+      nombreRelacion="Tiene"/>
+  <relacionesTipofuerteDelDiagrama
+      nombreRelacion="Conduce"/>
   <entidadesRelacionesFuertesDelDiagrama
       entidadERLink="//@entidadfuerteDelDiagrama.0"
       relacionERLink="//@relacionesTipodebilDelDiagrama.0"
+      limiteInferiorER="1"
+      limiteSuperiorER="1"/>
+  <entidadesRelacionesFuertesDelDiagrama
+      entidadERLink="//@entidadfuerteDelDiagrama.5"
+      relacionERLink="//@relacionesTipofuerteDelDiagrama.1"
+      limiteInferiorER="1"
+      limiteSuperiorER="1"/>
+  <entidadesRelacionesFuertesDelDiagrama
+      entidadERLink="//@entidadfuerteDelDiagrama.3"
+      relacionERLink="//@relacionesTipofuerteDelDiagrama.1"
+      limiteInferiorER="1"
+      limiteSuperiorER="1"/>
+  <entidadesRelacionesFuertesDelDiagrama
+      entidadERLink="//@entidadfuerteDelDiagrama.3"
+      relacionERLink="//@relacionesTipofuerteDelDiagrama.0"
+      limiteInferiorER="1"
+      limiteSuperiorER="1"/>
+  <entidadesRelacionesFuertesDelDiagrama
+      entidadERLink="//@entidadfuerteDelDiagrama.4"
+      relacionERLink="//@relacionesTipofuerteDelDiagrama.0"
       limiteInferiorER="1"
       limiteSuperiorER="1"/>
   <entidadesRelacionesDebilesDelDiagrama
@@ -45,6 +69,25 @@
         xsi:type="modeloER:ClavePrimaria"
         nombreAtributo="clavePrimariaHijo"
         tipoDatoAtributo="int"/>
+  </entidadfuerteDelDiagrama>
+  <entidadfuerteDelDiagrama
+      nombreEntidad="Conductor">
+    <atributosEntidad
+        xsi:type="modeloER:ClavePrimaria"
+        nombreAtributo="clavePrimariaConductor"
+        tipoDatoAtributo="int"/>
+  </entidadfuerteDelDiagrama>
+  <entidadfuerteDelDiagrama
+      nombreEntidad="Carnet">
+    <atributosEntidad
+        xsi:type="modeloER:ClavePrimaria"
+        nombreAtributo="clavePrimariaCarnet"/>
+  </entidadfuerteDelDiagrama>
+  <entidadfuerteDelDiagrama
+      nombreEntidad="Auto">
+    <atributosEntidad
+        xsi:type="modeloER:ClavePrimaria"
+        nombreAtributo="clavePrimariaAuto"/>
   </entidadfuerteDelDiagrama>
   <entidaddebilDelDiagrama
       nombreEntidad="Entidad2-Debil">

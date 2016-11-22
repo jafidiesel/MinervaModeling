@@ -9,9 +9,15 @@
 	«EXPAND creacionEntidad FOREACH entidaddebilDelDiagrama»
 	
 	«REM»Relaciones: obtiene todas las EntidadRelaciones de la misma Relacion y las pasa a relacionEntidades (DEFINE)«ENDREM»
-	«FOREACH relacionesTipofuerteDelDiagrama.union(relacionesTipodebilDelDiagrama) AS relacion»
-	«LET entidadesRelacionesFuertesDelDiagrama.union(entidadesRelacionesDebilesDelDiagrama).select(e|e.relacionERLink == relacion) AS entidadRelaciones»
-		«EXPAND relacionEntidades((List[EntidadRelacion])entidadRelaciones) FOREACH entidadRelaciones»
+	«FOREACH relacionesTipofuerteDelDiagrama AS relacionFuerte»
+	«LET entidadesRelacionesFuertesDelDiagrama.select(e|e.relacionERLink == relacionFuerte) AS entidadRelaciones»
+		«EXPAND relacionEntidades(entidadRelaciones) FOREACH entidadRelaciones»
+	«ENDLET»
+	«ENDFOREACH»
+	
+	«FOREACH relacionesTipodebilDelDiagrama AS relacionDebil»
+	«LET entidadesRelacionesDebilesDelDiagrama.select(e|e.relacionERLink == relacionDebil) AS entidadRelaciones»
+		«EXPAND relacionEntidades(entidadRelaciones) FOREACH entidadRelaciones»
 	«ENDLET»
 	«ENDFOREACH»
 	
@@ -42,13 +48,13 @@ CREATE TABLE «this.nombreEntidad» {
 «ENDDEFINE»
 
 «DEFINE atributoMultivaluado FOR Atributo»
-	FOREIGN KEY («this.nombreAtributo») REFERENCES «this.nombreAtributo»(OIDMultivaluado) 
+	FOREIGN KEY («this.nombreAtributo») REFERENCES «this.nombreAtributo.toFirstUpper()»(OIDMultivaluado) 
 «ENDDEFINE»
 
 «REM»Atributos multivaluados como tablas (entidades) apartes«ENDREM»
 «DEFINE creacionAtributoMultivaluado FOR AtributoMultivaluado»
 /* Atributo Multivaluado */
-CREATE TABLE «this.nombreAtributo» {
+CREATE TABLE «this.nombreAtributo.toFirstUpper()» {
 	OIDMultivaluado INT NOT NULL AUTO_INCREMENT,
 	«this.nombreAtributo» «this.tipoDatoAtributo»«IF this.tipoDatoAtributo.toString() == "varchar"»(255)«ENDIF»«IF !this.nuloAtributo == true» NOT NULL «ENDIF»,
 	PRIMARY KEY (OIDMultivaluado)
@@ -57,28 +63,71 @@ CREATE TABLE «this.nombreAtributo» {
 
 «REM»Relaciones: se pasan todas las EntidadRelaciones de la misma Relación«ENDREM»
 «DEFINE relacionEntidades(List[EntidadRelacion] entidadRelaciones) FOR EntidadRelacion»
-	«FOREACH entidadRelaciones.reject(e|e == this) AS relacion»
+«REM»Relación entre 2 Entidades«ENDREM»
+«IF entidadRelaciones.size == 2»
+
+«LET entidadRelaciones.first() AS entidadRelacion1»
+«LET entidadRelaciones.last() AS entidadRelacion2»
+
+	«IF entidadRelacion1.limiteSuperiorER == "1" && entidadRelacion2.limiteSuperiorER == "1"» «REM»1 a 1«ENDREM»
+	
+	ALTER TABLE «entidadRelacion2.entidadERLink.nombreEntidad»
+		«EXPAND claveForanea(entidadRelacion1.entidadERLink.nombreEntidad) FOREACH entidadRelacion1.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
+		«EXPAND claveForaneaReferencias(entidadRelacion1.entidadERLink.nombreEntidad) FOREACH entidadRelacion1.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
+		
+	«ELSEIF entidadRelacion1.limiteSuperiorER == "1" && entidadRelacion2.limiteSuperiorER == "*"» «REM»1 a N«ENDREM»
+	
+	ALTER TABLE «entidadRelacion2.entidadERLink.nombreEntidad»
+		«EXPAND claveForanea(entidadRelacion1.entidadERLink.nombreEntidad) FOREACH entidadRelacion1.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
+		«EXPAND claveForaneaReferencias(entidadRelacion1.entidadERLink.nombreEntidad) FOREACH entidadRelacion1.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
+		
+	«ELSEIF entidadRelacion1.limiteSuperiorER == "*" && entidadRelacion2.limiteSuperiorER == "1"» «REM»N a 1«ENDREM»
+	
+	ALTER TABLE «entidadRelacion1.entidadERLink.nombreEntidad»
+		«EXPAND claveForanea(entidadRelacion2.entidadERLink.nombreEntidad) FOREACH entidadRelacion2.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
+		«EXPAND claveForaneaReferencias(entidadRelacion2.entidadERLink.nombreEntidad) FOREACH entidadRelacion2.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
+		
+	«ELSEIF entidadRelacion1.limiteSuperiorER == "*" && entidadRelacion2.limiteSuperiorER == "*"» «REM»N a N«ENDREM»
+	
+	/* Nueva tabla «entidadRelacion1.entidadERLink.nombreEntidad»«entidadRelacion2.entidadERLink.nombreEntidad» */
+	
+	«ENDIF»
+
+«ENDLET»
+«ENDLET»
+
+«ELSE»
+
+«FOREACH entidadRelaciones.reject(e|e == this) AS relacion»
 ALTER TABLE «relacion.entidadERLink.nombreEntidad»
-	ADD «this.entidadERLink.atributosEntidad.typeSelect(ClaveForanea).first().nombreAtributo»
-		«this.entidadERLink.atributosEntidad.typeSelect(ClaveForanea).first().tipoDatoAtributo»,
-	FOREIGN KEY («this.entidadERLink.atributosEntidad.typeSelect(ClaveForanea).first().nombreAtributo»)
-		REFERENCES «relacion.entidadERLink.nombreEntidad»(«relacion.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria).first().nombreAtributo»)
-	«ENDFOREACH»
+	«EXPAND claveForanea(this.entidadERLink.nombreEntidad) FOREACH this.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
+	«EXPAND claveForaneaReferencias(this.entidadERLink.nombreEntidad) FOREACH this.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
+«ENDFOREACH»
+
+«ENDIF»
 «ENDDEFINE»
+
 
 «DEFINE relacionHerencia FOR Herencia»
 «LET this.linkHerenciaPadre.herenciaPadreEntidadOrigen AS entidadPadre» «REM»La vieja confiable: variables locales«ENDREM»
 «LET this.linkHerenciaHijo.herenciaHijoEntidadOrigen AS entidadHijo»
 /* Herencia entre «entidadPadre.nombreEntidad» y «entidadHijo.nombreEntidad» */
 ALTER TABLE «entidadHijo.nombreEntidad»
-	ADD «entidadPadre.atributosEntidad.typeSelect(ClavePrimaria).first().nombreAtributo»EnHijo «REM»Magic!«ENDREM»
-		«entidadPadre.atributosEntidad.typeSelect(ClavePrimaria).first().tipoDatoAtributo»,
-	FOREIGN KEY («entidadPadre.atributosEntidad.typeSelect(ClavePrimaria).first().nombreAtributo»)
-		REFERENCES «entidadPadre.nombreEntidad»(«entidadPadre.atributosEntidad.typeSelect(ClavePrimaria).first().nombreAtributo»)
+	«EXPAND claveForanea(entidadPadre.nombreEntidad) FOREACH entidadPadre.atributosEntidad.typeSelect(ClavePrimaria)»
+	«EXPAND claveForaneaReferencias(entidadPadre.nombreEntidad) FOREACH entidadPadre.atributosEntidad.typeSelect(ClavePrimaria)»
 «ENDLET»
 «ENDLET»
 «ENDDEFINE»
 
+«DEFINE claveForanea(String nombreEntidad) FOR ClavePrimaria»
+	ADD «this.nombreAtributo»_«nombreEntidad» «REM»Agrega un sufijo«ENDREM»
+		«this.tipoDatoAtributo»,
+«ENDDEFINE»
+
+«DEFINE claveForaneaReferencias(String nombreEntidad) FOR ClavePrimaria»
+	FOREIGN KEY («this.nombreAtributo»_«nombreEntidad»)
+		REFERENCES «nombreEntidad»(«this.nombreAtributo»)
+«ENDDEFINE»
 «REM»
 A expand se le pueden pasar parametros:
 «EXPAND definitionName [(parameterList)]
