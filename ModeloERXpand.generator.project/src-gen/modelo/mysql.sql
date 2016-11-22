@@ -10,7 +10,7 @@ CREATE TABLE NombreAtributoMultivaluado {
 }
 
 /* Entidad */
-CREATE TABLE Entidad1-Fuerte {
+CREATE TABLE EntidadFuerte {
 	
 	nombrePK varchar(255) NOT NULL ,
 
@@ -87,6 +87,30 @@ CREATE TABLE Auto {
 }
 
 	
+/* Entidad */
+CREATE TABLE Algunos {
+	
+	cpAlgunos Char NOT NULL ,
+
+	
+	PRIMARY KEY (cpAlgunos)
+
+	
+}
+
+	
+/* Entidad */
+CREATE TABLE Muchos {
+	
+	cpMuchos int NOT NULL ,
+
+	
+	PRIMARY KEY (cpMuchos)
+
+	
+}
+
+	
 	
 /* Atributo Multivaluado */
 CREATE TABLE 7nombreAtributoMultivaluado {
@@ -96,7 +120,7 @@ CREATE TABLE 7nombreAtributoMultivaluado {
 }
 
 /* Entidad */
-CREATE TABLE Entidad2-Debil {
+CREATE TABLE EntidadDebil {
 	
 	nombreAtributoEntidad1-Fuerte Float,
 
@@ -119,101 +143,146 @@ CREATE TABLE Entidad2-Debil {
 	
 	
 	
+		
+		
+
 	
-		
-		
-
-
-(2)
-
-
-
-	 
 	
+	
+	
+	
+	
+		 
 		
+			
 ALTER TABLE Carnet
-	
-	ADD clavePrimariaConductor_Conductor 
-		int,
+	ADD 
+	clavePrimariaConductor_Conductor int NOT NULL ,
 
 	
 	FOREIGN KEY (clavePrimariaConductor_Conductor)
 		REFERENCES Conductor(clavePrimariaConductor)
 
 
+			
 		
 	
-
-
-
-
-
+	
+	
+	
+	
 
 		
 	
 		
 		
 
-
-(2)
-
-
-
-	 
 	
+	
+	
+	
+	
+	
+		 
 		
+			
 ALTER TABLE Conductor
-	
-	ADD clavePrimariaAuto_Auto 
-		varchar,
+	ADD 
+	clavePrimariaAuto_Auto varchar(255) NOT NULL ,
 
 	
 	FOREIGN KEY (clavePrimariaAuto_Auto)
 		REFERENCES Auto(clavePrimariaAuto)
 
 
-		
-	
-
-
-
-
-
-
-		
-	
-		
-		
-
-
-(2)
-
-
-
-	 
-	
-		
-ALTER TABLE Entidad2-Debil
-	
-	ADD nombrePK_Entidad1-Fuerte 
-		varchar,
-
-	
-	FOREIGN KEY (nombrePK_Entidad1-Fuerte)
-		REFERENCES Entidad1-Fuerte(nombrePK)
-
-
-		
-	
-
-
-
-
-
-
+			
 		
 	
 	
+	
+	
+	
+
+		
+	
+		
+		
+
+	
+	
+	
+	
+	
+	
+		 
+		
+			
+
+/* Entidad intermedia */
+CREATE TABLE Algunos_Muchos {
+	
+	cpAlgunos_Algunos Char NOT NULL ,
+
+	
+	cpMuchos_Muchos int NOT NULL ,
+
+	
+	PRIMARY KEY (cpAlgunos)
+
+	
+	PRIMARY KEY (cpMuchos)
+
+	
+	FOREIGN KEY (cpAlgunos_Algunos)
+		REFERENCES Algunos(cpAlgunos)
+
+	
+	FOREIGN KEY (cpMuchos_Muchos)
+		REFERENCES Muchos(cpMuchos)
+
+}
+
+
+	
+		
+	
+	
+	
+	
+	
+
+		
+	
+		
+		
+
+	
+	
+	
+	
+	
+	
+		 
+		
+			
+ALTER TABLE EntidadDebil
+	ADD 
+	nombrePK_EntidadFuerte varchar(255) NOT NULL ,
+
+	
+	FOREIGN KEY (nombrePK_EntidadFuerte)
+		REFERENCES EntidadFuerte(nombrePK)
+
+
+			
+		
+	
+	
+	
+	
+	
+
+		
 	
 	
 	
@@ -224,8 +293,7 @@ ALTER TABLE Entidad2-Debil
 /* Herencia entre Padre y Hijo */
 ALTER TABLE Hijo
 	
-	ADD clavePrimariaPadre_Padre 
-		int,
+	clavePrimariaPadre_Padre int NOT NULL ,
 
 	
 	FOREIGN KEY (clavePrimariaPadre_Padre)

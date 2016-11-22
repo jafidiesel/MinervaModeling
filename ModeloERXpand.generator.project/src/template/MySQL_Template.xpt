@@ -9,7 +9,6 @@
 	«EXPAND creacionEntidad FOREACH entidaddebilDelDiagrama»
 	
 	«REM»Relaciones: obtiene todas las EntidadRelaciones de la misma Relacion y las pasa a relacionEntidades (DEFINE)«ENDREM»
-	
 	«REM»Une Relaciones fuertes y débiles, y EntidadRelaciones para tratarlas por igual«ENDREM»
 	«LET relacionesTipofuerteDelDiagrama.union(relacionesTipodebilDelDiagrama) AS relacionesDelDiagrama»
 	«FOREACH relacionesDelDiagrama AS relacionDelDiagrama»
@@ -41,13 +40,12 @@
 	FOREIGN KEY («this.nombreAtributo») REFERENCES «this.nombreAtributo.toFirstUpper()»(OIDMultivaluado) 
 «ENDDEFINE»
 
-«DEFINE claveForanea(String nombreEntidad) FOR ClavePrimaria»
-	ADD «this.nombreAtributo»_«nombreEntidad» «REM»Agrega un sufijo«ENDREM»
-		«this.tipoDatoAtributo»,
+«DEFINE claveForanea(String sufijo) FOR ClavePrimaria»
+	«this.nombreAtributo + "_" + sufijo» «this.tipoDatoAtributo»«IF this.tipoDatoAtributo.toString() == "varchar"»(255)«ENDIF»«IF !this.nuloAtributo == true» NOT NULL «ENDIF»,
 «ENDDEFINE»
 
 «DEFINE claveForaneaReferencias(String nombreEntidad) FOR ClavePrimaria»
-	FOREIGN KEY («this.nombreAtributo»_«nombreEntidad»)
+	FOREIGN KEY («this.nombreAtributo + "_" + nombreEntidad»)
 		REFERENCES «nombreEntidad»(«this.nombreAtributo»)
 «ENDDEFINE»
 «REM»---------«ENDREM»
@@ -81,10 +79,12 @@ CREATE TABLE «this.nombreAtributo.toFirstUpper()» {
 «LET this AS entidad2»
 /* Entidad intermedia */
 CREATE TABLE «entidad1.nombreEntidad»_«entidad2.nombreEntidad» {
-	«EXPAND atributoEntidad FOREACH entidad1.atributosEntidad.typeSelect(ClavePrimaria)»
-	«EXPAND atributoEntidad FOREACH entidad2.atributosEntidad.typeSelect(ClavePrimaria)»
+	«EXPAND claveForanea(entidad1.nombreEntidad) FOREACH entidad1.atributosEntidad.typeSelect(ClavePrimaria)»
+	«EXPAND claveForanea(entidad2.nombreEntidad) FOREACH entidad2.atributosEntidad.typeSelect(ClavePrimaria)»
 	«EXPAND clavePrimaria FOREACH entidad1.atributosEntidad.typeSelect(ClavePrimaria)»
 	«EXPAND clavePrimaria FOREACH entidad2.atributosEntidad.typeSelect(ClavePrimaria)»
+	«EXPAND claveForaneaReferencias(entidad1.nombreEntidad) FOREACH entidad1.atributosEntidad.typeSelect(ClavePrimaria)»
+	«EXPAND claveForaneaReferencias(entidad2.nombreEntidad) FOREACH entidad2.atributosEntidad.typeSelect(ClavePrimaria)»
 }
 «ENDLET»
 «ENDDEFINE»
@@ -94,7 +94,7 @@ CREATE TABLE «entidad1.nombreEntidad»_«entidad2.nombreEntidad» {
 «REM»Entidad --> entidad2; Entidad con clave foránea de entidad2«ENDREM»
 «DEFINE relacionEntreEntidades(Entidad entidad2) FOR Entidad»
 ALTER TABLE «this.nombreEntidad»
-	«EXPAND claveForanea(entidad2.nombreEntidad) FOREACH entidad2.atributosEntidad.typeSelect(ClavePrimaria)»
+	ADD «EXPAND claveForanea(entidad2.nombreEntidad) FOREACH entidad2.atributosEntidad.typeSelect(ClavePrimaria)»
 	«EXPAND claveForaneaReferencias(entidad2.nombreEntidad) FOREACH entidad2.atributosEntidad.typeSelect(ClavePrimaria)»
 «ENDDEFINE»
 
@@ -121,10 +121,7 @@ ALTER TABLE «this.nombreEntidad»
 			
 		«ELSEIF entidadRelacion1.limiteSuperiorER == "*" && entidadRelacion2.limiteSuperiorER == "*"» «REM»N a N«ENDREM»
 		
-	/* Entidad por Relacion N-N */
-	CREATE TABLE «this.nombreEntidad» {
-		
-	}
+			«EXPAND creacionEntidadIntermedia(entidadRelacion1.entidadERLink) FOR entidadRelacion2.entidadERLink»
 	
 		«ENDIF»
 	
