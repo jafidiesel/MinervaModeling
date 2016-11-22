@@ -29,7 +29,7 @@ public class HerenciaEditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 2011;
+	public static final int VISUAL_ID = 2008;
 
 	/**
 	* @generated

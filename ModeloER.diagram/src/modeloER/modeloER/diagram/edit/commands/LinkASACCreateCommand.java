@@ -49,10 +49,10 @@ public class LinkASACCreateCommand extends EditElementCommand {
 		if (source == null && target == null) {
 			return false;
 		}
-		if (source != null && false == source instanceof modeloER.modeloER.AtributoCompuesto) {
+		if (source != null && false == source instanceof modeloER.modeloER.AtributoSimple) {
 			return false;
 		}
-		if (target != null && false == target instanceof modeloER.modeloER.AtributoSimple) {
+		if (target != null && false == target instanceof modeloER.modeloER.AtributoCompuesto) {
 			return false;
 		}
 		if (getSource() == null) {
@@ -76,8 +76,8 @@ public class LinkASACCreateCommand extends EditElementCommand {
 
 		modeloER.modeloER.LinkASAC newElement = modeloER.modeloER.ModeloERFactory.eINSTANCE.createLinkASAC();
 		getContainer().getLinkasacDelDiagrama().add(newElement);
-		newElement.setAtributocompuestoOrigen(getSource());
-		newElement.setAtributosimpleDestino(getTarget());
+		newElement.setAtributosimpleDestino(getSource());
+		newElement.setAtributocompuestoOrigen(getTarget());
 		doConfigure(newElement, monitor, info);
 		((CreateElementRequest) getRequest()).setNewElement(newElement);
 		return CommandResult.newOKCommandResult(newElement);
@@ -111,15 +111,15 @@ public class LinkASACCreateCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	protected modeloER.modeloER.AtributoCompuesto getSource() {
-		return (modeloER.modeloER.AtributoCompuesto) source;
+	protected modeloER.modeloER.AtributoSimple getSource() {
+		return (modeloER.modeloER.AtributoSimple) source;
 	}
 
 	/**
 	* @generated
 	*/
-	protected modeloER.modeloER.AtributoSimple getTarget() {
-		return (modeloER.modeloER.AtributoSimple) target;
+	protected modeloER.modeloER.AtributoCompuesto getTarget() {
+		return (modeloER.modeloER.AtributoCompuesto) target;
 	}
 
 	/**

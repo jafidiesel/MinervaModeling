@@ -23,7 +23,7 @@ public class AtributoMultivaluadoItemSemanticEditPolicy
 	* @generated
 	*/
 	public AtributoMultivaluadoItemSemanticEditPolicy() {
-		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoMultivaluado_2008);
+		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoMultivaluado_2007);
 	}
 
 	/**
@@ -33,20 +33,20 @@ public class AtributoMultivaluadoItemSemanticEditPolicy
 		View view = (View) getHost().getModel();
 		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(getEditingDomain(), null);
 		cmd.setTransactionNestingEnabled(false);
-		for (Iterator<?> it = view.getTargetEdges().iterator(); it.hasNext();) {
-			Edge incomingLink = (Edge) it.next();
+		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
+			Edge outgoingLink = (Edge) it.next();
 			if (modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getVisualID(
-					incomingLink) == modeloER.modeloER.diagram.edit.parts.AtributoEntidadLinkEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
+					outgoingLink) == modeloER.modeloER.diagram.edit.parts.AtributoEntidadLinkEditPart.VISUAL_ID) {
+				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
+				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
 			if (modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getVisualID(
-					incomingLink) == modeloER.modeloER.diagram.edit.parts.RelacionAtributoLinkEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
+					outgoingLink) == modeloER.modeloER.diagram.edit.parts.RelacionAtributoLinkEditPart.VISUAL_ID) {
+				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
+				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
 		}
@@ -76,11 +76,13 @@ public class AtributoMultivaluadoItemSemanticEditPolicy
 	 */
 	protected Command getStartCreateRelationshipCommand(CreateRelationshipRequest req) {
 		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoEntidadLink_4001 == req.getElementType()) {
-			return null;
+			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.AtributoEntidadLinkCreateCommand(req,
+					req.getSource(), req.getTarget()));
 		}
 		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006 == req
 				.getElementType()) {
-			return null;
+			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.RelacionAtributoLinkCreateCommand(req,
+					req.getSource(), req.getTarget()));
 		}
 		return null;
 	}
@@ -90,13 +92,11 @@ public class AtributoMultivaluadoItemSemanticEditPolicy
 	 */
 	protected Command getCompleteCreateRelationshipCommand(CreateRelationshipRequest req) {
 		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoEntidadLink_4001 == req.getElementType()) {
-			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.AtributoEntidadLinkCreateCommand(req,
-					req.getSource(), req.getTarget()));
+			return null;
 		}
 		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006 == req
 				.getElementType()) {
-			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.RelacionAtributoLinkCreateCommand(req,
-					req.getSource(), req.getTarget()));
+			return null;
 		}
 		return null;
 	}

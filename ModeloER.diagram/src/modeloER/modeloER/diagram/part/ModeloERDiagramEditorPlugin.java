@@ -67,6 +67,11 @@ public class ModeloERDiagramEditorPlugin extends AbstractUIPlugin {
 	/**
 	* @generated
 	*/
+	private modeloER.modeloER.diagram.expressions.ModeloEROCLFactory oclFactory;
+
+	/**
+	* @generated
+	*/
 	public ModeloERDiagramEditorPlugin() {
 	}
 
@@ -89,6 +94,7 @@ public class ModeloERDiagramEditorPlugin extends AbstractUIPlugin {
 		adapterFactory = null;
 		linkConstraints = null;
 		initializers = null;
+		oclFactory = null;
 		instance = null;
 		super.stop(context);
 	}
@@ -230,6 +236,20 @@ public class ModeloERDiagramEditorPlugin extends AbstractUIPlugin {
 	*/
 	public void setElementInitializers(modeloER.modeloER.diagram.providers.ElementInitializers i) {
 		this.initializers = i;
+	}
+
+	/**
+	* @generated
+	*/
+	public modeloER.modeloER.diagram.expressions.ModeloEROCLFactory getModeloEROCLFactory() {
+		return oclFactory;
+	}
+
+	/**
+	* @generated
+	*/
+	public void setModeloEROCLFactory(modeloER.modeloER.diagram.expressions.ModeloEROCLFactory f) {
+		this.oclFactory = f;
 	}
 
 	/**

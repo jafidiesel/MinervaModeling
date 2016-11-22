@@ -52,28 +52,6 @@
   </nodes>
   <nodes>
     <containmentFeature
-        href="../../ModeloER/model/modeloER.ecore#//Diagrama/atributoderivadoclaveprimariaDelDiagrama"/>
-    <ownedChild>
-      <domainMetaElement
-          href="../../ModeloER/model/modeloER.ecore#//AtributoDerivadoClavePrimaria"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="modeloER.gmfgraph#AtributoDerivadoClavePrimariaNombreAtributo"/>
-        <features
-            href="../../ModeloER/model/modeloER.ecore#//Atributo/nombreAtributo"/>
-        <editableFeatures
-            href="../../ModeloER/model/modeloER.ecore#//Atributo/nombreAtributo"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="modeloER.gmftool#//@palette/@tools.0/@tools.6"/>
-      <diagramNode
-          href="modeloER.gmfgraph#AtributoDerivadoClavePrimaria"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
         href="../../ModeloER/model/modeloER.ecore#//Diagrama/atributosimpleDelDiagrama"/>
     <ownedChild>
       <domainMetaElement
@@ -89,7 +67,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="modeloER.gmftool#//@palette/@tools.0/@tools.5"/>
+          href="modeloER.gmftool#//@palette/@tools.0/@tools.3"/>
       <diagramNode
           href="modeloER.gmfgraph#AtributoSimple"/>
     </ownedChild>
@@ -111,7 +89,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="modeloER.gmftool#//@palette/@tools.0/@tools.5"/>
+          href="modeloER.gmftool#//@palette/@tools.0/@tools.3"/>
       <diagramNode
           href="modeloER.gmfgraph#AtributoCompuesto"/>
     </ownedChild>
@@ -184,50 +162,6 @@
   </nodes>
   <nodes>
     <containmentFeature
-        href="../../ModeloER/model/modeloER.ecore#//Diagrama/claveprimariaforaneaDelDiagrama"/>
-    <ownedChild>
-      <domainMetaElement
-          href="../../ModeloER/model/modeloER.ecore#//ClavePrimariaForanea"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="modeloER.gmfgraph#ClavePrimariaForaneaNombreAtributo"/>
-        <features
-            href="../../ModeloER/model/modeloER.ecore#//Atributo/nombreAtributo"/>
-        <editableFeatures
-            href="../../ModeloER/model/modeloER.ecore#//Atributo/nombreAtributo"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="modeloER.gmftool#//@palette/@tools.0/@tools.4"/>
-      <diagramNode
-          href="modeloER.gmfgraph#ClavePrimariaForanea"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="../../ModeloER/model/modeloER.ecore#//Diagrama/claveforaneaDelDiagrama"/>
-    <ownedChild>
-      <domainMetaElement
-          href="../../ModeloER/model/modeloER.ecore#//ClaveForanea"/>
-      <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
-        <diagramLabel
-            href="modeloER.gmfgraph#ClaveForaneaNombreAtributo"/>
-        <features
-            href="../../ModeloER/model/modeloER.ecore#//Atributo/nombreAtributo"/>
-        <editableFeatures
-            href="../../ModeloER/model/modeloER.ecore#//Atributo/nombreAtributo"/>
-      </labelMappings>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="modeloER.gmftool#//@palette/@tools.0/@tools.3"/>
-      <diagramNode
-          href="modeloER.gmfgraph#ClaveForanea"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
         href="../../ModeloER/model/modeloER.ecore#//Diagrama/herenciasDelDiagrama"/>
     <ownedChild>
       <domainMetaElement
@@ -295,10 +229,10 @@
         href="modeloER.gmfgraph#AtributoEntidadLink"/>
     <sourceMetaFeature
         xsi:type="ecore:EReference"
-        href="../../ModeloER/model/modeloER.ecore#//AtributoEntidadLink/entidadAtributoLinkOrigen"/>
+        href="../../ModeloER/model/modeloER.ecore#//AtributoEntidadLink/atributoEntidadLinkDestino"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="../../ModeloER/model/modeloER.ecore#//AtributoEntidadLink/atributoEntidadLinkDestino"/>
+        href="../../ModeloER/model/modeloER.ecore#//AtributoEntidadLink/entidadAtributoLinkOrigen"/>
   </links>
   <links>
     <domainMetaElement
@@ -399,10 +333,10 @@
         href="modeloER.gmfgraph#LinkASAC"/>
     <sourceMetaFeature
         xsi:type="ecore:EReference"
-        href="../../ModeloER/model/modeloER.ecore#//LinkASAC/atributocompuestoOrigen"/>
+        href="../../ModeloER/model/modeloER.ecore#//LinkASAC/atributosimpleDestino"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="../../ModeloER/model/modeloER.ecore#//LinkASAC/atributosimpleDestino"/>
+        href="../../ModeloER/model/modeloER.ecore#//LinkASAC/atributocompuestoOrigen"/>
   </links>
   <links>
     <domainMetaElement
@@ -416,10 +350,10 @@
         href="modeloER.gmfgraph#RelacionAtributoLink"/>
     <sourceMetaFeature
         xsi:type="ecore:EReference"
-        href="../../ModeloER/model/modeloER.ecore#//RelacionAtributoLink/relacionAtributoOrigen"/>
+        href="../../ModeloER/model/modeloER.ecore#//RelacionAtributoLink/relacionAtributoDestino"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="../../ModeloER/model/modeloER.ecore#//RelacionAtributoLink/relacionAtributoDestino"/>
+        href="../../ModeloER/model/modeloER.ecore#//RelacionAtributoLink/relacionAtributoOrigen"/>
   </links>
   <links>
     <domainMetaElement
@@ -455,23 +389,6 @@
         xsi:type="ecore:EReference"
         href="../../ModeloER/model/modeloER.ecore#//AtributoDerivadoEntidad/atributoderivadoDestino"/>
   </links>
-  <links>
-    <domainMetaElement
-        href="../../ModeloER/model/modeloER.ecore#//AtributoDerivadoEntidad"/>
-    <containmentFeature
-        href="../../ModeloER/model/modeloER.ecore#//Diagrama/atributoderivadoentidadDelDiagrama"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="modeloER.gmftool#//@palette/@tools.2/@tools.3"/>
-    <diagramLink
-        href="modeloER.gmfgraph#AtributoDerivadoEntidad"/>
-    <sourceMetaFeature
-        xsi:type="ecore:EReference"
-        href="../../ModeloER/model/modeloER.ecore#//AtributoDerivadoEntidad/entidadAtributoDerivadoOrigen"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="../../ModeloER/model/modeloER.ecore#//AtributoDerivadoEntidad/atributoderivadoclaveprimariaDestino"/>
-  </links>
   <diagram>
     <diagramCanvas
         href="modeloER.gmfgraph#modeloER"/>
@@ -482,7 +399,8 @@
     <palette
         href="modeloER.gmftool#//@palette"/>
   </diagram>
-  <audits>
+  <audits
+      id="0">
     <childContainers
         id="1"
         name="ValidarAtributo"
@@ -618,7 +536,7 @@
           id="5.2"
           message="Solo puede tener atributos simples">
         <rule
-            body="self.atributoRelacion->forAll(r|r.oclIsKindOf(AtributoSimple))"/>
+            body="self.atributosRelacion->forAll(r|r.oclIsKindOf(AtributoSimple))"/>
         <target
             xsi:type="gmfmap:DomainElementTarget">
           <element

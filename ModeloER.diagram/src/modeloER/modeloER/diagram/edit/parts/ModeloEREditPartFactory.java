@@ -35,13 +35,6 @@ public class ModeloEREditPartFactory implements EditPartFactory {
 			case modeloER.modeloER.diagram.edit.parts.ClavePrimariaNombreAtributoEditPart.VISUAL_ID:
 				return new modeloER.modeloER.diagram.edit.parts.ClavePrimariaNombreAtributoEditPart(view);
 
-			case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart.VISUAL_ID:
-				return new modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart(view);
-
-			case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaNombreAtributoEditPart.VISUAL_ID:
-				return new modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaNombreAtributoEditPart(
-						view);
-
 			case modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart.VISUAL_ID:
 				return new modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart(view);
 
@@ -71,18 +64,6 @@ public class ModeloEREditPartFactory implements EditPartFactory {
 
 			case modeloER.modeloER.diagram.edit.parts.AtributoMultivaluadoNombreAtributoEditPart.VISUAL_ID:
 				return new modeloER.modeloER.diagram.edit.parts.AtributoMultivaluadoNombreAtributoEditPart(view);
-
-			case modeloER.modeloER.diagram.edit.parts.ClavePrimariaForaneaEditPart.VISUAL_ID:
-				return new modeloER.modeloER.diagram.edit.parts.ClavePrimariaForaneaEditPart(view);
-
-			case modeloER.modeloER.diagram.edit.parts.ClavePrimariaForaneaNombreAtributoEditPart.VISUAL_ID:
-				return new modeloER.modeloER.diagram.edit.parts.ClavePrimariaForaneaNombreAtributoEditPart(view);
-
-			case modeloER.modeloER.diagram.edit.parts.ClaveForaneaEditPart.VISUAL_ID:
-				return new modeloER.modeloER.diagram.edit.parts.ClaveForaneaEditPart(view);
-
-			case modeloER.modeloER.diagram.edit.parts.ClaveForaneaNombreAtributoEditPart.VISUAL_ID:
-				return new modeloER.modeloER.diagram.edit.parts.ClaveForaneaNombreAtributoEditPart(view);
 
 			case modeloER.modeloER.diagram.edit.parts.HerenciaEditPart.VISUAL_ID:
 				return new modeloER.modeloER.diagram.edit.parts.HerenciaEditPart(view);
@@ -134,9 +115,6 @@ public class ModeloEREditPartFactory implements EditPartFactory {
 
 			case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidadEditPart.VISUAL_ID:
 				return new modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidadEditPart(view);
-
-			case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID:
-				return new modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart(view);
 
 			}
 		}

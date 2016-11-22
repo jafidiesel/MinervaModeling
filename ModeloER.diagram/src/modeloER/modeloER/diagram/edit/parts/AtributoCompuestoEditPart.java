@@ -33,7 +33,7 @@ public class AtributoCompuestoEditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 2005;
+	public static final int VISUAL_ID = 2004;
 
 	/**
 	* @generated

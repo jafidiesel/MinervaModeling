@@ -23,7 +23,7 @@ public class AtributoSimpleItemSemanticEditPolicy
 	* @generated
 	*/
 	public AtributoSimpleItemSemanticEditPolicy() {
-		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoSimple_2004);
+		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoSimple_2003);
 	}
 
 	/**
@@ -33,27 +33,27 @@ public class AtributoSimpleItemSemanticEditPolicy
 		View view = (View) getHost().getModel();
 		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(getEditingDomain(), null);
 		cmd.setTransactionNestingEnabled(false);
-		for (Iterator<?> it = view.getTargetEdges().iterator(); it.hasNext();) {
-			Edge incomingLink = (Edge) it.next();
+		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
+			Edge outgoingLink = (Edge) it.next();
 			if (modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getVisualID(
-					incomingLink) == modeloER.modeloER.diagram.edit.parts.AtributoEntidadLinkEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
+					outgoingLink) == modeloER.modeloER.diagram.edit.parts.AtributoEntidadLinkEditPart.VISUAL_ID) {
+				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
+				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
 			if (modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
-					.getVisualID(incomingLink) == modeloER.modeloER.diagram.edit.parts.LinkASACEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
+					.getVisualID(outgoingLink) == modeloER.modeloER.diagram.edit.parts.LinkASACEditPart.VISUAL_ID) {
+				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
+				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
 			if (modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getVisualID(
-					incomingLink) == modeloER.modeloER.diagram.edit.parts.RelacionAtributoLinkEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
+					outgoingLink) == modeloER.modeloER.diagram.edit.parts.RelacionAtributoLinkEditPart.VISUAL_ID) {
+				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
+				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
 				continue;
 			}
 		}
@@ -83,23 +83,6 @@ public class AtributoSimpleItemSemanticEditPolicy
 	 */
 	protected Command getStartCreateRelationshipCommand(CreateRelationshipRequest req) {
 		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoEntidadLink_4001 == req.getElementType()) {
-			return null;
-		}
-		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.LinkASAC_4005 == req.getElementType()) {
-			return null;
-		}
-		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006 == req
-				.getElementType()) {
-			return null;
-		}
-		return null;
-	}
-
-	/**
-	 * @generated
-	 */
-	protected Command getCompleteCreateRelationshipCommand(CreateRelationshipRequest req) {
-		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoEntidadLink_4001 == req.getElementType()) {
 			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.AtributoEntidadLinkCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
@@ -111,6 +94,23 @@ public class AtributoSimpleItemSemanticEditPolicy
 				.getElementType()) {
 			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.RelacionAtributoLinkCreateCommand(req,
 					req.getSource(), req.getTarget()));
+		}
+		return null;
+	}
+
+	/**
+	 * @generated
+	 */
+	protected Command getCompleteCreateRelationshipCommand(CreateRelationshipRequest req) {
+		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoEntidadLink_4001 == req.getElementType()) {
+			return null;
+		}
+		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.LinkASAC_4005 == req.getElementType()) {
+			return null;
+		}
+		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006 == req
+				.getElementType()) {
+			return null;
 		}
 		return null;
 	}

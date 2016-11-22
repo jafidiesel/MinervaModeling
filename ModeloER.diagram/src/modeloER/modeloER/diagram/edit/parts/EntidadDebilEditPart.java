@@ -32,7 +32,7 @@ public class EntidadDebilEditPart extends ShapeNodeEditPart {
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 2013;
+	public static final int VISUAL_ID = 2010;
 
 	/**
 	* @generated

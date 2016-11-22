@@ -19,75 +19,54 @@
   </nodeTraces>
   <nodeTraces
       visualID="2003"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'AtributoDerivadoClavePrimaria') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Diagrama') and _containmentMF_.name = 'atributoderivadoclaveprimariaDelDiagrama')">
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'AtributoSimple') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Diagrama') and _containmentMF_.name = 'atributosimpleDelDiagrama')">
     <nodeLabelTraces
         visualID="5003"
         queryText="true"/>
   </nodeTraces>
   <nodeTraces
       visualID="2004"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'AtributoSimple') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Diagrama') and _containmentMF_.name = 'atributosimpleDelDiagrama')">
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'AtributoCompuesto') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Diagrama') and _containmentMF_.name = 'atributocompuestoDelDiagrama')">
     <nodeLabelTraces
         visualID="5004"
         queryText="true"/>
   </nodeTraces>
   <nodeTraces
       visualID="2005"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'AtributoCompuesto') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Diagrama') and _containmentMF_.name = 'atributocompuestoDelDiagrama')">
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'RelacionTipoDebil') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Diagrama') and _containmentMF_.name = 'relacionesTipodebilDelDiagrama')">
     <nodeLabelTraces
         visualID="5005"
         queryText="true"/>
   </nodeTraces>
   <nodeTraces
       visualID="2006"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'RelacionTipoDebil') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Diagrama') and _containmentMF_.name = 'relacionesTipodebilDelDiagrama')">
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'RelacionTipoFuerte') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Diagrama') and _containmentMF_.name = 'relacionesTipofuerteDelDiagrama')">
     <nodeLabelTraces
         visualID="5006"
         queryText="true"/>
   </nodeTraces>
   <nodeTraces
       visualID="2007"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'RelacionTipoFuerte') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Diagrama') and _containmentMF_.name = 'relacionesTipofuerteDelDiagrama')">
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'AtributoMultivaluado') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Diagrama') and _containmentMF_.name = 'atributomultivaluadoDelDiagrama')">
     <nodeLabelTraces
         visualID="5007"
         queryText="true"/>
   </nodeTraces>
   <nodeTraces
       visualID="2008"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'AtributoMultivaluado') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Diagrama') and _containmentMF_.name = 'atributomultivaluadoDelDiagrama')">
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Herencia') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Diagrama') and _containmentMF_.name = 'herenciasDelDiagrama')"/>
+  <nodeTraces
+      visualID="2009"
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'EntidadFuerte') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Diagrama') and _containmentMF_.name = 'entidadfuerteDelDiagrama')">
     <nodeLabelTraces
         visualID="5008"
         queryText="true"/>
   </nodeTraces>
   <nodeTraces
-      visualID="2009"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'ClavePrimariaForanea') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Diagrama') and _containmentMF_.name = 'claveprimariaforaneaDelDiagrama')">
-    <nodeLabelTraces
-        visualID="5009"
-        queryText="true"/>
-  </nodeTraces>
-  <nodeTraces
       visualID="2010"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'ClaveForanea') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Diagrama') and _containmentMF_.name = 'claveforaneaDelDiagrama')">
-    <nodeLabelTraces
-        visualID="5010"
-        queryText="true"/>
-  </nodeTraces>
-  <nodeTraces
-      visualID="2011"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Herencia') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Diagrama') and _containmentMF_.name = 'herenciasDelDiagrama')"/>
-  <nodeTraces
-      visualID="2012"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'EntidadFuerte') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Diagrama') and _containmentMF_.name = 'entidadfuerteDelDiagrama')">
-    <nodeLabelTraces
-        visualID="5011"
-        queryText="true"/>
-  </nodeTraces>
-  <nodeTraces
-      visualID="2013"
       queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'EntidadDebil') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'Diagrama') and _containmentMF_.name = 'entidaddebilDelDiagrama')">
     <nodeLabelTraces
-        visualID="5012"
+        visualID="5009"
         queryText="true"/>
   </nodeTraces>
   <linkTraces
@@ -127,8 +106,5 @@
       queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'LinkHerenciaPadre')"/>
   <linkTraces
       visualID="4008"
-      queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'AtributoDerivadoEntidad')"/>
-  <linkTraces
-      visualID="4009"
       queryText="modelFacet.oclIsKindOf(gmfgen::TypeLinkModelFacet) and (let _eClass_:ecore::EClass = modelFacet.oclAsType(gmfgen::TypeLinkModelFacet).metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://www.example.org/modeloER' and _eClass_.name = 'AtributoDerivadoEntidad')"/>
 </trace:TraceModel>

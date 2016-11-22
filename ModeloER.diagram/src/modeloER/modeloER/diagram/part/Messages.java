@@ -288,42 +288,12 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String ClaveForanea4CreationTool_title;
+	public static String Atributo4CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String ClaveForanea4CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String ClavePrimariaForanea5CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String ClavePrimariaForanea5CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String Atributo6CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String Atributo6CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String AtributoDerivadoClavePrimaria7CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String AtributoDerivadoClavePrimaria7CreationTool_desc;
+	public static String Atributo4CreationTool_desc;
 
 	/**
 	* @generated
@@ -428,97 +398,77 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
+	public static String NavigatorGroupName_AtributoDerivado_2001_outgoinglinks;
+
+	/**
+	* @generated
+	*/
 	public static String NavigatorGroupName_AtributoDerivado_2001_incominglinks;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_ClavePrimaria_2002_incominglinks;
+	public static String NavigatorGroupName_ClavePrimaria_2002_outgoinglinks;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_AtributoDerivadoClavePrimaria_2003_incominglinks;
+	public static String NavigatorGroupName_AtributoSimple_2003_outgoinglinks;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_AtributoSimple_2004_incominglinks;
+	public static String NavigatorGroupName_AtributoCompuesto_2004_outgoinglinks;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_AtributoCompuesto_2005_incominglinks;
+	public static String NavigatorGroupName_AtributoCompuesto_2004_incominglinks;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_AtributoCompuesto_2005_outgoinglinks;
+	public static String NavigatorGroupName_RelacionTipoDebil_2005_incominglinks;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_RelacionTipoDebil_2006_incominglinks;
+	public static String NavigatorGroupName_RelacionTipoFuerte_2006_incominglinks;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_RelacionTipoDebil_2006_outgoinglinks;
+	public static String NavigatorGroupName_AtributoMultivaluado_2007_outgoinglinks;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_RelacionTipoFuerte_2007_incominglinks;
+	public static String NavigatorGroupName_Herencia_2008_outgoinglinks;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_RelacionTipoFuerte_2007_outgoinglinks;
+	public static String NavigatorGroupName_Herencia_2008_incominglinks;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_AtributoMultivaluado_2008_incominglinks;
+	public static String NavigatorGroupName_EntidadFuerte_2009_incominglinks;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_ClavePrimariaForanea_2009_incominglinks;
+	public static String NavigatorGroupName_EntidadFuerte_2009_outgoinglinks;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_ClaveForanea_2010_incominglinks;
+	public static String NavigatorGroupName_EntidadDebil_2010_incominglinks;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_Herencia_2011_outgoinglinks;
-
-	/**
-	* @generated
-	*/
-	public static String NavigatorGroupName_Herencia_2011_incominglinks;
-
-	/**
-	* @generated
-	*/
-	public static String NavigatorGroupName_EntidadFuerte_2012_outgoinglinks;
-
-	/**
-	* @generated
-	*/
-	public static String NavigatorGroupName_EntidadFuerte_2012_incominglinks;
-
-	/**
-	* @generated
-	*/
-	public static String NavigatorGroupName_EntidadDebil_2013_outgoinglinks;
-
-	/**
-	* @generated
-	*/
-	public static String NavigatorGroupName_EntidadDebil_2013_incominglinks;
+	public static String NavigatorGroupName_EntidadDebil_2010_outgoinglinks;
 
 	/**
 	* @generated
@@ -599,16 +549,6 @@ public class Messages extends NLS {
 	* @generated
 	*/
 	public static String NavigatorGroupName_AtributoDerivadoEntidad_4008_source;
-
-	/**
-	* @generated
-	*/
-	public static String NavigatorGroupName_AtributoDerivadoEntidad_4009_target;
-
-	/**
-	* @generated
-	*/
-	public static String NavigatorGroupName_AtributoDerivadoEntidad_4009_source;
 
 	/**
 	* @generated

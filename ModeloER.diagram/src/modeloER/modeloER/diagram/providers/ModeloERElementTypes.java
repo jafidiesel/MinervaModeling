@@ -56,51 +56,37 @@ public class ModeloERElementTypes {
 	/**
 	* @generated
 	*/
-	public static final IElementType AtributoDerivadoClavePrimaria_2003 = getElementType(
-			"ModeloER.diagram.AtributoDerivadoClavePrimaria_2003"); //$NON-NLS-1$
+	public static final IElementType AtributoSimple_2003 = getElementType("ModeloER.diagram.AtributoSimple_2003"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType AtributoSimple_2004 = getElementType("ModeloER.diagram.AtributoSimple_2004"); //$NON-NLS-1$
+	public static final IElementType AtributoCompuesto_2004 = getElementType("ModeloER.diagram.AtributoCompuesto_2004"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType AtributoCompuesto_2005 = getElementType("ModeloER.diagram.AtributoCompuesto_2005"); //$NON-NLS-1$
+	public static final IElementType RelacionTipoDebil_2005 = getElementType("ModeloER.diagram.RelacionTipoDebil_2005"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType RelacionTipoDebil_2006 = getElementType("ModeloER.diagram.RelacionTipoDebil_2006"); //$NON-NLS-1$
+	public static final IElementType RelacionTipoFuerte_2006 = getElementType(
+			"ModeloER.diagram.RelacionTipoFuerte_2006"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType RelacionTipoFuerte_2007 = getElementType(
-			"ModeloER.diagram.RelacionTipoFuerte_2007"); //$NON-NLS-1$
+	public static final IElementType AtributoMultivaluado_2007 = getElementType(
+			"ModeloER.diagram.AtributoMultivaluado_2007"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType AtributoMultivaluado_2008 = getElementType(
-			"ModeloER.diagram.AtributoMultivaluado_2008"); //$NON-NLS-1$
+	public static final IElementType Herencia_2008 = getElementType("ModeloER.diagram.Herencia_2008"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType ClavePrimariaForanea_2009 = getElementType(
-			"ModeloER.diagram.ClavePrimariaForanea_2009"); //$NON-NLS-1$
+	public static final IElementType EntidadFuerte_2009 = getElementType("ModeloER.diagram.EntidadFuerte_2009"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType ClaveForanea_2010 = getElementType("ModeloER.diagram.ClaveForanea_2010"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType Herencia_2011 = getElementType("ModeloER.diagram.Herencia_2011"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType EntidadFuerte_2012 = getElementType("ModeloER.diagram.EntidadFuerte_2012"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType EntidadDebil_2013 = getElementType("ModeloER.diagram.EntidadDebil_2013"); //$NON-NLS-1$
+	public static final IElementType EntidadDebil_2010 = getElementType("ModeloER.diagram.EntidadDebil_2010"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
@@ -138,11 +124,6 @@ public class ModeloERElementTypes {
 	*/
 	public static final IElementType AtributoDerivadoEntidad_4008 = getElementType(
 			"ModeloER.diagram.AtributoDerivadoEntidad_4008"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType AtributoDerivadoEntidad_4009 = getElementType(
-			"ModeloER.diagram.AtributoDerivadoEntidad_4009"); //$NON-NLS-1$
 
 	/**
 	* @generated
@@ -188,30 +169,22 @@ public class ModeloERElementTypes {
 
 			elements.put(ClavePrimaria_2002, modeloER.modeloER.ModeloERPackage.eINSTANCE.getClavePrimaria());
 
-			elements.put(AtributoDerivadoClavePrimaria_2003,
-					modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributoDerivadoClavePrimaria());
+			elements.put(AtributoSimple_2003, modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributoSimple());
 
-			elements.put(AtributoSimple_2004, modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributoSimple());
+			elements.put(AtributoCompuesto_2004, modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributoCompuesto());
 
-			elements.put(AtributoCompuesto_2005, modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributoCompuesto());
+			elements.put(RelacionTipoDebil_2005, modeloER.modeloER.ModeloERPackage.eINSTANCE.getRelacionTipoDebil());
 
-			elements.put(RelacionTipoDebil_2006, modeloER.modeloER.ModeloERPackage.eINSTANCE.getRelacionTipoDebil());
+			elements.put(RelacionTipoFuerte_2006, modeloER.modeloER.ModeloERPackage.eINSTANCE.getRelacionTipoFuerte());
 
-			elements.put(RelacionTipoFuerte_2007, modeloER.modeloER.ModeloERPackage.eINSTANCE.getRelacionTipoFuerte());
-
-			elements.put(AtributoMultivaluado_2008,
+			elements.put(AtributoMultivaluado_2007,
 					modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributoMultivaluado());
 
-			elements.put(ClavePrimariaForanea_2009,
-					modeloER.modeloER.ModeloERPackage.eINSTANCE.getClavePrimariaForanea());
+			elements.put(Herencia_2008, modeloER.modeloER.ModeloERPackage.eINSTANCE.getHerencia());
 
-			elements.put(ClaveForanea_2010, modeloER.modeloER.ModeloERPackage.eINSTANCE.getClaveForanea());
+			elements.put(EntidadFuerte_2009, modeloER.modeloER.ModeloERPackage.eINSTANCE.getEntidadFuerte());
 
-			elements.put(Herencia_2011, modeloER.modeloER.ModeloERPackage.eINSTANCE.getHerencia());
-
-			elements.put(EntidadFuerte_2012, modeloER.modeloER.ModeloERPackage.eINSTANCE.getEntidadFuerte());
-
-			elements.put(EntidadDebil_2013, modeloER.modeloER.ModeloERPackage.eINSTANCE.getEntidadDebil());
+			elements.put(EntidadDebil_2010, modeloER.modeloER.ModeloERPackage.eINSTANCE.getEntidadDebil());
 
 			elements.put(AtributoEntidadLink_4001,
 					modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributoEntidadLink());
@@ -233,9 +206,6 @@ public class ModeloERElementTypes {
 
 			elements.put(AtributoDerivadoEntidad_4008,
 					modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributoDerivadoEntidad());
-
-			elements.put(AtributoDerivadoEntidad_4009,
-					modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributoDerivadoEntidad());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -256,17 +226,14 @@ public class ModeloERElementTypes {
 			KNOWN_ELEMENT_TYPES.add(Diagrama_1000);
 			KNOWN_ELEMENT_TYPES.add(AtributoDerivado_2001);
 			KNOWN_ELEMENT_TYPES.add(ClavePrimaria_2002);
-			KNOWN_ELEMENT_TYPES.add(AtributoDerivadoClavePrimaria_2003);
-			KNOWN_ELEMENT_TYPES.add(AtributoSimple_2004);
-			KNOWN_ELEMENT_TYPES.add(AtributoCompuesto_2005);
-			KNOWN_ELEMENT_TYPES.add(RelacionTipoDebil_2006);
-			KNOWN_ELEMENT_TYPES.add(RelacionTipoFuerte_2007);
-			KNOWN_ELEMENT_TYPES.add(AtributoMultivaluado_2008);
-			KNOWN_ELEMENT_TYPES.add(ClavePrimariaForanea_2009);
-			KNOWN_ELEMENT_TYPES.add(ClaveForanea_2010);
-			KNOWN_ELEMENT_TYPES.add(Herencia_2011);
-			KNOWN_ELEMENT_TYPES.add(EntidadFuerte_2012);
-			KNOWN_ELEMENT_TYPES.add(EntidadDebil_2013);
+			KNOWN_ELEMENT_TYPES.add(AtributoSimple_2003);
+			KNOWN_ELEMENT_TYPES.add(AtributoCompuesto_2004);
+			KNOWN_ELEMENT_TYPES.add(RelacionTipoDebil_2005);
+			KNOWN_ELEMENT_TYPES.add(RelacionTipoFuerte_2006);
+			KNOWN_ELEMENT_TYPES.add(AtributoMultivaluado_2007);
+			KNOWN_ELEMENT_TYPES.add(Herencia_2008);
+			KNOWN_ELEMENT_TYPES.add(EntidadFuerte_2009);
+			KNOWN_ELEMENT_TYPES.add(EntidadDebil_2010);
 			KNOWN_ELEMENT_TYPES.add(AtributoEntidadLink_4001);
 			KNOWN_ELEMENT_TYPES.add(LinkHerenciaHijo_4002);
 			KNOWN_ELEMENT_TYPES.add(EntidadRelacionFuerte_4003);
@@ -275,7 +242,6 @@ public class ModeloERElementTypes {
 			KNOWN_ELEMENT_TYPES.add(RelacionAtributoLink_4006);
 			KNOWN_ELEMENT_TYPES.add(LinkHerenciaPadre_4007);
 			KNOWN_ELEMENT_TYPES.add(AtributoDerivadoEntidad_4008);
-			KNOWN_ELEMENT_TYPES.add(AtributoDerivadoEntidad_4009);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -291,28 +257,22 @@ public class ModeloERElementTypes {
 			return AtributoDerivado_2001;
 		case modeloER.modeloER.diagram.edit.parts.ClavePrimariaEditPart.VISUAL_ID:
 			return ClavePrimaria_2002;
-		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart.VISUAL_ID:
-			return AtributoDerivadoClavePrimaria_2003;
 		case modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart.VISUAL_ID:
-			return AtributoSimple_2004;
+			return AtributoSimple_2003;
 		case modeloER.modeloER.diagram.edit.parts.AtributoCompuestoEditPart.VISUAL_ID:
-			return AtributoCompuesto_2005;
+			return AtributoCompuesto_2004;
 		case modeloER.modeloER.diagram.edit.parts.RelacionTipoDebilEditPart.VISUAL_ID:
-			return RelacionTipoDebil_2006;
+			return RelacionTipoDebil_2005;
 		case modeloER.modeloER.diagram.edit.parts.RelacionTipoFuerteEditPart.VISUAL_ID:
-			return RelacionTipoFuerte_2007;
+			return RelacionTipoFuerte_2006;
 		case modeloER.modeloER.diagram.edit.parts.AtributoMultivaluadoEditPart.VISUAL_ID:
-			return AtributoMultivaluado_2008;
-		case modeloER.modeloER.diagram.edit.parts.ClavePrimariaForaneaEditPart.VISUAL_ID:
-			return ClavePrimariaForanea_2009;
-		case modeloER.modeloER.diagram.edit.parts.ClaveForaneaEditPart.VISUAL_ID:
-			return ClaveForanea_2010;
+			return AtributoMultivaluado_2007;
 		case modeloER.modeloER.diagram.edit.parts.HerenciaEditPart.VISUAL_ID:
-			return Herencia_2011;
+			return Herencia_2008;
 		case modeloER.modeloER.diagram.edit.parts.EntidadFuerteEditPart.VISUAL_ID:
-			return EntidadFuerte_2012;
+			return EntidadFuerte_2009;
 		case modeloER.modeloER.diagram.edit.parts.EntidadDebilEditPart.VISUAL_ID:
-			return EntidadDebil_2013;
+			return EntidadDebil_2010;
 		case modeloER.modeloER.diagram.edit.parts.AtributoEntidadLinkEditPart.VISUAL_ID:
 			return AtributoEntidadLink_4001;
 		case modeloER.modeloER.diagram.edit.parts.LinkHerenciaHijoEditPart.VISUAL_ID:
@@ -329,8 +289,6 @@ public class ModeloERElementTypes {
 			return LinkHerenciaPadre_4007;
 		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidadEditPart.VISUAL_ID:
 			return AtributoDerivadoEntidad_4008;
-		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID:
-			return AtributoDerivadoEntidad_4009;
 		}
 		return null;
 	}

@@ -23,7 +23,7 @@ public class HerenciaItemSemanticEditPolicy
 	* @generated
 	*/
 	public HerenciaItemSemanticEditPolicy() {
-		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.Herencia_2011);
+		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.Herencia_2008);
 	}
 
 	/**

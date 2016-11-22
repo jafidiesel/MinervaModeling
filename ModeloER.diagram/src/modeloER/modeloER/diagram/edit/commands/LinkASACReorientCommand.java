@@ -58,11 +58,11 @@ public class LinkASACReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected boolean canReorientSource() {
-		if (!(oldEnd instanceof modeloER.modeloER.AtributoCompuesto
-				&& newEnd instanceof modeloER.modeloER.AtributoCompuesto)) {
+		if (!(oldEnd instanceof modeloER.modeloER.AtributoSimple
+				&& newEnd instanceof modeloER.modeloER.AtributoSimple)) {
 			return false;
 		}
-		modeloER.modeloER.AtributoSimple target = getLink().getAtributosimpleDestino();
+		modeloER.modeloER.AtributoCompuesto target = getLink().getAtributocompuestoOrigen();
 		if (!(getLink().eContainer() instanceof modeloER.modeloER.Diagrama)) {
 			return false;
 		}
@@ -75,11 +75,11 @@ public class LinkASACReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected boolean canReorientTarget() {
-		if (!(oldEnd instanceof modeloER.modeloER.AtributoSimple
-				&& newEnd instanceof modeloER.modeloER.AtributoSimple)) {
+		if (!(oldEnd instanceof modeloER.modeloER.AtributoCompuesto
+				&& newEnd instanceof modeloER.modeloER.AtributoCompuesto)) {
 			return false;
 		}
-		modeloER.modeloER.AtributoCompuesto source = getLink().getAtributocompuestoOrigen();
+		modeloER.modeloER.AtributoSimple source = getLink().getAtributosimpleDestino();
 		if (!(getLink().eContainer() instanceof modeloER.modeloER.Diagrama)) {
 			return false;
 		}
@@ -108,7 +108,7 @@ public class LinkASACReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected CommandResult reorientSource() throws ExecutionException {
-		getLink().setAtributocompuestoOrigen(getNewSource());
+		getLink().setAtributosimpleDestino(getNewSource());
 		return CommandResult.newOKCommandResult(getLink());
 	}
 
@@ -116,7 +116,7 @@ public class LinkASACReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected CommandResult reorientTarget() throws ExecutionException {
-		getLink().setAtributosimpleDestino(getNewTarget());
+		getLink().setAtributocompuestoOrigen(getNewTarget());
 		return CommandResult.newOKCommandResult(getLink());
 	}
 
@@ -130,28 +130,28 @@ public class LinkASACReorientCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	protected modeloER.modeloER.AtributoCompuesto getOldSource() {
-		return (modeloER.modeloER.AtributoCompuesto) oldEnd;
-	}
-
-	/**
-	* @generated
-	*/
-	protected modeloER.modeloER.AtributoCompuesto getNewSource() {
-		return (modeloER.modeloER.AtributoCompuesto) newEnd;
-	}
-
-	/**
-	* @generated
-	*/
-	protected modeloER.modeloER.AtributoSimple getOldTarget() {
+	protected modeloER.modeloER.AtributoSimple getOldSource() {
 		return (modeloER.modeloER.AtributoSimple) oldEnd;
 	}
 
 	/**
 	* @generated
 	*/
-	protected modeloER.modeloER.AtributoSimple getNewTarget() {
+	protected modeloER.modeloER.AtributoSimple getNewSource() {
 		return (modeloER.modeloER.AtributoSimple) newEnd;
+	}
+
+	/**
+	* @generated
+	*/
+	protected modeloER.modeloER.AtributoCompuesto getOldTarget() {
+		return (modeloER.modeloER.AtributoCompuesto) oldEnd;
+	}
+
+	/**
+	* @generated
+	*/
+	protected modeloER.modeloER.AtributoCompuesto getNewTarget() {
+		return (modeloER.modeloER.AtributoCompuesto) newEnd;
 	}
 }

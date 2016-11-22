@@ -23,7 +23,7 @@ public class EntidadDebilItemSemanticEditPolicy
 	* @generated
 	*/
 	public EntidadDebilItemSemanticEditPolicy() {
-		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2013);
+		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2010);
 	}
 
 	/**
@@ -36,6 +36,13 @@ public class EntidadDebilItemSemanticEditPolicy
 		for (Iterator<?> it = view.getTargetEdges().iterator(); it.hasNext();) {
 			Edge incomingLink = (Edge) it.next();
 			if (modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getVisualID(
+					incomingLink) == modeloER.modeloER.diagram.edit.parts.AtributoEntidadLinkEditPart.VISUAL_ID) {
+				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
+				cmd.add(new DestroyElementCommand(r));
+				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
+				continue;
+			}
+			if (modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getVisualID(
 					incomingLink) == modeloER.modeloER.diagram.edit.parts.LinkHerenciaHijoEditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
@@ -45,13 +52,6 @@ public class EntidadDebilItemSemanticEditPolicy
 		}
 		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
 			Edge outgoingLink = (Edge) it.next();
-			if (modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getVisualID(
-					outgoingLink) == modeloER.modeloER.diagram.edit.parts.AtributoEntidadLinkEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
-				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
-				continue;
-			}
 			if (modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getVisualID(
 					outgoingLink) == modeloER.modeloER.diagram.edit.parts.EntidadRelacionFuerteEditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
@@ -75,13 +75,6 @@ public class EntidadDebilItemSemanticEditPolicy
 			}
 			if (modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getVisualID(
 					outgoingLink) == modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidadEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
-				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
-				continue;
-			}
-			if (modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getVisualID(
-					outgoingLink) == modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
 				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
@@ -114,8 +107,7 @@ public class EntidadDebilItemSemanticEditPolicy
 	 */
 	protected Command getStartCreateRelationshipCommand(CreateRelationshipRequest req) {
 		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoEntidadLink_4001 == req.getElementType()) {
-			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.AtributoEntidadLinkCreateCommand(req,
-					req.getSource(), req.getTarget()));
+			return null;
 		}
 		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.LinkHerenciaHijo_4002 == req.getElementType()) {
 			return null;
@@ -139,11 +131,6 @@ public class EntidadDebilItemSemanticEditPolicy
 			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.AtributoDerivadoEntidadCreateCommand(req,
 					req.getSource(), req.getTarget()));
 		}
-		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoEntidad_4009 == req
-				.getElementType()) {
-			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.AtributoDerivadoEntidad2CreateCommand(req,
-					req.getSource(), req.getTarget()));
-		}
 		return null;
 	}
 
@@ -152,7 +139,8 @@ public class EntidadDebilItemSemanticEditPolicy
 	 */
 	protected Command getCompleteCreateRelationshipCommand(CreateRelationshipRequest req) {
 		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoEntidadLink_4001 == req.getElementType()) {
-			return null;
+			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.AtributoEntidadLinkCreateCommand(req,
+					req.getSource(), req.getTarget()));
 		}
 		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.LinkHerenciaHijo_4002 == req.getElementType()) {
 			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.LinkHerenciaHijoCreateCommand(req,
@@ -170,10 +158,6 @@ public class EntidadDebilItemSemanticEditPolicy
 			return null;
 		}
 		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoEntidad_4008 == req
-				.getElementType()) {
-			return null;
-		}
-		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoEntidad_4009 == req
 				.getElementType()) {
 			return null;
 		}
@@ -201,9 +185,6 @@ public class EntidadDebilItemSemanticEditPolicy
 		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidadEditPart.VISUAL_ID:
 			return getGEFWrapper(
 					new modeloER.modeloER.diagram.edit.commands.AtributoDerivadoEntidadReorientCommand(req));
-		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID:
-			return getGEFWrapper(
-					new modeloER.modeloER.diagram.edit.commands.AtributoDerivadoEntidad2ReorientCommand(req));
 		}
 		return super.getReorientRelationshipCommand(req);
 	}

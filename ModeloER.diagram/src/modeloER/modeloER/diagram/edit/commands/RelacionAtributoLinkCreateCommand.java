@@ -49,10 +49,10 @@ public class RelacionAtributoLinkCreateCommand extends EditElementCommand {
 		if (source == null && target == null) {
 			return false;
 		}
-		if (source != null && false == source instanceof modeloER.modeloER.Relacion) {
+		if (source != null && false == source instanceof modeloER.modeloER.Atributo) {
 			return false;
 		}
-		if (target != null && false == target instanceof modeloER.modeloER.Atributo) {
+		if (target != null && false == target instanceof modeloER.modeloER.Relacion) {
 			return false;
 		}
 		if (getSource() == null) {
@@ -77,8 +77,8 @@ public class RelacionAtributoLinkCreateCommand extends EditElementCommand {
 		modeloER.modeloER.RelacionAtributoLink newElement = modeloER.modeloER.ModeloERFactory.eINSTANCE
 				.createRelacionAtributoLink();
 		getContainer().getRelacionatributolinkDiagrama().add(newElement);
-		newElement.setRelacionAtributoOrigen(getSource());
-		newElement.setRelacionAtributoDestino(getTarget());
+		newElement.setRelacionAtributoDestino(getSource());
+		newElement.setRelacionAtributoOrigen(getTarget());
 		doConfigure(newElement, monitor, info);
 		((CreateElementRequest) getRequest()).setNewElement(newElement);
 		return CommandResult.newOKCommandResult(newElement);
@@ -112,15 +112,15 @@ public class RelacionAtributoLinkCreateCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	protected modeloER.modeloER.Relacion getSource() {
-		return (modeloER.modeloER.Relacion) source;
+	protected modeloER.modeloER.Atributo getSource() {
+		return (modeloER.modeloER.Atributo) source;
 	}
 
 	/**
 	* @generated
 	*/
-	protected modeloER.modeloER.Atributo getTarget() {
-		return (modeloER.modeloER.Atributo) target;
+	protected modeloER.modeloER.Relacion getTarget() {
+		return (modeloER.modeloER.Relacion) target;
 	}
 
 	/**

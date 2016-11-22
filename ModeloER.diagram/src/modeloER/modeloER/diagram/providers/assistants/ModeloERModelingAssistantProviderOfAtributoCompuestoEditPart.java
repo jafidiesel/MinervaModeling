@@ -29,8 +29,9 @@ public class ModeloERModelingAssistantProviderOfAtributoCompuestoEditPart
 	*/
 	public List<IElementType> doGetRelTypesOnSource(
 			modeloER.modeloER.diagram.edit.parts.AtributoCompuestoEditPart source) {
-		List<IElementType> types = new ArrayList<IElementType>(1);
-		types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.LinkASAC_4005);
+		List<IElementType> types = new ArrayList<IElementType>(2);
+		types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoEntidadLink_4001);
+		types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006);
 		return types;
 	}
 
@@ -52,8 +53,17 @@ public class ModeloERModelingAssistantProviderOfAtributoCompuestoEditPart
 	public List<IElementType> doGetRelTypesOnSourceAndTarget(
 			modeloER.modeloER.diagram.edit.parts.AtributoCompuestoEditPart source, IGraphicalEditPart targetEditPart) {
 		List<IElementType> types = new LinkedList<IElementType>();
-		if (targetEditPart instanceof modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart) {
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.LinkASAC_4005);
+		if (targetEditPart instanceof modeloER.modeloER.diagram.edit.parts.EntidadFuerteEditPart) {
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoEntidadLink_4001);
+		}
+		if (targetEditPart instanceof modeloER.modeloER.diagram.edit.parts.EntidadDebilEditPart) {
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoEntidadLink_4001);
+		}
+		if (targetEditPart instanceof modeloER.modeloER.diagram.edit.parts.RelacionTipoDebilEditPart) {
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006);
+		}
+		if (targetEditPart instanceof modeloER.modeloER.diagram.edit.parts.RelacionTipoFuerteEditPart) {
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006);
 		}
 		return types;
 	}
@@ -75,8 +85,12 @@ public class ModeloERModelingAssistantProviderOfAtributoCompuestoEditPart
 	public List<IElementType> doGetTypesForTarget(modeloER.modeloER.diagram.edit.parts.AtributoCompuestoEditPart source,
 			IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
-		if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.LinkASAC_4005) {
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoSimple_2004);
+		if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoEntidadLink_4001) {
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2009);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2010);
+		} else if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006) {
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoDebil_2005);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoFuerte_2006);
 		}
 		return types;
 	}
@@ -96,9 +110,8 @@ public class ModeloERModelingAssistantProviderOfAtributoCompuestoEditPart
 	*/
 	public List<IElementType> doGetRelTypesOnTarget(
 			modeloER.modeloER.diagram.edit.parts.AtributoCompuestoEditPart target) {
-		List<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoEntidadLink_4001);
-		types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006);
+		List<IElementType> types = new ArrayList<IElementType>(1);
+		types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.LinkASAC_4005);
 		return types;
 	}
 
@@ -119,13 +132,8 @@ public class ModeloERModelingAssistantProviderOfAtributoCompuestoEditPart
 	public List<IElementType> doGetTypesForSource(modeloER.modeloER.diagram.edit.parts.AtributoCompuestoEditPart target,
 			IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
-		if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoEntidadLink_4001) {
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2012);
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2013);
-		} else
-			if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006) {
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoDebil_2006);
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoFuerte_2007);
+		if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.LinkASAC_4005) {
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoSimple_2003);
 		}
 		return types;
 	}

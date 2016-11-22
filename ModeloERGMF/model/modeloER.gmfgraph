@@ -137,75 +137,6 @@
           figure="//@figures.0/@descriptors.3/@actualFigure/@children.0/@children.0"/>
     </descriptors>
     <descriptors
-        name="ClaveForaneaFigure">
-      <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="ClaveForaneaFigure"
-          outline="false"
-          fill="false">
-        <layout
-            xsi:type="gmfgraph:StackLayout"/>
-        <minimumSize
-            dx="70"
-            dy="45"/>
-        <children
-            xsi:type="gmfgraph:Ellipse"
-            name="ElipseClaveForanea">
-          <layout
-              xsi:type="gmfgraph:GridLayout"/>
-          <children
-              xsi:type="gmfgraph:Label"
-              name="ClaveForaneaNombreAtributoFigure"
-              text="&lt;...>">
-            <layoutData
-                xsi:type="gmfgraph:GridLayoutData"
-                grabExcessHorizontalSpace="true"
-                grabExcessVerticalSpace="true"/>
-            <font
-                xsi:type="gmfgraph:BasicFont"
-                style="ITALIC"/>
-          </children>
-        </children>
-      </actualFigure>
-      <accessors
-          figure="//@figures.0/@descriptors.4/@actualFigure/@children.0/@children.0"/>
-    </descriptors>
-    <descriptors
-        name="ClavePrimariaForaneaFigure">
-      <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="ClavePrimariaForaneaFigure"
-          outline="false"
-          fill="false">
-        <layout
-            xsi:type="gmfgraph:StackLayout"/>
-        <minimumSize
-            dx="70"
-            dy="45"/>
-        <children
-            xsi:type="gmfgraph:Ellipse"
-            name="ElipseClavePrimariaForenea"
-            lineKind="LINE_DASHDOT">
-          <layout
-              xsi:type="gmfgraph:GridLayout"/>
-          <children
-              xsi:type="gmfgraph:Label"
-              name="ClavePrimariaForeneaNombreAtributoFigure"
-              text="&lt;...>">
-            <layoutData
-                xsi:type="gmfgraph:GridLayoutData"
-                grabExcessHorizontalSpace="true"
-                grabExcessVerticalSpace="true"/>
-            <font
-                xsi:type="gmfgraph:BasicFont"
-                style="ITALIC"/>
-          </children>
-        </children>
-      </actualFigure>
-      <accessors
-          figure="//@figures.0/@descriptors.5/@actualFigure/@children.0/@children.0"/>
-    </descriptors>
-    <descriptors
         name="RelacionTipoDebilFigure">
       <actualFigure
           xsi:type="gmfgraph:Rectangle"
@@ -245,7 +176,7 @@
         </children>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.6/@actualFigure/@children.0/@children.0"/>
+          figure="//@figures.0/@descriptors.4/@actualFigure/@children.0/@children.0"/>
     </descriptors>
     <descriptors
         name="RelacionTipoFuerteFigure">
@@ -287,7 +218,7 @@
         </children>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.7/@actualFigure/@children.0/@children.0"/>
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.0/@children.0"/>
     </descriptors>
     <descriptors
         name="EntidadRelacionDebilFigure">
@@ -304,9 +235,9 @@
             text="&lt;...>"/>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.8/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
       <accessors
-          figure="//@figures.0/@descriptors.8/@actualFigure/@children.1"/>
+          figure="//@figures.0/@descriptors.6/@actualFigure/@children.1"/>
     </descriptors>
     <descriptors
         name="EntidadRelacionFuerteFigure">
@@ -323,44 +254,9 @@
             text="&lt;...>"/>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.9/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
       <accessors
-          figure="//@figures.0/@descriptors.9/@actualFigure/@children.1"/>
-    </descriptors>
-    <descriptors
-        name="AtributoDerivadoClavePrimariaFigure">
-      <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="AtributoDerivadoClavePrimariaFigure">
-        <layout
-            xsi:type="gmfgraph:StackLayout"/>
-        <minimumSize
-            dx="70"
-            dy="45"/>
-        <children
-            xsi:type="gmfgraph:Ellipse"
-            name="ElipseAtributoDerivadoClavePrimaria"
-            outline="false"
-            fill="false"
-            lineKind="LINE_DASH">
-          <layout
-              xsi:type="gmfgraph:GridLayout"/>
-          <children
-              xsi:type="gmfgraph:Label"
-              name="AtributoDerivadoClavePrimariaFigure"
-              text="&lt;...>">
-            <layoutData
-                xsi:type="gmfgraph:GridLayoutData"
-                grabExcessHorizontalSpace="true"
-                grabExcessVerticalSpace="true"/>
-            <font
-                xsi:type="gmfgraph:BasicFont"
-                style="BOLD"/>
-          </children>
-        </children>
-      </actualFigure>
-      <accessors
-          figure="//@figures.0/@descriptors.10/@actualFigure/@children.0/@children.0"/>
+          figure="//@figures.0/@descriptors.7/@actualFigure/@children.1"/>
     </descriptors>
     <descriptors
         name="EntidadFuerteFigure">
@@ -383,7 +279,7 @@
         </children>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.11/@actualFigure/@children.0"/>
+          figure="//@figures.0/@descriptors.8/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="EntidadDebilFigure">
@@ -414,7 +310,7 @@
         </children>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.12/@actualFigure/@children.0/@children.0"/>
+          figure="//@figures.0/@descriptors.9/@actualFigure/@children.0/@children.0"/>
     </descriptors>
     <descriptors
         name="AtributoSimpleFigure">
@@ -445,7 +341,7 @@
         </children>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.13/@actualFigure/@children.0/@children.0"/>
+          figure="//@figures.0/@descriptors.10/@actualFigure/@children.0/@children.0"/>
     </descriptors>
     <descriptors
         name="LinkASACFigure">
@@ -504,20 +400,11 @@
       name="ClavePrimaria"
       figure="ClavePrimariaFigure"/>
   <nodes
-      name="ClaveForanea"
-      figure="ClaveForaneaFigure"/>
-  <nodes
-      name="ClavePrimariaForanea"
-      figure="ClavePrimariaForaneaFigure"/>
-  <nodes
       name="RelacionTipoDebil"
       figure="RelacionTipoDebilFigure"/>
   <nodes
       name="RelacionTipoFuerte"
       figure="RelacionTipoFuerteFigure"/>
-  <nodes
-      name="AtributoDerivadoClavePrimaria"
-      figure="AtributoDerivadoClavePrimariaFigure"/>
   <nodes
       name="EntidadFuerte"
       figure="EntidadFuerteFigure"/>
@@ -570,30 +457,20 @@
       elementIcon="false"
       accessor="//@figures.0/@descriptors.3/@accessors.0"/>
   <labels
-      name="ClaveForaneaNombreAtributo"
-      figure="ClaveForaneaFigure"
-      elementIcon="false"
-      accessor="//@figures.0/@descriptors.4/@accessors.0"/>
-  <labels
-      name="ClavePrimariaForaneaNombreAtributo"
-      figure="ClavePrimariaForaneaFigure"
-      elementIcon="false"
-      accessor="//@figures.0/@descriptors.5/@accessors.0"/>
-  <labels
       name="RelacionTipoDebilNombreRelacion"
       figure="RelacionTipoDebilFigure"
       elementIcon="false"
-      accessor="//@figures.0/@descriptors.6/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.4/@accessors.0"/>
   <labels
       name="RelacionTipoFuerteNombreRelacion"
       figure="RelacionTipoFuerteFigure"
       elementIcon="false"
-      accessor="//@figures.0/@descriptors.7/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.5/@accessors.0"/>
   <labels
       name="EntidadRelacionDebilLimiteInferiorER"
       figure="EntidadRelacionDebilFigure"
       elementIcon="false"
-      accessor="//@figures.0/@descriptors.8/@accessors.0">
+      accessor="//@figures.0/@descriptors.6/@accessors.0">
     <facets
         xsi:type="gmfgraph:AlignmentFacet"
         alignment="END"/>
@@ -606,7 +483,7 @@
       name="EntidadRelacionDebilLimiteSuperiorER"
       figure="EntidadRelacionDebilFigure"
       elementIcon="false"
-      accessor="//@figures.0/@descriptors.8/@accessors.1">
+      accessor="//@figures.0/@descriptors.6/@accessors.1">
     <facets
         xsi:type="gmfgraph:AlignmentFacet"/>
     <facets
@@ -618,7 +495,7 @@
       name="EntidadRelacionFuerteLimiteInferiorER"
       figure="EntidadRelacionFuerteFigure"
       elementIcon="false"
-      accessor="//@figures.0/@descriptors.9/@accessors.0">
+      accessor="//@figures.0/@descriptors.7/@accessors.0">
     <facets
         xsi:type="gmfgraph:AlignmentFacet"
         alignment="END"/>
@@ -631,7 +508,7 @@
       name="EntidadRelacionFuerteLimiteSuperiorER"
       figure="EntidadRelacionFuerteFigure"
       elementIcon="false"
-      accessor="//@figures.0/@descriptors.9/@accessors.1">
+      accessor="//@figures.0/@descriptors.7/@accessors.1">
     <facets
         xsi:type="gmfgraph:AlignmentFacet"/>
     <facets
@@ -640,28 +517,23 @@
         y="4"/>
   </labels>
   <labels
-      name="AtributoDerivadoClavePrimariaNombreAtributo"
-      figure="AtributoDerivadoClavePrimariaFigure"
-      elementIcon="false"
-      accessor="//@figures.0/@descriptors.10/@accessors.0"/>
-  <labels
       name="EntidadFuerteNombreEntidad"
       figure="EntidadFuerteFigure"
       elementIcon="false"
-      accessor="//@figures.0/@descriptors.11/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.8/@accessors.0"/>
   <labels
       name="EntidadDebilNombreEntidad"
       figure="EntidadDebilFigure"
       elementIcon="false"
-      accessor="//@figures.0/@descriptors.12/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.9/@accessors.0"/>
   <labels
       name="AtributoSimpleNombreAtributo"
       figure="AtributoSimpleFigure"
       elementIcon="false"
-      accessor="//@figures.0/@descriptors.13/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.10/@accessors.0"/>
   <labels
       name="AtributoCompuestoNombreAtributo"
       figure="AtributoSimpleFigure"
       elementIcon="false"
-      accessor="//@figures.0/@descriptors.13/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.10/@accessors.0"/>
 </gmfgraph:Canvas>

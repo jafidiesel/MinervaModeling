@@ -58,10 +58,10 @@ public class AtributoEntidadLinkReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected boolean canReorientSource() {
-		if (!(oldEnd instanceof modeloER.modeloER.Entidad && newEnd instanceof modeloER.modeloER.Entidad)) {
+		if (!(oldEnd instanceof modeloER.modeloER.Atributo && newEnd instanceof modeloER.modeloER.Atributo)) {
 			return false;
 		}
-		modeloER.modeloER.Atributo target = getLink().getAtributoEntidadLinkDestino();
+		modeloER.modeloER.Entidad target = getLink().getEntidadAtributoLinkOrigen();
 		if (!(getLink().eContainer() instanceof modeloER.modeloER.Diagrama)) {
 			return false;
 		}
@@ -74,10 +74,10 @@ public class AtributoEntidadLinkReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected boolean canReorientTarget() {
-		if (!(oldEnd instanceof modeloER.modeloER.Atributo && newEnd instanceof modeloER.modeloER.Atributo)) {
+		if (!(oldEnd instanceof modeloER.modeloER.Entidad && newEnd instanceof modeloER.modeloER.Entidad)) {
 			return false;
 		}
-		modeloER.modeloER.Entidad source = getLink().getEntidadAtributoLinkOrigen();
+		modeloER.modeloER.Atributo source = getLink().getAtributoEntidadLinkDestino();
 		if (!(getLink().eContainer() instanceof modeloER.modeloER.Diagrama)) {
 			return false;
 		}
@@ -106,7 +106,7 @@ public class AtributoEntidadLinkReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected CommandResult reorientSource() throws ExecutionException {
-		getLink().setEntidadAtributoLinkOrigen(getNewSource());
+		getLink().setAtributoEntidadLinkDestino(getNewSource());
 		return CommandResult.newOKCommandResult(getLink());
 	}
 
@@ -114,7 +114,7 @@ public class AtributoEntidadLinkReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected CommandResult reorientTarget() throws ExecutionException {
-		getLink().setAtributoEntidadLinkDestino(getNewTarget());
+		getLink().setEntidadAtributoLinkOrigen(getNewTarget());
 		return CommandResult.newOKCommandResult(getLink());
 	}
 
@@ -128,28 +128,28 @@ public class AtributoEntidadLinkReorientCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	protected modeloER.modeloER.Entidad getOldSource() {
-		return (modeloER.modeloER.Entidad) oldEnd;
-	}
-
-	/**
-	* @generated
-	*/
-	protected modeloER.modeloER.Entidad getNewSource() {
-		return (modeloER.modeloER.Entidad) newEnd;
-	}
-
-	/**
-	* @generated
-	*/
-	protected modeloER.modeloER.Atributo getOldTarget() {
+	protected modeloER.modeloER.Atributo getOldSource() {
 		return (modeloER.modeloER.Atributo) oldEnd;
 	}
 
 	/**
 	* @generated
 	*/
-	protected modeloER.modeloER.Atributo getNewTarget() {
+	protected modeloER.modeloER.Atributo getNewSource() {
 		return (modeloER.modeloER.Atributo) newEnd;
+	}
+
+	/**
+	* @generated
+	*/
+	protected modeloER.modeloER.Entidad getOldTarget() {
+		return (modeloER.modeloER.Entidad) oldEnd;
+	}
+
+	/**
+	* @generated
+	*/
+	protected modeloER.modeloER.Entidad getNewTarget() {
+		return (modeloER.modeloER.Entidad) newEnd;
 	}
 }

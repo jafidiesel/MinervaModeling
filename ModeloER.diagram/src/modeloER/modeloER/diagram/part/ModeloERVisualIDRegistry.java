@@ -116,10 +116,6 @@ public class ModeloERVisualIDRegistry {
 			if (modeloER.modeloER.ModeloERPackage.eINSTANCE.getClavePrimaria().isSuperTypeOf(domainElement.eClass())) {
 				return modeloER.modeloER.diagram.edit.parts.ClavePrimariaEditPart.VISUAL_ID;
 			}
-			if (modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributoDerivadoClavePrimaria()
-					.isSuperTypeOf(domainElement.eClass())) {
-				return modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart.VISUAL_ID;
-			}
 			if (modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributoSimple().isSuperTypeOf(domainElement.eClass())) {
 				return modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart.VISUAL_ID;
 			}
@@ -138,13 +134,6 @@ public class ModeloERVisualIDRegistry {
 			if (modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributoMultivaluado()
 					.isSuperTypeOf(domainElement.eClass())) {
 				return modeloER.modeloER.diagram.edit.parts.AtributoMultivaluadoEditPart.VISUAL_ID;
-			}
-			if (modeloER.modeloER.ModeloERPackage.eINSTANCE.getClavePrimariaForanea()
-					.isSuperTypeOf(domainElement.eClass())) {
-				return modeloER.modeloER.diagram.edit.parts.ClavePrimariaForaneaEditPart.VISUAL_ID;
-			}
-			if (modeloER.modeloER.ModeloERPackage.eINSTANCE.getClaveForanea().isSuperTypeOf(domainElement.eClass())) {
-				return modeloER.modeloER.diagram.edit.parts.ClaveForaneaEditPart.VISUAL_ID;
 			}
 			if (modeloER.modeloER.ModeloERPackage.eINSTANCE.getHerencia().isSuperTypeOf(domainElement.eClass())) {
 				return modeloER.modeloER.diagram.edit.parts.HerenciaEditPart.VISUAL_ID;
@@ -186,9 +175,6 @@ public class ModeloERVisualIDRegistry {
 			if (modeloER.modeloER.diagram.edit.parts.ClavePrimariaEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
-			if (modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
 			if (modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
@@ -202,12 +188,6 @@ public class ModeloERVisualIDRegistry {
 				return true;
 			}
 			if (modeloER.modeloER.diagram.edit.parts.AtributoMultivaluadoEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (modeloER.modeloER.diagram.edit.parts.ClavePrimariaForaneaEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (modeloER.modeloER.diagram.edit.parts.ClaveForaneaEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			if (modeloER.modeloER.diagram.edit.parts.HerenciaEditPart.VISUAL_ID == nodeVisualID) {
@@ -227,11 +207,6 @@ public class ModeloERVisualIDRegistry {
 			break;
 		case modeloER.modeloER.diagram.edit.parts.ClavePrimariaEditPart.VISUAL_ID:
 			if (modeloER.modeloER.diagram.edit.parts.ClavePrimariaNombreAtributoEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart.VISUAL_ID:
-			if (modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaNombreAtributoEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -257,16 +232,6 @@ public class ModeloERVisualIDRegistry {
 			break;
 		case modeloER.modeloER.diagram.edit.parts.AtributoMultivaluadoEditPart.VISUAL_ID:
 			if (modeloER.modeloER.diagram.edit.parts.AtributoMultivaluadoNombreAtributoEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case modeloER.modeloER.diagram.edit.parts.ClavePrimariaForaneaEditPart.VISUAL_ID:
-			if (modeloER.modeloER.diagram.edit.parts.ClavePrimariaForaneaNombreAtributoEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case modeloER.modeloER.diagram.edit.parts.ClaveForaneaEditPart.VISUAL_ID:
-			if (modeloER.modeloER.diagram.edit.parts.ClaveForaneaNombreAtributoEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -336,10 +301,6 @@ public class ModeloERVisualIDRegistry {
 				.isSuperTypeOf(domainElement.eClass())) {
 			return modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidadEditPart.VISUAL_ID;
 		}
-		if (modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributoDerivadoEntidad()
-				.isSuperTypeOf(domainElement.eClass())) {
-			return modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEntidad2EditPart.VISUAL_ID;
-		}
 		return -1;
 	}
 
@@ -381,14 +342,11 @@ public class ModeloERVisualIDRegistry {
 			return false;
 		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoEditPart.VISUAL_ID:
 		case modeloER.modeloER.diagram.edit.parts.ClavePrimariaEditPart.VISUAL_ID:
-		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart.VISUAL_ID:
 		case modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart.VISUAL_ID:
 		case modeloER.modeloER.diagram.edit.parts.AtributoCompuestoEditPart.VISUAL_ID:
 		case modeloER.modeloER.diagram.edit.parts.RelacionTipoDebilEditPart.VISUAL_ID:
 		case modeloER.modeloER.diagram.edit.parts.RelacionTipoFuerteEditPart.VISUAL_ID:
 		case modeloER.modeloER.diagram.edit.parts.AtributoMultivaluadoEditPart.VISUAL_ID:
-		case modeloER.modeloER.diagram.edit.parts.ClavePrimariaForaneaEditPart.VISUAL_ID:
-		case modeloER.modeloER.diagram.edit.parts.ClaveForaneaEditPart.VISUAL_ID:
 		case modeloER.modeloER.diagram.edit.parts.HerenciaEditPart.VISUAL_ID:
 		case modeloER.modeloER.diagram.edit.parts.EntidadFuerteEditPart.VISUAL_ID:
 		case modeloER.modeloER.diagram.edit.parts.EntidadDebilEditPart.VISUAL_ID:

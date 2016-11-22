@@ -49,10 +49,10 @@ public class AtributoEntidadLinkCreateCommand extends EditElementCommand {
 		if (source == null && target == null) {
 			return false;
 		}
-		if (source != null && false == source instanceof modeloER.modeloER.Entidad) {
+		if (source != null && false == source instanceof modeloER.modeloER.Atributo) {
 			return false;
 		}
-		if (target != null && false == target instanceof modeloER.modeloER.Atributo) {
+		if (target != null && false == target instanceof modeloER.modeloER.Entidad) {
 			return false;
 		}
 		if (getSource() == null) {
@@ -77,8 +77,8 @@ public class AtributoEntidadLinkCreateCommand extends EditElementCommand {
 		modeloER.modeloER.AtributoEntidadLink newElement = modeloER.modeloER.ModeloERFactory.eINSTANCE
 				.createAtributoEntidadLink();
 		getContainer().getAtributoentidadlinkDiagrama().add(newElement);
-		newElement.setEntidadAtributoLinkOrigen(getSource());
-		newElement.setAtributoEntidadLinkDestino(getTarget());
+		newElement.setAtributoEntidadLinkDestino(getSource());
+		newElement.setEntidadAtributoLinkOrigen(getTarget());
 		doConfigure(newElement, monitor, info);
 		((CreateElementRequest) getRequest()).setNewElement(newElement);
 		return CommandResult.newOKCommandResult(newElement);
@@ -112,15 +112,15 @@ public class AtributoEntidadLinkCreateCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	protected modeloER.modeloER.Entidad getSource() {
-		return (modeloER.modeloER.Entidad) source;
+	protected modeloER.modeloER.Atributo getSource() {
+		return (modeloER.modeloER.Atributo) source;
 	}
 
 	/**
 	* @generated
 	*/
-	protected modeloER.modeloER.Atributo getTarget() {
-		return (modeloER.modeloER.Atributo) target;
+	protected modeloER.modeloER.Entidad getTarget() {
+		return (modeloER.modeloER.Entidad) target;
 	}
 
 	/**

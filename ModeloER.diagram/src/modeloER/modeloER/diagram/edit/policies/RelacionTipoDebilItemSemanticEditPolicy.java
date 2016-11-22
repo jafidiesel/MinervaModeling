@@ -23,7 +23,7 @@ public class RelacionTipoDebilItemSemanticEditPolicy
 	* @generated
 	*/
 	public RelacionTipoDebilItemSemanticEditPolicy() {
-		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoDebil_2006);
+		super(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoDebil_2005);
 	}
 
 	/**
@@ -49,14 +49,11 @@ public class RelacionTipoDebilItemSemanticEditPolicy
 				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
-		}
-		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
-			Edge outgoingLink = (Edge) it.next();
 			if (modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getVisualID(
-					outgoingLink) == modeloER.modeloER.diagram.edit.parts.RelacionAtributoLinkEditPart.VISUAL_ID) {
-				DestroyElementRequest r = new DestroyElementRequest(outgoingLink.getElement(), false);
+					incomingLink) == modeloER.modeloER.diagram.edit.parts.RelacionAtributoLinkEditPart.VISUAL_ID) {
+				DestroyElementRequest r = new DestroyElementRequest(incomingLink.getElement(), false);
 				cmd.add(new DestroyElementCommand(r));
-				cmd.add(new DeleteCommand(getEditingDomain(), outgoingLink));
+				cmd.add(new DeleteCommand(getEditingDomain(), incomingLink));
 				continue;
 			}
 		}
@@ -95,8 +92,7 @@ public class RelacionTipoDebilItemSemanticEditPolicy
 		}
 		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006 == req
 				.getElementType()) {
-			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.RelacionAtributoLinkCreateCommand(req,
-					req.getSource(), req.getTarget()));
+			return null;
 		}
 		return null;
 	}
@@ -117,7 +113,8 @@ public class RelacionTipoDebilItemSemanticEditPolicy
 		}
 		if (modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006 == req
 				.getElementType()) {
-			return null;
+			return getGEFWrapper(new modeloER.modeloER.diagram.edit.commands.RelacionAtributoLinkCreateCommand(req,
+					req.getSource(), req.getTarget()));
 		}
 		return null;
 	}

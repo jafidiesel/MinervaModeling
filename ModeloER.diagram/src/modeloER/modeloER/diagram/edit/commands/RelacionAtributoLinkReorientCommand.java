@@ -58,10 +58,10 @@ public class RelacionAtributoLinkReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected boolean canReorientSource() {
-		if (!(oldEnd instanceof modeloER.modeloER.Relacion && newEnd instanceof modeloER.modeloER.Relacion)) {
+		if (!(oldEnd instanceof modeloER.modeloER.Atributo && newEnd instanceof modeloER.modeloER.Atributo)) {
 			return false;
 		}
-		modeloER.modeloER.Atributo target = getLink().getRelacionAtributoDestino();
+		modeloER.modeloER.Relacion target = getLink().getRelacionAtributoOrigen();
 		if (!(getLink().eContainer() instanceof modeloER.modeloER.Diagrama)) {
 			return false;
 		}
@@ -74,10 +74,10 @@ public class RelacionAtributoLinkReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected boolean canReorientTarget() {
-		if (!(oldEnd instanceof modeloER.modeloER.Atributo && newEnd instanceof modeloER.modeloER.Atributo)) {
+		if (!(oldEnd instanceof modeloER.modeloER.Relacion && newEnd instanceof modeloER.modeloER.Relacion)) {
 			return false;
 		}
-		modeloER.modeloER.Relacion source = getLink().getRelacionAtributoOrigen();
+		modeloER.modeloER.Atributo source = getLink().getRelacionAtributoDestino();
 		if (!(getLink().eContainer() instanceof modeloER.modeloER.Diagrama)) {
 			return false;
 		}
@@ -106,7 +106,7 @@ public class RelacionAtributoLinkReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected CommandResult reorientSource() throws ExecutionException {
-		getLink().setRelacionAtributoOrigen(getNewSource());
+		getLink().setRelacionAtributoDestino(getNewSource());
 		return CommandResult.newOKCommandResult(getLink());
 	}
 
@@ -114,7 +114,7 @@ public class RelacionAtributoLinkReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected CommandResult reorientTarget() throws ExecutionException {
-		getLink().setRelacionAtributoDestino(getNewTarget());
+		getLink().setRelacionAtributoOrigen(getNewTarget());
 		return CommandResult.newOKCommandResult(getLink());
 	}
 
@@ -128,28 +128,28 @@ public class RelacionAtributoLinkReorientCommand extends EditElementCommand {
 	/**
 	* @generated
 	*/
-	protected modeloER.modeloER.Relacion getOldSource() {
-		return (modeloER.modeloER.Relacion) oldEnd;
-	}
-
-	/**
-	* @generated
-	*/
-	protected modeloER.modeloER.Relacion getNewSource() {
-		return (modeloER.modeloER.Relacion) newEnd;
-	}
-
-	/**
-	* @generated
-	*/
-	protected modeloER.modeloER.Atributo getOldTarget() {
+	protected modeloER.modeloER.Atributo getOldSource() {
 		return (modeloER.modeloER.Atributo) oldEnd;
 	}
 
 	/**
 	* @generated
 	*/
-	protected modeloER.modeloER.Atributo getNewTarget() {
+	protected modeloER.modeloER.Atributo getNewSource() {
 		return (modeloER.modeloER.Atributo) newEnd;
+	}
+
+	/**
+	* @generated
+	*/
+	protected modeloER.modeloER.Relacion getOldTarget() {
+		return (modeloER.modeloER.Relacion) oldEnd;
+	}
+
+	/**
+	* @generated
+	*/
+	protected modeloER.modeloER.Relacion getNewTarget() {
+		return (modeloER.modeloER.Relacion) newEnd;
 	}
 }

@@ -1,6 +1,7 @@
 package modeloER.modeloER.diagram.providers.assistants;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.eclipse.core.runtime.IAdaptable;
@@ -18,16 +19,16 @@ public class ModeloERModelingAssistantProviderOfAtributoSimpleEditPart
 	*/
 	@Override
 
-	public List<IElementType> getRelTypesOnTarget(IAdaptable target) {
-		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target.getAdapter(IGraphicalEditPart.class);
-		return doGetRelTypesOnTarget((modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart) targetEditPart);
+	public List<IElementType> getRelTypesOnSource(IAdaptable source) {
+		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source.getAdapter(IGraphicalEditPart.class);
+		return doGetRelTypesOnSource((modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart) sourceEditPart);
 	}
 
 	/**
 	* @generated
 	*/
-	public List<IElementType> doGetRelTypesOnTarget(
-			modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart target) {
+	public List<IElementType> doGetRelTypesOnSource(
+			modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart source) {
 		List<IElementType> types = new ArrayList<IElementType>(3);
 		types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoEntidadLink_4001);
 		types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.LinkASAC_4005);
@@ -40,27 +41,62 @@ public class ModeloERModelingAssistantProviderOfAtributoSimpleEditPart
 	*/
 	@Override
 
-	public List<IElementType> getTypesForSource(IAdaptable target, IElementType relationshipType) {
+	public List<IElementType> getRelTypesOnSourceAndTarget(IAdaptable source, IAdaptable target) {
+		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source.getAdapter(IGraphicalEditPart.class);
 		IGraphicalEditPart targetEditPart = (IGraphicalEditPart) target.getAdapter(IGraphicalEditPart.class);
-		return doGetTypesForSource((modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart) targetEditPart,
+		return doGetRelTypesOnSourceAndTarget(
+				(modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart) sourceEditPart, targetEditPart);
+	}
+
+	/**
+	* @generated
+	*/
+	public List<IElementType> doGetRelTypesOnSourceAndTarget(
+			modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart source, IGraphicalEditPart targetEditPart) {
+		List<IElementType> types = new LinkedList<IElementType>();
+		if (targetEditPart instanceof modeloER.modeloER.diagram.edit.parts.EntidadFuerteEditPart) {
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoEntidadLink_4001);
+		}
+		if (targetEditPart instanceof modeloER.modeloER.diagram.edit.parts.EntidadDebilEditPart) {
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoEntidadLink_4001);
+		}
+		if (targetEditPart instanceof modeloER.modeloER.diagram.edit.parts.AtributoCompuestoEditPart) {
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.LinkASAC_4005);
+		}
+		if (targetEditPart instanceof modeloER.modeloER.diagram.edit.parts.RelacionTipoDebilEditPart) {
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006);
+		}
+		if (targetEditPart instanceof modeloER.modeloER.diagram.edit.parts.RelacionTipoFuerteEditPart) {
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006);
+		}
+		return types;
+	}
+
+	/**
+	* @generated
+	*/
+	@Override
+
+	public List<IElementType> getTypesForTarget(IAdaptable source, IElementType relationshipType) {
+		IGraphicalEditPart sourceEditPart = (IGraphicalEditPart) source.getAdapter(IGraphicalEditPart.class);
+		return doGetTypesForTarget((modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart) sourceEditPart,
 				relationshipType);
 	}
 
 	/**
 	* @generated
 	*/
-	public List<IElementType> doGetTypesForSource(modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart target,
+	public List<IElementType> doGetTypesForTarget(modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart source,
 			IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
 		if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoEntidadLink_4001) {
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2012);
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2013);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2009);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2010);
 		} else if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.LinkASAC_4005) {
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoCompuesto_2005);
-		} else
-			if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006) {
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoDebil_2006);
-			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoFuerte_2007);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoCompuesto_2004);
+		} else if (relationshipType == modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionAtributoLink_4006) {
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoDebil_2005);
+			types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoFuerte_2006);
 		}
 		return types;
 	}

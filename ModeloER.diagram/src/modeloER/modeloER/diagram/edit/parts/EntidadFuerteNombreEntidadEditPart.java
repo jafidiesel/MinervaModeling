@@ -52,7 +52,7 @@ public class EntidadFuerteNombreEntidadEditPart extends CompartmentEditPart impl
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5011;
+	public static final int VISUAL_ID = 5008;
 
 	/**
 	* @generated
@@ -245,10 +245,11 @@ public class EntidadFuerteNombreEntidadEditPart extends CompartmentEditPart impl
 						IParserEditStatus valid = (IParserEditStatus) getEditingDomain()
 								.runExclusive(new RunnableWithResult.Impl<IParserEditStatus>() {
 
-							public void run() {
-								setResult(parser.isValidEditString(new EObjectAdapter(element), (String) value));
-							}
-						});
+									public void run() {
+										setResult(
+												parser.isValidEditString(new EObjectAdapter(element), (String) value));
+									}
+								});
 						return valid.getCode() == ParserEditStatus.EDITABLE ? null : valid.getMessage();
 					} catch (InterruptedException ie) {
 						ie.printStackTrace();
@@ -284,7 +285,7 @@ public class EntidadFuerteNombreEntidadEditPart extends CompartmentEditPart impl
 	public IParser getParser() {
 		if (parser == null) {
 			parser = modeloER.modeloER.diagram.providers.ModeloERParserProvider.getParser(
-					modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2012, getParserElement(),
+					modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2009, getParserElement(),
 					modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry.getType(
 							modeloER.modeloER.diagram.edit.parts.EntidadFuerteNombreEntidadEditPart.VISUAL_ID));
 		}
@@ -352,8 +353,8 @@ public class EntidadFuerteNombreEntidadEditPart extends CompartmentEditPart impl
 							Character initialChar = (Character) theRequest.getExtendedData()
 									.get(RequestConstants.REQ_DIRECTEDIT_EXTENDEDDATA_INITIAL_CHAR);
 							performDirectEdit(initialChar.charValue());
-						} else
-							if ((theRequest instanceof DirectEditRequest) && (getEditText().equals(getLabelText()))) {
+						} else if ((theRequest instanceof DirectEditRequest)
+								&& (getEditText().equals(getLabelText()))) {
 							DirectEditRequest editRequest = (DirectEditRequest) theRequest;
 							performDirectEdit(editRequest.getLocation());
 						} else {

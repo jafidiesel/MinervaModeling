@@ -111,6 +111,21 @@
    </extension>
 
 
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.markerNavigationProviders" id="markers-navigation">
+      <?gmfgen generated="true"?>
+      <MarkerNavigationProvider class="modeloER.modeloER.diagram.providers.ModeloERMarkerNavigationProvider">
+         <MarkerType name="ModeloER.diagram.diagnostic"/>
+         <Priority name="Lowest"/>
+      </MarkerNavigationProvider>
+   </extension>
+
+   <extension id="diagnostic" name="ModeloER Plugin problems" point="org.eclipse.core.resources.markers">
+      <?gmfgen generated="true"?>
+      <super type="org.eclipse.core.resources.problemmarker"/>
+      <super type="org.eclipse.gmf.runtime.common.ui.services.marker"/>
+      <persistent value="true"/>
+   </extension>   
+
    <extension point="org.eclipse.core.runtime.preferences" id="prefs">
       <?gmfgen generated="true"?>
       <initializer class="modeloER.modeloER.diagram.preferences.DiagramPreferenceInitializer"/>
@@ -217,8 +232,8 @@
       <viewProvider class="modeloER.modeloER.diagram.providers.ModeloERViewProvider">
          <Priority name="Lowest"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="ModeloER"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003,4004,4005,4006,4007,4008,4009"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004,2005,2006,2007,2008,2009,2010"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003,4004,4005,4006,4007,4008"/>
       </viewProvider>
    </extension>
 
@@ -230,13 +245,13 @@
             <method name="getType()" value="ModeloER"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013"/>
+            <method name="getType()" value="2001,2002,2003,2004,2005,2006,2007,2008,2009,2010"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
-            <method name="getType()" value="4001,4002,4003,4004,4005,4006,4007,4008,4009"/>
+            <method name="getType()" value="4001,4002,4003,4004,4005,4006,4007,4008"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5001,5002,5003,5004,5005,5006,5007,5008,5009,5010,5011,5012"/>
+            <method name="getType()" value="5001,5002,5003,5004,5005,5006,5007,5008,5009"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
             <method name="getType()" value=""/>
@@ -263,60 +278,45 @@
          <object class="modeloER.modeloER.diagram.edit.parts.ClavePrimariaEditPart" id="ClavePrimaria_2002"/>
          <context elements="ClavePrimaria_2002"/>
       </modelingAssistantProvider>
-            <modelingAssistantProvider class="modeloER.modeloER.diagram.providers.assistants.ModeloERModelingAssistantProviderOfAtributoDerivadoClavePrimariaEditPart">
-         <Priority name="Lowest"/>
-         <object class="modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaEditPart" id="AtributoDerivadoClavePrimaria_2003"/>
-         <context elements="AtributoDerivadoClavePrimaria_2003"/>
-      </modelingAssistantProvider>
             <modelingAssistantProvider class="modeloER.modeloER.diagram.providers.assistants.ModeloERModelingAssistantProviderOfAtributoSimpleEditPart">
          <Priority name="Lowest"/>
-         <object class="modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart" id="AtributoSimple_2004"/>
-         <context elements="AtributoSimple_2004"/>
+         <object class="modeloER.modeloER.diagram.edit.parts.AtributoSimpleEditPart" id="AtributoSimple_2003"/>
+         <context elements="AtributoSimple_2003"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="modeloER.modeloER.diagram.providers.assistants.ModeloERModelingAssistantProviderOfAtributoCompuestoEditPart">
          <Priority name="Lowest"/>
-         <object class="modeloER.modeloER.diagram.edit.parts.AtributoCompuestoEditPart" id="AtributoCompuesto_2005"/>
-         <context elements="AtributoCompuesto_2005"/>
+         <object class="modeloER.modeloER.diagram.edit.parts.AtributoCompuestoEditPart" id="AtributoCompuesto_2004"/>
+         <context elements="AtributoCompuesto_2004"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="modeloER.modeloER.diagram.providers.assistants.ModeloERModelingAssistantProviderOfRelacionTipoDebilEditPart">
          <Priority name="Lowest"/>
-         <object class="modeloER.modeloER.diagram.edit.parts.RelacionTipoDebilEditPart" id="RelacionTipoDebil_2006"/>
-         <context elements="RelacionTipoDebil_2006"/>
+         <object class="modeloER.modeloER.diagram.edit.parts.RelacionTipoDebilEditPart" id="RelacionTipoDebil_2005"/>
+         <context elements="RelacionTipoDebil_2005"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="modeloER.modeloER.diagram.providers.assistants.ModeloERModelingAssistantProviderOfRelacionTipoFuerteEditPart">
          <Priority name="Lowest"/>
-         <object class="modeloER.modeloER.diagram.edit.parts.RelacionTipoFuerteEditPart" id="RelacionTipoFuerte_2007"/>
-         <context elements="RelacionTipoFuerte_2007"/>
+         <object class="modeloER.modeloER.diagram.edit.parts.RelacionTipoFuerteEditPart" id="RelacionTipoFuerte_2006"/>
+         <context elements="RelacionTipoFuerte_2006"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="modeloER.modeloER.diagram.providers.assistants.ModeloERModelingAssistantProviderOfAtributoMultivaluadoEditPart">
          <Priority name="Lowest"/>
-         <object class="modeloER.modeloER.diagram.edit.parts.AtributoMultivaluadoEditPart" id="AtributoMultivaluado_2008"/>
-         <context elements="AtributoMultivaluado_2008"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="modeloER.modeloER.diagram.providers.assistants.ModeloERModelingAssistantProviderOfClavePrimariaForaneaEditPart">
-         <Priority name="Lowest"/>
-         <object class="modeloER.modeloER.diagram.edit.parts.ClavePrimariaForaneaEditPart" id="ClavePrimariaForanea_2009"/>
-         <context elements="ClavePrimariaForanea_2009"/>
-      </modelingAssistantProvider>
-            <modelingAssistantProvider class="modeloER.modeloER.diagram.providers.assistants.ModeloERModelingAssistantProviderOfClaveForaneaEditPart">
-         <Priority name="Lowest"/>
-         <object class="modeloER.modeloER.diagram.edit.parts.ClaveForaneaEditPart" id="ClaveForanea_2010"/>
-         <context elements="ClaveForanea_2010"/>
+         <object class="modeloER.modeloER.diagram.edit.parts.AtributoMultivaluadoEditPart" id="AtributoMultivaluado_2007"/>
+         <context elements="AtributoMultivaluado_2007"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="modeloER.modeloER.diagram.providers.assistants.ModeloERModelingAssistantProviderOfHerenciaEditPart">
          <Priority name="Lowest"/>
-         <object class="modeloER.modeloER.diagram.edit.parts.HerenciaEditPart" id="Herencia_2011"/>
-         <context elements="Herencia_2011"/>
+         <object class="modeloER.modeloER.diagram.edit.parts.HerenciaEditPart" id="Herencia_2008"/>
+         <context elements="Herencia_2008"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="modeloER.modeloER.diagram.providers.assistants.ModeloERModelingAssistantProviderOfEntidadFuerteEditPart">
          <Priority name="Lowest"/>
-         <object class="modeloER.modeloER.diagram.edit.parts.EntidadFuerteEditPart" id="EntidadFuerte_2012"/>
-         <context elements="EntidadFuerte_2012"/>
+         <object class="modeloER.modeloER.diagram.edit.parts.EntidadFuerteEditPart" id="EntidadFuerte_2009"/>
+         <context elements="EntidadFuerte_2009"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="modeloER.modeloER.diagram.providers.assistants.ModeloERModelingAssistantProviderOfEntidadDebilEditPart">
          <Priority name="Lowest"/>
-         <object class="modeloER.modeloER.diagram.edit.parts.EntidadDebilEditPart" id="EntidadDebil_2013"/>
-         <context elements="EntidadDebil_2013"/>
+         <object class="modeloER.modeloER.diagram.edit.parts.EntidadDebilEditPart" id="EntidadDebil_2010"/>
+         <context elements="EntidadDebil_2010"/>
       </modelingAssistantProvider>
       
    </extension>
@@ -370,112 +370,82 @@
       </metamodel>
       <metamodel nsURI="http://www.example.org/modeloER">
          <metamodelType
-               id="ModeloER.diagram.AtributoDerivadoClavePrimaria_2003"
-               name="%metatype.name.AtributoDerivadoClavePrimaria_2003"
+               id="ModeloER.diagram.AtributoSimple_2003"
+               name="%metatype.name.AtributoSimple_2003"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="AtributoDerivadoClavePrimaria"
-               edithelper="modeloER.modeloER.diagram.edit.helpers.AtributoDerivadoClavePrimariaEditHelper">
+               eclass="AtributoSimple"
+               edithelper="modeloER.modeloER.diagram.edit.helpers.AtributoSimpleEditHelper">
             <param name="semanticHint" value="2003"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.example.org/modeloER">
          <metamodelType
-               id="ModeloER.diagram.AtributoSimple_2004"
-               name="%metatype.name.AtributoSimple_2004"
+               id="ModeloER.diagram.AtributoCompuesto_2004"
+               name="%metatype.name.AtributoCompuesto_2004"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="AtributoSimple"
-               edithelper="modeloER.modeloER.diagram.edit.helpers.AtributoSimpleEditHelper">
+               eclass="AtributoCompuesto"
+               edithelper="modeloER.modeloER.diagram.edit.helpers.AtributoCompuestoEditHelper">
             <param name="semanticHint" value="2004"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.example.org/modeloER">
          <metamodelType
-               id="ModeloER.diagram.AtributoCompuesto_2005"
-               name="%metatype.name.AtributoCompuesto_2005"
+               id="ModeloER.diagram.RelacionTipoDebil_2005"
+               name="%metatype.name.RelacionTipoDebil_2005"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="AtributoCompuesto"
-               edithelper="modeloER.modeloER.diagram.edit.helpers.AtributoCompuestoEditHelper">
+               eclass="RelacionTipoDebil"
+               edithelper="modeloER.modeloER.diagram.edit.helpers.RelacionTipoDebilEditHelper">
             <param name="semanticHint" value="2005"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.example.org/modeloER">
          <metamodelType
-               id="ModeloER.diagram.RelacionTipoDebil_2006"
-               name="%metatype.name.RelacionTipoDebil_2006"
+               id="ModeloER.diagram.RelacionTipoFuerte_2006"
+               name="%metatype.name.RelacionTipoFuerte_2006"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="RelacionTipoDebil"
-               edithelper="modeloER.modeloER.diagram.edit.helpers.RelacionTipoDebilEditHelper">
+               eclass="RelacionTipoFuerte"
+               edithelper="modeloER.modeloER.diagram.edit.helpers.RelacionTipoFuerteEditHelper">
             <param name="semanticHint" value="2006"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.example.org/modeloER">
          <metamodelType
-               id="ModeloER.diagram.RelacionTipoFuerte_2007"
-               name="%metatype.name.RelacionTipoFuerte_2007"
+               id="ModeloER.diagram.AtributoMultivaluado_2007"
+               name="%metatype.name.AtributoMultivaluado_2007"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="RelacionTipoFuerte"
-               edithelper="modeloER.modeloER.diagram.edit.helpers.RelacionTipoFuerteEditHelper">
+               eclass="AtributoMultivaluado"
+               edithelper="modeloER.modeloER.diagram.edit.helpers.AtributoMultivaluadoEditHelper">
             <param name="semanticHint" value="2007"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.example.org/modeloER">
          <metamodelType
-               id="ModeloER.diagram.AtributoMultivaluado_2008"
-               name="%metatype.name.AtributoMultivaluado_2008"
+               id="ModeloER.diagram.Herencia_2008"
+               name="%metatype.name.Herencia_2008"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="AtributoMultivaluado"
-               edithelper="modeloER.modeloER.diagram.edit.helpers.AtributoMultivaluadoEditHelper">
+               eclass="Herencia"
+               edithelper="modeloER.modeloER.diagram.edit.helpers.HerenciaEditHelper">
             <param name="semanticHint" value="2008"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.example.org/modeloER">
          <metamodelType
-               id="ModeloER.diagram.ClavePrimariaForanea_2009"
-               name="%metatype.name.ClavePrimariaForanea_2009"
+               id="ModeloER.diagram.EntidadFuerte_2009"
+               name="%metatype.name.EntidadFuerte_2009"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="ClavePrimariaForanea"
-               edithelper="modeloER.modeloER.diagram.edit.helpers.ClavePrimariaForaneaEditHelper">
+               eclass="EntidadFuerte"
+               edithelper="modeloER.modeloER.diagram.edit.helpers.EntidadFuerteEditHelper">
             <param name="semanticHint" value="2009"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.example.org/modeloER">
          <metamodelType
-               id="ModeloER.diagram.ClaveForanea_2010"
-               name="%metatype.name.ClaveForanea_2010"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="ClaveForanea"
-               edithelper="modeloER.modeloER.diagram.edit.helpers.ClaveForaneaEditHelper">
-            <param name="semanticHint" value="2010"/>
-         </metamodelType>
-      </metamodel>
-      <metamodel nsURI="http://www.example.org/modeloER">
-         <metamodelType
-               id="ModeloER.diagram.Herencia_2011"
-               name="%metatype.name.Herencia_2011"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="Herencia"
-               edithelper="modeloER.modeloER.diagram.edit.helpers.HerenciaEditHelper">
-            <param name="semanticHint" value="2011"/>
-         </metamodelType>
-      </metamodel>
-      <metamodel nsURI="http://www.example.org/modeloER">
-         <metamodelType
-               id="ModeloER.diagram.EntidadFuerte_2012"
-               name="%metatype.name.EntidadFuerte_2012"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
-               eclass="EntidadFuerte"
-               edithelper="modeloER.modeloER.diagram.edit.helpers.EntidadFuerteEditHelper">
-            <param name="semanticHint" value="2012"/>
-         </metamodelType>
-      </metamodel>
-      <metamodel nsURI="http://www.example.org/modeloER">
-         <metamodelType
-               id="ModeloER.diagram.EntidadDebil_2013"
-               name="%metatype.name.EntidadDebil_2013"
+               id="ModeloER.diagram.EntidadDebil_2010"
+               name="%metatype.name.EntidadDebil_2010"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="EntidadDebil"
                edithelper="modeloER.modeloER.diagram.edit.helpers.EntidadDebilEditHelper">
-            <param name="semanticHint" value="2013"/>
+            <param name="semanticHint" value="2010"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://www.example.org/modeloER">
@@ -558,15 +528,6 @@
             <param name="semanticHint" value="4008"/>
          </metamodelType>
       </metamodel>
-      <metamodel nsURI="http://www.example.org/modeloER">
-         <specializationType
-               id="ModeloER.diagram.AtributoDerivadoEntidad_4009"
-               name="%metatype.name.AtributoDerivadoEntidad_4009"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="ModeloER.diagram.AtributoDerivadoEntidad_4008"/>
-            <param name="semanticHint" value="4009"/>
-         </specializationType>
-      </metamodel>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
@@ -582,17 +543,14 @@
          <elementType ref="ModeloER.diagram.Diagrama_1000"/>
          <elementType ref="ModeloER.diagram.AtributoDerivado_2001"/>
          <elementType ref="ModeloER.diagram.ClavePrimaria_2002"/>
-         <elementType ref="ModeloER.diagram.AtributoDerivadoClavePrimaria_2003"/>
-         <elementType ref="ModeloER.diagram.AtributoSimple_2004"/>
-         <elementType ref="ModeloER.diagram.AtributoCompuesto_2005"/>
-         <elementType ref="ModeloER.diagram.RelacionTipoDebil_2006"/>
-         <elementType ref="ModeloER.diagram.RelacionTipoFuerte_2007"/>
-         <elementType ref="ModeloER.diagram.AtributoMultivaluado_2008"/>
-         <elementType ref="ModeloER.diagram.ClavePrimariaForanea_2009"/>
-         <elementType ref="ModeloER.diagram.ClaveForanea_2010"/>
-         <elementType ref="ModeloER.diagram.Herencia_2011"/>
-         <elementType ref="ModeloER.diagram.EntidadFuerte_2012"/>
-         <elementType ref="ModeloER.diagram.EntidadDebil_2013"/>
+         <elementType ref="ModeloER.diagram.AtributoSimple_2003"/>
+         <elementType ref="ModeloER.diagram.AtributoCompuesto_2004"/>
+         <elementType ref="ModeloER.diagram.RelacionTipoDebil_2005"/>
+         <elementType ref="ModeloER.diagram.RelacionTipoFuerte_2006"/>
+         <elementType ref="ModeloER.diagram.AtributoMultivaluado_2007"/>
+         <elementType ref="ModeloER.diagram.Herencia_2008"/>
+         <elementType ref="ModeloER.diagram.EntidadFuerte_2009"/>
+         <elementType ref="ModeloER.diagram.EntidadDebil_2010"/>
          <elementType ref="ModeloER.diagram.AtributoEntidadLink_4001"/>
          <elementType ref="ModeloER.diagram.LinkHerenciaHijo_4002"/>
          <elementType ref="ModeloER.diagram.EntidadRelacionFuerte_4003"/>
@@ -601,7 +559,6 @@
          <elementType ref="ModeloER.diagram.RelacionAtributoLink_4006"/>
          <elementType ref="ModeloER.diagram.LinkHerenciaPadre_4007"/>
          <elementType ref="ModeloER.diagram.AtributoDerivadoEntidad_4008"/>
-         <elementType ref="ModeloER.diagram.AtributoDerivadoEntidad_4009"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>
@@ -718,6 +675,180 @@
          </selectionEnablement>
       </linkHelper>
    </extension>
+   <extension point="org.eclipse.emf.validation.constraintProviders">
+      <?gmfgen generated="true"?>
+            <category id="0" mandatory="false" name="0">
+         <![CDATA[]]>
+      </category>
+      <category id="0/1" mandatory="false" name="ValidarAtributo">
+         <![CDATA[]]>
+      </category>
+      <category id="0/2" mandatory="false" name="ValidarClavePrimaria">
+         <![CDATA[]]>
+      </category>
+      <category id="0/3" mandatory="false" name="ValidarEntidad">
+         <![CDATA[]]>
+      </category>
+      <category id="0/4" mandatory="false" name="ValidarEntidadRelacion">
+         <![CDATA[]]>
+      </category>
+      <category id="0/5" mandatory="false" name="ValidarRelacion">
+         <![CDATA[]]>
+      </category>
+      <category id="0/6" mandatory="false" name="ValidarLinkASAC">
+         <![CDATA[]]>
+      </category>
+      <constraintProvider cache="true">
+         <package namespaceUri="http://www.example.org/modeloER"/>
+               <constraints categories="0">
+                  </constraints>
+         <constraints categories="0/1">
+                  <constraint id="1.1"
+            lang="OCL"
+            name="ValidarNombre"
+            mode="Batch"
+            severity="ERROR" statusCode="200">
+            <![CDATA[self.nombreAtributo <> null and self.nombreAtributo <> '']]>
+            <description><![CDATA[Nombre no vacío ni null]]></description>
+            <message><![CDATA[Nombre no vacío ni null]]></message>
+            <target class="modeloER.Atributo"/>
+         </constraint>
+                  </constraints>
+         <constraints categories="0/2">
+                  <constraint id="2.1"
+            lang="OCL"
+            name="ExitenciaClavePrimaria"
+            mode="Batch"
+            severity="ERROR" statusCode="200">
+            <![CDATA[self.nuloAtributo = false]]>
+            <description><![CDATA[]]></description>
+            <message><![CDATA[Debe existir una clave primaria]]></message>
+            <target class="modeloER.ClavePrimaria"/>
+         </constraint>
+                  </constraints>
+         <constraints categories="0/3">
+                  <constraint id="3.1"
+            lang="OCL"
+            name="NombreUnicoAtributo"
+            mode="Batch"
+            severity="ERROR" statusCode="200">
+            <![CDATA[self.atributosEntidad->isUnique(nombreAtributo)]]>
+            <description><![CDATA[]]></description>
+            <message><![CDATA[Todos los atributos de una entidad deben tener un nombre único]]></message>
+            <target class="modeloER.Entidad"/>
+         </constraint>
+                  <constraint id="3.2"
+            lang="OCL"
+            name="ValidarNombre"
+            mode="Batch"
+            severity="ERROR" statusCode="200">
+            <![CDATA[self.nombreEntidad<>null and self.nombreEntidad<>'']]>
+            <description><![CDATA[]]></description>
+            <message><![CDATA[El nombre de la entidad no puede estar vacío]]></message>
+            <target class="modeloER.Entidad"/>
+         </constraint>
+                  <constraint id="3.3"
+            lang="OCL"
+            name="NombreUnicoEntidad"
+            mode="Batch"
+            severity="ERROR" statusCode="200">
+            <![CDATA[Entidad::allInstances()->isUnique(nombreEntidad)]]>
+            <description><![CDATA[]]></description>
+            <message><![CDATA[Dos entidades no pueden tener el mismo nombre]]></message>
+            <target class="modeloER.Entidad"/>
+         </constraint>
+                  <constraint id="3.4"
+            lang="OCL"
+            name="ExisteClavePrimaria"
+            mode="Batch"
+            severity="ERROR" statusCode="200">
+            <![CDATA[self.atributosEntidad->exists(ae|ae.oclIsKindOf(ClavePrimaria))]]>
+            <description><![CDATA[]]></description>
+            <message><![CDATA[Toda entidad debe tener una clave primaria]]></message>
+            <target class="modeloER.Entidad"/>
+         </constraint>
+                  </constraints>
+         <constraints categories="0/4">
+                  <constraint id="4.1"
+            lang="OCL"
+            name="ValidadLimites"
+            mode="Batch"
+            severity="ERROR" statusCode="200">
+            <![CDATA[self.limiteInferiorER = '*' or (not(self.limiteInferiorER.toInteger().oclIsInvalid())) and self.limiteSuperiorER = '*' or (not(self.limiteSuperiorER.toInteger().oclIsInvalid()))]]>
+            <description><![CDATA[]]></description>
+            <message><![CDATA[El límite inferiory superior no deben estar vacío]]></message>
+            <target class="modeloER.EntidadRelacion"/>
+         </constraint>
+                  <constraint id="4.2"
+            lang="OCL"
+            name="ValidaRelacionDebil"
+            mode="Batch"
+            severity="ERROR" statusCode="200">
+            <![CDATA[entidadERLink.oclIsTypeOf(EntidadDebil) implies relacionERLink.oclIsTypeOf(RelacionTipoDebil)]]>
+            <description><![CDATA[Una relacion débil se conecta con línea doble]]></description>
+            <message><![CDATA[]]></message>
+            <target class="modeloER.EntidadRelacion"/>
+         </constraint>
+                  </constraints>
+         <constraints categories="0/5">
+                  <constraint id="5.1"
+            lang="OCL"
+            name="ValidarNombre"
+            mode="Batch"
+            severity="ERROR" statusCode="200">
+            <![CDATA[self.nombreRelacion<>null and self.nombreRelacion<>'']]>
+            <description><![CDATA[]]></description>
+            <message><![CDATA[El nombre de la relación no puede estar vacio]]></message>
+            <target class="modeloER.Relacion"/>
+         </constraint>
+                  <constraint id="5.2"
+            lang="OCL"
+            name="SoloAtributosSimples"
+            mode="Batch"
+            severity="ERROR" statusCode="200">
+            <![CDATA[self.atributosRelacion->forAll(r|r.oclIsKindOf(AtributoSimple))]]>
+            <description><![CDATA[]]></description>
+            <message><![CDATA[Solo puede tener atributos simples]]></message>
+            <target class="modeloER.Relacion"/>
+         </constraint>
+                  </constraints>
+         <constraints categories="0/6">
+                  <constraint id="6.1"
+            lang="OCL"
+            name="AtributoCompuestoASimple"
+            mode="Batch"
+            severity="ERROR" statusCode="200">
+            <![CDATA[atributocompuestoOrigen.oclIsTypeOf(AtributoCompuesto) implies atributosimpleDestino.oclIsTypeOf(AtributoSimple)]]>
+            <description><![CDATA[Un atributo compuesto puede tener atributos simples]]></description>
+            <message><![CDATA[]]></message>
+            <target class="modeloER.LinkASAC"/>
+         </constraint>
+                  </constraints>
+      </constraintProvider>
+   </extension>
+
+   <extension point="org.eclipse.emf.validation.constraintBindings">
+      <?gmfgen generated="true"?>
+      <clientContext default="false" id="ModeloER.diagramDefaultCtx">
+         <selector class="modeloER.modeloER.diagram.providers.ModeloERValidationProvider$DefaultCtx"/>
+      </clientContext>
+      <binding context="ModeloER.diagramDefaultCtx">
+                  <constraint ref="ModeloER.diagram.1.1"/>
+                  <constraint ref="ModeloER.diagram.2.1"/>
+                  <constraint ref="ModeloER.diagram.3.1"/>
+                  <constraint ref="ModeloER.diagram.3.2"/>
+                  <constraint ref="ModeloER.diagram.3.3"/>
+                  <constraint ref="ModeloER.diagram.3.4"/>
+                  <constraint ref="ModeloER.diagram.4.1"/>
+                  <constraint ref="ModeloER.diagram.4.2"/>
+                  <constraint ref="ModeloER.diagram.5.1"/>
+                  <constraint ref="ModeloER.diagram.5.2"/>
+                  <constraint ref="ModeloER.diagram.6.1"/>
+               </binding>
+
+   </extension>
+
+
    <extension point="org.eclipse.ui.commands" id="update-cmd">
       <?gmfgen generated="true"?>
       <command

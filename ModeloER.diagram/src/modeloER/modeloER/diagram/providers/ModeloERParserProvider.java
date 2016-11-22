@@ -63,211 +63,148 @@ public class ModeloERParserProvider extends AbstractProvider implements IParserP
 	/**
 	* @generated
 	*/
-	private IParser atributoDerivadoClavePrimariaNombreAtributo_5003Parser;
+	private IParser atributoSimpleNombreAtributo_5003Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getAtributoDerivadoClavePrimariaNombreAtributo_5003Parser() {
-		if (atributoDerivadoClavePrimariaNombreAtributo_5003Parser == null) {
+	private IParser getAtributoSimpleNombreAtributo_5003Parser() {
+		if (atributoSimpleNombreAtributo_5003Parser == null) {
 			EAttribute[] features = new EAttribute[] {
 					modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributo_NombreAtributo() };
 			EAttribute[] editableFeatures = new EAttribute[] {
 					modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributo_NombreAtributo() };
 			modeloER.modeloER.diagram.parsers.MessageFormatParser parser = new modeloER.modeloER.diagram.parsers.MessageFormatParser(
 					features, editableFeatures);
-			atributoDerivadoClavePrimariaNombreAtributo_5003Parser = parser;
+			atributoSimpleNombreAtributo_5003Parser = parser;
 		}
-		return atributoDerivadoClavePrimariaNombreAtributo_5003Parser;
+		return atributoSimpleNombreAtributo_5003Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser atributoSimpleNombreAtributo_5004Parser;
+	private IParser atributoCompuestoNombreAtributo_5004Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getAtributoSimpleNombreAtributo_5004Parser() {
-		if (atributoSimpleNombreAtributo_5004Parser == null) {
+	private IParser getAtributoCompuestoNombreAtributo_5004Parser() {
+		if (atributoCompuestoNombreAtributo_5004Parser == null) {
 			EAttribute[] features = new EAttribute[] {
 					modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributo_NombreAtributo() };
 			EAttribute[] editableFeatures = new EAttribute[] {
 					modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributo_NombreAtributo() };
 			modeloER.modeloER.diagram.parsers.MessageFormatParser parser = new modeloER.modeloER.diagram.parsers.MessageFormatParser(
 					features, editableFeatures);
-			atributoSimpleNombreAtributo_5004Parser = parser;
+			atributoCompuestoNombreAtributo_5004Parser = parser;
 		}
-		return atributoSimpleNombreAtributo_5004Parser;
+		return atributoCompuestoNombreAtributo_5004Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser atributoCompuestoNombreAtributo_5005Parser;
+	private IParser relacionTipoDebilNombreRelacion_5005Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getAtributoCompuestoNombreAtributo_5005Parser() {
-		if (atributoCompuestoNombreAtributo_5005Parser == null) {
-			EAttribute[] features = new EAttribute[] {
-					modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributo_NombreAtributo() };
-			EAttribute[] editableFeatures = new EAttribute[] {
-					modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributo_NombreAtributo() };
-			modeloER.modeloER.diagram.parsers.MessageFormatParser parser = new modeloER.modeloER.diagram.parsers.MessageFormatParser(
-					features, editableFeatures);
-			atributoCompuestoNombreAtributo_5005Parser = parser;
-		}
-		return atributoCompuestoNombreAtributo_5005Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser relacionTipoDebilNombreRelacion_5006Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getRelacionTipoDebilNombreRelacion_5006Parser() {
-		if (relacionTipoDebilNombreRelacion_5006Parser == null) {
+	private IParser getRelacionTipoDebilNombreRelacion_5005Parser() {
+		if (relacionTipoDebilNombreRelacion_5005Parser == null) {
 			EAttribute[] features = new EAttribute[] {
 					modeloER.modeloER.ModeloERPackage.eINSTANCE.getRelacion_NombreRelacion() };
 			EAttribute[] editableFeatures = new EAttribute[] {
 					modeloER.modeloER.ModeloERPackage.eINSTANCE.getRelacion_NombreRelacion() };
 			modeloER.modeloER.diagram.parsers.MessageFormatParser parser = new modeloER.modeloER.diagram.parsers.MessageFormatParser(
 					features, editableFeatures);
-			relacionTipoDebilNombreRelacion_5006Parser = parser;
+			relacionTipoDebilNombreRelacion_5005Parser = parser;
 		}
-		return relacionTipoDebilNombreRelacion_5006Parser;
+		return relacionTipoDebilNombreRelacion_5005Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser relacionTipoFuerteNombreRelacion_5007Parser;
+	private IParser relacionTipoFuerteNombreRelacion_5006Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getRelacionTipoFuerteNombreRelacion_5007Parser() {
-		if (relacionTipoFuerteNombreRelacion_5007Parser == null) {
+	private IParser getRelacionTipoFuerteNombreRelacion_5006Parser() {
+		if (relacionTipoFuerteNombreRelacion_5006Parser == null) {
 			EAttribute[] features = new EAttribute[] {
 					modeloER.modeloER.ModeloERPackage.eINSTANCE.getRelacion_NombreRelacion() };
 			EAttribute[] editableFeatures = new EAttribute[] {
 					modeloER.modeloER.ModeloERPackage.eINSTANCE.getRelacion_NombreRelacion() };
 			modeloER.modeloER.diagram.parsers.MessageFormatParser parser = new modeloER.modeloER.diagram.parsers.MessageFormatParser(
 					features, editableFeatures);
-			relacionTipoFuerteNombreRelacion_5007Parser = parser;
+			relacionTipoFuerteNombreRelacion_5006Parser = parser;
 		}
-		return relacionTipoFuerteNombreRelacion_5007Parser;
+		return relacionTipoFuerteNombreRelacion_5006Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser atributoMultivaluadoNombreAtributo_5008Parser;
+	private IParser atributoMultivaluadoNombreAtributo_5007Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getAtributoMultivaluadoNombreAtributo_5008Parser() {
-		if (atributoMultivaluadoNombreAtributo_5008Parser == null) {
+	private IParser getAtributoMultivaluadoNombreAtributo_5007Parser() {
+		if (atributoMultivaluadoNombreAtributo_5007Parser == null) {
 			EAttribute[] features = new EAttribute[] {
 					modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributo_NombreAtributo() };
 			EAttribute[] editableFeatures = new EAttribute[] {
 					modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributo_NombreAtributo() };
 			modeloER.modeloER.diagram.parsers.MessageFormatParser parser = new modeloER.modeloER.diagram.parsers.MessageFormatParser(
 					features, editableFeatures);
-			atributoMultivaluadoNombreAtributo_5008Parser = parser;
+			atributoMultivaluadoNombreAtributo_5007Parser = parser;
 		}
-		return atributoMultivaluadoNombreAtributo_5008Parser;
+		return atributoMultivaluadoNombreAtributo_5007Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser clavePrimariaForaneaNombreAtributo_5009Parser;
+	private IParser entidadFuerteNombreEntidad_5008Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getClavePrimariaForaneaNombreAtributo_5009Parser() {
-		if (clavePrimariaForaneaNombreAtributo_5009Parser == null) {
-			EAttribute[] features = new EAttribute[] {
-					modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributo_NombreAtributo() };
-			EAttribute[] editableFeatures = new EAttribute[] {
-					modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributo_NombreAtributo() };
-			modeloER.modeloER.diagram.parsers.MessageFormatParser parser = new modeloER.modeloER.diagram.parsers.MessageFormatParser(
-					features, editableFeatures);
-			clavePrimariaForaneaNombreAtributo_5009Parser = parser;
-		}
-		return clavePrimariaForaneaNombreAtributo_5009Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser claveForaneaNombreAtributo_5010Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getClaveForaneaNombreAtributo_5010Parser() {
-		if (claveForaneaNombreAtributo_5010Parser == null) {
-			EAttribute[] features = new EAttribute[] {
-					modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributo_NombreAtributo() };
-			EAttribute[] editableFeatures = new EAttribute[] {
-					modeloER.modeloER.ModeloERPackage.eINSTANCE.getAtributo_NombreAtributo() };
-			modeloER.modeloER.diagram.parsers.MessageFormatParser parser = new modeloER.modeloER.diagram.parsers.MessageFormatParser(
-					features, editableFeatures);
-			claveForaneaNombreAtributo_5010Parser = parser;
-		}
-		return claveForaneaNombreAtributo_5010Parser;
-	}
-
-	/**
-	* @generated
-	*/
-	private IParser entidadFuerteNombreEntidad_5011Parser;
-
-	/**
-	* @generated
-	*/
-	private IParser getEntidadFuerteNombreEntidad_5011Parser() {
-		if (entidadFuerteNombreEntidad_5011Parser == null) {
+	private IParser getEntidadFuerteNombreEntidad_5008Parser() {
+		if (entidadFuerteNombreEntidad_5008Parser == null) {
 			EAttribute[] features = new EAttribute[] {
 					modeloER.modeloER.ModeloERPackage.eINSTANCE.getEntidad_NombreEntidad() };
 			EAttribute[] editableFeatures = new EAttribute[] {
 					modeloER.modeloER.ModeloERPackage.eINSTANCE.getEntidad_NombreEntidad() };
 			modeloER.modeloER.diagram.parsers.MessageFormatParser parser = new modeloER.modeloER.diagram.parsers.MessageFormatParser(
 					features, editableFeatures);
-			entidadFuerteNombreEntidad_5011Parser = parser;
+			entidadFuerteNombreEntidad_5008Parser = parser;
 		}
-		return entidadFuerteNombreEntidad_5011Parser;
+		return entidadFuerteNombreEntidad_5008Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser entidadDebilNombreEntidad_5012Parser;
+	private IParser entidadDebilNombreEntidad_5009Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getEntidadDebilNombreEntidad_5012Parser() {
-		if (entidadDebilNombreEntidad_5012Parser == null) {
+	private IParser getEntidadDebilNombreEntidad_5009Parser() {
+		if (entidadDebilNombreEntidad_5009Parser == null) {
 			EAttribute[] features = new EAttribute[] {
 					modeloER.modeloER.ModeloERPackage.eINSTANCE.getEntidad_NombreEntidad() };
 			EAttribute[] editableFeatures = new EAttribute[] {
 					modeloER.modeloER.ModeloERPackage.eINSTANCE.getEntidad_NombreEntidad() };
 			modeloER.modeloER.diagram.parsers.MessageFormatParser parser = new modeloER.modeloER.diagram.parsers.MessageFormatParser(
 					features, editableFeatures);
-			entidadDebilNombreEntidad_5012Parser = parser;
+			entidadDebilNombreEntidad_5009Parser = parser;
 		}
-		return entidadDebilNombreEntidad_5012Parser;
+		return entidadDebilNombreEntidad_5009Parser;
 	}
 
 	/**
@@ -363,26 +300,20 @@ public class ModeloERParserProvider extends AbstractProvider implements IParserP
 			return getAtributoDerivadoNombreAtributo_5001Parser();
 		case modeloER.modeloER.diagram.edit.parts.ClavePrimariaNombreAtributoEditPart.VISUAL_ID:
 			return getClavePrimariaNombreAtributo_5002Parser();
-		case modeloER.modeloER.diagram.edit.parts.AtributoDerivadoClavePrimariaNombreAtributoEditPart.VISUAL_ID:
-			return getAtributoDerivadoClavePrimariaNombreAtributo_5003Parser();
 		case modeloER.modeloER.diagram.edit.parts.AtributoSimpleNombreAtributoEditPart.VISUAL_ID:
-			return getAtributoSimpleNombreAtributo_5004Parser();
+			return getAtributoSimpleNombreAtributo_5003Parser();
 		case modeloER.modeloER.diagram.edit.parts.AtributoCompuestoNombreAtributoEditPart.VISUAL_ID:
-			return getAtributoCompuestoNombreAtributo_5005Parser();
+			return getAtributoCompuestoNombreAtributo_5004Parser();
 		case modeloER.modeloER.diagram.edit.parts.RelacionTipoDebilNombreRelacionEditPart.VISUAL_ID:
-			return getRelacionTipoDebilNombreRelacion_5006Parser();
+			return getRelacionTipoDebilNombreRelacion_5005Parser();
 		case modeloER.modeloER.diagram.edit.parts.RelacionTipoFuerteNombreRelacionEditPart.VISUAL_ID:
-			return getRelacionTipoFuerteNombreRelacion_5007Parser();
+			return getRelacionTipoFuerteNombreRelacion_5006Parser();
 		case modeloER.modeloER.diagram.edit.parts.AtributoMultivaluadoNombreAtributoEditPart.VISUAL_ID:
-			return getAtributoMultivaluadoNombreAtributo_5008Parser();
-		case modeloER.modeloER.diagram.edit.parts.ClavePrimariaForaneaNombreAtributoEditPart.VISUAL_ID:
-			return getClavePrimariaForaneaNombreAtributo_5009Parser();
-		case modeloER.modeloER.diagram.edit.parts.ClaveForaneaNombreAtributoEditPart.VISUAL_ID:
-			return getClaveForaneaNombreAtributo_5010Parser();
+			return getAtributoMultivaluadoNombreAtributo_5007Parser();
 		case modeloER.modeloER.diagram.edit.parts.EntidadFuerteNombreEntidadEditPart.VISUAL_ID:
-			return getEntidadFuerteNombreEntidad_5011Parser();
+			return getEntidadFuerteNombreEntidad_5008Parser();
 		case modeloER.modeloER.diagram.edit.parts.EntidadDebilNombreEntidadEditPart.VISUAL_ID:
-			return getEntidadDebilNombreEntidad_5012Parser();
+			return getEntidadDebilNombreEntidad_5009Parser();
 		case modeloER.modeloER.diagram.edit.parts.EntidadRelacionFuerteLimiteInferiorEREditPart.VISUAL_ID:
 			return getEntidadRelacionFuerteLimiteInferiorER_6001Parser();
 		case modeloER.modeloER.diagram.edit.parts.EntidadRelacionFuerteLimiteSuperiorEREditPart.VISUAL_ID:

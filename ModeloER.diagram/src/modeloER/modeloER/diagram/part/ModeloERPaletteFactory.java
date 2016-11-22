@@ -36,10 +36,7 @@ public class ModeloERPaletteFactory {
 		paletteContainer.add(createAtributoDerivado1CreationTool());
 		paletteContainer.add(createAtributoMultivaluado2CreationTool());
 		paletteContainer.add(createClavePrimaria3CreationTool());
-		paletteContainer.add(createClaveForanea4CreationTool());
-		paletteContainer.add(createClavePrimariaForanea5CreationTool());
-		paletteContainer.add(createAtributo6CreationTool());
-		paletteContainer.add(createAtributoDerivadoClavePrimaria7CreationTool());
+		paletteContainer.add(createAtributo4CreationTool());
 		return paletteContainer;
 	}
 
@@ -97,7 +94,7 @@ public class ModeloERPaletteFactory {
 				modeloER.modeloER.diagram.part.Messages.AtributoMultivaluado2CreationTool_title,
 				modeloER.modeloER.diagram.part.Messages.AtributoMultivaluado2CreationTool_desc,
 				Collections.singletonList(
-						modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoMultivaluado_2008));
+						modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoMultivaluado_2007));
 		entry.setId("createAtributoMultivaluado2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(modeloER.modeloER.diagram.part.ModeloERDiagramEditorPlugin
 				.findImageDescriptor("/ModeloER.edit/icons/full/obj16/AtributoMultivaluadoIcon.svg")); //$NON-NLS-1$
@@ -125,68 +122,18 @@ public class ModeloERPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createClaveForanea4CreationTool() {
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				modeloER.modeloER.diagram.part.Messages.ClaveForanea4CreationTool_title,
-				modeloER.modeloER.diagram.part.Messages.ClaveForanea4CreationTool_desc,
-				Collections.singletonList(modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClaveForanea_2010));
-		entry.setId("createClaveForanea4CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(modeloER.modeloER.diagram.part.ModeloERDiagramEditorPlugin
-				.findImageDescriptor("/ModeloER.edit/icons/full/obj16/AtributoClaveForaneaIcon.svg")); //$NON-NLS-1$
-		entry.setLargeIcon(modeloER.modeloER.diagram.part.ModeloERDiagramEditorPlugin
-				.findImageDescriptor("/ModeloER.edit/icons/full/obj16/AtributoClaveForaneaIcon.svg")); //$NON-NLS-1$
-		return entry;
-	}
-
-	/**
-	* @generated
-	*/
-	private ToolEntry createClavePrimariaForanea5CreationTool() {
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				modeloER.modeloER.diagram.part.Messages.ClavePrimariaForanea5CreationTool_title,
-				modeloER.modeloER.diagram.part.Messages.ClavePrimariaForanea5CreationTool_desc,
-				Collections.singletonList(
-						modeloER.modeloER.diagram.providers.ModeloERElementTypes.ClavePrimariaForanea_2009));
-		entry.setId("createClavePrimariaForanea5CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(modeloER.modeloER.diagram.part.ModeloERDiagramEditorPlugin
-				.findImageDescriptor("/ModeloER.edit/icons/full/obj16/AtributoClavePrimariaForaneaIcon.svg")); //$NON-NLS-1$
-		entry.setLargeIcon(modeloER.modeloER.diagram.part.ModeloERDiagramEditorPlugin
-				.findImageDescriptor("/ModeloER.edit/icons/full/obj16/AtributoClavePrimariaForaneaIcon.svg")); //$NON-NLS-1$
-		return entry;
-	}
-
-	/**
-	* @generated
-	*/
-	private ToolEntry createAtributo6CreationTool() {
+	private ToolEntry createAtributo4CreationTool() {
 		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoSimple_2004);
-		types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoCompuesto_2005);
+		types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoSimple_2003);
+		types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoCompuesto_2004);
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				modeloER.modeloER.diagram.part.Messages.Atributo6CreationTool_title,
-				modeloER.modeloER.diagram.part.Messages.Atributo6CreationTool_desc, types);
-		entry.setId("createAtributo6CreationTool"); //$NON-NLS-1$
+				modeloER.modeloER.diagram.part.Messages.Atributo4CreationTool_title,
+				modeloER.modeloER.diagram.part.Messages.Atributo4CreationTool_desc, types);
+		entry.setId("createAtributo4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(modeloER.modeloER.diagram.part.ModeloERDiagramEditorPlugin
 				.findImageDescriptor("/ModeloER.edit/icons/full/obj16/AtributoIcon.svg")); //$NON-NLS-1$
 		entry.setLargeIcon(modeloER.modeloER.diagram.part.ModeloERDiagramEditorPlugin
 				.findImageDescriptor("/ModeloER.edit/icons/full/obj16/AtributoIcon.svg")); //$NON-NLS-1$
-		return entry;
-	}
-
-	/**
-	* @generated
-	*/
-	private ToolEntry createAtributoDerivadoClavePrimaria7CreationTool() {
-		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
-				modeloER.modeloER.diagram.part.Messages.AtributoDerivadoClavePrimaria7CreationTool_title,
-				modeloER.modeloER.diagram.part.Messages.AtributoDerivadoClavePrimaria7CreationTool_desc,
-				Collections.singletonList(
-						modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoClavePrimaria_2003));
-		entry.setId("createAtributoDerivadoClavePrimaria7CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(modeloER.modeloER.diagram.part.ModeloERDiagramEditorPlugin
-				.findImageDescriptor("/ModeloER.edit/icons/full/obj16/AtributoDerivadoClavePrimariaIcon.svg")); //$NON-NLS-1$
-		entry.setLargeIcon(modeloER.modeloER.diagram.part.ModeloERDiagramEditorPlugin
-				.findImageDescriptor("/ModeloER.edit/icons/full/obj16/AtributoDerivadoClavePrimariaIcon.svg")); //$NON-NLS-1$
 		return entry;
 	}
 
@@ -197,7 +144,7 @@ public class ModeloERPaletteFactory {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				modeloER.modeloER.diagram.part.Messages.Herencia1CreationTool_title,
 				modeloER.modeloER.diagram.part.Messages.Herencia1CreationTool_desc,
-				Collections.singletonList(modeloER.modeloER.diagram.providers.ModeloERElementTypes.Herencia_2011));
+				Collections.singletonList(modeloER.modeloER.diagram.providers.ModeloERElementTypes.Herencia_2008));
 		entry.setId("createHerencia1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(modeloER.modeloER.diagram.part.ModeloERDiagramEditorPlugin
 				.findImageDescriptor("/ModeloER.edit/icons/full/obj16/HerenciaIcon.svg")); //$NON-NLS-1$
@@ -213,7 +160,7 @@ public class ModeloERPaletteFactory {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				modeloER.modeloER.diagram.part.Messages.RelacionTipoDebil2CreationTool_title,
 				modeloER.modeloER.diagram.part.Messages.RelacionTipoDebil2CreationTool_desc, Collections.singletonList(
-						modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoDebil_2006));
+						modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoDebil_2005));
 		entry.setId("createRelacionTipoDebil2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(modeloER.modeloER.diagram.part.ModeloERDiagramEditorPlugin
 				.findImageDescriptor("/ModeloER.edit/icons/full/obj16/VinculoDebilIcon.svg")); //$NON-NLS-1$
@@ -229,7 +176,7 @@ public class ModeloERPaletteFactory {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				modeloER.modeloER.diagram.part.Messages.RelacionTipoFuerte3CreationTool_title,
 				modeloER.modeloER.diagram.part.Messages.RelacionTipoFuerte3CreationTool_desc, Collections.singletonList(
-						modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoFuerte_2007));
+						modeloER.modeloER.diagram.providers.ModeloERElementTypes.RelacionTipoFuerte_2006));
 		entry.setId("createRelacionTipoFuerte3CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(modeloER.modeloER.diagram.part.ModeloERDiagramEditorPlugin
 				.findImageDescriptor("/ModeloER.edit/icons/full/obj16/VinculoIcon.svg")); //$NON-NLS-1$
@@ -245,7 +192,7 @@ public class ModeloERPaletteFactory {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				modeloER.modeloER.diagram.part.Messages.Entidad4CreationTool_title,
 				modeloER.modeloER.diagram.part.Messages.Entidad4CreationTool_desc,
-				Collections.singletonList(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2012));
+				Collections.singletonList(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadFuerte_2009));
 		entry.setId("createEntidad4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(modeloER.modeloER.diagram.part.ModeloERDiagramEditorPlugin
 				.findImageDescriptor("/ModeloER.edit/icons/full/obj16/EntidadIcon.svg")); //$NON-NLS-1$
@@ -261,7 +208,7 @@ public class ModeloERPaletteFactory {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				modeloER.modeloER.diagram.part.Messages.EntidadDebil5CreationTool_title,
 				modeloER.modeloER.diagram.part.Messages.EntidadDebil5CreationTool_desc,
-				Collections.singletonList(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2013));
+				Collections.singletonList(modeloER.modeloER.diagram.providers.ModeloERElementTypes.EntidadDebil_2010));
 		entry.setId("createEntidadDebil5CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(modeloER.modeloER.diagram.part.ModeloERDiagramEditorPlugin
 				.findImageDescriptor("/ModeloER.edit/icons/full/obj16/EntidadDebilIcon.svg")); //$NON-NLS-1$
@@ -329,12 +276,11 @@ public class ModeloERPaletteFactory {
 	* @generated
 	*/
 	private ToolEntry createRelacionLineaDiscontinua4CreationTool() {
-		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
-		types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoEntidad_4008);
-		types.add(modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoEntidad_4009);
 		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(
 				modeloER.modeloER.diagram.part.Messages.RelacionLineaDiscontinua4CreationTool_title,
-				modeloER.modeloER.diagram.part.Messages.RelacionLineaDiscontinua4CreationTool_desc, types);
+				modeloER.modeloER.diagram.part.Messages.RelacionLineaDiscontinua4CreationTool_desc,
+				Collections.singletonList(
+						modeloER.modeloER.diagram.providers.ModeloERElementTypes.AtributoDerivadoEntidad_4008));
 		entry.setId("createRelacionLineaDiscontinua4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(modeloER.modeloER.diagram.part.ModeloERDiagramEditorPlugin
 				.findImageDescriptor("/ModeloER.edit/icons/full/obj16/RelacionAtributoDerivado.svg")); //$NON-NLS-1$
