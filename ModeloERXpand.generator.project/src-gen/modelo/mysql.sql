@@ -118,15 +118,19 @@ CREATE TABLE Entidad2-Debil {
 	
 	
 	
+	
+	
+		
 		
 
 
+(2)
 
 
 
-
- 
-
+	 
+	
+		
 ALTER TABLE Carnet
 	
 	ADD clavePrimariaConductor_Conductor 
@@ -136,6 +140,8 @@ ALTER TABLE Carnet
 	FOREIGN KEY (clavePrimariaConductor_Conductor)
 		REFERENCES Conductor(clavePrimariaConductor)
 
+
+		
 	
 
 
@@ -143,44 +149,19 @@ ALTER TABLE Carnet
 
 
 
-
-
-
-
-
-
-
- 
-
-ALTER TABLE Carnet
+		
 	
-	ADD clavePrimariaConductor_Conductor 
-		int,
-
-	
-	FOREIGN KEY (clavePrimariaConductor_Conductor)
-		REFERENCES Conductor(clavePrimariaConductor)
-
-	
-
-
-
-
-
-
-
-	
-	
-	
+		
 		
 
 
+(2)
 
 
 
-
- 
-
+	 
+	
+		
 ALTER TABLE Conductor
 	
 	ADD clavePrimariaAuto_Auto 
@@ -190,6 +171,8 @@ ALTER TABLE Conductor
 	FOREIGN KEY (clavePrimariaAuto_Auto)
 		REFERENCES Auto(clavePrimariaAuto)
 
+
+		
 	
 
 
@@ -197,45 +180,40 @@ ALTER TABLE Conductor
 
 
 
-
-
-
-
-
-
-
- 
-
-ALTER TABLE Conductor
+		
 	
-	ADD clavePrimariaAuto_Auto 
-		varchar,
-
-	
-	FOREIGN KEY (clavePrimariaAuto_Auto)
-		REFERENCES Auto(clavePrimariaAuto)
-
-	
-
-
-
-
-
-
-
-	
-	
-	
-	
-	
+		
 		
 
 
+(2)
+
+
+
+	 
+	
+		
+ALTER TABLE Entidad2-Debil
+	
+	ADD nombrePK_Entidad1-Fuerte 
+		varchar,
+
+	
+	FOREIGN KEY (nombrePK_Entidad1-Fuerte)
+		REFERENCES Entidad1-Fuerte(nombrePK)
+
+
+		
+	
 
 
 
 
 
+
+		
+	
+	
 	
 	
 	

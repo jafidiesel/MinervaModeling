@@ -9,36 +9,26 @@
 	«EXPAND creacionEntidad FOREACH entidaddebilDelDiagrama»
 	
 	«REM»Relaciones: obtiene todas las EntidadRelaciones de la misma Relacion y las pasa a relacionEntidades (DEFINE)«ENDREM»
-	«FOREACH relacionesTipofuerteDelDiagrama AS relacionFuerte»
-	«LET entidadesRelacionesFuertesDelDiagrama.select(e|e.relacionERLink == relacionFuerte) AS entidadRelaciones»
-		«EXPAND relacionEntidades(entidadRelaciones) FOREACH entidadRelaciones»
-	«ENDLET»
-	«ENDFOREACH»
 	
-	«FOREACH relacionesTipodebilDelDiagrama AS relacionDebil»
-	«LET entidadesRelacionesDebilesDelDiagrama.select(e|e.relacionERLink == relacionDebil) AS entidadRelaciones»
-		«EXPAND relacionEntidades(entidadRelaciones) FOREACH entidadRelaciones»
-	«ENDLET»
+	«REM»Une Relaciones fuertes y débiles, y EntidadRelaciones para tratarlas por igual«ENDREM»
+	«LET relacionesTipofuerteDelDiagrama.union(relacionesTipodebilDelDiagrama) AS relacionesDelDiagrama»
+	«FOREACH relacionesDelDiagrama AS relacionDelDiagrama»
+		«LET entidadesRelacionesFuertesDelDiagrama
+			.typeSelect(EntidadRelacion)
+			.union(entidadesRelacionesDebilesDelDiagrama.typeSelect(EntidadRelacion))
+			.select(e|e.relacionERLink == relacionDelDiagrama)
+			 AS entidadRelaciones»
+		«EXPAND relacionEntidades FOR entidadRelaciones.toList()»
+		«ENDLET»
 	«ENDFOREACH»
+	«ENDLET»
 	
 	«REM»Herencias«ENDREM»
 	«EXPAND relacionHerencia FOREACH herenciasDelDiagrama»
 «ENDFILE»
 «ENDDEFINE»
 
-«REM»Creacion de entidad: CREATE TABLE; y atributos multivaluados como tablas«ENDREM»
-«REM»Primero crea los atributos multivaluados como entidades, luego crea las entidades propiamente dichas y luego las relaciona«ENDREM»
-«DEFINE creacionEntidad FOR Entidad»
-	«EXPAND creacionAtributoMultivaluado FOREACH atributosEntidad.typeSelect(AtributoMultivaluado)»
-/* Entidad */
-CREATE TABLE «this.nombreEntidad» {
-	«EXPAND atributoEntidad FOREACH atributosEntidad»
-	«EXPAND clavePrimaria FOREACH atributosEntidad.typeSelect(ClavePrimaria)»
-	«EXPAND atributoMultivaluado FOREACH atributosEntidad.typeSelect(AtributoMultivaluado)»
-}
-«ENDDEFINE»
-
-«REM»Atributos«ENDREM»
+«REM»--- ATRIBUTOS ---«ENDREM»
 «DEFINE atributoEntidad FOR Atributo»
 	«this.nombreAtributo» «this.tipoDatoAtributo»«IF this.tipoDatoAtributo.toString() == "varchar"»(255)«ENDIF»«IF !this.nuloAtributo == true» NOT NULL «ENDIF»,
 «ENDDEFINE»
@@ -51,6 +41,30 @@ CREATE TABLE «this.nombreEntidad» {
 	FOREIGN KEY («this.nombreAtributo») REFERENCES «this.nombreAtributo.toFirstUpper()»(OIDMultivaluado) 
 «ENDDEFINE»
 
+«DEFINE claveForanea(String nombreEntidad) FOR ClavePrimaria»
+	ADD «this.nombreAtributo»_«nombreEntidad» «REM»Agrega un sufijo«ENDREM»
+		«this.tipoDatoAtributo»,
+«ENDDEFINE»
+
+«DEFINE claveForaneaReferencias(String nombreEntidad) FOR ClavePrimaria»
+	FOREIGN KEY («this.nombreAtributo»_«nombreEntidad»)
+		REFERENCES «nombreEntidad»(«this.nombreAtributo»)
+«ENDDEFINE»
+«REM»---------«ENDREM»
+
+«REM»--- CREACIONES ---«ENDREM»
+«REM»Creacion de entidad: CREATE TABLE; y atributos multivaluados como tablas«ENDREM»
+«REM»Primero crea los atributos multivaluados como entidades, luego crea las entidades propiamente dichas y luego las relaciona«ENDREM»
+«DEFINE creacionEntidad FOR Entidad»
+	«EXPAND creacionAtributoMultivaluado FOREACH atributosEntidad.typeSelect(AtributoMultivaluado)»
+/* Entidad */
+CREATE TABLE «this.nombreEntidad» {
+	«EXPAND atributoEntidad FOREACH atributosEntidad»
+	«EXPAND clavePrimaria FOREACH atributosEntidad.typeSelect(ClavePrimaria)»
+	«EXPAND atributoMultivaluado FOREACH atributosEntidad.typeSelect(AtributoMultivaluado)»
+}
+«ENDDEFINE»
+
 «REM»Atributos multivaluados como tablas (entidades) apartes«ENDREM»
 «DEFINE creacionAtributoMultivaluado FOR AtributoMultivaluado»
 /* Atributo Multivaluado */
@@ -61,52 +75,75 @@ CREATE TABLE «this.nombreAtributo.toFirstUpper()» {
 }
 «ENDDEFINE»
 
-«REM»Relaciones: se pasan todas las EntidadRelaciones de la misma Relación«ENDREM»
-«DEFINE relacionEntidades(List[EntidadRelacion] entidadRelaciones) FOR EntidadRelacion»
-«REM»Relación entre 2 Entidades«ENDREM»
-«IF entidadRelaciones.size == 2»
-
-«LET entidadRelaciones.first() AS entidadRelacion1»
-«LET entidadRelaciones.last() AS entidadRelacion2»
-
-	«IF entidadRelacion1.limiteSuperiorER == "1" && entidadRelacion2.limiteSuperiorER == "1"» «REM»1 a 1«ENDREM»
-	
-	ALTER TABLE «entidadRelacion2.entidadERLink.nombreEntidad»
-		«EXPAND claveForanea(entidadRelacion1.entidadERLink.nombreEntidad) FOREACH entidadRelacion1.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
-		«EXPAND claveForaneaReferencias(entidadRelacion1.entidadERLink.nombreEntidad) FOREACH entidadRelacion1.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
-		
-	«ELSEIF entidadRelacion1.limiteSuperiorER == "1" && entidadRelacion2.limiteSuperiorER == "*"» «REM»1 a N«ENDREM»
-	
-	ALTER TABLE «entidadRelacion2.entidadERLink.nombreEntidad»
-		«EXPAND claveForanea(entidadRelacion1.entidadERLink.nombreEntidad) FOREACH entidadRelacion1.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
-		«EXPAND claveForaneaReferencias(entidadRelacion1.entidadERLink.nombreEntidad) FOREACH entidadRelacion1.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
-		
-	«ELSEIF entidadRelacion1.limiteSuperiorER == "*" && entidadRelacion2.limiteSuperiorER == "1"» «REM»N a 1«ENDREM»
-	
-	ALTER TABLE «entidadRelacion1.entidadERLink.nombreEntidad»
-		«EXPAND claveForanea(entidadRelacion2.entidadERLink.nombreEntidad) FOREACH entidadRelacion2.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
-		«EXPAND claveForaneaReferencias(entidadRelacion2.entidadERLink.nombreEntidad) FOREACH entidadRelacion2.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
-		
-	«ELSEIF entidadRelacion1.limiteSuperiorER == "*" && entidadRelacion2.limiteSuperiorER == "*"» «REM»N a N«ENDREM»
-	
-	/* Nueva tabla «entidadRelacion1.entidadERLink.nombreEntidad»«entidadRelacion2.entidadERLink.nombreEntidad» */
-	
-	«ENDIF»
-
+«REM»Creación de tabla por relación N a N«ENDREM»
+«REM»Toma las claves primarias de ambas entidades como atributos y a su vez las coloca como primarias y foráneas«ENDREM»
+«DEFINE creacionEntidadIntermedia(Entidad entidad1) FOR Entidad»
+«LET this AS entidad2»
+/* Entidad intermedia */
+CREATE TABLE «entidad1.nombreEntidad»_«entidad2.nombreEntidad» {
+	«EXPAND atributoEntidad FOREACH entidad1.atributosEntidad.typeSelect(ClavePrimaria)»
+	«EXPAND atributoEntidad FOREACH entidad2.atributosEntidad.typeSelect(ClavePrimaria)»
+	«EXPAND clavePrimaria FOREACH entidad1.atributosEntidad.typeSelect(ClavePrimaria)»
+	«EXPAND clavePrimaria FOREACH entidad2.atributosEntidad.typeSelect(ClavePrimaria)»
+}
 «ENDLET»
-«ENDLET»
+«ENDDEFINE»
+«REM»----------«ENDREM»
 
-«ELSE»
-
-«FOREACH entidadRelaciones.reject(e|e == this) AS relacion»
-ALTER TABLE «relacion.entidadERLink.nombreEntidad»
-	«EXPAND claveForanea(this.entidadERLink.nombreEntidad) FOREACH this.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
-	«EXPAND claveForaneaReferencias(this.entidadERLink.nombreEntidad) FOREACH this.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
-«ENDFOREACH»
-
-«ENDIF»
+«REM»--- RELACIONES ---«ENDREM»
+«REM»Entidad --> entidad2; Entidad con clave foránea de entidad2«ENDREM»
+«DEFINE relacionEntreEntidades(Entidad entidad2) FOR Entidad»
+ALTER TABLE «this.nombreEntidad»
+	«EXPAND claveForanea(entidad2.nombreEntidad) FOREACH entidad2.atributosEntidad.typeSelect(ClavePrimaria)»
+	«EXPAND claveForaneaReferencias(entidad2.nombreEntidad) FOREACH entidad2.atributosEntidad.typeSelect(ClavePrimaria)»
 «ENDDEFINE»
 
+«REM»Relaciones: se pasan todas las EntidadRelaciones de la misma Relación«ENDREM»
+«DEFINE relacionEntidades FOR List[EntidadRelacion]»
+
+	«IF this.size == 2»
+	
+	«REM»Relación entre 2 Entidades con la misma Relacion«ENDREM»
+	«LET this.first() AS entidadRelacion1»
+	«LET this.last() AS entidadRelacion2»
+	
+		«IF entidadRelacion1.limiteSuperiorER == "1" && entidadRelacion2.limiteSuperiorER == "1"» «REM»1 a 1«ENDREM»
+		
+			«EXPAND relacionEntreEntidades(entidadRelacion1.entidadERLink) FOR entidadRelacion2.entidadERLink»
+			
+		«ELSEIF entidadRelacion1.limiteSuperiorER == "1" && entidadRelacion2.limiteSuperiorER == "*"» «REM»1 a N«ENDREM»
+		
+			«EXPAND relacionEntreEntidades(entidadRelacion1.entidadERLink) FOR entidadRelacion2.entidadERLink»
+			
+		«ELSEIF entidadRelacion1.limiteSuperiorER == "*" && entidadRelacion2.limiteSuperiorER == "1"» «REM»N a 1«ENDREM»
+		
+			«EXPAND relacionEntreEntidades(entidadRelacion2.entidadERLink) FOR entidadRelacion1.entidadERLink»
+			
+		«ELSEIF entidadRelacion1.limiteSuperiorER == "*" && entidadRelacion2.limiteSuperiorER == "*"» «REM»N a N«ENDREM»
+		
+	/* Entidad por Relacion N-N */
+	CREATE TABLE «this.nombreEntidad» {
+		
+	}
+	
+		«ENDIF»
+	
+	«ENDLET»
+	«ENDLET»
+	
+	«ELSE»
+	
+	«REM»Relación entre más de 2 Entidades con la misma Relacion«ENDREM»
+	«REM»
+	«FOREACH entidadRelaciones.reject(e|e == this) AS relacion»
+	ALTER TABLE «relacion.entidadERLink.nombreEntidad»
+		«EXPAND claveForanea(this.entidadERLink.nombreEntidad) FOREACH this.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
+		«EXPAND claveForaneaReferencias(this.entidadERLink.nombreEntidad) FOREACH this.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
+	«ENDFOREACH»
+	«ENDREM»
+	
+	«ENDIF»
+«ENDDEFINE»
 
 «DEFINE relacionHerencia FOR Herencia»
 «LET this.linkHerenciaPadre.herenciaPadreEntidadOrigen AS entidadPadre» «REM»La vieja confiable: variables locales«ENDREM»
@@ -118,16 +155,8 @@ ALTER TABLE «entidadHijo.nombreEntidad»
 «ENDLET»
 «ENDLET»
 «ENDDEFINE»
+«REM»---------«ENDREM»
 
-«DEFINE claveForanea(String nombreEntidad) FOR ClavePrimaria»
-	ADD «this.nombreAtributo»_«nombreEntidad» «REM»Agrega un sufijo«ENDREM»
-		«this.tipoDatoAtributo»,
-«ENDDEFINE»
-
-«DEFINE claveForaneaReferencias(String nombreEntidad) FOR ClavePrimaria»
-	FOREIGN KEY («this.nombreAtributo»_«nombreEntidad»)
-		REFERENCES «nombreEntidad»(«this.nombreAtributo»)
-«ENDDEFINE»
 «REM»
 A expand se le pueden pasar parametros:
 «EXPAND definitionName [(parameterList)]
