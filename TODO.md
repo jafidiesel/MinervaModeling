@@ -42,3 +42,13 @@ puede seguir lo mismo que son herencia. En xpand está hecho con herencia con
 
 - Relación bidireccional entre LinkHerenciaPadre y LinkHerenciaHijo con
   Herencia.
+
+## Consideraciones
+
+- Para establecer las relaciones se está ignorando si son entidades y tipos de
+  relaciones débiles o fuerte. Es decir, se están considerando ambas como
+  simples entidades y relaciones, respectivamente.
+
+- Para establecer la cardinalidad de las relaciones, se está ignorando
+  límiteInferior, y se está utilizando solamente límite superior, es decir, si
+  la cardinalidad es 1 ó N dentro de la relación.

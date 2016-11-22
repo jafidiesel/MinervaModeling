@@ -8,24 +8,15 @@
 	«EXPAND creacionEntidad FOREACH entidadfuerteDelDiagrama»
 	«EXPAND creacionEntidad FOREACH entidaddebilDelDiagrama»
 	
-	«REM»Relacionar tablas a través de claves primarias y foráneas«ENDREM»
-	
+	«REM»Relaciones: obtiene todas las EntidadRelaciones de la misma Relacion y las pasa a relacionEntidades (DEFINE)«ENDREM»
 	«FOREACH relacionesTipofuerteDelDiagrama.union(relacionesTipodebilDelDiagrama) AS relacion»
 	«LET entidadesRelacionesFuertesDelDiagrama.union(entidadesRelacionesDebilesDelDiagrama).select(e|e.relacionERLink == relacion) AS entidadRelaciones»
-		/* Entidades relacionadas:
-		«FOREACH entidadRelaciones AS entidadRelacion»
-		- «entidadRelacion.entidadERLink.nombreEntidad»
-		«ENDFOREACH»
-		*/
+		«EXPAND relacionEntidades((List[EntidadRelacion])entidadRelaciones) FOREACH entidadRelaciones»
 	«ENDLET»
 	«ENDFOREACH»
 	
-	«REM»
-	«EXPAND entidadRelacion FOREACH entidadesRelacionesFuertesDelDiagrama»
-	«EXPAND entidadRelacion FOREACH entidadesRelacionesDebilesDelDiagrama»
-	
+	«REM»Herencias«ENDREM»
 	«EXPAND relacionHerencia FOREACH herenciasDelDiagrama»
-	«ENDREM»
 «ENDFILE»
 «ENDDEFINE»
 
@@ -64,15 +55,15 @@ CREATE TABLE «this.nombreAtributo» {
 }
 «ENDDEFINE»
 
-«REM»Relaciones«ENDREM»
-«DEFINE entidadRelacion FOR EntidadRelacion»
-«REM»Posibilidades: 1-1, 1-N, N-1, N-N«ENDREM»
-/* Clave primaria de «this.entidadERLink.nombreEntidad» */
-/* Relacion «this.limiteInferiorER»-«this.limiteSuperiorER» */
-	
-«ENDDEFINE»
-
-«DEFINE relacionEntidades FOR Entidad»
+«REM»Relaciones: se pasan todas las EntidadRelaciones de la misma Relación«ENDREM»
+«DEFINE relacionEntidades(List[EntidadRelacion] entidadRelaciones) FOR EntidadRelacion»
+	«FOREACH entidadRelaciones.reject(e|e == this) AS relacion»
+ALTER TABLE «relacion.entidadERLink.nombreEntidad»
+	ADD «this.entidadERLink.atributosEntidad.typeSelect(ClaveForanea).first().nombreAtributo»
+		«this.entidadERLink.atributosEntidad.typeSelect(ClaveForanea).first().tipoDatoAtributo»,
+	FOREIGN KEY («this.entidadERLink.atributosEntidad.typeSelect(ClaveForanea).first().nombreAtributo»)
+		REFERENCES «relacion.entidadERLink.nombreEntidad»(«relacion.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria).first().nombreAtributo»)
+	«ENDFOREACH»
 «ENDDEFINE»
 
 «DEFINE relacionHerencia FOR Herencia»
