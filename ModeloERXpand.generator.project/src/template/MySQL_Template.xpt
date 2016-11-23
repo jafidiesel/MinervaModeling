@@ -38,6 +38,14 @@
 	«this.nombreAtributo» «this.tipoDatoAtributo»«IF this.tipoDatoAtributo.toString() == "varchar"»(255)«ENDIF»«IF !this.nuloAtributo == true» NOT NULL «ENDIF»,
 «ENDDEFINE»
 
+«DEFINE atributoCompuesto FOR AtributoCompuesto»
+	/* AtributoCompuesto: «this.nombreAtributo» */
+	«FOREACH ((Diagrama)eRootContainer).linkasacDelDiagrama.select(e|e.atributocompuestoOrigen == this) AS linkASAC» «REM»Funcionó a la primera, lloré de alegría«ENDREM»
+	«EXPAND atributoEntidad FOR linkASAC.atributosimpleDestino»
+	«ENDFOREACH»
+	/* ---- */
+«ENDDEFINE»
+
 «DEFINE clavePrimaria FOR ClavePrimaria»
 	PRIMARY KEY («this.nombreAtributo»)
 «ENDDEFINE»
@@ -63,7 +71,8 @@
 	«EXPAND creacionAtributoMultivaluado FOREACH atributosEntidad.typeSelect(AtributoMultivaluado)»
 /* Entidad */
 CREATE TABLE «this.nombreEntidad» {
-	«EXPAND atributoEntidad FOREACH atributosEntidad»
+	«EXPAND atributoEntidad FOREACH atributosEntidad.reject(e|e.metaType.isAssignableFrom(AtributoCompuesto))»
+	«EXPAND atributoCompuesto FOREACH atributosEntidad.typeSelect(AtributoCompuesto)»
 	«EXPAND clavePrimaria FOREACH atributosEntidad.typeSelect(ClavePrimaria)»
 	«EXPAND atributoMultivaluado FOREACH atributosEntidad.typeSelect(AtributoMultivaluado)»
 }
@@ -162,20 +171,6 @@ ALTER TABLE «entidadHijo.nombreEntidad»
 «ENDLET»
 
 «ENDDEFINE»
-
-«REM»
-«DEFINE relacionHerencia FOR Herencia»
-«LET this.linkHerenciaPadre.herenciaPadreEntidadOrigen AS entidadPadre»
-«LET this.linkHerenciaHijo.herenciaHijoEntidadOrigen AS entidadHijo»
-/* Herencia entre «entidadPadre.nombreEntidad» y «entidadHijo.nombreEntidad» */
-ALTER TABLE «entidadHijo.nombreEntidad»
-	«EXPAND claveForanea(entidadPadre.nombreEntidad) FOREACH entidadPadre.atributosEntidad.typeSelect(ClavePrimaria)»
-	«EXPAND claveForaneaReferencias(entidadPadre.nombreEntidad) FOREACH entidadPadre.atributosEntidad.typeSelect(ClavePrimaria)»
-«ENDLET»
-«ENDLET»
-«ENDDEFINE»
-«ENDREM»
-
 «REM»---------«ENDREM»
 
 «REM»

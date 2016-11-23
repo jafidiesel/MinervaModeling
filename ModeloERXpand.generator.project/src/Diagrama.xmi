@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <modeloER:Diagrama xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:modeloER="http://www.example.org/modeloER" xsi:schemaLocation="http://www.example.org/modeloER metamodel/modeloER.ecore">
+  <atributosDelDiagrama xsi:type="modeloER:AtributoSimple" nombreAtributo="CP"/>
+  <atributosDelDiagrama xsi:type="modeloER:AtributoSimple" nombreAtributo="Calle"/>
+  <atributosDelDiagrama xsi:type="modeloER:AtributoSimple" nombreAtributo="Localidad"/>
   <herenciasDelDiagrama/>
   <relacionesTipodebilDelDiagrama nombreRelacion="relcionTipoDebil1"/>
   <relacionesTipofuerteDelDiagrama nombreRelacion="Tiene"/>
@@ -39,11 +42,17 @@
   <entidadfuerteDelDiagrama nombreEntidad="Muchos">
     <atributosEntidad xsi:type="modeloER:ClavePrimaria" nombreAtributo="cpMuchos" tipoDatoAtributo="int"/>
   </entidadfuerteDelDiagrama>
+  <entidadfuerteDelDiagrama nombreEntidad="EntidadConAtrCompuesto">
+    <atributosEntidad xsi:type="modeloER:AtributoCompuesto" nombreAtributo="Direccion"/>
+  </entidadfuerteDelDiagrama>
   <entidaddebilDelDiagrama nombreEntidad="EntidadDebil">
     <atributosEntidad nombreAtributo="nombreAtributoEntidad1-Fuerte" nuloAtributo="true" tipoDatoAtributo="Float"/>
     <atributosEntidad xsi:type="modeloER:ClavePrimaria" nombreAtributo="7nombreClavePrimaria"/>
     <atributosEntidad xsi:type="modeloER:AtributoMultivaluado" nombreAtributo="7nombreAtributoMultivaluado"/>
   </entidaddebilDelDiagrama>
+  <linkasacDelDiagrama atributocompuestoOrigen="//@entidadfuerteDelDiagrama.8/@atributosEntidad.0" atributosimpleDestino="//@atributosDelDiagrama.0"/>
+  <linkasacDelDiagrama atributocompuestoOrigen="//@entidadfuerteDelDiagrama.8/@atributosEntidad.0" atributosimpleDestino="//@atributosDelDiagrama.1"/>
+  <linkasacDelDiagrama atributocompuestoOrigen="//@entidadfuerteDelDiagrama.8/@atributosEntidad.0" atributosimpleDestino="//@atributosDelDiagrama.2"/>
   <linkherenciapadreDiagrama linkHerenciaPadreHerenciaDestino="//@herenciasDelDiagrama.0" herenciaPadreEntidadOrigen="//@entidadfuerteDelDiagrama.1"/>
   <linkherenciahijoDiagrama herenciaHijoHerenciaDestino="//@herenciasDelDiagrama.0" herenciaHijoEntidadOrigen="//@entidadfuerteDelDiagrama.2"/>
 </modeloER:Diagrama>

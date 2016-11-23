@@ -17,6 +17,7 @@ CREATE TABLE EntidadFuerte {
 	nombreAtributoMultivaluado varchar(255) NOT NULL ,
 
 	
+	
 	PRIMARY KEY (nombrePK)
 
 	
@@ -33,6 +34,7 @@ CREATE TABLE Padre {
 	nombre varchar(255),
 
 	
+	
 	PRIMARY KEY (clavePrimariaPadre)
 
 	
@@ -44,6 +46,7 @@ CREATE TABLE Hijo {
 	
 	clavePrimariaHijo int NOT NULL ,
 
+	
 	
 	PRIMARY KEY (clavePrimariaHijo)
 
@@ -57,6 +60,7 @@ CREATE TABLE Conductor {
 	clavePrimariaConductor int NOT NULL ,
 
 	
+	
 	PRIMARY KEY (clavePrimariaConductor)
 
 	
@@ -68,6 +72,7 @@ CREATE TABLE Carnet {
 	
 	clavePrimariaCarnet varchar(255) NOT NULL ,
 
+	
 	
 	PRIMARY KEY (clavePrimariaCarnet)
 
@@ -81,6 +86,7 @@ CREATE TABLE Auto {
 	clavePrimariaAuto varchar(255) NOT NULL ,
 
 	
+	
 	PRIMARY KEY (clavePrimariaAuto)
 
 	
@@ -92,6 +98,7 @@ CREATE TABLE Algunos {
 	
 	cpAlgunos Char NOT NULL ,
 
+	
 	
 	PRIMARY KEY (cpAlgunos)
 
@@ -105,8 +112,34 @@ CREATE TABLE Muchos {
 	cpMuchos int NOT NULL ,
 
 	
+	
 	PRIMARY KEY (cpMuchos)
 
+	
+}
+
+	
+/* Entidad */
+CREATE TABLE EntidadConAtrCompuesto {
+	
+	
+	/* AtributoCompuesto: Direccion */
+	 
+	
+	CP varchar(255) NOT NULL ,
+
+	 
+	
+	Calle varchar(255) NOT NULL ,
+
+	 
+	
+	Localidad varchar(255) NOT NULL ,
+
+	
+	/* ---- */
+
+	
 	
 }
 
@@ -122,12 +155,11 @@ CREATE TABLE 7nombreAtributoMultivaluado {
 /* Entidad */
 CREATE TABLE EntidadDebil {
 	
-	nombreAtributoEntidad1-Fuerte Float,
-
 	7nombreClavePrimaria varchar(255) NOT NULL ,
 
 	7nombreAtributoMultivaluado varchar(255) NOT NULL ,
 
+	
 	
 	PRIMARY KEY (7nombreClavePrimaria)
 
