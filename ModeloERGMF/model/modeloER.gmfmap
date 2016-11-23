@@ -491,11 +491,11 @@
         id="4"
         name="ValidarEntidadRelacion">
       <audits
-          name="ValidadLimites"
+          name="ValidarLimites"
           id="4.1"
           message="El límite inferiory superior no deben estar vacío">
         <rule
-            body="self.limiteInferiorER = '*' or (not(self.limiteInferiorER.toInteger().oclIsInvalid())) and self.limiteSuperiorER = '*' or (not(self.limiteSuperiorER.toInteger().oclIsInvalid()))"/>
+            body="self.limiteInferiorER&lt;>'' and self.limiteInferiorER&lt;>null and self.limiteInferiorER = '*' or (not(self.limiteInferiorER.toInteger().oclIsInvalid())) and self.limiteSuperiorER&lt;>'' and self.limiteSuperiorER&lt;>null and self.limiteSuperiorER = '*' or (not(self.limiteSuperiorER.toInteger().oclIsInvalid()))"/>
         <target
             xsi:type="gmfmap:DomainElementTarget">
           <element
@@ -512,7 +512,7 @@
         <target
             xsi:type="gmfmap:DomainElementTarget">
           <element
-              href="../../ModeloER/model/modeloER.ecore#//EntidadRelacion"/>
+              href="../../ModeloER/model/modeloER.ecore#//EntidadDebil"/>
         </target>
       </audits>
     </childContainers>
@@ -541,23 +541,6 @@
             xsi:type="gmfmap:DomainElementTarget">
           <element
               href="../../ModeloER/model/modeloER.ecore#//Relacion"/>
-        </target>
-      </audits>
-    </childContainers>
-    <childContainers
-        id="6"
-        name="ValidarLinkASAC">
-      <audits
-          name="AtributoCompuestoASimple"
-          description="Un atributo compuesto puede tener atributos simples"
-          id="6.1"
-          message="">
-        <rule
-            body="atributocompuestoOrigen.oclIsTypeOf(AtributoCompuesto) implies atributosimpleDestino.oclIsTypeOf(AtributoSimple)"/>
-        <target
-            xsi:type="gmfmap:DomainElementTarget">
-          <element
-              href="../../ModeloER/model/modeloER.ecore#//LinkASAC"/>
         </target>
       </audits>
     </childContainers>

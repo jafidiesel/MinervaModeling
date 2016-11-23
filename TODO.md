@@ -45,8 +45,8 @@ Mismo caso que el item de arriba.
 
 ## OCL
 
-- Agregar restricciones para que las relaciones deban tener, obligatoriamente,
-  límte inferior y límite superior.
+- ~~Agregar restricciones para que las relaciones deban tener, obligatoriamente,
+  límte inferior y límite superior.~~
 - Un atributo debe tener asociada una sola entidad
 - Ídem atributo simple con compuesto 
 - Si Entidadfuerte esta relacionada con RelacionTipoDebil, esa RelacionTipoDebil debe estar relacionada con una EntidadDebil
