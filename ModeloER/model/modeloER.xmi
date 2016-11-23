@@ -5,17 +5,16 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:modeloER="http://www.example.org/modeloER"
     xsi:schemaLocation="http://www.example.org/modeloER modeloER.ecore">
-  <atributosDelDiagrama
-      nombreAtributo=""/>
-  <atributosDelDiagrama
-      xsi:type="modeloER:ClavePrimaria"
-      nombreAtributo="ID"
-      nuloAtributo="true"/>
   <relacionesTipodebilDelDiagrama
       nombreRelacion="tiene"/>
   <relacionesTipofuerteDelDiagrama
       nombreRelacion="">
-    <atributosRelacion/>
+    <atributosRelacion
+        xsi:type="modeloER:AtributoSimple"
+        nombreAtributo="RelTipFuerAtSimp"/>
+    <atributosRelacion
+        xsi:type="modeloER:ClaveForanea"
+        nombreAtributo="RelTipFuerClaFor"/>
   </relacionesTipofuerteDelDiagrama>
   <entidadesRelacionesFuertesDelDiagrama
       limiteInferiorER="2a"/>
