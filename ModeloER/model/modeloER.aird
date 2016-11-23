@@ -823,17 +823,17 @@
           </edges>
           <edges xmi:type="notation:Edge" xmi:id="_q6wIgJ1YEeajM8nnCwUpTg" type="4001" element="_q5ouMJ1YEeajM8nnCwUpTg" source="_ZtUzMJ1YEeajM8nnCwUpTg" target="_Sr3j8IXxEeasGamjbRZAEQ">
             <children xmi:type="notation:Node" xmi:id="_q6xWoJ1YEeajM8nnCwUpTg" type="6001">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q6xWoZ1YEeajM8nnCwUpTg" y="-10"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q6xWoZ1YEeajM8nnCwUpTg" x="-3" y="-10"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_q6xWop1YEeajM8nnCwUpTg" type="6002">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q6xWo51YEeajM8nnCwUpTg" y="10"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q6xWo51YEeajM8nnCwUpTg" x="1" y="10"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_q6x9sJ1YEeajM8nnCwUpTg" type="6003">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q6x9sZ1YEeajM8nnCwUpTg" y="10"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q6x9sZ1YEeajM8nnCwUpTg" x="-1" y="10"/>
             </children>
             <styles xmi:type="notation:ConnectorStyle" xmi:id="_q6wIgZ1YEeajM8nnCwUpTg" routing="Rectilinear"/>
             <styles xmi:type="notation:FontStyle" xmi:id="_q6wIgp1YEeajM8nnCwUpTg" fontColor="7490599" fontName="Noto Sans" fontHeight="8"/>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_q6wIg51YEeajM8nnCwUpTg" points="[0, 0, -112, -140]$[112, 140, 0, 0]"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_q6wIg51YEeajM8nnCwUpTg" points="[0, 7, -84, -98]$[42, 7, -42, -98]$[42, 105, -42, 0]$[84, 105, 0, 0]"/>
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_q6x9sp1YEeajM8nnCwUpTg" id="(1.0,0.40816326530612246)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_q6x9s51YEeajM8nnCwUpTg" id="(0.0,0.6122448979591837)"/>
           </edges>

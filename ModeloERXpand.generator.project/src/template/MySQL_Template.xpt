@@ -23,7 +23,13 @@
 	«ENDLET»
 	
 	«REM»Herencias«ENDREM»
-	«EXPAND relacionHerencia FOREACH herenciasDelDiagrama»
+	«FOREACH herenciasDelDiagrama AS herencia»
+		«LET linkherenciapadreDiagrama.selectFirst(e|e.linkHerenciaPadreHerenciaDestino == herencia) AS padre»
+		«LET linkherenciahijoDiagrama.select(e|e.herenciaHijoHerenciaDestino == herencia) AS hijos»
+			«EXPAND relacionHerencia(padre) FOREACH hijos»
+		«ENDLET»
+		«ENDLET»
+	«ENDFOREACH»
 «ENDFILE»
 «ENDDEFINE»
 
@@ -142,8 +148,24 @@ ALTER TABLE «this.nombreEntidad»
 	«ENDIF»
 «ENDDEFINE»
 
+«DEFINE relacionHerencia(LinkHerenciaPadre linkHerenciaPadre) FOR LinkHerenciaHijo»
+
+«LET this.herenciaHijoEntidadOrigen AS entidadHijo»
+«LET linkHerenciaPadre.herenciaPadreEntidadOrigen AS entidadPadre»
+
+/* Herencia entre «entidadPadre.nombreEntidad» y «entidadHijo.nombreEntidad» */
+ALTER TABLE «entidadHijo.nombreEntidad»
+	«EXPAND claveForanea(entidadPadre.nombreEntidad) FOREACH entidadPadre.atributosEntidad.typeSelect(ClavePrimaria)»
+	«EXPAND claveForaneaReferencias(entidadPadre.nombreEntidad) FOREACH entidadPadre.atributosEntidad.typeSelect(ClavePrimaria)»
+
+«ENDLET»
+«ENDLET»
+
+«ENDDEFINE»
+
+«REM»
 «DEFINE relacionHerencia FOR Herencia»
-«LET this.linkHerenciaPadre.herenciaPadreEntidadOrigen AS entidadPadre» «REM»La vieja confiable: variables locales«ENDREM»
+«LET this.linkHerenciaPadre.herenciaPadreEntidadOrigen AS entidadPadre»
 «LET this.linkHerenciaHijo.herenciaHijoEntidadOrigen AS entidadHijo»
 /* Herencia entre «entidadPadre.nombreEntidad» y «entidadHijo.nombreEntidad» */
 ALTER TABLE «entidadHijo.nombreEntidad»
@@ -152,6 +174,8 @@ ALTER TABLE «entidadHijo.nombreEntidad»
 «ENDLET»
 «ENDLET»
 «ENDDEFINE»
+«ENDREM»
+
 «REM»---------«ENDREM»
 
 «REM»

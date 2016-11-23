@@ -1,140 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<modeloER:Diagrama
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:modeloER="http://www.example.org/modeloER"
-    xsi:schemaLocation="http://www.example.org/modeloER metamodel/modeloER.ecore">
-  <herenciasDelDiagrama
-      linkHerenciaPadre="//@linkherenciapadreDiagrama.0"
-      linkHerenciaHijo="//@linkherenciahijoDiagrama.0"/>
-  <relacionesTipodebilDelDiagrama
-      nombreRelacion="relcionTipoDebil1"/>
-  <relacionesTipofuerteDelDiagrama
-      nombreRelacion="Tiene"/>
-  <relacionesTipofuerteDelDiagrama
-      nombreRelacion="Conduce"/>
-  <relacionesTipofuerteDelDiagrama
-      nombreRelacion="NaN"/>
-  <entidadesRelacionesFuertesDelDiagrama
-      entidadERLink="//@entidadfuerteDelDiagrama.0"
-      relacionERLink="//@relacionesTipodebilDelDiagrama.0"
-      limiteInferiorER="1"
-      limiteSuperiorER="1"/>
-  <entidadesRelacionesFuertesDelDiagrama
-      entidadERLink="//@entidadfuerteDelDiagrama.5"
-      relacionERLink="//@relacionesTipofuerteDelDiagrama.1"
-      limiteInferiorER="1"
-      limiteSuperiorER="1"/>
-  <entidadesRelacionesFuertesDelDiagrama
-      entidadERLink="//@entidadfuerteDelDiagrama.3"
-      relacionERLink="//@relacionesTipofuerteDelDiagrama.1"
-      limiteInferiorER="1"
-      limiteSuperiorER="1"/>
-  <entidadesRelacionesFuertesDelDiagrama
-      entidadERLink="//@entidadfuerteDelDiagrama.3"
-      relacionERLink="//@relacionesTipofuerteDelDiagrama.0"
-      limiteInferiorER="1"
-      limiteSuperiorER="1"/>
-  <entidadesRelacionesFuertesDelDiagrama
-      entidadERLink="//@entidadfuerteDelDiagrama.4"
-      relacionERLink="//@relacionesTipofuerteDelDiagrama.0"
-      limiteInferiorER="1"
-      limiteSuperiorER="1"/>
-  <entidadesRelacionesFuertesDelDiagrama
-      entidadERLink="//@entidadfuerteDelDiagrama.6"
-      relacionERLink="//@relacionesTipofuerteDelDiagrama.2"
-      limiteInferiorER="1"
-      limiteSuperiorER="*"/>
-  <entidadesRelacionesFuertesDelDiagrama
-      entidadERLink="//@entidadfuerteDelDiagrama.7"
-      relacionERLink="//@relacionesTipofuerteDelDiagrama.2"
-      limiteInferiorER="1"
-      limiteSuperiorER="*"/>
-  <entidadesRelacionesDebilesDelDiagrama
-      entidadERLink="//@entidaddebilDelDiagrama.0"
-      relacionERLink="//@relacionesTipodebilDelDiagrama.0"
-      limiteInferiorER="1"
-      limiteSuperiorER="1"/>
-  <entidadfuerteDelDiagrama
-      nombreEntidad="EntidadFuerte">
-    <atributosEntidad
-        xsi:type="modeloER:ClavePrimaria"
-        nombreAtributo="nombrePK"/>
-    <atributosEntidad
-        xsi:type="modeloER:AtributoMultivaluado"
-        nombreAtributo="nombreAtributoMultivaluado"/>
-    <atributosEntidad
-        xsi:type="modeloER:ClaveForanea"
-        nombreAtributo="nombreFK"/>
+<modeloER:Diagrama xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:modeloER="http://www.example.org/modeloER" xsi:schemaLocation="http://www.example.org/modeloER metamodel/modeloER.ecore">
+  <herenciasDelDiagrama/>
+  <relacionesTipodebilDelDiagrama nombreRelacion="relcionTipoDebil1"/>
+  <relacionesTipofuerteDelDiagrama nombreRelacion="Tiene"/>
+  <relacionesTipofuerteDelDiagrama nombreRelacion="Conduce"/>
+  <relacionesTipofuerteDelDiagrama nombreRelacion="NaN"/>
+  <entidadesRelacionesFuertesDelDiagrama entidadERLink="//@entidadfuerteDelDiagrama.0" relacionERLink="//@relacionesTipodebilDelDiagrama.0" limiteInferiorER="1" limiteSuperiorER="1"/>
+  <entidadesRelacionesFuertesDelDiagrama entidadERLink="//@entidadfuerteDelDiagrama.5" relacionERLink="//@relacionesTipofuerteDelDiagrama.1" limiteInferiorER="1" limiteSuperiorER="1"/>
+  <entidadesRelacionesFuertesDelDiagrama entidadERLink="//@entidadfuerteDelDiagrama.3" relacionERLink="//@relacionesTipofuerteDelDiagrama.1" limiteInferiorER="1" limiteSuperiorER="1"/>
+  <entidadesRelacionesFuertesDelDiagrama entidadERLink="//@entidadfuerteDelDiagrama.3" relacionERLink="//@relacionesTipofuerteDelDiagrama.0" limiteInferiorER="1" limiteSuperiorER="1"/>
+  <entidadesRelacionesFuertesDelDiagrama entidadERLink="//@entidadfuerteDelDiagrama.4" relacionERLink="//@relacionesTipofuerteDelDiagrama.0" limiteInferiorER="1" limiteSuperiorER="1"/>
+  <entidadesRelacionesFuertesDelDiagrama entidadERLink="//@entidadfuerteDelDiagrama.6" relacionERLink="//@relacionesTipofuerteDelDiagrama.2" limiteInferiorER="1" limiteSuperiorER="*"/>
+  <entidadesRelacionesFuertesDelDiagrama entidadERLink="//@entidadfuerteDelDiagrama.7" relacionERLink="//@relacionesTipofuerteDelDiagrama.2" limiteInferiorER="1" limiteSuperiorER="*"/>
+  <entidadesRelacionesDebilesDelDiagrama entidadERLink="//@entidaddebilDelDiagrama.0" relacionERLink="//@relacionesTipodebilDelDiagrama.0" limiteInferiorER="1" limiteSuperiorER="1"/>
+  <entidadfuerteDelDiagrama nombreEntidad="EntidadFuerte">
+    <atributosEntidad xsi:type="modeloER:ClavePrimaria" nombreAtributo="nombrePK"/>
+    <atributosEntidad xsi:type="modeloER:AtributoMultivaluado" nombreAtributo="nombreAtributoMultivaluado"/>
   </entidadfuerteDelDiagrama>
-  <entidadfuerteDelDiagrama
-      nombreEntidad="Padre">
-    <atributosEntidad
-        xsi:type="modeloER:ClavePrimaria"
-        nombreAtributo="clavePrimariaPadre"
-        tipoDatoAtributo="int"/>
+  <entidadfuerteDelDiagrama nombreEntidad="Padre">
+    <atributosEntidad xsi:type="modeloER:ClavePrimaria" nombreAtributo="clavePrimariaPadre" tipoDatoAtributo="int"/>
+    <atributosEntidad xsi:type="modeloER:AtributoSimple" nombreAtributo="nombre" nuloAtributo="true"/>
   </entidadfuerteDelDiagrama>
-  <entidadfuerteDelDiagrama
-      nombreEntidad="Hijo">
-    <atributosEntidad
-        xsi:type="modeloER:ClavePrimaria"
-        nombreAtributo="clavePrimariaHijo"
-        tipoDatoAtributo="int"/>
+  <entidadfuerteDelDiagrama nombreEntidad="Hijo">
+    <atributosEntidad xsi:type="modeloER:ClavePrimaria" nombreAtributo="clavePrimariaHijo" tipoDatoAtributo="int"/>
   </entidadfuerteDelDiagrama>
-  <entidadfuerteDelDiagrama
-      nombreEntidad="Conductor">
-    <atributosEntidad
-        xsi:type="modeloER:ClavePrimaria"
-        nombreAtributo="clavePrimariaConductor"
-        tipoDatoAtributo="int"/>
+  <entidadfuerteDelDiagrama nombreEntidad="Conductor">
+    <atributosEntidad xsi:type="modeloER:ClavePrimaria" nombreAtributo="clavePrimariaConductor" tipoDatoAtributo="int"/>
   </entidadfuerteDelDiagrama>
-  <entidadfuerteDelDiagrama
-      nombreEntidad="Carnet">
-    <atributosEntidad
-        xsi:type="modeloER:ClavePrimaria"
-        nombreAtributo="clavePrimariaCarnet"/>
+  <entidadfuerteDelDiagrama nombreEntidad="Carnet">
+    <atributosEntidad xsi:type="modeloER:ClavePrimaria" nombreAtributo="clavePrimariaCarnet"/>
   </entidadfuerteDelDiagrama>
-  <entidadfuerteDelDiagrama
-      nombreEntidad="Auto">
-    <atributosEntidad
-        xsi:type="modeloER:ClavePrimaria"
-        nombreAtributo="clavePrimariaAuto"/>
+  <entidadfuerteDelDiagrama nombreEntidad="Auto">
+    <atributosEntidad xsi:type="modeloER:ClavePrimaria" nombreAtributo="clavePrimariaAuto"/>
   </entidadfuerteDelDiagrama>
-  <entidadfuerteDelDiagrama
-      nombreEntidad="Algunos">
-    <atributosEntidad
-        xsi:type="modeloER:ClavePrimaria"
-        nombreAtributo="cpAlgunos"
-        tipoDatoAtributo="Char"/>
+  <entidadfuerteDelDiagrama nombreEntidad="Algunos">
+    <atributosEntidad xsi:type="modeloER:ClavePrimaria" nombreAtributo="cpAlgunos" tipoDatoAtributo="Char"/>
   </entidadfuerteDelDiagrama>
-  <entidadfuerteDelDiagrama
-      nombreEntidad="Muchos">
-    <atributosEntidad
-        xsi:type="modeloER:ClavePrimaria"
-        nombreAtributo="cpMuchos"
-        tipoDatoAtributo="int"/>
+  <entidadfuerteDelDiagrama nombreEntidad="Muchos">
+    <atributosEntidad xsi:type="modeloER:ClavePrimaria" nombreAtributo="cpMuchos" tipoDatoAtributo="int"/>
   </entidadfuerteDelDiagrama>
-  <entidaddebilDelDiagrama
-      nombreEntidad="EntidadDebil">
-    <atributosEntidad
-        nombreAtributo="nombreAtributoEntidad1-Fuerte"
-        nuloAtributo="true"
-        tipoDatoAtributo="Float"/>
-    <atributosEntidad
-        xsi:type="modeloER:ClavePrimaria"
-        nombreAtributo="7nombreClavePrimaria"/>
-    <atributosEntidad
-        xsi:type="modeloER:AtributoMultivaluado"
-        nombreAtributo="7nombreAtributoMultivaluado"/>
-    <atributosEntidad
-        xsi:type="modeloER:ClaveForanea"
-        nombreAtributo="7nombreClaveForanea"/>
+  <entidaddebilDelDiagrama nombreEntidad="EntidadDebil">
+    <atributosEntidad nombreAtributo="nombreAtributoEntidad1-Fuerte" nuloAtributo="true" tipoDatoAtributo="Float"/>
+    <atributosEntidad xsi:type="modeloER:ClavePrimaria" nombreAtributo="7nombreClavePrimaria"/>
+    <atributosEntidad xsi:type="modeloER:AtributoMultivaluado" nombreAtributo="7nombreAtributoMultivaluado"/>
   </entidaddebilDelDiagrama>
-  <linkherenciapadreDiagrama
-      herenciaPadreEntidadOrigen="//@entidadfuerteDelDiagrama.1"
-      herencia="//@herenciasDelDiagrama.0"/>
-  <linkherenciahijoDiagrama
-      herenciaHijoEntidadOrigen="//@entidadfuerteDelDiagrama.2"
-      herencia="//@herenciasDelDiagrama.0"/>
+  <linkherenciapadreDiagrama linkHerenciaPadreHerenciaDestino="//@herenciasDelDiagrama.0" herenciaPadreEntidadOrigen="//@entidadfuerteDelDiagrama.1"/>
+  <linkherenciahijoDiagrama herenciaHijoHerenciaDestino="//@herenciasDelDiagrama.0" herenciaHijoEntidadOrigen="//@entidadfuerteDelDiagrama.2"/>
 </modeloER:Diagrama>

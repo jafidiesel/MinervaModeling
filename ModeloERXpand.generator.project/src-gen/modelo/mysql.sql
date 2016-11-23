@@ -16,8 +16,6 @@ CREATE TABLE EntidadFuerte {
 
 	nombreAtributoMultivaluado varchar(255) NOT NULL ,
 
-	nombreFK varchar(255) NOT NULL ,
-
 	
 	PRIMARY KEY (nombrePK)
 
@@ -31,6 +29,8 @@ CREATE TABLE EntidadFuerte {
 CREATE TABLE Padre {
 	
 	clavePrimariaPadre int NOT NULL ,
+
+	nombre varchar(255),
 
 	
 	PRIMARY KEY (clavePrimariaPadre)
@@ -127,8 +127,6 @@ CREATE TABLE EntidadDebil {
 	7nombreClavePrimaria varchar(255) NOT NULL ,
 
 	7nombreAtributoMultivaluado varchar(255) NOT NULL ,
-
-	7nombreClaveForanea varchar(255) NOT NULL ,
 
 	
 	PRIMARY KEY (7nombreClavePrimaria)
@@ -288,7 +286,12 @@ ALTER TABLE EntidadDebil
 	
 	
 	
- 
+		
+		
+			
+
+
+
 
 /* Herencia entre Padre y Hijo */
 ALTER TABLE Hijo
@@ -302,3 +305,8 @@ ALTER TABLE Hijo
 
 
 
+
+
+		
+		
+	

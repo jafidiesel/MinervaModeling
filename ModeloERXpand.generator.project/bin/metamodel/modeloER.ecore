@@ -29,10 +29,6 @@
         upperBound="-1" eType="#//AtributoMultivaluado" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="claveprimariaDelDiagrama"
         upperBound="-1" eType="#//ClavePrimaria" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="claveforaneaDelDiagrama"
-        upperBound="-1" eType="#//ClaveForanea" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="claveprimariaforaneaDelDiagrama"
-        upperBound="-1" eType="#//ClavePrimariaForanea" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relacionesTipodebilDelDiagrama"
         upperBound="-1" eType="#//RelacionTipoDebil" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relacionesTipofuerteDelDiagrama"
@@ -41,8 +37,6 @@
         upperBound="-1" eType="#//EntidadRelacionFuerte" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entidadesRelacionesDebilesDelDiagrama"
         upperBound="-1" eType="#//EntidadRelacionDebil" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="atributoderivadoclaveprimariaDelDiagrama"
-        upperBound="-1" eType="#//AtributoDerivadoClavePrimaria" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entidadfuerteDelDiagrama"
         upperBound="-1" eType="#//EntidadFuerte" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entidaddebilDelDiagrama"
@@ -57,8 +51,6 @@
         upperBound="-1" eType="#//AtributoDerivadoEntidad" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributoentidadlinkDiagrama"
         upperBound="-1" eType="#//AtributoEntidadLink" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="atributoderivadoentidadDiagrama"
-        upperBound="-1" eType="#//AtributoDerivadoEntidad" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relacionatributolinkDiagrama"
         upperBound="-1" eType="#//RelacionAtributoLink" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="linkherenciapadreDiagrama"
@@ -81,22 +73,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="limiteInferiorER" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="limiteSuperiorER" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Herencia">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="linkHerenciaPadre" lowerBound="1"
-        eType="#//LinkHerenciaPadre" eOpposite="#//LinkHerenciaPadre/herencia"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="linkHerenciaHijo" lowerBound="1"
-        eType="#//LinkHerenciaHijo" eOpposite="#//LinkHerenciaHijo/herencia"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Herencia"/>
   <eClassifiers xsi:type="ecore:EClass" name="AtributoDerivado" eSuperTypes="#//Atributo"/>
   <eClassifiers xsi:type="ecore:EClass" name="AtributoMultivaluado" eSuperTypes="#//Atributo"/>
   <eClassifiers xsi:type="ecore:EClass" name="ClavePrimaria" eSuperTypes="#//Atributo"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ClaveForanea" eSuperTypes="#//Atributo"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ClavePrimariaForanea" eSuperTypes="#//Atributo"/>
   <eClassifiers xsi:type="ecore:EClass" name="RelacionTipoDebil" eSuperTypes="#//Relacion"/>
   <eClassifiers xsi:type="ecore:EClass" name="RelacionTipoFuerte" eSuperTypes="#//Relacion"/>
   <eClassifiers xsi:type="ecore:EClass" name="EntidadRelacionDebil" eSuperTypes="#//EntidadRelacion"/>
   <eClassifiers xsi:type="ecore:EClass" name="EntidadRelacionFuerte" eSuperTypes="#//EntidadRelacion"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AtributoDerivadoClavePrimaria" eSuperTypes="#//Atributo"/>
   <eClassifiers xsi:type="ecore:EClass" name="EntidadFuerte" eSuperTypes="#//Entidad"/>
   <eClassifiers xsi:type="ecore:EClass" name="EntidadDebil" eSuperTypes="#//Entidad"/>
   <eClassifiers xsi:type="ecore:EClass" name="AtributoSimple" eSuperTypes="#//Atributo"/>
@@ -114,22 +98,20 @@
         lowerBound="1" eType="#//Atributo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LinkHerenciaPadre">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkHerenciaPadreHerenciaDestino"
+        lowerBound="1" eType="#//Herencia"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="herenciaPadreEntidadOrigen"
         lowerBound="1" eType="#//Entidad"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="herencia" eType="#//Herencia"
-        eOpposite="#//Herencia/linkHerenciaPadre"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LinkHerenciaHijo">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="herenciaHijoHerenciaDestino"
+        lowerBound="1" eType="#//Herencia"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="herenciaHijoEntidadOrigen"
         lowerBound="1" eType="#//Entidad"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="herencia" eType="#//Herencia"
-        eOpposite="#//Herencia/linkHerenciaHijo"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AtributoDerivadoEntidad">
     <eStructuralFeatures xsi:type="ecore:EReference" name="entidadAtributoDerivadoOrigen"
         lowerBound="1" eType="#//Entidad"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="atributoderivadoclaveprimariaDestino"
-        lowerBound="1" eType="#//AtributoDerivadoClavePrimaria"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="atributoderivadoDestino"
         lowerBound="1" eType="#//AtributoDerivado"/>
   </eClassifiers>
