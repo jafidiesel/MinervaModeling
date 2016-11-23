@@ -47,6 +47,12 @@ Mismo caso que el item de arriba.
 
 - Agregar restricciones para que las relaciones deban tener, obligatoriamente,
   límte inferior y límite superior.
+- Un atributo debe tener asociada una sola entidad
+- Ídem atributo simple con compuesto 
+- Si Entidadfuerte esta relacionada con RelacionTipoDebil, esa RelacionTipoDebil debe estar relacionada con una EntidadDebil
+- Que el padre no sea hijo al mismo tiempo.
+- Si Entidadfuerte esta relacionada con RelacionTipoFuerte, esta relación debe tener una EntidadFuerte del otro lado de la luna
+- Si existe Herencia y tiene alguna relación con algún padre  debe haber al menos un hijo relacionado con esa Herencia
 
 ## Cambios a evaluar sobre el mapeo y GMF
 
