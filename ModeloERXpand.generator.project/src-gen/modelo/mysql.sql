@@ -47,6 +47,18 @@ CREATE TABLE Hijo {
 	clavePrimariaHijo int NOT NULL ,
 
 	
+	/* AtributoCompuesto: atrCompuesto */
+	 
+	
+	acItem1 varchar(255) NOT NULL ,
+
+	 
+	
+	acItem2 varchar(255) NOT NULL ,
+
+	
+	/* ---- */
+
 	
 	PRIMARY KEY (clavePrimariaHijo)
 
@@ -139,6 +151,15 @@ CREATE TABLE EntidadConAtrCompuesto {
 	
 	/* ---- */
 
+	
+	
+}
+
+	
+/* Entidad */
+CREATE TABLE Hermano {
+	
+	
 	
 	
 }
@@ -327,6 +348,24 @@ ALTER TABLE EntidadDebil
 
 /* Herencia entre Padre y Hijo */
 ALTER TABLE Hijo
+	
+	clavePrimariaPadre_Padre int NOT NULL ,
+
+	
+	FOREIGN KEY (clavePrimariaPadre_Padre)
+		REFERENCES Padre(clavePrimariaPadre)
+
+
+
+
+
+
+
+
+
+
+/* Herencia entre Padre y Hermano */
+ALTER TABLE Hermano
 	
 	clavePrimariaPadre_Padre int NOT NULL ,
 

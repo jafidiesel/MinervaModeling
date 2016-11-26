@@ -143,17 +143,6 @@ ALTER TABLE «this.nombreEntidad»
 	«ENDLET»
 	«ENDLET»
 	
-	«ELSE»
-	
-	«REM»Relación entre más de 2 Entidades con la misma Relacion«ENDREM»
-	«REM»
-	«FOREACH entidadRelaciones.reject(e|e == this) AS relacion»
-	ALTER TABLE «relacion.entidadERLink.nombreEntidad»
-		«EXPAND claveForanea(this.entidadERLink.nombreEntidad) FOREACH this.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
-		«EXPAND claveForaneaReferencias(this.entidadERLink.nombreEntidad) FOREACH this.entidadERLink.atributosEntidad.typeSelect(ClavePrimaria)»
-	«ENDFOREACH»
-	«ENDREM»
-	
 	«ENDIF»
 «ENDDEFINE»
 
