@@ -418,6 +418,18 @@
               href="../../ModeloER/model/modeloER.ecore#//Atributo"/>
         </target>
       </audits>
+      <audits
+          name="ValidarRelacionCompuestoSimple"
+          id="1.2"
+          message="El atributo simple solo puede relacionarse con uno y solo un atributo compuesto">
+        <rule
+            body="LinkASAC.allInstances()-> forAll( atributoCS: LinkASAC, atributoCS2: LinkASAC|atributoCS&lt;>atributoCS2 implies atributoCS.atributosimpleDestino &lt;> atributoCS2.atributosimpleDestino)"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//LinkASAC"/>
+        </target>
+      </audits>
     </childContainers>
     <childContainers
         id="2"
@@ -465,7 +477,7 @@
       <audits
           name="NombreUnicoEntidad"
           id="3.3"
-          message="Dos entidades no pueden tener el mismo nombre">
+          message="Cada entidad debe tener un nombre unico">
         <rule
             body="Entidad::allInstances()->isUnique(nombreEntidad)"/>
         <target
@@ -493,7 +505,7 @@
       <audits
           name="ValidarLimites"
           id="4.1"
-          message="El límite inferiory superior no deben estar vacío">
+          message="El límite inferior y superior no deben estar vacío">
         <rule
             body="self.limiteInferiorER&lt;>'' and self.limiteInferiorER&lt;>null and self.limiteInferiorER = '*' or (not(self.limiteInferiorER.toInteger().oclIsInvalid())) and self.limiteSuperiorER&lt;>'' and self.limiteSuperiorER&lt;>null and self.limiteSuperiorER = '*' or (not(self.limiteSuperiorER.toInteger().oclIsInvalid()))"/>
         <target
@@ -503,16 +515,29 @@
         </target>
       </audits>
       <audits
-          name="ValidaRelacionDebil"
+          name="ValidarRelacionDebil"
           description="Una relacion débil se conecta con línea doble"
           id="4.2"
-          message="">
+          message="Una entidad debil debe relacionarse con un Link Entidad Relacion Debil">
         <rule
-            body="entidadERLink.oclIsTypeOf(EntidadDebil) implies relacionERLink.oclIsTypeOf(RelacionTipoDebil)"/>
+            body="entidadERLink.oclIsTypeOf(EntidadDebil) and relacionERLink.oclIsTypeOf(RelacionTipoDebil)"/>
         <target
             xsi:type="gmfmap:DomainElementTarget">
           <element
-              href="../../ModeloER/model/modeloER.ecore#//EntidadDebil"/>
+              href="../../ModeloER/model/modeloER.ecore#//EntidadRelacionDebil"/>
+        </target>
+      </audits>
+      <audits
+          name="ValidarRelacionFuerte"
+          description="Una EntidadFuerte se asocia con RelacionTipoFuerte o RelacionTipoDebil mediante una linea simple"
+          id="4.3"
+          message="Uso incorrecto de Link Entidad-Relacion">
+        <rule
+            body="entidadERLink.oclIsTypeOf(EntidadFuerte) and relacionERLink.oclIsKindOf(Relacion)"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//EntidadRelacionFuerte"/>
         </target>
       </audits>
     </childContainers>
@@ -541,6 +566,66 @@
             xsi:type="gmfmap:DomainElementTarget">
           <element
               href="../../ModeloER/model/modeloER.ecore#//Relacion"/>
+        </target>
+      </audits>
+    </childContainers>
+    <childContainers
+        id="6"
+        name="ValidarAtributoEntidad">
+      <audits
+          name="ValidarAtributoEntidadLink"
+          description="Valida la relacion entre Entidad y los atributos (sin el derivado)"
+          id="6.1"
+          message="El Link Simple se utiliza para unir Atributos no derivados con entidades">
+        <rule
+            body="entidadAtributoLinkOrigen.oclIsKindOf(Entidad) implies ( atributoEntidadLinkDestino.oclIsTypeOf(ClavePrimaria) or atributoEntidadLinkDestino.oclIsTypeOf(AtributoSimple) or atributoEntidadLinkDestino.oclIsTypeOf(AtributoCompuesto) or atributoEntidadLinkDestino.oclIsTypeOf(AtributoMultivaluado))"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//AtributoEntidadLink"/>
+        </target>
+      </audits>
+      <audits
+          name="ValidarRelacionAtributoUnica"
+          description="Verifica que un atributo solo pueda relacionarse solo con una entidad. Solo puede graficarse una sola linea entre Atributo y Entidad"
+          id="6.2"
+          message="Solo puede graficarse una linea entre Atributo y Entidad">
+        <rule
+            body="AtributoEntidadLink.allInstances()->forAll( atributoE: AtributoEntidadLink, atributoE2: AtributoEntidadLink|atributoE &lt;> atributoE2 implies ((atributoE.atributoEntidadLinkDestino &lt;> atributoE2.atributoEntidadLinkDestino) and  (atributoE.entidadAtributoLinkOrigen.atributosEntidad ->includes(atributoE.atributoEntidadLinkDestino))))&#xA;"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//AtributoEntidadLink"/>
+        </target>
+      </audits>
+      <audits
+          name="ValidarAtributoDerivadoEntidad"
+          description="Valida la relacion entre Entidad y los atributos (solo para el derivado)"
+          id="6.3"
+          message="La Relacion Linea Discontinua solo se utiliza para relacionar un Atributo Derivado con una Entidad">
+        <rule
+            body="AtributoDerivadoEntidad.allInstances() -> forAll(atributoD1:AtributoDerivadoEntidad, atributoD2: AtributoDerivadoEntidad| atributoD1 &lt;> atributoD2 implies ((atributoD1.atributoderivadoDestino &lt;> atributoD2.atributoderivadoDestino) and (atributoD1.entidadAtributoDerivadoOrigen.atributosEntidad -> includes(atributoD1.atributoderivadoDestino))))"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//AtributoDerivadoEntidad"/>
+        </target>
+      </audits>
+    </childContainers>
+    <childContainers
+        id="7"
+        name="Herencia">
+      <audits
+          name="ValidarPadreConHijos"
+          description="Valida que una Entidad no pueda ser padre e hijo a lavez"
+          id="7.1"
+          message="Una entidad Padre no puede ser Hijo a la misma vez">
+        <rule
+            body="LinkHerenciaHijo.allInstances()->forAll(hijo: LinkHerenciaHijo|self.linkHerenciaPadreHerenciaDestino = hijo.herenciaHijoHerenciaDestino implies self.herenciaPadreEntidadOrigen &lt;> hijo.herenciaHijoEntidadOrigen)"/>
+        <target
+            xsi:type="gmfmap:DomainElementTarget">
+          <element
+              href="../../ModeloER/model/modeloER.ecore#//LinkHerenciaPadre"/>
         </target>
       </audits>
     </childContainers>

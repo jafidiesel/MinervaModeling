@@ -13,32 +13,37 @@
         name="ValidarAtributo"
         description=""
         path="//@audits/@categories.0 //@audits/@categories.1"
-        audits="//@audits/@rules.0"/>
+        audits="//@audits/@rules.0 //@audits/@rules.1"/>
     <categories
         id="2"
         name="ValidarClavePrimaria"
         path="//@audits/@categories.0 //@audits/@categories.2"
-        audits="//@audits/@rules.1"/>
+        audits="//@audits/@rules.2"/>
     <categories
         id="3"
         name="ValidarEntidad"
         path="//@audits/@categories.0 //@audits/@categories.3"
-        audits="//@audits/@rules.2 //@audits/@rules.3 //@audits/@rules.4 //@audits/@rules.5"/>
+        audits="//@audits/@rules.3 //@audits/@rules.4 //@audits/@rules.5 //@audits/@rules.6"/>
     <categories
         id="4"
         name="ValidarEntidadRelacion"
         path="//@audits/@categories.0 //@audits/@categories.4"
-        audits="//@audits/@rules.6 //@audits/@rules.7"/>
+        audits="//@audits/@rules.7 //@audits/@rules.8 //@audits/@rules.9"/>
     <categories
         id="5"
         name="ValidarRelacion"
         path="//@audits/@categories.0 //@audits/@categories.5"
-        audits="//@audits/@rules.8 //@audits/@rules.9"/>
+        audits="//@audits/@rules.10 //@audits/@rules.11"/>
     <categories
         id="6"
-        name="ValidarLinkASAC"
+        name="ValidarAtributoEntidad"
         path="//@audits/@categories.0 //@audits/@categories.6"
-        audits="//@audits/@rules.10"/>
+        audits="//@audits/@rules.12 //@audits/@rules.13 //@audits/@rules.14"/>
+    <categories
+        id="7"
+        name="Herencia"
+        path="//@audits/@categories.0 //@audits/@categories.7"
+        audits="//@audits/@rules.15"/>
     <rules
         name="ValidarNombre"
         description="Nombre no vacío ni null"
@@ -54,9 +59,22 @@
       </target>
     </rules>
     <rules
+        name="ValidarRelacionCompuestoSimple"
+        id="1.2"
+        rule="//@expressionProviders/@providers.0/@expressions.1"
+        message="El atributo simple solo puede relacionarse con uno y solo un atributo compuesto"
+        category="//@audits/@categories.1">
+      <target
+          xsi:type="gmfgen:GenDomainElementTarget"
+          contextSelector="//@audits/@clientContexts.0">
+        <element
+            href="../../ModeloER/model/modeloER.genmodel#//modeloER/LinkASAC"/>
+      </target>
+    </rules>
+    <rules
         name="ExitenciaClavePrimaria"
         id="2.1"
-        rule="//@expressionProviders/@providers.0/@expressions.1"
+        rule="//@expressionProviders/@providers.0/@expressions.2"
         message="Debe existir una clave primaria"
         category="//@audits/@categories.2">
       <target
@@ -69,7 +87,7 @@
     <rules
         name="NombreUnicoAtributo"
         id="3.1"
-        rule="//@expressionProviders/@providers.0/@expressions.2"
+        rule="//@expressionProviders/@providers.0/@expressions.3"
         message="Todos los atributos de una entidad deben tener un nombre único"
         category="//@audits/@categories.3">
       <target
@@ -82,7 +100,7 @@
     <rules
         name="ValidarNombre"
         id="3.2"
-        rule="//@expressionProviders/@providers.0/@expressions.3"
+        rule="//@expressionProviders/@providers.0/@expressions.4"
         message="El nombre de la entidad no puede estar vacío"
         category="//@audits/@categories.3">
       <target
@@ -95,8 +113,8 @@
     <rules
         name="NombreUnicoEntidad"
         id="3.3"
-        rule="//@expressionProviders/@providers.0/@expressions.4"
-        message="Dos entidades no pueden tener el mismo nombre"
+        rule="//@expressionProviders/@providers.0/@expressions.5"
+        message="Cada entidad debe tener un nombre unico"
         category="//@audits/@categories.3">
       <target
           xsi:type="gmfgen:GenDomainElementTarget"
@@ -108,7 +126,7 @@
     <rules
         name="ExisteClavePrimaria"
         id="3.4"
-        rule="//@expressionProviders/@providers.0/@expressions.5"
+        rule="//@expressionProviders/@providers.0/@expressions.6"
         message="Toda entidad debe tener una clave primaria"
         category="//@audits/@categories.3">
       <target
@@ -119,10 +137,10 @@
       </target>
     </rules>
     <rules
-        name="ValidadLimites"
+        name="ValidarLimites"
         id="4.1"
-        rule="//@expressionProviders/@providers.0/@expressions.6"
-        message="El límite inferiory superior no deben estar vacío"
+        rule="//@expressionProviders/@providers.0/@expressions.7"
+        message="El límite inferior y superior no deben estar vacío"
         category="//@audits/@categories.4">
       <target
           xsi:type="gmfgen:GenDomainElementTarget"
@@ -132,23 +150,37 @@
       </target>
     </rules>
     <rules
-        name="ValidaRelacionDebil"
+        name="ValidarRelacionDebil"
         description="Una relacion débil se conecta con línea doble"
         id="4.2"
-        rule="//@expressionProviders/@providers.0/@expressions.7"
-        message=""
+        rule="//@expressionProviders/@providers.0/@expressions.8"
+        message="Una entidad debil debe relacionarse con un Link Entidad Relacion Debil"
         category="//@audits/@categories.4">
       <target
           xsi:type="gmfgen:GenDomainElementTarget"
           contextSelector="//@audits/@clientContexts.0">
         <element
-            href="../../ModeloER/model/modeloER.genmodel#//modeloER/EntidadRelacion"/>
+            href="../../ModeloER/model/modeloER.genmodel#//modeloER/EntidadRelacionDebil"/>
+      </target>
+    </rules>
+    <rules
+        name="ValidarRelacionFuerte"
+        description="Una EntidadFuerte se asocia con RelacionTipoFuerte o RelacionTipoDebil mediante una linea simple"
+        id="4.3"
+        rule="//@expressionProviders/@providers.0/@expressions.9"
+        message="Uso incorrecto de Link Entidad-Relacion"
+        category="//@audits/@categories.4">
+      <target
+          xsi:type="gmfgen:GenDomainElementTarget"
+          contextSelector="//@audits/@clientContexts.0">
+        <element
+            href="../../ModeloER/model/modeloER.genmodel#//modeloER/EntidadRelacionFuerte"/>
       </target>
     </rules>
     <rules
         name="ValidarNombre"
         id="5.1"
-        rule="//@expressionProviders/@providers.0/@expressions.8"
+        rule="//@expressionProviders/@providers.0/@expressions.10"
         message="El nombre de la relación no puede estar vacio"
         category="//@audits/@categories.5">
       <target
@@ -161,7 +193,7 @@
     <rules
         name="SoloAtributosSimples"
         id="5.2"
-        rule="//@expressionProviders/@providers.0/@expressions.9"
+        rule="//@expressionProviders/@providers.0/@expressions.11"
         message="Solo puede tener atributos simples"
         category="//@audits/@categories.5">
       <target
@@ -172,21 +204,63 @@
       </target>
     </rules>
     <rules
-        name="AtributoCompuestoASimple"
-        description="Un atributo compuesto puede tener atributos simples"
+        name="ValidarAtributoEntidadLink"
+        description="Valida la relacion entre Entidad y los atributos (sin el derivado)"
         id="6.1"
-        rule="//@expressionProviders/@providers.0/@expressions.10"
-        message=""
+        rule="//@expressionProviders/@providers.0/@expressions.12"
+        message="El Link Simple se utiliza para unir Atributos no derivados con entidades"
         category="//@audits/@categories.6">
       <target
           xsi:type="gmfgen:GenDomainElementTarget"
           contextSelector="//@audits/@clientContexts.0">
         <element
-            href="../../ModeloER/model/modeloER.genmodel#//modeloER/LinkASAC"/>
+            href="../../ModeloER/model/modeloER.genmodel#//modeloER/AtributoEntidadLink"/>
+      </target>
+    </rules>
+    <rules
+        name="ValidarRelacionAtributoUnica"
+        description="Verifica que un atributo solo pueda relacionarse solo con una entidad. Solo puede graficarse una sola linea entre Atributo y Entidad"
+        id="6.2"
+        rule="//@expressionProviders/@providers.0/@expressions.13"
+        message="Solo puede graficarse una linea entre Atributo y Entidad"
+        category="//@audits/@categories.6">
+      <target
+          xsi:type="gmfgen:GenDomainElementTarget"
+          contextSelector="//@audits/@clientContexts.0">
+        <element
+            href="../../ModeloER/model/modeloER.genmodel#//modeloER/AtributoEntidadLink"/>
+      </target>
+    </rules>
+    <rules
+        name="ValidarAtributoDerivadoEntidad"
+        description="Valida la relacion entre Entidad y los atributos (solo para el derivado)"
+        id="6.3"
+        rule="//@expressionProviders/@providers.0/@expressions.14"
+        message="La Relacion Linea Discontinua solo se utiliza para relacionar un Atributo Derivado con una Entidad"
+        category="//@audits/@categories.6">
+      <target
+          xsi:type="gmfgen:GenDomainElementTarget"
+          contextSelector="//@audits/@clientContexts.0">
+        <element
+            href="../../ModeloER/model/modeloER.genmodel#//modeloER/AtributoDerivadoEntidad"/>
+      </target>
+    </rules>
+    <rules
+        name="ValidarPadreConHijos"
+        description="Valida que una Entidad no pueda ser padre e hijo a lavez"
+        id="7.1"
+        rule="//@expressionProviders/@providers.0/@expressions.15"
+        message="Una entidad Padre no puede ser Hijo a la misma vez"
+        category="//@audits/@categories.7">
+      <target
+          xsi:type="gmfgen:GenDomainElementTarget"
+          contextSelector="//@audits/@clientContexts.0">
+        <element
+            href="../../ModeloER/model/modeloER.genmodel#//modeloER/LinkHerenciaPadre"/>
       </target>
     </rules>
     <clientContexts
-        ruleTargets="//@audits/@rules.0/@target //@audits/@rules.1/@target //@audits/@rules.2/@target //@audits/@rules.3/@target //@audits/@rules.4/@target //@audits/@rules.5/@target //@audits/@rules.6/@target //@audits/@rules.7/@target //@audits/@rules.8/@target //@audits/@rules.9/@target //@audits/@rules.10/@target"/>
+        ruleTargets="//@audits/@rules.0/@target //@audits/@rules.1/@target //@audits/@rules.2/@target //@audits/@rules.3/@target //@audits/@rules.4/@target //@audits/@rules.5/@target //@audits/@rules.6/@target //@audits/@rules.7/@target //@audits/@rules.8/@target //@audits/@rules.9/@target //@audits/@rules.10/@target //@audits/@rules.11/@target //@audits/@rules.12/@target //@audits/@rules.13/@target //@audits/@rules.14/@target //@audits/@rules.15/@target"/>
   </audits>
   <diagram
       visualID="1000"
@@ -720,7 +794,7 @@
           visualID="6001"
           editPartClassName="EntidadRelacionFuerteLimiteInferiorEREditPart"
           itemSemanticEditPolicyClassName="EntidadRelacionFuerteLimiteInferiorERItemSemanticEditPolicy"
-          alignment="SOURCE">
+          alignment="TARGET">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -729,7 +803,8 @@
             figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel">
           <attributes
               xsi:type="gmfgen:LabelOffsetAttributes"
-              y="40"/>
+              x="4"
+              y="4"/>
         </viewmap>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
@@ -744,7 +819,7 @@
           visualID="6002"
           editPartClassName="EntidadRelacionFuerteLimiteSuperiorEREditPart"
           itemSemanticEditPolicyClassName="EntidadRelacionFuerteLimiteSuperiorERItemSemanticEditPolicy"
-          alignment="TARGET">
+          alignment="SOURCE">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -753,7 +828,8 @@
             figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel">
           <attributes
               xsi:type="gmfgen:LabelOffsetAttributes"
-              y="60"/>
+              x="4"
+              y="4"/>
         </viewmap>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
@@ -797,7 +873,7 @@
           visualID="6003"
           editPartClassName="EntidadRelacionDebilLimiteInferiorEREditPart"
           itemSemanticEditPolicyClassName="EntidadRelacionDebilLimiteInferiorERItemSemanticEditPolicy"
-          alignment="SOURCE">
+          alignment="TARGET">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -806,7 +882,8 @@
             figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel">
           <attributes
               xsi:type="gmfgen:LabelOffsetAttributes"
-              y="40"/>
+              x="4"
+              y="4"/>
         </viewmap>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
@@ -821,7 +898,7 @@
           visualID="6004"
           editPartClassName="EntidadRelacionDebilLimiteSuperiorEREditPart"
           itemSemanticEditPolicyClassName="EntidadRelacionDebilLimiteSuperiorERItemSemanticEditPolicy"
-          alignment="TARGET">
+          alignment="SOURCE">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -830,7 +907,8 @@
             figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel">
           <attributes
               xsi:type="gmfgen:LabelOffsetAttributes"
-              y="60"/>
+              x="4"
+              y="4"/>
         </viewmap>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
@@ -1592,6 +1670,9 @@
           body="self.nombreAtributo &lt;> null and self.nombreAtributo &lt;> ''"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
+          body="LinkASAC.allInstances()-> forAll( atributoCS: LinkASAC, atributoCS2: LinkASAC|atributoCS&lt;>atributoCS2 implies atributoCS.atributosimpleDestino &lt;> atributoCS2.atributosimpleDestino)"/>
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
           body="self.nuloAtributo = false"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
@@ -1607,10 +1688,13 @@
           body="self.atributosEntidad->exists(ae|ae.oclIsKindOf(ClavePrimaria))"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
-          body="self.limiteInferiorER = '*' or (not(self.limiteInferiorER.toInteger().oclIsInvalid())) and self.limiteSuperiorER = '*' or (not(self.limiteSuperiorER.toInteger().oclIsInvalid()))"/>
+          body="self.limiteInferiorER&lt;>'' and self.limiteInferiorER&lt;>null and self.limiteInferiorER = '*' or (not(self.limiteInferiorER.toInteger().oclIsInvalid())) and self.limiteSuperiorER&lt;>'' and self.limiteSuperiorER&lt;>null and self.limiteSuperiorER = '*' or (not(self.limiteSuperiorER.toInteger().oclIsInvalid()))"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
-          body="entidadERLink.oclIsTypeOf(EntidadDebil) implies relacionERLink.oclIsTypeOf(RelacionTipoDebil)"/>
+          body="entidadERLink.oclIsTypeOf(EntidadDebil) and relacionERLink.oclIsTypeOf(RelacionTipoDebil)"/>
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
+          body="entidadERLink.oclIsTypeOf(EntidadFuerte) and relacionERLink.oclIsKindOf(Relacion)"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
           body="self.nombreRelacion&lt;>null and self.nombreRelacion&lt;>''"/>
@@ -1619,7 +1703,16 @@
           body="self.atributosRelacion->forAll(r|r.oclIsKindOf(AtributoSimple))"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
-          body="atributocompuestoOrigen.oclIsTypeOf(AtributoCompuesto) implies atributosimpleDestino.oclIsTypeOf(AtributoSimple)"/>
+          body="entidadAtributoLinkOrigen.oclIsKindOf(Entidad) implies ( atributoEntidadLinkDestino.oclIsTypeOf(ClavePrimaria) or atributoEntidadLinkDestino.oclIsTypeOf(AtributoSimple) or atributoEntidadLinkDestino.oclIsTypeOf(AtributoCompuesto) or atributoEntidadLinkDestino.oclIsTypeOf(AtributoMultivaluado))"/>
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
+          body="AtributoEntidadLink.allInstances()->forAll( atributoE: AtributoEntidadLink, atributoE2: AtributoEntidadLink|atributoE &lt;> atributoE2 implies ((atributoE.atributoEntidadLinkDestino &lt;> atributoE2.atributoEntidadLinkDestino) and  (atributoE.entidadAtributoLinkOrigen.atributosEntidad ->includes(atributoE.atributoEntidadLinkDestino))))&#xA;"/>
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
+          body="AtributoDerivadoEntidad.allInstances() -> forAll(atributoD1:AtributoDerivadoEntidad, atributoD2: AtributoDerivadoEntidad| atributoD1 &lt;> atributoD2 implies ((atributoD1.atributoderivadoDestino &lt;> atributoD2.atributoderivadoDestino) and (atributoD1.entidadAtributoDerivadoOrigen.atributosEntidad -> includes(atributoD1.atributoderivadoDestino))))"/>
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
+          body="LinkHerenciaHijo.allInstances()->forAll(hijo: LinkHerenciaHijo|self.linkHerenciaPadreHerenciaDestino = hijo.herenciaHijoHerenciaDestino implies self.herenciaPadreEntidadOrigen &lt;> hijo.herenciaHijoEntidadOrigen)"/>
     </providers>
   </expressionProviders>
   <labelParsers
