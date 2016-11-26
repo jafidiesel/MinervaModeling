@@ -97,8 +97,7 @@ public class EntidadRelacionDebilEditPart extends ConnectionNodeEditPart impleme
 	*/
 
 	protected Connection createConnectionFigure() {
-		
-		return new EntidadRelacionDebilFigure( );
+		return new EntidadRelacionDebilFigure();
 	}
 
 	/**
@@ -130,9 +129,6 @@ public class EntidadRelacionDebilEditPart extends ConnectionNodeEditPart impleme
 			createContents();
 		}
 
-		/**
-		 * @generated
-		 */
 		protected void outlineShape(Graphics g) {
 			
 			PointList mylist1 = this.getPoints().getCopy();
@@ -144,11 +140,11 @@ public class EntidadRelacionDebilEditPart extends ConnectionNodeEditPart impleme
 				g.drawPolyline(mylist1);
 	        	g.drawPolyline(mylist2);
 			}
-		
+		/**
+		 * @generated
+		 */
 		private void createContents() {
 
-			
-			
 			fFigureEntidadRelacionDebilLimiteInferiorERFigure = new WrappingLabel();
 
 			fFigureEntidadRelacionDebilLimiteInferiorERFigure.setText("<...>");
@@ -160,7 +156,6 @@ public class EntidadRelacionDebilEditPart extends ConnectionNodeEditPart impleme
 			fFigureEntidadRelacionDebilLimiteSuperiorERFigure.setText("<...>");
 
 			this.add(fFigureEntidadRelacionDebilLimiteSuperiorERFigure);
-			
 
 		}
 
@@ -179,6 +174,5 @@ public class EntidadRelacionDebilEditPart extends ConnectionNodeEditPart impleme
 		}
 
 	}
-	
 
 }

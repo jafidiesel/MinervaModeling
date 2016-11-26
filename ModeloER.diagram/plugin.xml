@@ -695,7 +695,10 @@
       <category id="0/5" mandatory="false" name="ValidarRelacion">
          <![CDATA[]]>
       </category>
-      <category id="0/6" mandatory="false" name="ValidarLinkASAC">
+      <category id="0/6" mandatory="false" name="ValidarAtributoEntidad">
+         <![CDATA[]]>
+      </category>
+      <category id="0/7" mandatory="false" name="Herencia">
          <![CDATA[]]>
       </category>
       <constraintProvider cache="true">
@@ -712,6 +715,16 @@
             <description><![CDATA[Nombre no vacío ni null]]></description>
             <message><![CDATA[Nombre no vacío ni null]]></message>
             <target class="modeloER.Atributo"/>
+         </constraint>
+                  <constraint id="1.2"
+            lang="OCL"
+            name="ValidarRelacionCompuestoSimple"
+            mode="Batch"
+            severity="ERROR" statusCode="200">
+            <![CDATA[LinkASAC.allInstances()-> forAll( atributoCS: LinkASAC, atributoCS2: LinkASAC|atributoCS<>atributoCS2 implies atributoCS.atributosimpleDestino <> atributoCS2.atributosimpleDestino)]]>
+            <description><![CDATA[]]></description>
+            <message><![CDATA[El atributo simple solo puede relacionarse con uno y solo un atributo compuesto]]></message>
+            <target class="modeloER.LinkASAC"/>
          </constraint>
                   </constraints>
          <constraints categories="0/2">
@@ -754,7 +767,7 @@
             severity="ERROR" statusCode="200">
             <![CDATA[Entidad::allInstances()->isUnique(nombreEntidad)]]>
             <description><![CDATA[]]></description>
-            <message><![CDATA[Dos entidades no pueden tener el mismo nombre]]></message>
+            <message><![CDATA[Cada entidad debe tener un nombre unico]]></message>
             <target class="modeloER.Entidad"/>
          </constraint>
                   <constraint id="3.4"
@@ -771,23 +784,33 @@
          <constraints categories="0/4">
                   <constraint id="4.1"
             lang="OCL"
-            name="ValidadLimites"
+            name="ValidarLimites"
             mode="Batch"
             severity="ERROR" statusCode="200">
-            <![CDATA[self.limiteInferiorER = '*' or (not(self.limiteInferiorER.toInteger().oclIsInvalid())) and self.limiteSuperiorER = '*' or (not(self.limiteSuperiorER.toInteger().oclIsInvalid()))]]>
+            <![CDATA[self.limiteInferiorER<>'' and self.limiteInferiorER<>null and self.limiteInferiorER = '*' or (not(self.limiteInferiorER.toInteger().oclIsInvalid())) and self.limiteSuperiorER<>'' and self.limiteSuperiorER<>null and self.limiteSuperiorER = '*' or (not(self.limiteSuperiorER.toInteger().oclIsInvalid()))]]>
             <description><![CDATA[]]></description>
-            <message><![CDATA[El límite inferiory superior no deben estar vacío]]></message>
+            <message><![CDATA[El límite inferior y superior no deben estar vacío]]></message>
             <target class="modeloER.EntidadRelacion"/>
          </constraint>
                   <constraint id="4.2"
             lang="OCL"
-            name="ValidaRelacionDebil"
+            name="ValidarRelacionDebil"
             mode="Batch"
             severity="ERROR" statusCode="200">
-            <![CDATA[entidadERLink.oclIsTypeOf(EntidadDebil) implies relacionERLink.oclIsTypeOf(RelacionTipoDebil)]]>
+            <![CDATA[entidadERLink.oclIsTypeOf(EntidadDebil) and relacionERLink.oclIsTypeOf(RelacionTipoDebil)]]>
             <description><![CDATA[Una relacion débil se conecta con línea doble]]></description>
-            <message><![CDATA[]]></message>
-            <target class="modeloER.EntidadRelacion"/>
+            <message><![CDATA[Una entidad debil debe relacionarse con un Link Entidad Relacion Debil]]></message>
+            <target class="modeloER.EntidadRelacionDebil"/>
+         </constraint>
+                  <constraint id="4.3"
+            lang="OCL"
+            name="ValidarRelacionFuerte"
+            mode="Batch"
+            severity="ERROR" statusCode="200">
+            <![CDATA[entidadERLink.oclIsTypeOf(EntidadFuerte) and relacionERLink.oclIsKindOf(Relacion)]]>
+            <description><![CDATA[Una EntidadFuerte se asocia con RelacionTipoFuerte o RelacionTipoDebil mediante una linea simple]]></description>
+            <message><![CDATA[Uso incorrecto de Link Entidad-Relacion]]></message>
+            <target class="modeloER.EntidadRelacionFuerte"/>
          </constraint>
                   </constraints>
          <constraints categories="0/5">
@@ -815,13 +838,46 @@
          <constraints categories="0/6">
                   <constraint id="6.1"
             lang="OCL"
-            name="AtributoCompuestoASimple"
+            name="ValidarAtributoEntidadLink"
             mode="Batch"
             severity="ERROR" statusCode="200">
-            <![CDATA[atributocompuestoOrigen.oclIsTypeOf(AtributoCompuesto) implies atributosimpleDestino.oclIsTypeOf(AtributoSimple)]]>
-            <description><![CDATA[Un atributo compuesto puede tener atributos simples]]></description>
-            <message><![CDATA[]]></message>
-            <target class="modeloER.LinkASAC"/>
+            <![CDATA[entidadAtributoLinkOrigen.oclIsKindOf(Entidad) implies ( atributoEntidadLinkDestino.oclIsTypeOf(ClavePrimaria) or atributoEntidadLinkDestino.oclIsTypeOf(AtributoSimple) or atributoEntidadLinkDestino.oclIsTypeOf(AtributoCompuesto) or atributoEntidadLinkDestino.oclIsTypeOf(AtributoMultivaluado))]]>
+            <description><![CDATA[Valida la relacion entre Entidad y los atributos (sin el derivado)]]></description>
+            <message><![CDATA[El Link Simple se utiliza para unir Atributos no derivados con entidades]]></message>
+            <target class="modeloER.AtributoEntidadLink"/>
+         </constraint>
+                  <constraint id="6.2"
+            lang="OCL"
+            name="ValidarRelacionAtributoUnica"
+            mode="Batch"
+            severity="ERROR" statusCode="200">
+            <![CDATA[AtributoEntidadLink.allInstances()->forAll( atributoE: AtributoEntidadLink, atributoE2: AtributoEntidadLink|atributoE <> atributoE2 implies ((atributoE.atributoEntidadLinkDestino <> atributoE2.atributoEntidadLinkDestino) and  (atributoE.entidadAtributoLinkOrigen.atributosEntidad ->includes(atributoE.atributoEntidadLinkDestino))))
+]]>
+            <description><![CDATA[Verifica que un atributo solo pueda relacionarse solo con una entidad. Solo puede graficarse una sola linea entre Atributo y Entidad]]></description>
+            <message><![CDATA[Solo puede graficarse una linea entre Atributo y Entidad]]></message>
+            <target class="modeloER.AtributoEntidadLink"/>
+         </constraint>
+                  <constraint id="6.3"
+            lang="OCL"
+            name="ValidarAtributoDerivadoEntidad"
+            mode="Batch"
+            severity="ERROR" statusCode="200">
+            <![CDATA[AtributoDerivadoEntidad.allInstances() -> forAll(atributoD1:AtributoDerivadoEntidad, atributoD2: AtributoDerivadoEntidad| atributoD1 <> atributoD2 implies ((atributoD1.atributoderivadoDestino <> atributoD2.atributoderivadoDestino) and (atributoD1.entidadAtributoDerivadoOrigen.atributosEntidad -> includes(atributoD1.atributoderivadoDestino))))]]>
+            <description><![CDATA[Valida la relacion entre Entidad y los atributos (solo para el derivado)]]></description>
+            <message><![CDATA[La Relacion Linea Discontinua solo se utiliza para relacionar un Atributo Derivado con una Entidad]]></message>
+            <target class="modeloER.AtributoDerivadoEntidad"/>
+         </constraint>
+                  </constraints>
+         <constraints categories="0/7">
+                  <constraint id="7.1"
+            lang="OCL"
+            name="ValidarPadreConHijos"
+            mode="Batch"
+            severity="ERROR" statusCode="200">
+            <![CDATA[LinkHerenciaHijo.allInstances()->forAll(hijo: LinkHerenciaHijo|self.linkHerenciaPadreHerenciaDestino = hijo.herenciaHijoHerenciaDestino implies self.herenciaPadreEntidadOrigen <> hijo.herenciaHijoEntidadOrigen)]]>
+            <description><![CDATA[Valida que una Entidad no pueda ser padre e hijo a lavez]]></description>
+            <message><![CDATA[Una entidad Padre no puede ser Hijo a la misma vez]]></message>
+            <target class="modeloER.LinkHerenciaPadre"/>
          </constraint>
                   </constraints>
       </constraintProvider>
@@ -834,6 +890,7 @@
       </clientContext>
       <binding context="ModeloER.diagramDefaultCtx">
                   <constraint ref="ModeloER.diagram.1.1"/>
+                  <constraint ref="ModeloER.diagram.1.2"/>
                   <constraint ref="ModeloER.diagram.2.1"/>
                   <constraint ref="ModeloER.diagram.3.1"/>
                   <constraint ref="ModeloER.diagram.3.2"/>
@@ -841,9 +898,13 @@
                   <constraint ref="ModeloER.diagram.3.4"/>
                   <constraint ref="ModeloER.diagram.4.1"/>
                   <constraint ref="ModeloER.diagram.4.2"/>
+                  <constraint ref="ModeloER.diagram.4.3"/>
                   <constraint ref="ModeloER.diagram.5.1"/>
                   <constraint ref="ModeloER.diagram.5.2"/>
                   <constraint ref="ModeloER.diagram.6.1"/>
+                  <constraint ref="ModeloER.diagram.6.2"/>
+                  <constraint ref="ModeloER.diagram.6.3"/>
+                  <constraint ref="ModeloER.diagram.7.1"/>
                </binding>
 
    </extension>

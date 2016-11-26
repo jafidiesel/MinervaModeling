@@ -277,12 +277,13 @@ public class RelacionTipoDebilEditPart extends ShapeNodeEditPart {
 		private void createContents() {
 
 			ScalablePolygonShape polyline0 = new ScalablePolygonShape(){
+				
 			protected void outlineShape(Graphics graphics) {
 				super.outlineShape(graphics);
 				
 				 Rectangle r = getBounds();
 				    
-				    
+				   
 				    Point p1 = new Point(r.x + r.width/12 , r.y+ r.height/2);
 				    Point p2 = new Point(r.x + r.width/2, r.y+ r.height/12);
 				    Point p3 = new Point (r.x + r.width - r.width/12 , r.y + r.height/2);  

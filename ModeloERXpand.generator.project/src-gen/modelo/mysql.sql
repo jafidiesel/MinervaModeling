@@ -379,5 +379,6 @@ ALTER TABLE Hermano
 
 
 		
-		
+- Que validaciones sean Live
+- Verificar produccion de xmi
 	

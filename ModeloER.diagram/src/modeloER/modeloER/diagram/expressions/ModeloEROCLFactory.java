@@ -35,18 +35,23 @@ public class ModeloEROCLFactory {
 	* @generated
 	*/
 	protected ModeloEROCLFactory() {
-		this.expressions = new modeloER.modeloER.diagram.expressions.ModeloERAbstractExpression[11];
+		this.expressions = new modeloER.modeloER.diagram.expressions.ModeloERAbstractExpression[16];
 		this.expressionBodies = new String[] { "self.nombreAtributo <> null and self.nombreAtributo <> \'\'", //$NON-NLS-1$
+				"LinkASAC.allInstances()-> forAll( atributoCS: LinkASAC, atributoCS2: LinkASAC|atributoCS<>atributoCS2 implies atributoCS.atributosimpleDestino <> atributoCS2.atributosimpleDestino)", //$NON-NLS-1$
 				"self.nuloAtributo = false", //$NON-NLS-1$
 				"self.atributosEntidad->isUnique(nombreAtributo)", //$NON-NLS-1$
 				"self.nombreEntidad<>null and self.nombreEntidad<>\'\'", //$NON-NLS-1$
 				"Entidad::allInstances()->isUnique(nombreEntidad)", //$NON-NLS-1$
 				"self.atributosEntidad->exists(ae|ae.oclIsKindOf(ClavePrimaria))", //$NON-NLS-1$
-				"self.limiteInferiorER = \'*\' or (not(self.limiteInferiorER.toInteger().oclIsInvalid())) and self.limiteSuperiorER = \'*\' or (not(self.limiteSuperiorER.toInteger().oclIsInvalid()))", //$NON-NLS-1$
-				"entidadERLink.oclIsTypeOf(EntidadDebil) implies relacionERLink.oclIsTypeOf(RelacionTipoDebil)", //$NON-NLS-1$
+				"self.limiteInferiorER<>\'\' and self.limiteInferiorER<>null and self.limiteInferiorER = \'*\' or (not(self.limiteInferiorER.toInteger().oclIsInvalid())) and self.limiteSuperiorER<>\'\' and self.limiteSuperiorER<>null and self.limiteSuperiorER = \'*\' or (not(self.limiteSuperiorER.toInteger().oclIsInvalid()))", //$NON-NLS-1$
+				"entidadERLink.oclIsTypeOf(EntidadDebil) and relacionERLink.oclIsTypeOf(RelacionTipoDebil)", //$NON-NLS-1$
+				"entidadERLink.oclIsTypeOf(EntidadFuerte) and relacionERLink.oclIsKindOf(Relacion)", //$NON-NLS-1$
 				"self.nombreRelacion<>null and self.nombreRelacion<>\'\'", //$NON-NLS-1$
 				"self.atributosRelacion->forAll(r|r.oclIsKindOf(AtributoSimple))", //$NON-NLS-1$
-				"atributocompuestoOrigen.oclIsTypeOf(AtributoCompuesto) implies atributosimpleDestino.oclIsTypeOf(AtributoSimple)", //$NON-NLS-1$
+				"entidadAtributoLinkOrigen.oclIsKindOf(Entidad) implies ( atributoEntidadLinkDestino.oclIsTypeOf(ClavePrimaria) or atributoEntidadLinkDestino.oclIsTypeOf(AtributoSimple) or atributoEntidadLinkDestino.oclIsTypeOf(AtributoCompuesto) or atributoEntidadLinkDestino.oclIsTypeOf(AtributoMultivaluado))", //$NON-NLS-1$
+				"AtributoEntidadLink.allInstances()->forAll( atributoE: AtributoEntidadLink, atributoE2: AtributoEntidadLink|atributoE <> atributoE2 implies ((atributoE.atributoEntidadLinkDestino <> atributoE2.atributoEntidadLinkDestino) and  (atributoE.entidadAtributoLinkOrigen.atributosEntidad ->includes(atributoE.atributoEntidadLinkDestino))))\n", //$NON-NLS-1$
+				"AtributoDerivadoEntidad.allInstances() -> forAll(atributoD1:AtributoDerivadoEntidad, atributoD2: AtributoDerivadoEntidad| atributoD1 <> atributoD2 implies ((atributoD1.atributoderivadoDestino <> atributoD2.atributoderivadoDestino) and (atributoD1.entidadAtributoDerivadoOrigen.atributosEntidad -> includes(atributoD1.atributoderivadoDestino))))", //$NON-NLS-1$
+				"LinkHerenciaHijo.allInstances()->forAll(hijo: LinkHerenciaHijo|self.linkHerenciaPadreHerenciaDestino = hijo.herenciaHijoHerenciaDestino implies self.herenciaPadreEntidadOrigen <> hijo.herenciaHijoEntidadOrigen)", //$NON-NLS-1$
 		};
 	}
 

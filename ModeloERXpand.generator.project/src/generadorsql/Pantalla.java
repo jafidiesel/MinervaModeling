@@ -135,7 +135,7 @@ public class Pantalla extends javax.swing.JFrame {
 		// codigo para MySQL
 		System.out.println("Generando código para MySQL...");
 
-		String wtFile = "/home/kiriost/Programas/Instalados/eclipse-modeling/workspace/MinervaModeling/ModeloERXpand.generator.project/src/workflow/mysql_generator.mwe";
+		String wtFile = "/home/jafi/Documentos/git/MinervaModeling/ModeloERXpand.generator.project/src/workflow/mysql_generator.mwe";
 
 		Map properties = new HashMap();
 		Map slotContents = new HashMap();

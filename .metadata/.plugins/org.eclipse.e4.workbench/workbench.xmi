@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_VU36EIWPEeaczaFP7mJDhQ" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_VU6WUIWPEeaczaFP7mJDhQ" bindingContexts="_VU7kcIWPEeaczaFP7mJDhQ">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.emf.codegen.ecore.genmodel.presentation.GenModelEditorID&quot; name=&quot;modeloER.genmodel&quot; tooltip=&quot;ModeloER/model/modeloER.genmodel&quot;>&#xA;&lt;persistable path=&quot;/ModeloER/model/modeloER.genmodel&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.gmf.gmfgraph.presentation.GMFGraphEditorID&quot; name=&quot;lienzoModeloER.gmfgraph&quot; tooltip=&quot;ModeloERGMF/model/lienzoModeloER.gmfgraph&quot;>&#xA;&lt;persistable path=&quot;/ModeloERGMF/model/lienzoModeloER.gmfgraph&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.gmf.gmfgraph.presentation.GMFGraphEditorID&quot; name=&quot;LienzoModeloER.gmfgraph&quot; tooltip=&quot;ModeloERGMF/model/LienzoModeloER.gmfgraph&quot;>&#xA;&lt;persistable path=&quot;/ModeloERGMF/model/LienzoModeloER.gmfgraph&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.pde.ui.manifestEditor&quot; name=&quot;MANIFEST.MF&quot; tooltip=&quot;ModeloER/META-INF/MANIFEST.MF&quot;>&#xA;&lt;persistable path=&quot;/ModeloER/META-INF/MANIFEST.MF&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInputFactory&quot; id=&quot;org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID&quot; name=&quot;modeloER&quot; tooltip=&quot;platform:/resource/ModeloER/model/modeloER.aird/modeloER&quot;>&#xA;&lt;persistable SESSION_RESOURCE_URI=&quot;platform:/resource/ModeloER/model/modeloER.aird&quot; bundle=&quot;org.eclipse.sirius.ui&quot; class=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInput&quot; name=&quot;modeloER&quot; uri=&quot;platform:/resource/ModeloER/model/modeloER.aird#_sV8jIYRJEeayf4BqS4kE3A&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.sirius.ui.fakeeditoronlyforicon&quot; name=&quot;modeloER.aird&quot; tooltip=&quot;ModeloER/model/modeloER.aird&quot;>&#xA;&lt;persistable path=&quot;/ModeloER/model/modeloER.aird&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.gmf.mappings.presentation.GMFMapEditorID&quot; name=&quot;modeloER.gmfmap&quot; tooltip=&quot;ModeloERGMF/model/modeloER.gmfmap&quot;>&#xA;&lt;persistable path=&quot;/ModeloERGMF/model/modeloER.gmfmap&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.emf.genericEditor&quot; name=&quot;Diagrama.xmi&quot; tooltip=&quot;ModeloERXpand.generator.project/src/Diagrama.xmi&quot;>&#xA;&lt;persistable path=&quot;/ModeloERXpand.generator.project/src/Diagrama.xmi&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.xpand.ui.XpandEditor&quot; name=&quot;MySQL_Template.xpt&quot; tooltip=&quot;ModeloERXpand.generator.project/src/template/MySQL_Template.xpt&quot;>&#xA;&lt;persistable path=&quot;/ModeloERXpand.generator.project/src/template/MySQL_Template.xpt&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;Diagramanew.xmi&quot; tooltip=&quot;ModeloERXpand.generator.project/src/Diagramanew.xmi&quot;>&#xA;&lt;persistable path=&quot;/ModeloERXpand.generator.project/src/Diagramanew.xmi&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Pantalla.java&quot; tooltip=&quot;ModeloERXpand.generator.project/src/generadorsql/Pantalla.java&quot;>&#xA;&lt;persistable path=&quot;/ModeloERXpand.generator.project/src/generadorsql/Pantalla.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;mysql_generator.mwe&quot; tooltip=&quot;ModeloERXpand.generator.project/src/workflow/mysql_generator.mwe&quot;>&#xA;&lt;persistable path=&quot;/ModeloERXpand.generator.project/src/workflow/mysql_generator.mwe&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInputFactory&quot; id=&quot;org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID&quot; name=&quot;modeloER&quot; tooltip=&quot;platform:/resource/ModeloER/model/modeloER.aird/modeloER&quot;>&#xA;&lt;persistable SESSION_RESOURCE_URI=&quot;platform:/resource/ModeloER/model/modeloER.aird&quot; bundle=&quot;org.eclipse.sirius.ui&quot; class=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInput&quot; name=&quot;modeloER&quot; uri=&quot;platform:/resource/ModeloER/model/modeloER.aird#_sV8jIYRJEeayf4BqS4kE3A&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;EntidadRelacionDebilEditPart.java&quot; tooltip=&quot;ModeloER.diagram/src/modeloER/modeloER/diagram/edit/parts/EntidadRelacionDebilEditPart.java&quot;>&#xA;&lt;persistable path=&quot;/ModeloER.diagram/src/modeloER/modeloER/diagram/edit/parts/EntidadRelacionDebilEditPart.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;RelacionTipoDebilEditPart.java&quot; tooltip=&quot;ModeloER.diagram/src/modeloER/modeloER/diagram/edit/parts/RelacionTipoDebilEditPart.java&quot;>&#xA;&lt;persistable path=&quot;/ModeloER.diagram/src/modeloER/modeloER/diagram/edit/parts/RelacionTipoDebilEditPart.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;EntidadDebilEditPart.java&quot; tooltip=&quot;ModeloER.diagram/src/modeloER/modeloER/diagram/edit/parts/EntidadDebilEditPart.java&quot;>&#xA;&lt;persistable path=&quot;/ModeloER.diagram/src/modeloER/modeloER/diagram/edit/parts/EntidadDebilEditPart.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;AtributoMultivaluadoEditPart.java&quot; tooltip=&quot;ModeloER.diagram/src/modeloER/modeloER/diagram/edit/parts/AtributoMultivaluadoEditPart.java&quot;>&#xA;&lt;persistable path=&quot;/ModeloER.diagram/src/modeloER/modeloER/diagram/edit/parts/AtributoMultivaluadoEditPart.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.pde.ui.manifestEditor&quot; name=&quot;MANIFEST.MF&quot; tooltip=&quot;ModeloERGMF/META-INF/MANIFEST.MF&quot;>&#xA;&lt;persistable path=&quot;/ModeloERGMF/META-INF/MANIFEST.MF&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.pde.ui.manifestEditor&quot; name=&quot;MANIFEST.MF&quot; tooltip=&quot;ModeloER/META-INF/MANIFEST.MF&quot;>&#xA;&lt;persistable path=&quot;/ModeloER/META-INF/MANIFEST.MF&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;AtributoDerivadoCreateCommand.java&quot; tooltip=&quot;ModeloER.diagram/src/modeloER/modeloER/diagram/edit/commands/AtributoDerivadoCreateCommand.java&quot;>&#xA;&lt;persistable path=&quot;/ModeloER.diagram/src/modeloER/modeloER/diagram/edit/commands/AtributoDerivadoCreateCommand.java&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.pde.ui.manifestEditor&quot; name=&quot;MANIFEST.MF&quot; tooltip=&quot;ModeloER.diagram/META-INF/MANIFEST.MF&quot;>&#xA;&lt;persistable path=&quot;/ModeloER.diagram/META-INF/MANIFEST.MF&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_VU6WUIWPEeaczaFP7mJDhQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_ZAqPUIWPEeaczaFP7mJDhQ" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="1278" height="747">
@@ -141,10 +141,9 @@
           <tags>persp.actionSet:org.eclipse.egf.model.editor.activity.actionSet</tags>
           <tags>persp.actionSet:org.eclipse.egf.producer.ui.run.actionSet</tags>
           <tags>persp.actionSet:org.eclipse.acceleo.ide.ui.editors.template.actionSet</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_moHz0YXtEeasGamjbRZAEQ" selectedElement="_moHz0oXtEeasGamjbRZAEQ" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_moHz0YXtEeasGamjbRZAEQ" selectedElement="_moHz14XtEeasGamjbRZAEQ" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_moHz0oXtEeasGamjbRZAEQ" containerData="2500" selectedElement="_moHz04XtEeasGamjbRZAEQ">
               <children xsi:type="basic:PartStack" xmi:id="_moHz04XtEeasGamjbRZAEQ" elementId="org.eclipse.sirius.ui.tools.views.model.explorerMStack" containerData="5000" selectedElement="_moHz1IXtEeasGamjbRZAEQ">
-                <tags>active</tags>
                 <tags>noFocus</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_moHz1IXtEeasGamjbRZAEQ" elementId="org.eclipse.sirius.ui.tools.views.model.explorer" ref="_moBtMIXtEeasGamjbRZAEQ"/>
               </children>
@@ -152,13 +151,16 @@
                 <children xsi:type="advanced:Placeholder" xmi:id="_moHz1oXtEeasGamjbRZAEQ" elementId="org.eclipse.ui.views.ContentOutline" toBeRendered="false" ref="_avHVMYWPEeaczaFP7mJDhQ"/>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_moHz14XtEeasGamjbRZAEQ" containerData="7500" selectedElement="_moHz2IXtEeasGamjbRZAEQ">
-              <children xsi:type="advanced:Placeholder" xmi:id="_moHz2IXtEeasGamjbRZAEQ" elementId="org.eclipse.ui.editorss" containerData="6526" ref="_auNWQIWPEeaczaFP7mJDhQ"/>
-              <children xsi:type="basic:PartStack" xmi:id="_moHz2YXtEeasGamjbRZAEQ" elementId="bottom" containerData="3474" selectedElement="_moHz2oXtEeasGamjbRZAEQ">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_moHz14XtEeasGamjbRZAEQ" containerData="7500" selectedElement="_moHz2YXtEeasGamjbRZAEQ">
+              <children xsi:type="advanced:Placeholder" xmi:id="_moHz2IXtEeasGamjbRZAEQ" elementId="org.eclipse.ui.editorss" containerData="6283" ref="_auNWQIWPEeaczaFP7mJDhQ"/>
+              <children xsi:type="basic:PartStack" xmi:id="_moHz2YXtEeasGamjbRZAEQ" elementId="bottom" containerData="3717" selectedElement="_moHz2oXtEeasGamjbRZAEQ">
                 <tags>General</tags>
+                <tags>active</tags>
+                <tags>noFocus</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_moHz2oXtEeasGamjbRZAEQ" elementId="org.eclipse.ui.views.PropertySheet" ref="_moEwgIXtEeasGamjbRZAEQ"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_moHz24XtEeasGamjbRZAEQ" elementId="org.eclipse.ui.views.ProblemView" ref="_avAngIWPEeaczaFP7mJDhQ"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_g3kssJJ-Eea7a4wezp5TQw" elementId="org.eclipse.gmf.bridge.ui.dashboard.DashboardPart" ref="_g3kFoJJ-Eea7a4wezp5TQw"/>
+                <children xsi:type="advanced:Placeholder" xmi:id="_gxyIcLPVEea90NFCWBinBQ" elementId="org.eclipse.ui.console.ConsoleView" ref="_avFgAYWPEeaczaFP7mJDhQ"/>
               </children>
             </children>
           </children>
@@ -189,25 +191,49 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_auNWQIWPEeaczaFP7mJDhQ" elementId="org.eclipse.ui.editorss" selectedElement="_auNWQYWPEeaczaFP7mJDhQ">
-      <children xsi:type="basic:PartStack" xmi:id="_auNWQYWPEeaczaFP7mJDhQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_prO_gIXtEeasGamjbRZAEQ">
+      <children xsi:type="basic:PartStack" xmi:id="_auNWQYWPEeaczaFP7mJDhQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_RtxhQLPWEea90NFCWBinBQ">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
-        <children xsi:type="basic:Part" xmi:id="_prO_gIXtEeasGamjbRZAEQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="modeloER" iconURI="platform:/plugin/org.eclipse.sirius.diagram.ui/icons/DDiagram.gif" closeable="true">
+        <children xsi:type="basic:Part" xmi:id="_RtxhQLPWEea90NFCWBinBQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="modeloER.gmfmap" iconURI="platform:/plugin/org.eclipse.gmf.map.edit/icons/full/obj16/GMFMapModelFile.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.gmf.mappings.presentation.GMFMapEditorID&quot; name=&quot;modeloER.gmfmap&quot; partName=&quot;modeloER.gmfmap&quot; title=&quot;modeloER.gmfmap&quot; tooltip=&quot;ModeloERGMF/model/modeloER.gmfmap&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ModeloERGMF/model/modeloER.gmfmap&quot;/>&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.gmf.mappings.presentation.GMFMapEditorID</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_7GOv0LPZEeaZr4r8uCe8CA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="modeloER" iconURI="platform:/plugin/org.eclipse.sirius.diagram.ui/icons/DDiagram.gif" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID&quot; name=&quot;modeloER&quot; partName=&quot;modeloER&quot; title=&quot;modeloER&quot; tooltip=&quot;platform:/resource/ModeloER/model/modeloER.aird/modeloER&quot;>&#xA;&lt;input SESSION_RESOURCE_URI=&quot;platform:/resource/ModeloER/model/modeloER.aird&quot; bundle=&quot;org.eclipse.sirius.ui&quot; class=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInput&quot; factoryID=&quot;org.eclipse.sirius.ui.business.api.session.SessionEditorInputFactory&quot; name=&quot;modeloER&quot; uri=&quot;platform:/resource/ModeloER/model/modeloER.aird#_sV8jIYRJEeayf4BqS4kE3A&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.sirius.diagram.ui.part.SiriusDiagramEditorID</tags>
           <tags>removeOnHide</tags>
         </children>
-        <children xsi:type="basic:Part" xmi:id="_jF3wQJJ-Eea7a4wezp5TQw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="LienzoModeloER.gmfgraph" iconURI="platform:/plugin/org.eclipse.gmf.graphdef.edit/icons/full/obj16/GMFGraphModelFile.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.gmf.gmfgraph.presentation.GMFGraphEditorID&quot; name=&quot;LienzoModeloER.gmfgraph&quot; partName=&quot;LienzoModeloER.gmfgraph&quot; title=&quot;LienzoModeloER.gmfgraph&quot; tooltip=&quot;ModeloERGMF/model/LienzoModeloER.gmfgraph&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ModeloERGMF/model/LienzoModeloER.gmfgraph&quot;/>&#xA;&lt;/editor>"/>
+        <children xsi:type="basic:Part" xmi:id="_Kj5FwLPcEeaZr4r8uCe8CA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Pantalla.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Pantalla.java&quot; partName=&quot;Pantalla.java&quot; title=&quot;Pantalla.java&quot; tooltip=&quot;ModeloERXpand.generator.project/src/generadorsql/Pantalla.java&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ModeloERXpand.generator.project/src/generadorsql/Pantalla.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;244&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;6126&quot; selectionTopPixel=&quot;2113&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
-          <tags>org.eclipse.gmf.gmfgraph.presentation.GMFGraphEditorID</tags>
+          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
         </children>
-        <children xsi:type="basic:Part" xmi:id="_6kRlUJKHEea7a4wezp5TQw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="modeloER.genmodel" iconURI="platform:/plugin/org.eclipse.emf.codegen.ecore.ui/icons/full/obj16/GenModelModelFile.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.emf.codegen.ecore.genmodel.presentation.GenModelEditorID&quot; name=&quot;modeloER.genmodel&quot; partName=&quot;modeloER.genmodel&quot; title=&quot;modeloER.genmodel&quot; tooltip=&quot;ModeloER/model/modeloER.genmodel&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ModeloER/model/modeloER.genmodel&quot;/>&#xA;&lt;/editor>"/>
+        <children xsi:type="basic:Part" xmi:id="_hhb_kLPcEeaZr4r8uCe8CA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="DiagramaNew.xmi" iconURI="platform:/plugin/org.eclipse.ui.editors/icons/full/obj16/file_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;DiagramaNew.xmi&quot; partName=&quot;DiagramaNew.xmi&quot; title=&quot;DiagramaNew.xmi&quot; tooltip=&quot;ModeloERXpand.generator.project/src/DiagramaNew.xmi&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ModeloERXpand.generator.project/src/DiagramaNew.xmi&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;39&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
-          <tags>org.eclipse.emf.codegen.ecore.genmodel.presentation.GenModelEditorID</tags>
+          <tags>org.eclipse.ui.DefaultTextEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_k3NBgLPcEeaZr4r8uCe8CA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Diagrama.xmi" iconURI="platform:/plugin/org.eclipse.ui.editors/icons/full/obj16/file_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;Diagrama.xmi&quot; partName=&quot;Diagrama.xmi&quot; title=&quot;Diagrama.xmi&quot; tooltip=&quot;ModeloERXpand.generator.project/src/Diagrama.xmi&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ModeloERXpand.generator.project/src/Diagrama.xmi&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;253&quot; selectionOffset=&quot;39&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.ui.DefaultTextEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_5hmM8LPcEeaZr4r8uCe8CA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="MySQL_Template.xpt" iconURI="platform:/plugin/org.eclipse.xpand.ui/icons/templatefile.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.xpand.ui.XpandEditor&quot; name=&quot;MySQL_Template.xpt&quot; partName=&quot;MySQL_Template.xpt&quot; title=&quot;MySQL_Template.xpt&quot; tooltip=&quot;ModeloERXpand.generator.project/src/template/MySQL_Template.xpt&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ModeloERXpand.generator.project/src/template/MySQL_Template.xpt&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1026&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.xpand.ui.XpandEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_ZOVrgLPdEeaZr4r8uCe8CA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Diagrama.xmi" iconURI="platform:/plugin/org.eclipse.emf.generic.editor/icons/synch_toc_nav.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.emf.genericEditor&quot; name=&quot;Diagrama.xmi&quot; partName=&quot;Diagrama.xmi&quot; title=&quot;Diagrama.xmi&quot; tooltip=&quot;ModeloERXpand.generator.project/src/Diagrama.xmi&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ModeloERXpand.generator.project/src/Diagrama.xmi&quot;/>&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.emf.genericEditor</tags>
           <tags>removeOnHide</tags>
         </children>
       </children>
@@ -235,7 +261,7 @@
       <tags>categoryTag:General</tags>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_avAngIWPEeaczaFP7mJDhQ" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/problems_view.png" tooltip="" closeable="true">
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;408&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;300&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xA;&lt;expanded>&#xA;&lt;category IMemento.internal.id=&quot;Warnings (100 of 134 items)&quot;/>&#xA;&lt;/expanded>&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;408&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;300&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <menus xmi:id="_bhbi8IWPEeaczaFP7mJDhQ" elementId="org.eclipse.ui.views.ProblemView">
@@ -257,8 +283,14 @@
       <tags>categoryTag:General</tags>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_avFgAYWPEeaczaFP7mJDhQ" elementId="org.eclipse.ui.console.ConsoleView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Console" iconURI="platform:/plugin/org.eclipse.ui.console/icons/full/cview16/console_view.png" tooltip="" closeable="true">
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
+      <menus xmi:id="_gzDTwLPVEea90NFCWBinBQ" elementId="org.eclipse.ui.console.ConsoleView">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_gzD60LPVEea90NFCWBinBQ" elementId="org.eclipse.ui.console.ConsoleView" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_avGuIIWPEeaczaFP7mJDhQ" elementId="org.eclipse.ui.views.BookmarkView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Bookmarks" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/bkmrk_nav.png" tooltip="" closeable="true">
       <tags>View</tags>
@@ -310,8 +342,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; currentWorkingSetName=&quot;Aggregate for window 1475076172684&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:Sirius</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_mpbbYIXtEeasGamjbRZAEQ" elementId="org.eclipse.sirius.ui.tools.views.model.explorer">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -324,6 +354,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_m0L54IXtEeasGamjbRZAEQ" elementId="org.eclipse.ui.views.PropertySheet">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -349,7 +381,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ZiAB0IWPEeaczaFP7mJDhQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_iCag8LN0Eea5FfRTKto82Q" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_VcOfVoWPEeaczaFP7mJDhQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_ffXhgLPZEeaZr4r8uCe8CA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_VcOfVoWPEeaczaFP7mJDhQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ZiAo4IWPEeaczaFP7mJDhQ" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -373,7 +405,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ZiCeEIWPEeaczaFP7mJDhQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_iCjD0LN0Eea5FfRTKto82Q" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_VcMDBYWPEeaczaFP7mJDhQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_ffrqkLPZEeaZr4r8uCe8CA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_VcMDBYWPEeaczaFP7mJDhQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ZiDFIIWPEeaczaFP7mJDhQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -411,8 +443,15 @@
       <children xsi:type="menu:ToolControl" xmi:id="_b4pwIIWPEeaczaFP7mJDhQ" elementId="org.eclipse.ui.ide.perspectivestack(minimized)" toBeRendered="false" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
         <tags>TrimStack</tags>
       </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_83f5ILPZEeaZr4r8uCe8CA" elementId="org.eclipse.sirius.ui.tools.views.model.explorerMStack(org.eclipse.sirius.ui.tools.perspective.modeling)" toBeRendered="false" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
+        <tags>TrimStack</tags>
+      </children>
     </trimBars>
-    <trimBars xmi:id="_aTizgIWPEeaczaFP7mJDhQ" elementId="org.eclipse.ui.trim.vertical2" side="Right"/>
+    <trimBars xmi:id="_aTizgIWPEeaczaFP7mJDhQ" elementId="org.eclipse.ui.trim.vertical2" toBeRendered="false" side="Right">
+      <children xsi:type="menu:ToolControl" xmi:id="_9K9AoLPZEeaZr4r8uCe8CA" elementId="bottom(org.eclipse.sirius.ui.tools.perspective.modeling)" toBeRendered="false" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
+        <tags>TrimStack</tags>
+      </children>
+    </trimBars>
   </children>
   <handlers xmi:id="_p45hULy3EeOxWJvPH-7sUQ" elementId="org.eclipse.e4.tools.emf.ui.handler.mark_duplicate_ids" contributorURI="platform:/plugin/org.eclipse.e4.tools.emf.ui" contributionURI="bundleclass://org.eclipse.e4.tools.emf.ui/org.eclipse.e4.tools.emf.ui.internal.handlers.MarkDuplicateElementIdsHandler" command="_RRp7QLy2EeOxWJvPH-7sUQ"/>
   <handlers xmi:id="_AOEgkL2JEeOqSr2XZwfnmA" elementId="org.eclipse.e4.tools.emf.ui.handler.mark_duplicate_labels" contributorURI="platform:/plugin/org.eclipse.e4.tools.emf.ui" contributionURI="bundleclass://org.eclipse.e4.tools.emf.ui/org.eclipse.e4.tools.emf.ui.internal.handlers.MarkDuplicateLabelsHandler" command="_9ITpgL2IEeOqSr2XZwfnmA"/>
@@ -658,6 +697,17 @@
     <bindings xmi:id="_Vkax8oWPEeaczaFP7mJDhQ" keySequence="CTRL+7" command="_VcVNAYWPEeaczaFP7mJDhQ"/>
     <bindings xmi:id="_VkitwIWPEeaczaFP7mJDhQ" keySequence="CTRL+O" command="_VcVNAIWPEeaczaFP7mJDhQ"/>
     <bindings xmi:id="_VmencYWPEeaczaFP7mJDhQ" keySequence="ALT+SHIFT+ARROW_LEFT" command="_Va0KCoWPEeaczaFP7mJDhQ"/>
+    <bindings xmi:id="_uMwxwLPTEeaQLJUVjJkciA" keySequence="ALT+CTRL+H" command="_Vb2ExoWPEeaczaFP7mJDhQ"/>
+    <bindings xmi:id="_uMxY0LPTEeaQLJUVjJkciA" keySequence="ALT+CTRL+H" command="_qc5dppJ9Eea7a4wezp5TQw"/>
+    <bindings xmi:id="_uNETwLPTEeaQLJUVjJkciA" keySequence="ALT+SHIFT+L" command="_Vbqen4WPEeaczaFP7mJDhQ">
+      <tags>platform:gtk</tags>
+    </bindings>
+    <bindings xmi:id="_uNLBcLPTEeaQLJUVjJkciA" keySequence="CTRL+SHIFT+O" command="_VcVM8IWPEeaczaFP7mJDhQ"/>
+    <bindings xmi:id="_uNLogLPTEeaQLJUVjJkciA" keySequence="F4" command="_VcWbJYWPEeaczaFP7mJDhQ"/>
+    <bindings xmi:id="_uNOEwLPTEeaQLJUVjJkciA" keySequence="ALT+SHIFT+M" command="_qc6Eu5J9Eea7a4wezp5TQw">
+      <tags>platform:gtk</tags>
+    </bindings>
+    <bindings xmi:id="_uNoUcLPTEeaQLJUVjJkciA" keySequence="CTRL+T" command="_Vb2r1oWPEeaczaFP7mJDhQ"/>
   </bindingTables>
   <bindingTables xmi:id="_VhXd8YWPEeaczaFP7mJDhQ" elementId="org.eclipse.xpand.ui.XpandEditorScope" bindingContext="_Vc6b14WPEeaczaFP7mJDhQ">
     <bindings xmi:id="_VhXd8oWPEeaczaFP7mJDhQ" keySequence="COMMAND+>" command="_VbJhNIWPEeaczaFP7mJDhQ"/>
@@ -926,7 +976,19 @@
     <bindings xmi:id="_qh55cJJ9Eea7a4wezp5TQw" keySequence="ALT+SHIFT+Y" command="_qc42nZJ9Eea7a4wezp5TQw"/>
     <bindings xmi:id="_qiJxEJJ9Eea7a4wezp5TQw" keySequence="ALT+SHIFT+J" command="_qc42mJJ9Eea7a4wezp5TQw"/>
   </bindingTables>
-  <bindingTables xmi:id="_qgdvAJJ9Eea7a4wezp5TQw" elementId="org.eclipse.xtend.ide.XtendEditorScope" bindingContext="_qdGR8JJ9Eea7a4wezp5TQw"/>
+  <bindingTables xmi:id="_qgdvAJJ9Eea7a4wezp5TQw" elementId="org.eclipse.xtend.ide.XtendEditorScope" bindingContext="_qdGR8JJ9Eea7a4wezp5TQw">
+    <bindings xmi:id="_uMUF0LPTEeaQLJUVjJkciA" keySequence="COMMAND+>" command="_qc5dopJ9Eea7a4wezp5TQw"/>
+    <bindings xmi:id="_uMed4LPTEeaQLJUVjJkciA" keySequence="COMMAND+&lt;" command="_qc42nJJ9Eea7a4wezp5TQw"/>
+    <bindings xmi:id="_uMj9cLPTEeaQLJUVjJkciA" keySequence="ALT+SHIFT+D P" command="_qc6EtpJ9Eea7a4wezp5TQw"/>
+    <bindings xmi:id="_uMlLkLPTEeaQLJUVjJkciA" keySequence="ALT+SHIFT+D T" command="_qc42mpJ9Eea7a4wezp5TQw"/>
+    <bindings xmi:id="_uMmZsLPTEeaQLJUVjJkciA" keySequence="ALT+COMMAND+D J" command="_qc42npJ9Eea7a4wezp5TQw"/>
+    <bindings xmi:id="_uN8dgLPTEeaQLJUVjJkciA" keySequence="CTRL+SHIFT+V" command="_qc5dpJJ9Eea7a4wezp5TQw"/>
+    <bindings xmi:id="_uN9EkLPTEeaQLJUVjJkciA" keySequence="CTRL+&lt;" command="_qc42nJJ9Eea7a4wezp5TQw"/>
+    <bindings xmi:id="_uN-5wLPTEeaQLJUVjJkciA" keySequence="CTRL+>" command="_qc5dopJ9Eea7a4wezp5TQw"/>
+    <bindings xmi:id="_uODyQLPTEeaQLJUVjJkciA" keySequence="ALT+SHIFT+X T" command="_qc6EuZJ9Eea7a4wezp5TQw"/>
+    <bindings xmi:id="_uOG1kLPTEeaQLJUVjJkciA" keySequence="ALT+SHIFT+X P" command="_qc6EspJ9Eea7a4wezp5TQw"/>
+    <bindings xmi:id="_uOJ44LPTEeaQLJUVjJkciA" keySequence="ALT+SHIFT+X J" command="_qc42lZJ9Eea7a4wezp5TQw"/>
+  </bindingTables>
   <bindingTables xmi:id="_qhKSkJJ9Eea7a4wezp5TQw" elementId="org.eclipse.acceleo.ui.interpreter.interpreterview" bindingContext="_qdFq4JJ9Eea7a4wezp5TQw">
     <bindings xmi:id="_qhK5oJJ9Eea7a4wezp5TQw" keySequence="CTRL+SHIFT+D" command="_qc6rw5J9Eea7a4wezp5TQw"/>
   </bindingTables>

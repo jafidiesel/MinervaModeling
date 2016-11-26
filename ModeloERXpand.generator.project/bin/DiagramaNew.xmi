@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modeloER:Diagrama xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:modeloER="http://www.example.org/modeloER" xsi:schemaLocation="http://www.example.org/modeloER metamodel/modeloER.ecore">
+  <claveprimariaDelDiagrama nombreAtributo="clavePRimaria1"/>
+  <relacionesTipodebilDelDiagrama nombreRelacion="relacionTipoDebil1"/>
+  <entidadesRelacionesDebilesDelDiagrama entidadERLink="//@entidaddebilDelDiagrama.0" relacionERLink="//@relacionesTipodebilDelDiagrama.0"/>
+  <entidaddebilDelDiagrama nombreEntidad="entidadDebil1"/>
+  <atributosimpleDelDiagrama nombreAtributo="atributoSimple1"/>
+  <atributocompuestoDelDiagrama nombreAtributo="atributoCompuesto1"/>
+  <linkasacDelDiagrama atributocompuestoOrigen="//@atributocompuestoDelDiagrama.0" atributosimpleDestino="//@atributosimpleDelDiagrama.0"/>
+  <atributoentidadlinkDiagrama entidadAtributoLinkOrigen="//@entidaddebilDelDiagrama.0" atributoEntidadLinkDestino="//@claveprimariaDelDiagrama.0"/>
+  <atributoentidadlinkDiagrama entidadAtributoLinkOrigen="//@entidaddebilDelDiagrama.0" atributoEntidadLinkDestino="//@atributocompuestoDelDiagrama.0"/>
+</modeloER:Diagrama>

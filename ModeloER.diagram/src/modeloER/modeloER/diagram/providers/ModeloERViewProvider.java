@@ -785,14 +785,14 @@ public class ModeloERViewProvider extends AbstractProvider implements IViewProvi
 				.getType(modeloER.modeloER.diagram.edit.parts.EntidadRelacionFuerteLimiteInferiorEREditPart.VISUAL_ID));
 		label6001.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
 		Location location6001 = (Location) label6001.getLayoutConstraint();
-		location6001.setX(0);
-		location6001.setY(40);
+		location6001.setX(4);
+		location6001.setY(4);
 		Node label6002 = createLabel(edge, modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
 				.getType(modeloER.modeloER.diagram.edit.parts.EntidadRelacionFuerteLimiteSuperiorEREditPart.VISUAL_ID));
 		label6002.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
 		Location location6002 = (Location) label6002.getLayoutConstraint();
-		location6002.setX(0);
-		location6002.setY(60);
+		location6002.setX(4);
+		location6002.setY(4);
 		return edge;
 	}
 
@@ -839,14 +839,14 @@ public class ModeloERViewProvider extends AbstractProvider implements IViewProvi
 				.getType(modeloER.modeloER.diagram.edit.parts.EntidadRelacionDebilLimiteInferiorEREditPart.VISUAL_ID));
 		label6003.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
 		Location location6003 = (Location) label6003.getLayoutConstraint();
-		location6003.setX(0);
-		location6003.setY(40);
+		location6003.setX(4);
+		location6003.setY(4);
 		Node label6004 = createLabel(edge, modeloER.modeloER.diagram.part.ModeloERVisualIDRegistry
 				.getType(modeloER.modeloER.diagram.edit.parts.EntidadRelacionDebilLimiteSuperiorEREditPart.VISUAL_ID));
 		label6004.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
 		Location location6004 = (Location) label6004.getLayoutConstraint();
-		location6004.setX(0);
-		location6004.setY(60);
+		location6004.setX(4);
+		location6004.setY(4);
 		return edge;
 	}
 
