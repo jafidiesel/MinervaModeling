@@ -1,0 +1,104 @@
+Double Line
+
+public class DoubleLineConnection extends PolylineConnectionEx {
+
+		/**
+		 * @generated
+		 */
+		public DoubleLineConnection() {
+			this.setLineStyle(Graphics.LINE_DASH);
+
+		}
+		
+
+		protected void outlineShape(Graphics g) {
+			
+		PointList mylist1 = this.getPoints().getCopy();
+        	PointList mylist2 = getPoints().getCopy();
+        	mylist1.translate(0 , -2);
+        	mylist2.translate(0, 2);
+        	
+        	      
+			g.drawPolyline(mylist1);
+        	g.drawPolyline(mylist2);
+		}
+}
+------------------------------------------------------------------
+ElipseDoble
+Ellipse elli0 = new Ellipse(){
+				@Override
+				protected void outlineShape(Graphics graphics) {
+				super.outlineShape(graphics);
+				double scaleFactor = 0.9;
+				Rectangle rect1 = getBounds().getCopy();// Las figuras estan contenidas en un rectangulo
+				Rectangle rect = getBounds().getCopy().scale(scaleFactor);
+				rect.x = rect1.x + (int) Math.floor(rect1.width * (1 - scaleFactor) / 2);
+				rect.y = rect1.y + (int) Math.floor(rect1.height * (1 - scaleFactor) / 2);
+				
+				graphics.drawOval(rect);
+				}
+				};
+
+			
+-----------------------------------------
+PoligonoDoble
+				{
+					
+				protected void outlineShape(Graphics graphics) {
+				super.outlineShape(graphics);
+				double scaleFactor = 0.9;
+				 Rectangle r = getBounds();
+				    
+				    // Define the points of a trapez
+				    Point p1 = new Point(r.x + r.width/12 , r.y+ r.height/2);
+				    Point p2 = new Point(r.x + r.width/2, r.y+ r.height/12);
+				    Point p3 = new Point (r.x + r.width - r.width/12 , r.y + r.height/2);  
+				    Point p4 = new Point (r.x + r.width/2,  r.y + r.height- r.height/12);
+				    
+				    
+				    PointList pointList = new PointList();
+				    pointList.addPoint(p1);
+				    pointList.addPoint(p2);
+				    pointList.addPoint(p3);
+				    pointList.addPoint(p4);
+				    
+				    // Fill the shape
+				    graphics.fillPolygon(pointList);
+				    
+				    // Draw the outline
+				    graphics.drawLine(p1, p2);
+				    graphics.drawLine(p2, p3);
+				    graphics.drawLine(p3, p4);
+				    graphics.drawLine(p4, p1);
+				}
+				};
+-----------------------------
+Cualca
+
+				public void paintFigure(Graphics graphics){
+					super.paintFigure(graphics);
+					String labelNombre = this.getText();
+					int longitudLinea = labelNombre.length();
+					
+					Rectangle r = getBounds();
+					
+					Point p1 = new Point(r.x,r.y);
+					Point p2 = new Point(r.x + longitudLinea,r.y);
+					
+					PointList pointList = new PointList();
+				    pointList.addPoint(p1);
+				    pointList.addPoint(p2);
+				    
+				    graphics.fillPolygon(pointList);
+				    graphics.drawLine(p1, p2);
+				    
+				}
+			};
+------------------------------------------
+fFigureNombreC.setTextUnderline(true);
+-------------------
+/Circulo.edit/icons/full/obj16/AtributoMultivaluadoIcon.svg
+
+
+NO USAR RECTANGULO INVISIBLE PARA ANIDAR FIGURAS
+

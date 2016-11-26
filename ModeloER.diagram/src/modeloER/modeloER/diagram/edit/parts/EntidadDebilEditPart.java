@@ -1,5 +1,6 @@
 package modeloER.modeloER.diagram.edit.parts;
 
+import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.GridData;
 import org.eclipse.draw2d.GridLayout;
 import org.eclipse.draw2d.IFigure;
@@ -7,6 +8,7 @@ import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.draw2d.geometry.Dimension;
+import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.Request;
@@ -271,7 +273,19 @@ public class EntidadDebilEditPart extends ShapeNodeEditPart {
 		 */
 		private void createContents() {
 
-			RectangleFigure rectanguloEntidadDebil0 = new RectangleFigure();
+			RectangleFigure rectanguloEntidadDebil0 = new RectangleFigure(){
+				protected void outlineShape(Graphics graphics) {
+					super.outlineShape(graphics);
+					double scaleFactor = 0.9;
+					Rectangle rect1 = getBounds().getCopy();// Las figuras estan contenidas en un rectangulo
+					Rectangle rect = getBounds().getCopy().scale(scaleFactor);
+					rect.x = rect1.x + (int) Math.floor(rect1.width * (1 - scaleFactor) / 2);
+					rect.y = rect1.y + (int) Math.floor(rect1.height * (1 - scaleFactor) / 2);
+					
+					graphics.drawRectangle(rect);
+					}
+					
+			};
 
 			this.add(rectanguloEntidadDebil0);
 

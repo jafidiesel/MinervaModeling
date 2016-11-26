@@ -1,5 +1,6 @@
 package modeloER.modeloER.diagram.edit.parts;
 
+import org.eclipse.draw2d.Graphics;
 import org.eclipse.draw2d.GridData;
 import org.eclipse.draw2d.GridLayout;
 import org.eclipse.draw2d.IFigure;
@@ -9,6 +10,8 @@ import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.draw2d.geometry.Point;
+import org.eclipse.draw2d.geometry.PointList;
+import org.eclipse.draw2d.geometry.Rectangle;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.Request;
@@ -273,7 +276,35 @@ public class RelacionTipoDebilEditPart extends ShapeNodeEditPart {
 		 */
 		private void createContents() {
 
-			ScalablePolygonShape polyline0 = new ScalablePolygonShape();
+			ScalablePolygonShape polyline0 = new ScalablePolygonShape(){
+			protected void outlineShape(Graphics graphics) {
+				super.outlineShape(graphics);
+				
+				 Rectangle r = getBounds();
+				    
+				    
+				    Point p1 = new Point(r.x + r.width/12 , r.y+ r.height/2);
+				    Point p2 = new Point(r.x + r.width/2, r.y+ r.height/12);
+				    Point p3 = new Point (r.x + r.width - r.width/12 , r.y + r.height/2);  
+				    Point p4 = new Point (r.x + r.width/2,  r.y + r.height- r.height/12);
+				    
+				    
+				    PointList pointList = new PointList();
+				    pointList.addPoint(p1);
+				    pointList.addPoint(p2);
+				    pointList.addPoint(p3);
+				    pointList.addPoint(p4);
+				    
+				    // Fill the shape
+				    graphics.fillPolygon(pointList);
+				    
+				    // Draw the outline
+				    graphics.drawLine(p1, p2);
+				    graphics.drawLine(p2, p3);
+				    graphics.drawLine(p3, p4);
+				    graphics.drawLine(p4, p1);
+				}
+				};
 
 			polyline0.addPoint(new Point(getMapMode().DPtoLP(0), getMapMode().DPtoLP(30)));
 			polyline0.addPoint(new Point(getMapMode().DPtoLP(30), getMapMode().DPtoLP(0)));
