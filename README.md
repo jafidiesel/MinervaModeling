@@ -1,5 +1,14 @@
 # MinervaModeling
 
+### ¿Que versión de Eclipse descargar?
+> https://www.eclipse.org/downloads/packages/release/mars/2#node-47500
+
+
+### ¿Como instalar Eclipse?
+https://wiki.eclipse.org/Eclipse/Installation#Eclipse_4.5_.28Mars.29
+
+
+
 > Toolkit para entender que puta son las cosas que se ponen en GMF
 > http://what-when-how.com/Tutorial/topic-225aimup/Eclipse-Modeling-Project-A-Domain-Specific-Language-Toolkit-533.html
 
